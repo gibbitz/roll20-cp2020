@@ -1,0 +1,39 @@
+.sheet-cp-2020 {
+  $base: &;
+
+  &__armor {
+
+  }
+
+  &__armor-table{
+
+    td {
+      padding: 0;
+      position: relative;
+      width: 15%;
+
+      input[type=number] {
+        height: 100%; // calc(100% - 2px);
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        // width: calc(100% - 2px);
+      }
+    }
+
+    th {
+      background-color: $dim-font-color;
+      color: $background;
+      font-weight: normal;
+      padding: 0.3em;
+
+      label {
+        color: $background;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,51 @@
+- var stats = { INT: 'INTelligence', REF: 'REFlexes', TECH: 'TECHnical Aptitude', COOL: 'COOL', ATTR: 'ATTRactiveness', LUCK: 'LUCK', MA: 'Movement Allowance', BODY: 'BODY Type', EMP: 'EMPathy' }
+
+div.cp-2020__stats
+  h4 Stats
+  div.cp-2020__stat--inline.cp-2020__stat__character-points
+    label(for='attr_CharacterPoints') Character Points
+    input(type='number' name='attr_CharacterPoints')
+
+  div.cp-2020__stat--inline
+    div.cp-2020__stat__key--label Stat
+    div.cp-2020__stat__key--value Total
+    div.cp-2020__stat__key--value Modifier
+    div.cp-2020__stat__key--value Base
+
+  input(type='hidden' value='1' name='attr_Wound_Divisor')
+  input(type='hidden' value='0' name='attr_Wound_Ref_Mod')
+  each name, stat in stats
+    div.cp-2020__stat--inline
+      label(for=`attr_${stat}`)
+        button.cp-2020__stat__check-btn(type='roll' title=`roll ${name} check` value=`&{template:general} {{roll=@{Handle} ^{rolls} ^{${stat}} [[1d10!! + [[@{${stat}}]] ]]}}`)= stat
+      if stat === 'INT' || stat === 'COOL'
+        input(type='number' disabled='true' name=`attr_${stat}` value=`round((@{${stat}_Mod}+@{${stat}_Base})/@{Wound_Divisor})`)
+      else if stat === 'REF'
+        input(type='number' disabled='true' name=`attr_${stat}` value=`round(@{${stat}_Mod}+@{${stat}_Base}-@{Wound_Ref_Mod}/@{Wound_Divisor})`)
+      else
+        input(type='number' disabled='true' name=`attr_${stat}` value=`@{${stat}_Mod}+@{${stat}_Base}`)
+      input(type='number' name=`attr_${stat}_Mod`)
+      input(type='number' id=`attr_${stat}_Base` name=`attr_${stat}_Base` min='2' max='10')
+  div.cp-2020__stat--inline
+    label(for='attr_Humanity') Humanity
+    input(type='number' disabled='true' name='attr_Humanity' value='floor((@{EMP}*10)-@{Humanity_loss}')
+
+  div.cp-2020__stat--inline
+    label(for='attr_Humanity_loss') Humanity Loss
+    input(type='number' disabled='true' name='attr_Humanity_loss' value='0')
+
+  div.cp-2020__stat--inline
+    label(for='attr_Run') Run
+    input(type='number' disabled='true' name='attr_Run' value='@{MA}*3')
+
+  div.cp-2020__stat--inline
+    label(for='attr_Leap') Leap
+    input(type='number' disabled='true' name='attr_Leap' value='@{Run}/4')
+
+  div.cp-2020__stat--inline
+    label(for='attr_Carry') Carry
+    input(type='number' disabled='true' name='attr_Carry' value='@{BODY}*10')
+
+  div.cp-2020__stat--inline
+    label(for='attr_Lift') Lift
+    input(type='number' disabled='true' name='attr_Lift' value='@{Carry}*4')

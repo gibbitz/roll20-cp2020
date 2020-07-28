@@ -1,0 +1,174 @@
+%full-block {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+%anchored {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+%stunned {
+  + span.sheet-cp-2020__wound__stun-icon::before {
+    @extend %full-block;
+    @extend %anchored;
+    border: calc(.5em - 2px) solid rgba($level-1, 0.5);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    content: '';
+  }
+}
+
+%wounded {
+  + span.sheet-cp-2020__wound__wound-icon::before {
+    @extend %full-block;
+    @extend %anchored;
+    background: rgba($level-1, 0.5);
+    content: '';
+  }
+}
+.sheet-cp-2020 {
+  $base: &;
+
+  &__health {
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &__saves {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: row;
+      flex: 0 0 20%;
+      height: 50%;
+      justify-content: space-between;
+      max-width: 26%;
+
+      > * {
+        flex: 1 1 25%;
+        max-width: 25%;
+      }
+    }
+
+    &__wounds {
+      display: flex;
+      flex: 6 5 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 360px;
+
+      > * {
+        flex: 0 1 auto;
+        padding: 0 0.3em;
+      }
+
+      label {
+        padding: 0;
+      }
+    }
+  }
+
+  &__wound-input {
+    height: 1em;
+    padding: 0;
+    width: 1em;
+    display: inline-block;
+    margin-left: .2em;
+    position: relative;
+
+    input {
+      @extend %full-block;
+      @extend %anchored;
+      opacity: 0.01;
+      z-index: 2;
+      &:checked {
+        z-index: 1;
+        + span + input:checked {
+          z-index: 0;
+        }
+      }
+    }
+
+    // label {
+
+      span {
+        @extend %full-block;
+        @extend %anchored;
+        border: 1px solid $dim-font-color;
+        pointer-events: none;
+      }
+    // }
+
+    label:first-child {
+        position: relative;
+        z-index: 0;
+    }
+
+    label:last-child {
+        @extend %anchored;
+        z-index: 1;
+    }
+  }
+  $damageLevels: (
+    'light' 0,
+    'serious' 1,
+    'critical' 2,
+    'mortal-0' 3,
+    'mortal-1' 4,
+    'mortal-2' 5,
+    'mortal-3' 6,
+    'mortal-4' 7,
+    'mortal-5' 8,
+    'mortal-6' 9
+  );
+  @each $level, $index in $damageLevels {
+    $groupSelectors: ();
+    @if $index > 0 {
+      @each $slotLevel, $slotIndex in $damageLevels {
+        @if $slotIndex < $index {
+          $groupSelectors: append($groupSelectors, "#{$base}__wound-slot--#{$slotLevel}")
+        }
+      }
+    }
+    @for $subLevel from 1 through 4 {
+      [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$base}__wound-input {
+        @for $subLevelIterator from 1 through $subLevel {
+          input.sheet-wound_#{$index}_#{$subLevelIterator} {
+            @extend %wounded;
+          }
+        }
+      }
+
+      [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$base}__wound-input {
+        @for $subLevelIterator from 1 through $subLevel {
+          input.sheet-stun_#{$index}_#{$subLevelIterator} {
+            @extend %stunned;
+          }
+        }
+      }
+
+      @each $slotLevel in $groupSelectors {
+        [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$slotLevel} {
+          input {
+            @extend %wounded;
+          }
+        }
+
+        [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$slotLevel} {
+          input {
+            @extend %stunned;
+          }
+        }
+      }
+    }
+  }
+}
+
+

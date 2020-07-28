@@ -1,0 +1,49 @@
+{
+  "name": "cp2020",
+  "version": "1.0.0",
+  "description": "Character sheet build system for Roll 20",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "build:js": "babel ./src/index.js --watch --out-file dist/app.js",
+    "scss": "node-sass src/index.scss -o dist",
+    "build:css": "npm run scss && node-sass src/index.scss -rwo dist",
+    "build:html": "pug src/index.pug -wo dist",
+    "build": "run-p build:css build:html build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gibbitz/rolll20-cp2020.git"
+  },
+  "keywords": [
+    "roll-20",
+    "gibbitz",
+    "cyberpunk"
+  ],
+  "author": "gibbitzStudios",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/gibbitz/rolll20-cp2020/issues"
+  },
+  "homepage": "https://github.com/gibbitz/rolll20-cp2020#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "node-sass": "^4.14.1",
+    "normalize-scss": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

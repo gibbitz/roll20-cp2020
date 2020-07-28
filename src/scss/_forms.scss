@@ -1,0 +1,34 @@
+%text-field {
+  background-color: transparent;
+  border-radius: 0;
+  border-color: $dim-font-color;
+  color: $med-light-font-color;
+  width: 100%;
+
+  &:focus {
+    border-radius: 0;
+    border-color: $med-light-font-color !important;
+    outline-width: 0;
+    outline-color:  $med-light-font-color;
+  }
+}
+.sheet-cp-2020 {
+  label {
+    color: $base-font-color;
+    margin: 0;
+    padding: 0.7em 1em .3em 0;
+  }
+
+  input {
+    &[type=text],
+    &[type=password],
+    &[type=number] {
+      @extend %text-field;
+    }
+  }
+
+  textarea {
+    @extend %text-field;
+    box-sizing: border-box;
+  }
+}

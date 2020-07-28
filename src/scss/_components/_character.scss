@@ -1,0 +1,25 @@
+.sheet-cp-2020{
+  $base: &;
+  &__character {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    // &_column {
+    > .sheet-cp-2020__character__column {
+    //   display: flex;
+      flex: 0 1 auto;
+
+      &:first-child {
+        max-width: 40%;
+      }
+
+      &:last-child {
+        max-width: 55%;
+      }
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    }
+  }
+}

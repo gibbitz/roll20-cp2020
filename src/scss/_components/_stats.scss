@@ -1,0 +1,77 @@
+%stat-input {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  margin-right: 1%;
+  max-width: 20%;
+}
+
+%stat-label {
+  @extend %stat-input;
+  flex: 2 0 auto;
+  max-width: 30%;
+  min-width: 10em;
+  padding: 0;
+}
+
+
+.sheet-cp-2020{
+  $base: &;
+
+  &__stats {
+
+  }
+
+  &__stat {
+    &--inline {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      label {
+        @extend %stat-label;
+      }
+
+      input[type='number'] {
+        @extend %stat-input;
+
+        &[disabled] {
+          border: 0;
+          color: $light-font-color;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    &__key--value {
+      @extend %stat-input;
+    }
+
+    &__key--label {
+      @extend %stat-label;
+    }
+    &__character-points {
+      padding-bottom: 1em;
+    }
+  }
+
+  button#{$base}__stat__check-btn {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: $base-font-color;
+    margin-left: 0;
+    outline: 0;
+    padding-left: 0;
+    text-shadow: none;
+
+    &::before {
+      padding-right: .3em;
+    }
+
+    .sheet-small {
+      font-size: 0.8em;
+    }
+  }
+}

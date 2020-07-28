@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Aldrich';
+  src: url(https://fonts.gstatic.com/s/aldrich/v10/MCoTzAn-1s3IGyJMVacY3w.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Share Tech Mono';
+  src: url(https://fonts.gstatic.com/s/sharetechmono/v9/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%base-font {
+  color: $base-font-color;
+  font-family: 'Aldrich', sans-serif;
+  line-height: 1.4;
+}
+%title-font {
+  color: $med-light-font-color;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.sheet-cp-2020 {
+  @extend %base-font;
+
+  button {
+    @extend %title-font;
+  }
+
+  p {
+    @extend %base-font;
+  }
+
+  h1 {
+    @extend %title-font;
+    font-size: 1.5em;
+  }
+  h2 {
+    @extend %title-font;
+    font-size: 1.4em;
+  }
+  h3 {
+    @extend %title-font;
+    font-size: 1.3em;
+  }
+  h4 {
+    @extend %title-font;
+    font-size: 1.2em;
+  }
+  h5 {
+    @extend %title-font;
+    font-size: 1.1em;
+  }
+  h6 {
+    @extend %title-font;
+    font-size: 1em;
+  }
+  label {
+    @extend %title-font;
+    font-size: 1em;
+  }
+}

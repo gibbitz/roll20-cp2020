@@ -1,0 +1,17 @@
+@import 'scss/_partials/reset';
+@import 'scss/_partials/colors';
+@import 'scss/_partials/typography';
+@import 'scss/base-formatting';
+@import 'scss/forms';
+@import 'scss/_components/character';
+@import 'scss/_components/stats';
+@import 'scss/_components/armor';
+@import 'scss/_components/health';
+
+
+.sheet- {
+  &cp-2020 {
+    background-color: $background;
+    color: $base-font-color;
+  }
+}
