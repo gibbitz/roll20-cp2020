@@ -1,8 +1,11 @@
 @import 'scss/_partials/reset';
 @import 'scss/_partials/colors';
+@import 'scss/_partials/variables';
 @import 'scss/_partials/typography';
 @import 'scss/base-formatting';
+@import 'scss/layout';
 @import 'scss/forms';
+@import 'scss/box';
 @import 'scss/_components/character';
 @import 'scss/_components/stats';
 @import 'scss/_components/armor';

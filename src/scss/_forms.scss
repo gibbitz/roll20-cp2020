@@ -2,7 +2,7 @@
   background-color: transparent;
   border-radius: 0;
   border-color: $dim-font-color;
-  color: $med-light-font-color;
+  color: $light-font-color;
   width: 100%;
 
   &:focus {
@@ -14,7 +14,7 @@
 }
 .sheet-cp-2020 {
   label {
-    color: $base-font-color;
+    color: $dim-font-color;
     margin: 0;
     padding: 0.7em 1em .3em 0;
   }
@@ -27,8 +27,26 @@
     }
   }
 
+  select {
+    @extend %text-field;
+    option {
+      color: $black;
+    }
+  }
+
   textarea {
     @extend %text-field;
     box-sizing: border-box;
+  }
+
+  &__box {
+    input,
+    label,
+    select,
+    textarea {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

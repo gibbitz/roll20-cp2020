@@ -1,0 +1,24 @@
+mixin box()
+  span(class=`cp-2020__box${attributes.class ? ' ' + attributes.class : ''}`)
+    span.cp-2020__box--inner
+      block
+
+mixin attrField(attrName, attrLabel)
+  +box(class=attributes.class)
+    label(for=attrName)
+      input(id=attrName name=`attr_${attrName}` type=attributes.type)
+      if block
+        block
+      else
+        span= attrLabel
+
+mixin attrSelect(attrName, attrOptions, attrLabel)
+  +box
+    label(for=attrName class=attributes.class)
+      select(id=attrName name=`attr_${attrName}`)
+        each attrOption in attrOptions
+          option(value=attrOption.value default=attrOption.default)= attrOption.label
+      if block
+        block
+      else
+        span= attrLabel

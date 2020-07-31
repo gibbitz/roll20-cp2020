@@ -1,0 +1,75 @@
+%cornered {
+  border: 1px solid;
+  content: '';
+  display: block;
+  filter: blur(0.7px);
+  height: $box-spacing;
+  position: absolute;
+  width: $box-spacing;
+  z-index: 0;
+}
+
+.sheet-cp-2020{
+  &__box {
+    background-color: rgba($dark-reverse-font-color, 0);
+    border: 1px solid $dim-stroke;
+    box-sizing: border-box;
+    display: inline-block;
+    height: calc(100% - 9px);
+    margin: 0 $box-spacing $box-spacing 0;
+    padding: $box-spacing;
+    position: relative;
+    transition: background-color .6s ease-out;
+    width: 100%;
+    z-index: 0;
+
+    &:hover,
+    &:focus-within {
+      background-color: rgba($dark-reverse-font-color, 0.95);
+    }
+
+    &::after {
+      @extend %cornered;
+      border-left: 0;
+      border-top: 0;
+      bottom: -1px;
+      right: -1px;
+    }
+
+    &::before {
+      @extend %cornered;
+      border-bottom: 0;
+      border-right: 0;
+      left: -1px;
+      top: -1px;
+    }
+
+    &--inner{
+      &::before {
+        @extend %cornered;
+        border-bottom: 0;
+        border-left: 0;
+        right: -1px;
+        top: -1px;
+      }
+
+      &::after {
+        @extend %cornered;
+        border-right: 0;
+        border-top: 0;
+        bottom: -1px;
+        left: -1px;
+      }
+    }
+  }
+
+  &__field {
+    &--third {
+      width: calc(33% - 7px);
+    }
+
+    &--two-thirds {
+      width: calc(66% - 7px);
+    }
+  }
+}

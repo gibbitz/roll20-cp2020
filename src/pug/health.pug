@@ -16,7 +16,7 @@ div.cp-2020__health
 
       div.cp-2020__health__bordered-input
         label(for='attr_BTM' title='Body Type Modifier') BTM
-        input(type='text' name='attr_BTM')
+        input(type='text' name='attr_BTM' disabled='true' value='0-floor((@{BODY}-2)/2)')
     input(name='attr_Stun_Level' type='hidden')
     input(name='attr_Wound_Level' type='hidden')
     div.cp-2020__health__wounds
@@ -29,16 +29,16 @@ div.cp-2020__health
             - var woundValue = `${woundIndex}.${subLevel}`
             - var stunId = `stun_${woundIndex}_${subLevel}`
             div.cp-2020__wound-input
-              input(class=stunId id=stunId type='radio' name=`attr_Stun_Indicator` value=woundValue)
-              span.cp-2020__wound__stun-icon
-              input(class=woundId id=woundId type='radio' name=`attr_Wound_Indicator` value=woundValue)
-              span.cp-2020__wound__wound-icon
-            // label(class=woundId for=woundId)
-            // label(class=stunId for=stunId)
+              label(for='attr_Damage_Indicator')
+              input(name='attr_Damage_Indicator' id='attr_Damage_Indicator' type='checkbox' value=woundValue)
+              // input(class=stunId id=stunId type='radio' name=`attr_Stun_Indicator` value=woundValue)
+              span(class=['cp-2020__wound__stun-icon', stunId])
+              // input(class=woundId id=woundId type='radio' name=`attr_Wound_Indicator` value=woundValue)
+              span(class=['cp-2020__wound__wound-icon', woundId])
 
 script(type='text/worker').
   var damageLevels = "#{woundLevels}".split(',');
-  changeEvents = ['change:Wound_Indicator', 'change:Stun_Indicator', 'sheet:opened'].join(' ').toLowerCase();
+  changeEvents = ['change:Damage_Indicator', 'sheet:opened'].join(' ').toLowerCase();
   function makeFloatOrZero(string) {
     return string ? parseFloat(string) : 0;
   }
@@ -46,24 +46,42 @@ script(type='text/worker').
     return string ? parseInt(string, 10) : 0;
   }
   on(changeEvents, function(eventInfo) {
-    getAttrs(['Wound_Level', 'Stun_Level', 'Wound_Indicator', 'Stun_Indicator', 'BODY_Mod', 'BODY_Base'], function(attrs) {
+    getAttrs(['Wound_Level', 'Stun_Level', 'Damage_Indicator', 'BODY_Mod', 'BODY_Base'], function(attrs) {
+
+      console.log(eventInfo)
+      var damageIndAttr = makeFloatOrZero(
+        eventInfo.newValue === '0'
+          ? eventInfo.previousValue
+          : eventInfo.newValue
+      );
+
       var woundLevelAttr = makeFloatOrZero(attrs.Wound_Level);
-      var woundIndAttr = makeFloatOrZero(attrs.Wound_Indicator);
+      //- var damageIndAttr = makeFloatOrZero(attrs.Damage_Indicator);
       var stunLevelAttr = makeFloatOrZero(attrs.Stun_Level);
       var stunIndAttr = makeFloatOrZero(attrs.Stun_Indicator);
       var bodyAttr = makeIntOrZero(attrs.BODY_Mod + attrs.BODY_Base);
-      var damageIndex = Math.floor(Math.max(woundIndAttr, stunIndAttr));
+      var stunValue = stunLevelAttr;
+      var woundValue = woundLevelAttr;
+
+      if (damageIndAttr <= woundLevelAttr) {
+        stunValue = woundValue = damageIndAttr;
+      } else if (damageIndAttr > woundLevelAttr && damageIndAttr <= stunLevelAttr) {
+        woundValue = damageIndAttr;
+      } else if (damageIndAttr <= stunLevelAttr || damageIndAttr > stunLevelAttr) {
+        stunValue = damageIndAttr;
+      }
+      var damageIndex = Math.max(stunValue, woundValue);
       var isSerious = damageIndex === 1;
       var isCritical = damageIndex === 2;
       var isMortal = damageIndex >= 3;
-      var stunValue = Math.max(woundIndAttr, stunIndAttr)
-      var woundValue = woundIndAttr;
       var stunIndex = Math.floor(stunValue);
       var woundIndex = Math.floor(woundValue);
       var status = damageLevels[woundIndex]
       var mortalIndex = status.indexOf('MORTAL ') >=0
         ? parseInt(status.replace('MORTAL ', ''), 10)
         : 0;
+
+
       console.log({
         Stun_Level: stunValue,
         Wound_Level: woundValue,

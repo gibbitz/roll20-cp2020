@@ -60,6 +60,12 @@
   }
   label {
     @extend %title-font;
-    font-size: 1em;
+    font-size: 0.9em;
+  }
+  input,
+  select,
+  textarea {
+    @extend %title-font;
+    font-size: 1.2em;
   }
 }

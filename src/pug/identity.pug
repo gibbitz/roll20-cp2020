@@ -1,6 +1,12 @@
-div.cp-2020__identity
-  label(for='attr_Handle') Handle
-  input(type='text' name='attr_Handle')
-  label(for='attr_Role') Role
-  input(type='text' name='attr_Role')
+include _mixins
 
+div.cp-2020__identity
+  h3 IDENTITY
+  +attrField('Handle', 'handle')(type='text')
+  +attrField('Name', 'given name')(type='text')
+  div.cp-2020__layout--row-1-2
+    +attrField('Age', 'age')(type='number')
+    +attrField('Role', 'role')(type='text')
+  +attrSelect('Gender', [{value:'m', label:'Male'}, {value:'f', label:'Female'}, {value:'a', label:'Androgynous'}], 'gender')(type='text')
+  +attrField('Nationality', 'ethnicity')(type='text')
+  +attrField('Language', 'language')(type='text')

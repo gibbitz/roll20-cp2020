@@ -1,3 +1,7 @@
+%character-column {
+  flex: 0 1 auto;
+}
+
 .sheet-cp-2020{
   $base: &;
   &__character {
@@ -6,20 +10,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    // &_column {
     > .sheet-cp-2020__character__column {
-    //   display: flex;
-      flex: 0 1 auto;
-
-      &:first-child {
-        max-width: 40%;
+      &--identity {
+        @extend %character-column;
+        max-width: 25%;
       }
 
-      &:last-child {
-        max-width: 55%;
+      &--vitals {
+        @extend %character-column;
+        max-width: 72%;
       }
-    //   flex-direction: column;
-    //   justify-content: space-between;
+
+      &--tabs {
+        @extend %character-column;
+        width: 100%;
+      }
     }
   }
 }

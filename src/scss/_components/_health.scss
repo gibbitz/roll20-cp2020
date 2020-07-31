@@ -13,7 +13,7 @@
 }
 
 %stunned {
-  + span.sheet-cp-2020__wound__stun-icon::before {
+  &::before {
     @extend %full-block;
     @extend %anchored;
     border: calc(.5em - 2px) solid rgba($level-1, 0.5);
@@ -24,7 +24,7 @@
 }
 
 %wounded {
-  + span.sheet-cp-2020__wound__wound-icon::before {
+  &::before {
     @extend %full-block;
     @extend %anchored;
     background: rgba($level-1, 0.5);
@@ -140,7 +140,7 @@
     @for $subLevel from 1 through 4 {
       [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$base}__wound-input {
         @for $subLevelIterator from 1 through $subLevel {
-          input.sheet-wound_#{$index}_#{$subLevelIterator} {
+          .sheet-wound_#{$index}_#{$subLevelIterator} {
             @extend %wounded;
           }
         }
@@ -148,7 +148,7 @@
 
       [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$base}__wound-input {
         @for $subLevelIterator from 1 through $subLevel {
-          input.sheet-stun_#{$index}_#{$subLevelIterator} {
+          .sheet-stun_#{$index}_#{$subLevelIterator} {
             @extend %stunned;
           }
         }
@@ -156,13 +156,13 @@
 
       @each $slotLevel in $groupSelectors {
         [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$slotLevel} {
-          input {
+          .sheet-cp-2020__wound__wound-icon {
             @extend %wounded;
           }
         }
 
         [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$slotLevel} {
-          input {
+          .sheet-cp-2020__wound__stun-icon {
             @extend %stunned;
           }
         }
