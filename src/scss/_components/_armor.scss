@@ -2,7 +2,20 @@
   $base: &;
 
   &__armor {
+    &__figure {
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 20em;
+      width: 100%;
+    }
 
+    [value='f'] + &__figure {
+      background-image: url($assets-female-silhouette)
+    }
+
+    [value='m'] + &__figure {
+      background-image: url($assets-male-silhouette)
+    }
   }
 
   &__armor-table{
