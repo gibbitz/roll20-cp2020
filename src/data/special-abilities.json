@@ -1,0 +1,348 @@
+[
+    {
+        "skillName": "ACPA Combat Sense",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "PA Trooper",
+        "description": "This skill is a variety of Vehicle Zen. While in ACPA, a PA trooper uses ACPA Sense as a modifier for Awareness/Notice and Initiative rolls, as well as using it like a normal REF skill for maneuvering and moving in the armor. It also counts as Dodge & Escape for PA troopers in their armor! It's practically useless outside of ACPA; a PA trooper only gets 1/2 (round down) this skill to use as Combat Sense when not in ACPA. Don't go thinking you're a solo.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Administrator Resources",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Administrator",
+        "description": "Like Corps, the Administrator special ability is Resources, only in this case, the skill represents the resources made available to you by the government for which you work. Even a small country has access to materials and funds far beyond most private groups. Admin resources is also your ability to call in government help as long as national interests are at stake. Abuse it and lose it.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Aircraft Sense",
+        "baseAttribute": "INT",
+        "modifier": "Awareness/Notice",
+        "ipMultiplier": "3",
+        "specialAbility": "Aerojock",
+        "description": "This is a variety of Vehicle Zen. A pilot may use up to half his Aircraft Sense (rounded down) as skill modifier for aerial maneuvers. The full skill level is added to Awareness/Notice and Initiative rolls while in aircraft. It only counts as half (round down) when making Awareness/Notice and Initiative rolls out of aircraft.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Authority",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Cop",
+        "description": "The ability to intimidate or control others through your position as a lawman. This attribute represents the Cop's ability to call on the forces of the Law and Government to get what he wants. Cops can use Authority to question suspects, arrest wrongdoers, and defend innocents. Backed by the power of Authority, a cop can arrest, detain, confiscate and enter nearly anywhere, as long as he has the proper arrest or search warrants to back his play. However, authority is only as good as the guy holding the badge-if the cop appears uncertain of his Authority, there's a good chance he'll get nailed by the people he's trying to confront. The higher your Authority, the more able you are to face down criminals, particularly high level mobsters and officials. Authority is applied to your Cool stat.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Aquatic Sense",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Divemaster/Miner",
+        "description": "The ability to be keenly observant, and to be aware of things that characters new to the underwater world might miss. While underwater, Aquatic Sense translates to a bonus equal to the skill level in Awareness/Notice, and half the skill level in the form of an Initiative modifier. For Example, a +4 in Aquatic Sense translates into a +4 to underwater Awareness/Notice and a +2 to underwater Initiative.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Brotherhood",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Highrider/Pilot",
+        "description": "The fraternity of space pilots is a tightly knit fraternity of tough, exceptionally skilled people. Space pilots can always call upon another pilot buddy to help them out, much as nomads can call upon members and resources of the Family.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Chameleon",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Spy",
+        "description": "Chameleon is the special ability of the spy. Chameleon gives the spy the ability to assume two possible cover roles to an extent that will confound almost all inspection. Chameleon is more than the disguise skill in that it allows the spy to emulate the special abilities of his cover roles at a reduced level. The spy may pick two cover abilities best suited to his theater of operations and mission requirements. The level of the cover identity special abilities is equal to the spy's Chameleon skill divided by two for the primary cover and divided by three for the secondary cover. Round up in both instances. Example: A spy must assume the identity of a netrunner, backup role of techie, and he has Chameleon 7. The spy then has Interface 4 (7/2 = 3.5, rounded up to 4) and Jury Rig 3 (7/3 = 2.3, rounded up to 3). This system limits the spy's abilities in his cover role special abilities, but allows him enough latitude to operate without detection for long periods of time. When a spy achieves Chameleon 10, he or she may pick a third cover identity and role. Like the second cover special ability, the third is at Chameleon divided by three. When a third cover role is gained, the spy should construct a history for the cover. While Chameleon is primarily used to represent training in specific roles, it also means an ability to blend into any situation or culture easily. This is more than just a Disguise skill, use it with Persuasion while trying to seem inconspicuous or with Fast Talk to convince someone you belong in that zone, on that vehicle, in that office, etc. It also represents ability at assuming another persona when acting as a mole with artificial behavior, mannerisms and so on. Thus it acts like a Social or Performance skill as well. Chipware can certainly make this job easier, but can be exposed rather easily. This special ability may be all that stands between you and a firing squad.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Charismatic Leadership",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Cultist|Rockerboy|Shaman",
+        "description": "This skill allows the Rocker to sway crowds equal to his level squared times 200. This ability (added to your Cool stat) allows the Rockerboy to control, incite and charm large number of people through his or her performance skills. When under the Rocker's control, this group can easily be persuaded to act on his suggestions; for example, a Rocker could convince a concert crowd to riot in the streets or attack a heavily fortified police line. Charismatic Leadership will only work with groups of ten or more people as it is primarily a mob leadership ability. The higher your charismatic Leadership, the larger a crowd you can control and the more direct and complex the instructions you can get them to follow. For example, a Level +3 Leadership could incite a nightclub crowd to get rowdy. A Level +5 or +6 could provoke a concert crowd of thousands to trash a neighborhood, if the area wasn't too far from the hall. At Level +9, and higher, you have the same sort of mesmeric ability as an Adolph Hitler-you can raise armies, start movements, and destroy nations.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Combat Sense",
+        "baseAttribute": "INT",
+        "modifier": "Awareness/Notice",
+        "ipMultiplier": "1",
+        "specialAbility": "Bodyguard|Bounty Hunter|Corp Operative|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Eurosolo|Ex-Cybersoldier|Shinobi|Solo|Street Samurai|Tatsujin",
+        "description": "This ability is based on the Solo's constant training and professionalism. Combat Sense allows the Solo to perceive danger, notice traps, and have an almost unearthly ability to avoid harm. Your Combat Sense gives you a bonus on both your Awareness skill and your Initiative equal to your level in the Combat Sense skill.\r\n",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Combat Sneak",
+        "baseAttribute": "INT",
+        "modifier": "Awareness/Notice|Stealth|Hide/Evade",
+        "ipMultiplier": "1",
+        "specialAbility": "Assassin|Covert Specialist",
+        "description": "A hybridization of a Solo's Combat Sense and a Prowler's Sneak: It adds 1/2 its level to Stealth, Hide/Evade, Awareness and Initiative.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Con",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Con Man",
+        "description": "The ability to separate a fool from his money, convince a mark to buy the drinks for hours, or goad someone into buying worthless trinkets. Con can be countered by Streetwise, since the more familiarity one has with the Streets, the more likely one is to recognize a scam when he sees one. For this reason, grifters prefer to choose out-of-towners (bennies) as their marks because a smooth operator (a gato) has a good chance of smelling a sting and turning on the hustler. Con Men, more than any other type of street operator, use a lot of slang. Another aspect of Con is that it is more than just a Persuasion/Lie skill. It is used to create a real-time illusion that draws the mark in, and if successful, should end with the mark thanking the con man for taking his money. This special ability is used only for the actual execution of the sting, the planning of profitable scams that will actually work is up to the character's player.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Counsel",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Doctor|Spiritual Leader",
+        "description": "Counsel is the ability to argue, speak, and influence that is similar to a rocker's ability. Counsel may be viewed as a cross between Credibility and Charismatic Leadership, especially because a shaman or doctor's Counsel is only as good as their reputation. A shaman who fails the greater goals of the pack, tribe or nation they serve loses the ability to lead. The advice of a doctor who fails the needs of their patients goes unheeded. Outside the nomad culture, this ability applies at half level, reflecting society's general distrust of nomads. Counsel also incorporates the abilities of Kith either in the Nomad community or the medical community.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Credibility",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Action Reporter|Celebrity Reporter|Freelancer|Investigative Reporter|Media|On-Air Star|Police Beat Reporter|Social Reporter|Tabloid-Monger|The Spin Doctor|War Correspondent",
+        "description": "This is the ability to be believed: by your viewers, by the police, by important and powerful people. This is critical to getting your story heard and acted upon, as well as convincing people to tell you things, give you information, or get you into where the story is really happening. The higher your credibility, the more people you can convince, and the easier it is to convince high level authorities of the truth of your information. With a level +3 Credibility, you can convince most people of minor scandals. With a level +5 or +6, you can convince local officials of military atrocities, undercover dealings and other front page stuff. At level +9, you can successfully expose a scandal of Watergate proportions, or convince the President of the EuroMarket Finance Board that aliens are secretly influencing world leaders. Credibility applies to your INT stat.\r\n",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Family",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Aquatic Nomad|Nomad|Pirate",
+        "description": "This is the ability to call upon the resources and help of any of the members of the Nomad's large, extended tribal family. This can be in the form of weapons, cash, information, or a small army of relatives. The threat of a Nomad family's vengeance may in itself stop harm to the Nomad. The higher your family ability, the more important you are to the Family and the more help you can call upon. With a Family status of +2, you might be able to get several of the Pack to help you wreck a town, for example. With a status of +7 or +8, you are able to make major Pack decisions and lead troops. At +10, you may be the Leader of your Pack. Family is applied to your intelligence stat.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Gang Rank",
+        "baseAttribute": "INT|CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Streetpunk",
+        "description": "This ability is like Family for Nomads, indicating the punk's level of authority, resources, respect, and experience with the gang. It can also be used as a sort of Expert skill in regards to gang politics, trivia, colors, culture, and areas of operations. It can also be used to call up help rather like a Nomad, access gang resources kind of like a Corporate, works deals like a low level Fixer, and Intimidate in the streets, rather like a Cop.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Interface",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Covert Tech Netrunner Ops|Netrunner|Rogue Hunter",
+        "description": "This skill reflects the Netrunner's ability to manipulate Interface programs, and is the Skill used when operating Menu functions such as Locate Remote, Run Software, Control Remote, Downlink, Load, Create and Delete. Other players can enter the Net, but cannot use the Menu. Interface is based on the INT Stat. Note for Cyberpunk\r\nplayers- you may elect to swap your original INT and REF stats for characters generated with the old rule.\r\n",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Jury Rig",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Covert Tech Remote Ops|Techie",
+        "description": "This general repair skill allows the Techie to temporarily repair or alter anything for 106 turns per level of skill. This is not a permanent repair; after the elapsed time, the jury rig will break down.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Medical Tech",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Combat Medic|Marine Biotech|Med Tech|Pharmacist/Bioware Researcher",
+        "description": "This is the skill used to perform major surgery and medical repairs. For more descriptions of this skill in action, see Trauma Team, pg. 116.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Reasoning",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Attorney/Judge|Lawyer",
+        "description": "This is the application of legal knowledge before the bench. With reasoning, the lawyer attempts to prove his theory by logic. This theory may have no bearing on the guilt or innocence of the defendant. The skill can be used as an opposing skill check between two lawyers with the judge acting as referee. It can also be used in conjunction with Persuade and Notice in order to influence judges and spot flaws in the opponent's case.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Reconnaissance",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Outrider|Pathfinder",
+        "description": "Along with providing the Kith function, it also represents the ability to notice danger and the ability to avoid it once it is found. Reconnaissance adds its level to Awareness and Hide/Evade in situations when the nomad is sneaking around and reconnoitering. Standing in a bar doesn't apply, but watching an enemy encampment from a wooded hilltop does. Engaging an enemy in combat doesn't apply, but fleeing from them will.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Research",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Private Investigator",
+        "description": "This is the amount of information resources the private investigator has access to, and his or her ability to use it. Be it snitches, friends, or computer files, the higher the level, the more the PI has at his fingertips. Add research to streetwise or library search skill checks in investigative situations.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Resources",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Corp",
+        "description": "This represents the Corporate's ability to command corporation resources. It is used as a persuasion skill, based on the scale of resources requested. This could include bodyguards, weapons, vehicles, buildings, money, etc. Obviously, the more powerful the Corporate, the more he can call upon at any one time. Your level of Resources determines exactly how much you can request from the Corporation without overreaching yourself. A Resource ability of +2 might get you access to a Company car. An ability of +6 might allow you to use a Company jet or hire a Solo team from the Corporate Security Division. A Resource of +9 would allow you access to almost all levels of the Corporation, as well as the ability to requisition almost any Company resource. Your Resource ability is applied to your INT stat.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Salvage",
+        "baseAttribute": "INT|TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Salver",
+        "description": "This encompasses the ability to spot a piece of valuable space-junk in the first place and to know how to harness it without crippling your own craft. It also functions as the Techie's ability of Jury Rig at half level.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Scrounge",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Scavenger",
+        "description": "This skill represents the knowledge of where to find salvageable materials. The higher the scrounge, the easier it is to locate unusual and valuable parts. At +2, you can locate such common junk as hubcaps, sheet metal, shell casings, and recyclable garbage. At +5, you can turn up old computer parts, scrapped appliances, and other handy stuff. At +9, you can find cyberware components, half full containers of chemicals, and used military equipment. The trick with this skill is that it only gives you knowledge of where to find these things; it doesn't tell you how you can get your grubby mitts on them.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Sneak",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Prowler",
+        "description": "This acts as a counter-balance to the solo's Combat Sense. Since solos have their combat sense added to their awareness skills, it seems nearly impossible to escape a solo's notice. Prowlers live to confound the observant, including solos, since their special ability adds to their Stealth and Hide/Evade. This reflects the Prowler's talent for moving silently, blending into the shadows, and generally avoiding the notice of security personnel.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Space Combat",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Space Marine",
+        "description": "This skill is added to both Zero Gee Combat and Zero Gee Maneuver when involved in space-based combats and reflects the highly specialized training these individuals have undergone to become adept at combat in space.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Spy Craft",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Spook",
+        "description": "This special ability represents the spook's skill at trashing (gaining information on a person by going through their garbage), bugging (planting bugs, tracers, phone taps, cameras, etc), surveillance work (observing a person without their knowledge), and technical knowledge of spy gear, including micro-cameras, bugs, and such equipment.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Streetdeal",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Credshark|Factor|Fence|Fixer|Information Broker|Loan Shark|Negotiator|Owner|Pimp|Pusher|Shoemaker|Sleaze|Smuggler|Sniffer|Talent Agent/Manager|Talent Scout|Trader",
+        "description": "This is the ability to deal with the underground information network. With Streetdeal, a Fixer can uncover rumors and information, locate missing persons or things, put gossip out on the Street, pick up clues and score big deals. The higher your Streetdeal ability, the more information you can gather about things happening around you, the more informants you have, and the more secretive the information you can dig up. A level +3 Streetdeal can get you contacts for weapons, tools, or minor illegal operations. At level +5, you can penetrate the secrets of all but the most powerful crime families. At level +9, you are the equivalent of a Mafia crimelord yourself, privy to every secret that's on the Street. Apply Streetdeal to your Cool stat.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Sub Tactics",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Subjock",
+        "description": "This represents your skill in sub piloting as well as the knowledge of the physical capabilities of your craft. More importantly, it is an understanding of cat and mouse tactics used by submersibles seeking each other in the deep by sonar and gut instinct. The skill level of Sub Tacticsis applied with your INT when in sub combat, and half of the skill level is added to any Initiative rolls made while in command of a sub.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Trace",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Reapers",
+        "description": "The ability to find people or the merchandise they are after. Unlike streetdeal or streetwise, it deals with finding a specific person or item as quietly and quickly as possible, using both human and computer information. Generally, the difficulty of finding \"merchandise\" is of only average difficulty, but when dealing with particularly crafty opponents, the difficulty can reach near impossible. Checks are made daily.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Vamp",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Dancer/Prostitute",
+        "description": "Much like Con, this special ability represents the skill at extracting as much money from a customer as possible. With prostitutes, it is the ability to entice a customer to pay for a room, then pay for sex.For strippers and dancers, it is the ability to get club patrons to buy drinks, food and gifts in return for a little friendly company.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Vehicle Zen",
+        "baseAttribute": "INT",
+        "modifier": "Awareness/Notice",
+        "ipMultiplier": "3",
+        "specialAbility": "Panzerboy|Runner",
+        "description": "Professional vehicle drivers can achieve a state of altered consciousness while driving; it's long been known that racers experience a significant rise in visual response and a spooky drop in reaction times. Driving the vehicle becomes instinctual. Vehicle Zen is a special skill that allows bonuses to vehicular activity. There are variants (see below), but the basic advantages are enhancedcontrol of ground vehicles and hovercraft (or aircraft or powered armors, as per variant — the driver may add half his Vehicle Zenskill, rounded down, to rolls for maneuvers and handling — and the addition offull Vehicle Zen skill to Awareness/Notice and Initiative rolls while in ground vehicles/hovercraft. When not driving said craft, a panzerboy is out of his element; Vehicle Zen only adds half skill level to Awareness/Notice and Initiative rolls in this circumstance.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Warpath",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Warrior",
+        "description": "This is a sort of combat sense based on the Nomad philosophy of combat, which focuses typically on either long range weapons or up front, in your face knuckle-dusting brawls. If you ever see a Nomad spraying the camp with an SMG during a battle, you're just as likely to see members of his own pack shoot him down dead right where he stands. Nomads dislike automatic weapons due to the insecurity of their camps. When an enemy eventually sneaks in amongst their tents, a hand gun or bolt action rifle or carbine provides far more safety for the children running around in terror. Warpath adds to Initiative and Awareness, just like Combat Sense for Solos. However, it's full level is added only against other Nomads. When facing others, Only half its level is added in, kind of like an ACPA Trooper's Power Armor Sense or ACPA Sense.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Workgang",
+        "baseAttribute": "EMP|CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "Workganger",
+        "description": "Much like pilots and nomads, workgangers can call upon the aid of their particular workgang. When you consider the fact that this could be as many as two hundred plus people, this skill carries a lot of weight",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Special Ability",
+        "skillGroup": ["ACPA Combat Sense", "Administrator Resources", "Aircraft Sense", "Authority", "Aquatic Sense", "Brotherhood", "Chameleon", "Charismatic Leadership", "Combat Sense", "Combat Sneak", "Con", "Counsel", "Credibility", "Family", "Gang Rank", "Interface", "Jury Rig", "Medical Tech", "Reasoning", "Reconnaissance", "Research", "Resources", "Salvage", "Scrounge", "Sneak", "Space Combat", "Spy Craft", "Streetdeal", "Sub Tactics", "Trace", "Vamp", "Vehicle Zen", "Warpath", "Workgang"],
+        "specialAbility": "British Combined Forces|Japanese SDF Officer|Marine Corps|U.S. or EDF Army|U.S. or EDF Navy|USAF/EDF Air Force",
+        "description": "Special Ability by Field for soldier or officer."
+    }
+]

@@ -1,0 +1,1482 @@
+[
+    {
+        "skillName": "Personal Grooming",
+        "baseAttribute": "ATT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This is the skill of knowing proper grooming, hair styling, etc., to maximize your physical attractiveness. Use of this skill allows players to increase their Attractiveness, and thus their chances of successful Relationships or Persuasions. A basically good looking person would be at +2. A fashion model might have a Personal Grooming of +5 or +6. At +8 or better, you could be a major fashion model, film star, or trendsetter. You are always \"together\". And you know it.\r\n",
+        "notes": "",
+        "career": "Bodyguard|Corporate|Dancer/Prostitute|Lawyer"
+    },
+    {
+        "skillName": "Wardrobe & Style",
+        "baseAttribute": "ATT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of knowing the right clothes to wear, when to wear them, and how to look cool even in a spacesuit. With a Wardrobe of +2 or better, you are good at choosing clothes off the rack. At +6, your friends ask you for wardrobe tips, and you never buy anything off the rack. At +8 or better, you are one of those rare people whose personal style influences major fashion trends.",
+        "notes": "",
+        "career": "Rockerboy|Corporate|Dancer/Prostitute|Eurosolo|Owner|Social Reporter|Street Samurai|Streetpunk|Celebrity Reporter"
+    },
+    {
+        "skillName": "Endurance",
+        "baseAttribute": "BODY",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This is the ability to withstand pain or hardship, particularly over long periods of time, by knowing the best ways to conserve strength and energy. Endurance Skill checks would be made whenever a character must continue to be active after a long period without food, sleep or water.",
+        "notes": "",
+        "career": "Nomad|Assassin|British Combined Forces|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Divemaster/Miner|Dancer/Prostitute|Ex-Cybersoldier|Marine Corps|Outrider|Pathfinder|U.S. or EDF Army|Warrior"
+    },
+    {
+        "skillName": "Strength Feat",
+        "baseAttribute": "BODY",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The user of this skill has practiced the art of bending bars, crushing objects, ripping phone books apart and other useful parlor tricks. At +2 you can crush cans, rip thin books in half, and bend thin rods. At +8, no phonebook is safe, you can bend thin rebar, and snap handcuffs. At +10, you can bend prison bars, rip up the Gutenberg Bible, and dent car fenders with one blow",
+        "notes": "",
+        "career": "Scavenger|Tatsujin|Workganger"
+    },
+    {
+        "skillName": "Swimming",
+        "baseAttribute": "BODY",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill is required to know how to swim (see Athletics for details).",
+        "notes": "",
+        "career": "British Combined Forces|Covert Specialist|Divemaster/Miner|Marine Corps|Pirate|Subjock|U.S. or EDF Navy"
+    },
+    {
+        "skillName": "Interrogation",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of drawing information from a subject and forcing his secrets into the open. An Interrogation of +2 or better will allow you to infallibly find out if your boyfriend is lying to you. At +5, you are a professional level interrogator--equivalent to a skilled detective grilling a suspect. Mike Wallace of 60 Minutes has an Interrogation of +9, allowing him to make even the most powerful people squirm.\r\n",
+        "notes": "",
+        "career": "Cop|Corp Operative|Information Broker|Loan Shark|Spy"
+    },
+    {
+        "skillName": "Intimidate",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of getting people to do what you want by force of personality or physical coercion. At +3, you can frighten almost any typical citizen, politician or low-level thug. At +6, you can intimidate Sylvester Stallone or any moderate \"tough guy\". At +9, you could intimidate Arnold Schwartzenegger.",
+        "notes": "",
+        "career": "Fixer|Black Marketeer|Bodyguard|Bookie|Bounty Hunter|Credshark|Cultist|Fence|Loan Shark|Owner|Pimp|Police Beat Reporter|Private Investigator|Pusher|Sleaze|Sniffer|Street Samurai|Streetpunk|Talent Agent/Manager|Talent Scout|Trader"
+    },
+    {
+        "skillName": "Streetwise",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of the \"seamy\" side of life-where to get illegal and contraband things, how to talk to the criminal element, and avoiding bad situations in bad neighborhoods. With a Streetwise of +2 or better, you can get \"hot\" items, score drugs, etc. A Streetwise of +5 would allow you to arrange a murder contract, know a few mobsters who might owe you favors, and be able to call on muscle when you need it. At +8 or better, you could become a major crimelord yourself and skip the middlemen.\r\nEmpathy Skills Human Perception: The skill of detecting lies, evasions, moods and other emotional clues from others. At +2, you can usually tell when you're not getting the whole truth. At +6, you can detect subtle evasions and mood swings. At +8, you can not only detect subtle emotional clues, but can usually tell what the subject is hiding in a general way.\r\n",
+        "notes": "",
+        "career": "Administrator|Bounty Hunter|Celebrity Reporter|Con Man|Cop|Dancer/Prostitute|Freelancer|Investigative Reporter|Media|Police Beat Reporter|Private Investigator|Reapers|Rockerboy|Runner|Scavenger|Social Reporter|Spook|Street Samurai|Streetpunk|Tabloid-Monger"
+    },
+    {
+        "skillName": "Oratory",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of public speaking. At +2, you can wing high school speech contests. At +6, you can be paid to speak in public. At +10, you are capable of delivering a speech to rival Kennedy's \"Ich Bin Ein Berliner\" or Lincoln's Gettysburg Address. Rockers with an Oratory Skill of +6 or better can add +1 when using their Charismatic Leadership ability.",
+        "notes": "",
+        "career": "Cultist|Doctor|Lawyer|Negotiator|Spiritual Leader"
+    },
+    {
+        "skillName": "Resist Torture/Drugs",
+        "baseAttribute": "CL",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Characters with this skill are especially toughened against interrogation, torture and mind control drugs. A successful use of this skill will automatically increase the difficulty of any interrogation attempt made by another party by one level.",
+        "notes": "",
+        "career": "Black Marketeer|Corp Operative|Smuggler|Spy"
+    },
+    {
+        "skillName": "Animal Handler",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill is used when a character deals with the care and/or training of animals; see Chromebook3 for more.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Culture",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This specific knowledge skill provides the user with basic knowledge concerning the culture of a foreign country and its people, Without this EMP based skill, a character will have a +2 on other EMP skill rolls when dealing with a NPC from another country.",
+        "notes": "",
+        "career": "On-Air Star|Talent Scout|The Spin Doctor"
+    },
+    {
+        "skillName": "Human Perception",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of detecting lies, evasions, moods and other emotional clues from others. At +2, you can usually tell when you're not getting the whole truth. At +6, you can detect subtle evasions and mood swings. At +8, you can not only detect subtle emotional clues, but can usually tell what the subject is hiding in a general way.",
+        "notes": "",
+        "career": "Action Reporter|Attorney/Judge|Bodyguard|Bookie|Combat Medic|Con Man|Cop|Corp Operative|Corporate|Divemaster/Miner|Doctor|Factor|Freelancer|Information Broker|Investigative Reporter|Lawyer|Loan Shark|Med Tech|Media|Pharmacist/Bioware Researcher|Negotiator|On-Air Star|Owner|Police Beat Reporter|Private Investigator|Shaman|Sniffer|Spiritual Leader|Spy|Talent Agent/Manager|Tatsujin|Trader|War Correspondent"
+    },
+    {
+        "skillName": "Social",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to deal with social situations, like knowing the right fork to use or when not to tell the joke about the farmer's daughter and the travelling cyberware salesman. A Social Skill of +2 or better will allow you to get by at any fine restaurant or social function. At +5, you can lunch with the President with aplomb. No social situation will faze you, no matter what. At +8 or above, you can lecture Emily Post on what's proper.",
+        "notes": "",
+        "career": "Administrator|Attorney/Judge|Bodyguard|Celebrity Reporter|Corporate|Factor|Freelancer|Media|Negotiator|On-Air Star|Owner|Social Reporter|Talent Agent/Manager|Talent Scout|Tatsujin|The Spin Doctor"
+    },
+    {
+        "skillName": "Interview",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of eliciting interesting annecdotes from an interview subject. This information will be of a more nonspecific and personal nature rather than specific knowledge (distinguishing this skill from the skill of Interrogation, where the user is trying to extract exact information. Example: Barbara Walters interviews, Mike Wallace interrogates). At+3 or better, the subject will usually tell you only information relating to what he/she is well known for. At +6 or better, the subject will tell you anecdotes about the past, pontificate about favorite interests and philosophies, about favorite interests and philosophies, etc. At +9 or better, he/she tells you everything-including personal information about their illegitimate son, the time they stole a cookie at age 4, and the fact that no one ever loved them.",
+        "notes": "",
+        "career": "Action Reporter|Celebrity Reporter|Credshark|Factor|Freelancer|Information Broker|Investigative Reporter|Lawyer|Media|On-Air Star|Owner|Police Beat Reporter|Private Investigator|Social Reporter|Tabloid-Monger|Talent Agent/Manager|Talent Scout|Trader|War Correspondent"
+    },
+    {
+        "skillName": "Perform",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of trained acting, singing, etc. A trained performer of +4 or greater can successfully sing for payment at weddings or small clubs. Performers +6 or greater will be considered to be of professional caliber, and may have lucrative contracts and fans. Performers of +9 or greater are of \"star\" caliber, have a large number of fans, and may be recognized on the street.",
+        "notes": "",
+        "career": "Cultist|Dancer/Prostitute|On-Air Star|Rockerboy|Shaman|Spiritual Leader|Tabloid-Monger|The Spin Doctor"
+    },
+    {
+        "skillName": "Seduction",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of forming and maintaining romantic relationships (this includes your abilities as a lover). This skill may be used to determine whether or not players can form relationships with other non-player characters and the intensity of these relationships. In certain cases, Referees may want to average this skill with a player's Attractiveness to get a more realistic outcome.",
+        "notes": "",
+        "career": "Con Man|Dancer/Prostitute|Pimp|Rockerboy"
+    },
+    {
+        "skillName": "Persuasion & Fast Talk",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to talk others into doing what you want. This may be used individually or on large groups. At +3, you can win most debates or convince your girlfriend that the blonde you were with was your sister. At +5, you are a smooth talker of professional caliber. Ronald Reagan has a Persuasion of +7. Hitler had a Persuasion of +9.",
+        "notes": "",
+        "career": "Action Reporter|Administrator|Attorney/Judge|Black Marketeer|Bookie|Celebrity Reporter|Con Man|Corporate|Cultist|Doctor|Factor|Fence|Fixer|Freelancer|Information Broker|Investigative Reporter|Lawyer|Media|Negotiator|Owner|Pimp|Police Beat Reporter|Private Investigator|Pusher|Reapers|Rockerboy|Shaman|Sleaze|Smuggler|Sniffer|Social Reporter|Spiritual Leader|Street Samurai|Talent Scout|The Spin Doctor|Trader|War Correspondent"
+    },
+    {
+        "skillName": "Leadership",
+        "baseAttribute": "EMP",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of leading and convincing people to follow you. A leader with a skill of +2 can manage a small office successfully and be respected for it. A leader with a skill of +4 or better can lead a small band of troops into battle and not get backshot. A leader with a skill of +7 or better can lead the entire Gamelon Empire into battle and look good doing it. James Kirk of Star Trek has a Leadership of +11, but you never will.\r\n",
+        "notes": "",
+        "career": "Cultist|Divemaster/Miner|Smuggler"
+    },
+    {
+        "skillName": "Accounting",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": "Bookie|Credshark|Factor|Fence|Japanese SDF Officer|Loan Shark|Owner|Shoemaker|Talent Agent/Manager"
+    },
+    {
+        "skillName": "African",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Bantu, Fante, Ashanti, Kongo, Zulu, Swahili, Blackfolk",
+        "career": ""
+    },
+    {
+        "skillName": "Anthropology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of human cultures, habits and customs. Unlike Streetwise (which covers only the cultures and customs of the Street), or Social(which covers only what you should do in a given situation), Anthropology covers general customs and background of a culture. For example, with Streetwise, you know what alleys to avoid and what gangs are dangerous. With Social, you know the proper forms of address for a high ranking Japanese zaibatsuhead. With Anthropology, you know that the customs of a N'Tanga tribesman require that a young man kill a lion in order to be accepted as an adult male.",
+        "notes": "",
+        "career": "Shaman"
+    },
+    {
+        "skillName": "Area Knowledge",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "description": "In a world this messed up, knowing what's going on anywhere is a valuable skill. With this skill you have the low-down on a given area no bigger than a small nation orlarge city or city-state. You'll know the politics and recent history well enough to recognize things that the average personis blind to. At +2, you have a basic background on the area. At +4, you have fairly deep knowledge of the people and the history. At +7, you have studied or lived in the area and know it intimately. Patterns or disturbances in the area become apparent quickly. At +9, you are so tuned into the pulse of the place that any change is immediately noticeable. That’s the kind of thing that can keep you alive, effendi.",
+        "notes": "",
+        "career": "Administrator"
+    },
+    {
+        "skillName": "Astrogation",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "description": "This skill allows a character to calculate a spacecraft course using computers, course tables and navigation beacons (Difficult task). Without these navigation aids the difficulty of this task increases to Very Difficult.",
+        "notes": "",
+        "career": "Highrider/Pilot|Salver"
+    },
+    {
+        "skillName": "Awareness/Notice",
+        "baseAttribute": "INT",
+        "modifier": "Combat Sense",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": " This is the equivalent of a \"trained observer\" skill, allowing characters to notice or be aware of clues, shadowers and other events. With an Awareness of +2 you will usually spot small pieces of paper with notes on them, doors left ajar, and obvious expressions of lying or dislike. An Awareness of +5 or better allows you to spot fairly well hidden clues, notice small changes in expression, and fairly sophisticated attempts to \"shadow\" you. With an Awareness of +8 or greater, you routinely perform the sorts of deductive reasoning seen in the average TV cop show (\"The murderer was left handed because this knife has a specialized handle\"). Sherlock Holmes has a +10 Awareness. Players without this skill may only use their Intelligence Stat.",
+        "notes": "",
+        "career": "Action Reporter|Administrator|Aerojock|Aquatic Nomad|Assassin|Attorney/Judge|Black Marketeer|Bodyguard|Bookie|Bounty Hunter|British Combined Forces|Celebrity Reporter|Combat Medic|Con Man|Cop|Corp Operative|Corporate|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Credshark|Cultist|Dancer/Prostitute|Divemaster/Miner|Doctor|Eurosolo|Ex-Cybersoldier|Factor|Fence|Fixer|Freelancer|Highrider/Pilot|Information Broker|Investigative Reporter|Japanese SDF Officer|Lawyer|Loan Shark|Marine Biotech|Marine Corps|Med Tech|Media|Pharmacist/Bioware Researcher|Negotiator|Netrunner|Nomad|On-Air Star|Outrider|Owner|PA Trooper|Pathfinder|Pimp|Pirate|Police Beat Reporter|Private Investigator|Prowler|Pusher|Reapers|Rockerboy|Rogue Hunter|Runner|Scavenger|Shaman|Shinobi|Shoemaker|Salver|Sleaze|Smuggler|Sniffer|Social Reporter|Solo|Space Marine|Spiritual Leader|Spook|Street Samurai|Streetpunk|Subjock|Tabloid-Monger|Talent Agent/Manager|Talent Scout|Tatsujin|Techie|The Spin Doctor|Trader|U.S. or EDF Army|U.S. or EDF Navy|USAF/EDF Air Force|War Correspondent|Warrior|Workganger"
+    },
+    {
+        "skillName": "Baltic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Lithuanian, Estonian, Latvian, Finnish",
+        "career": ""
+    },
+    {
+        "skillName": "Biogenetics",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The study of animals at their most basic level, Biogenetics is one of the new fields that have risen from nanotech, exotics, and other DNA recombination technologies. With Biogenetics, a character can, with the proper equipment, build viruses, recombine DNA,isolate specific genes, or mutate existing genes. Fortunately (or unfortunately), the equipment necessary for this kind of workis prohibitively expensive; as such biogeneticists are seen only in the largest of companies or start-ups with a lot of capital to throw around.",
+        "notes": "",
+        "career": "Marine Biotech"
+    },
+    {
+        "skillName": "Biology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "General knowledge of animals, plants, and other biological systems. At level +3, you know most types of common animals, plants. At +6, you have a general understanding of genetics, cellular biology, etc. At +10, you can perform most bio-lab procedures, including gene mapping and splicing.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Botany",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The general knowledge of plants and plant identification. At level +3, you know most common plants and can identify which ones are dangerous and why. At a +6, you can identify most important plants found worldwide and have a working knowledge of their uses. At +8, you have the equivalent of a doctorate in Botany and know all about rare poisons, exotic orchids and other useful plants.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Bureaucracy",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Modern government makes a tradition out of red tape. This skill lets you maneuver through it as painlessly as possible. At +3, you know how to jink minor clerks. At +5, you can sweet talk councilmen and some judges. At +7, you can slice through the worst red tape and bureaucracy and even senators may give you an ear. A necessary skill in an age of petty governments and petty people.",
+        "notes": "",
+        "career": "Administrator|Japanese SDF Officer|Shoemaker"
+    },
+    {
+        "skillName": "Celtic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Gaelic, Welsh, Breton",
+        "career": ""
+    },
+    {
+        "skillName": "Chemistry",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for mixing chemicals and creating various compounds. A level +2 Chemistry is equal to high school chemistry. A level +4 is equal to a trained pharmacist or college level chemist. A +8 is a trained laboratory chemist.",
+        "notes": "",
+        "career": "Black Marketeer|Covert Tech Demolitions Ops"
+    },
+    {
+        "skillName": "Composition",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for writing songs, articles, or stories. A Composing Skill of +4 or greater gives your character the ability to produce salable work. A Skill of +8 or more produces work of such a high caliber that the creator may have a strong literary following and not a little critical acclaim.",
+        "notes": "",
+        "career": "Action Reporter|Attorney/Judge|Celebrity Reporter|Freelancer|Investigative Reporter|Media|Netrunner|On-Air Star|Police Beat Reporter|Rockerboy|Social Reporter|Spiritual Leader|Tabloid-Monger|The Spin Doctor|War Correspondent"
+    },
+    {
+        "skillName": "Corporate Policy",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "knowledge of company rules and how to select key personnel.",
+        "notes": "",
+        "career": "Eurosolo|On-Air Star"
+    },
+    {
+        "skillName": "Diagnose Illness",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of clinically diagnosing symptoms and medical problems. A +3 is the equivalent of a high school nurse—you can recognize most common injuries and complaints. At +6, you would be equivalent to a trained intern; you can recognize many uncommon illnesses and know how to treat most common ones. A +9 is the equivalent of a skilled diagnostician; other physicians come to you to get a diagnosis.",
+        "notes": "",
+        "career": "Combat Medic|Doctor|Med Tech|Pimp|Tatsujin|Marine Biotech"
+    },
+    {
+        "skillName": "Education & General Knowledge",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill is the equivalent of a basic public school education, allowing you to know how to read, write, use basic math, and know enough history to get by. In effect, it is a \"lore\" or trivia skill. A level of +1 is a basic grade school education. A skill of +2 is equal to a high school equivalency. A Knowledge Skill of +3 is equal to a college education, +4 or higher is equal to a Masters or Doctorate. At +7, you are an extremely welleducated person, and are asked to play Trivial Pursuit a lot. At +9 and above, you are one of those people who knows a lot about everything (and hopefully has the good sense to keep his mouth shut).",
+        "notes": "",
+        "career": "Action Reporter|Administrator|Attorney/Judge|Celebrity Reporter|Combat Medic|Cop|Corporate|Cultist|Doctor|Factor|Freelancer|Information Broker|Investigative Reporter|Lawyer|Marine Biotech|Med Tech|Media|Pharmacist/Bioware Researcher|Negotiator|Netrunner|On-Air Star|Pimp|Police Beat Reporter|Rogue Hunter|Shoemaker|Social Reporter|Spy|Tabloid-Monger|Talent Agent/Manager|Talent Scout|Techie|The Spin Doctor|Trader|War Correspondent"
+    },
+    {
+        "skillName": "Expert",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Action Reporter:Sport|Aquatic Nomad:Ocean Life forms+Vessel ID|Attorney/Judge:Law|Bounty Hunter:Exotic Weapons|Corp Operative:Corp. Admin|Covert Tech Demolitions Ops:Structural Architecture|Covert Tech Elint Ops:Electronic Warfare|Information Broker:CHOOSE|Japanese SDF Officer:Law|Lawyer:Law|Marine Biotech:Psychology|Negotiator:CHOOSE |Rogue Hunter:World Net Systems+Computer Systems|Shaman:Fortune Telling|Spiritual Leader:Theology/History|Talent Agent/Manager:Entertainment|Talent Scout:CHOOSE|Workganger:Construction"
+    },
+    {
+        "skillName": "Farsi",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Gamble",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of knowing how to make bets, figure odds, and play games of chance successfully. As any professional gambler knows, this is not a luck skill. At+2, you are the local card shark at the Saturday night poker game. At +6, you can make a living at the tables in Vegas and Monte Carlo. At +9 or better, you can take on James Bond atroulette and stand a good chance of breaking the bank.",
+        "notes": "",
+        "career": "Con Man"
+    },
+    {
+        "skillName": "Geology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "A functional knowledge of rocks, minerals and geologic structures. At +3, you can identify most common rocks and minerals. At +6, you have the equivalent of a college degree in Geology and can identify minerals and geological structures with ease. At +8, you can teach geology in high school.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Germanic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Danish, Dutch, English, German, Norwegian, Swedish, Yiddish",
+        "career": ""
+    },
+    {
+        "skillName": "Greek",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Hide/Evade",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of losing pursuers, covering tracks and otherwise evading people on your trail. At +3, you can lose most booster gangers on the rampage. At +6, you can ditch cops and private eyes. At +8, you can ditch most Solos.",
+        "notes": "",
+        "career": "Assassin|Con Man|Covert Tech Intrusion Ops|Outrider|Pathfinder|Prowler|Runner|Shinobi|Smuggler"
+    },
+    {
+        "skillName": "History",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of facts and figures of past events. In game play, this might be used to determine if a character is familiar with a particular clue related to a past event. At +2, you have the equivalent of a grade school history education. At +6, you would have the equivalent of a college grasp on the subject. At +8, you could teach history in high school. At +9, you may have written a few of the most oftused texts on a particular historical personage or epoch.",
+        "notes": "",
+        "career": "Attorney/Judge|Spiritual Leader"
+    },
+    {
+        "skillName": "Japanese",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Kith",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This is to Family what Streetwise is to Streetdeal. Many members of a Nomad Pack have special abilities other than Family, though they are Nomad subroles. For them, Kith is available. Kith substitutes to help one do the same things that Family can, though it is one level of difficulty more difficult to accomplish with Kith.COOL based. Kith is not a stand-alone Special Ability for nomads, but is wrapped up as part of the function of alternative Nomad special abilities like Warpath, Counsel, or Reconnaissance. Non-Nomads can pick it up as a pickup skill.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Know Language (choose one)",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of a foreign tongue. At +2, you can get by\" with speaking the language. At +3, you can actually read a written form of it. At +6 and above, you are fairly fluent, although no native will be fooled by your ability. At +8 and above, you speak and read the lanquage like a native. Each language known requires a separate Know Lanquage Skill, however, one may use the knowledge of a particular Language with up to 1/2 (round down) proficiency with any language in the same linguistic family (example: knowing Cantonese at +4 will give you the ability to understand and speak Mandarin at +2).",
+        "notes": "Select from African, Baltic, Celtic, Farsi, Germanic, Greek, Japanese, Korean, Pacific Islander, Romantic, Semetic, Sino-Tibetan & South Eastern Asian or Slavic",
+        "career": "Aquatic Nomad|Eurosolo|Negotiator|Smuggler|Trader"
+    },
+    {
+        "skillName": "Korean",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Library Search",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of using databases, DataTerms\", libraries and other compiled information sources to find facts. With a skill of +2 you can use most simple databases. With a skill of +6, you can easily access the Library Congress. At +9, you can comprehend almost any public database and find very obscure facts.",
+        "notes": "",
+        "career": "Administrator|Attorney/Judge|Bounty Hunter|Corp Operative|Corporate|Covert Tech Netrunner Ops|Information Broker|Investigative Reporter|Lawyer|Marine Biotech|Med Tech|Pharmacist/Bioware Researcher|Private Investigator|Shoemaker|Sniffer"
+    },
+    {
+        "skillName": "Mathematics",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of understanding calculations and mathematical formulas. At +3, you have the ability to add, subtract, divide and multiply. At +4, you can do algebra and geometry. At +6, you can perform calculus. At +9 you can deduce your own mathematical formulas.",
+        "notes": "",
+        "career": "Bookie|Highrider/Pilot"
+    },
+    {
+        "skillName": "Navigation",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "This skill allows the user to navigate from one point to another, using maps or knowledge of the land. Helpful tools include maps, compass, and global positioning systems for those who want to do it the easy way.",
+        "notes": "",
+        "career": "Aerojock|Panzerboy|Pirate|Subjock"
+    },
+    {
+        "skillName": "Nuscuba",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The knowledge of how nuscuba operates for use, maintenance, and emergency circumstances. Nuscuba is not Swimming, it is only learning how to use the equipment. A character must have Swimming or else they can’t move easily (if at all), even if they can breathe.",
+        "notes": "",
+        "career": "Divemaster/Miner"
+    },
+    {
+        "skillName": "Pacific Islander",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Micronesian, Tagalog, Polynesian, Javnese, Malayan, Sudanese, Indonesian, Hawaiian",
+        "career": ""
+    },
+    {
+        "skillName": "Physics",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to calculate physical principles, such as gas pressures, mechanical energies, etc. This skill requires a basic Mathematics Skill of +4.",
+        "notes": "",
+        "career": "Highrider/Pilot"
+    },
+    {
+        "skillName": "Programming",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill to write programs and to re-program computer systems. This skill does not allow players to actually do repairs on a computer (this requires Electronics). With a Programming Skill of +1, you can do simple EBASIC programs. A Programming Skill of +3 or better allows you to know some higher level languages and be able to write reasonably complex programs (including video games). Players with a Programming Skill +6 or better are considered to be professionals, who can build operating software, design mainframe systems, and hold down a steady job at your average Silicon Valley firm. With a Programming Skill of +9 or better, other programmers speak your name with reverence (\"You invented Q? Wow!\"), young hackers set out to crack your systems, and any computer software you design instantly gets used by every business application in the world.",
+        "notes": "",
+        "career": "Covert Tech Netrunner Ops|Credshark|Highrider/Pilot|Netrunner|Rogue Hunter|Shoemaker"
+    },
+    {
+        "skillName": "Rhetoric",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Speaking in circles without revealing anything, at the same time keeping listeners convinced of hearing what they want; good for distractions, good for conmen, good for resisting interviews and interrogation; quite a skill to master. This is how to take one sentence and expand it to five minutes of monologue with no increase of meaning. It is the essence of bueacracy. The Chinese are considered true master of it. At +2, you can confuse a worried student. At +6, you can baffle an angry mob. At +10, you can run for President on \"the issues\" and win.",
+        "notes": "",
+        "career": "Administrator"
+    },
+    {
+        "skillName": "Romantic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "",
+        "notes": "French, Italian, Spanish, Portuguese, Latin",
+        "career": ""
+    },
+    {
+        "skillName": "Sailpower",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill allows you to maximize the efficiency of any wind-driven propulsion system. Or to put it another way, you can sail a sailboat.",
+        "notes": "",
+        "career": "Pirate"
+    },
+    {
+        "skillName": "Seamanship",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Basic skills for a shipboard environment. Includes familiarity with nautical jargon and specialized technical vocabulary. You can't run a sailboat, but you know the ropes and knots, stowage techniques, port from starboard, and how to man the pumps.",
+        "notes": "",
+        "career": "Pirate"
+    },
+    {
+        "skillName": "Semetic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Arabic, Hebrew",
+        "career": ""
+    },
+    {
+        "skillName": "Shadow/Track",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of shadowing and following people. This skill is primarily used in urban or inhabited areas rather than in wilderness (where the skill of Survival incorporates tracking game in the wilds).",
+        "notes": "",
+        "career": "Bounty Hunter|Loan Shark|Pathfinder|Private Investigator|Reapers|Shinobi|Sniffer|Spook|Spy|Street Samurai"
+    },
+    {
+        "skillName": "Sino-Tibetan & South Eastern Asian",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Burmese, Cantonese, Mandarin, Thai, Tibetan, Vietnamese",
+        "career": ""
+    },
+    {
+        "skillName": "Slavic",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "",
+        "notes": "Bulgarian, Russian, Czech, Polish, Ukranian, Slovak",
+        "career": ""
+    },
+    {
+        "skillName": "Space Survival",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "When an emergency occurs in space you have little time to respond and you can’t afford to get it wrong, otherwise you might find yourself breathing vac or glowing in the dark. This skill allows you to know the proper procedures during emergencies. It includes how to use a goop ball; how to cycle an airlock; how to read a personal rad meter; what to do and where to go in a solarflare. Referees may use this skill to determine whether a character knows a given piece of important information about day-to-day survival in space.",
+        "notes": "",
+        "career": "Highrider/Pilot|Salver|Space Marine|Workganger"
+    },
+    {
+        "skillName": "Stock Market",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to play the stock market, engage in routine stock transactions and manipulate stocks profitably. At +2, you know enough to invest in junk bonds and lose your shirt. At +6, your investments pay off 75% of the time. At +9, you are a major heavy on the Market, routinely dabble in international stocks, and can write learned articles on the subject of investment.",
+        "notes": "",
+        "career": "Corporate|Factor|Shoemaker"
+    },
+    {
+        "skillName": "System Knowledge",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Basic knowledge of the geography of the Net, it's lore and history, as well as knowledge of the important computer systems, their strengths and their weaknesses. At +2, you can generally navigate around the Net and know where all the local places are. At +6, you know the locations of most places in the Net, and have a working understanding of its largest and most well known systems. At +9, you know the entire Net like the back of your hand, know the general layouts of the important systems cold, and are aware of the layouts for the rest of them.",
+        "notes": "",
+        "career": "Covert Tech Netrunner Ops|Credshark|Netrunner|Rogue Hunter|Shoemaker"
+    },
+    {
+        "skillName": "Tactics",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill gives you the edge in small unit actions, allowing you to anticipate the enemy’s moves and respond quickly. At +4, you are a trained squad leader. At +6, you are a seasoned veteran who knows how to adapt to changing battlefield conditions. At +9, you are a master tactician.",
+        "notes": "",
+        "career": "War Correspondent|Japanese SDF Officer"
+    },
+    {
+        "skillName": "Teaching",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of imparting knowledge to someone else (if you don't think this is a skill, you ought to try it sometime). Players may not teach any skill unless they have a higher skill level than the student. The referee is the final arbiter of how long it takes to teach a skill. At a Teaching Skill of +3 or better, you can professionally teach students up to High School. At +6, you know enough to be a college professor (if you wanted). At +9 or greater, you are recognized by others in the field as good enough to guest lecture at MIT or Cal Tech; your texts on the subject are quoted as the major references, and you might have a TV show on the equivalent of the PBS channel.",
+        "notes": "",
+        "career": "Cultist|Techie"
+    },
+    {
+        "skillName": "Theology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of religions around the world and their beliefs. The character would generally specialize in their own particular religion.",
+        "notes": "",
+        "career": "Cultist|Shaman"
+    },
+    {
+        "skillName": "Underwater Survival",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to use anything and everything to assist in the case of mishap. The higher the rating, the better one’s chances of surviving.",
+        "notes": "",
+        "career": "Marine Biotech|Subjock"
+    },
+    {
+        "skillName": "Wilderness Survival",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for knowing how to survive in the wilds. Knowledge includes how to set traps, forage for wood, track game, build shelters, make fires. The average Boy Scout has a Survival of +3. A Special Forces Green Beret has a Survival of +6 or above. Grizzly Adams, Mountain Man of the Wilderness, would have a +9 or +10 Survival Skill.",
+        "notes": "",
+        "career": "Bounty Hunter|Covert Specialist|Doctor|Marine Corps|Nomad|Outrider|Pathfinder|Spiritual Leader|Warrior"
+    },
+    {
+        "skillName": "Zoology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Knowledge of lifeforms, biological processes and their relation to the environment. At +2, you know most common animals. At +5, you know not only well known animals, but also about many exotics and endangered species. At +8, you are knowledgable on almost all animals, know their habits well, and have a +1 advantage to any Wilderness Survival Skills (you know where to find the game).",
+        "notes": "",
+        "career": "Marine Biotech|Med Tech|Pharmacist/Bioware Researcher"
+    },
+    {
+        "skillName": "Akido",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "This form relies on using the opponent's strength and momentum against him. It is a perfect form for stopping an opponent peacefully while making yourself very hard to hit. Key attacks are: blocks & parries, dodges, throws, holds, escapes, chokes, sweeps, trips & sweeps, grapples.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Animal Kung Fu",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "These are forms based on animal movements, such as crane, mantis, tiger, leopard and dragon forms. These attacks are fast and dangerous, with a style that is exciting and flashy. Key attacks include: strikes, punches, kicks, blocks & parries, sweeps & trips.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Archery",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill required to use bows, crossbows and other arrow-based ranged weapons. See Handgun for details.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Athletics",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill is required for accurate throwing, climbing, and balancing. It combines the basic elements of any high school level sports program. At +3 and above, you are the equivalent of a real high school \"jock\". At +5 and above, you can perform in college level competitions. At +8 and above, you are of Olympic or Professional caliber.",
+        "notes": "",
+        "career": "Aerojock|Assassin|British Combined Forces|Combat Medic|Cop|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Nomad|Outrider|PA Trooper|Pathfinder|Pirate|Prowler|Runner|Shinobi|Solo|Tatsujin|USAF/EDF Air Force"
+    },
+    {
+        "skillName": "Boxing",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The manly art of fisticuffs, this form delivers lightning punches and a tight blocking defense. Key attacks are: punches, blocks & parries.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Brawling",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of fighting man to man with fist, feet and other parts of the body. Brawling is not a trained skill it is learned on the Street by getting into a lot of fights. Unlike Martial Arts, there are no specialized attacks and no damage bonuses based on level of mastery.",
+        "notes": "",
+        "career": "Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Runner|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior"
+    },
+    {
+        "skillName": "Capoeria",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "Created by Carribean slaves, this form combines dancelike movements with fast kicks and low line sweeps. It is a relatively unknown form and can be combined with dance moves to disguise it's true power. Key attacks are: punches, kicks, blocks & parries, dodges, and sweeps & trips.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Choi Li Fut",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "Descended directly from the ancient Shaolin temples, this form combines powerful roundhouse blows and sweeping kicks into a dynamic fighting style. Key attacks are: strikes, punches, kicks, blocks & parries, dodges, throws, and sweeps & trips.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Dance",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The specific skill needed to become a professional dancer. A trained dancer +4 or greater can successfully dance for payment in small clubs or dance troupes. Dancers +6 or greater will be considered to be of professional caliber, and regularly give performances and have fans. Dancers +9 or greater are of \"star\" caliber, have a large number of fans, and may be recognized on the street",
+        "notes": "",
+        "career": "Shaman"
+    },
+    {
+        "skillName": "Dodge & Escape",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill is required to dodge attacks and escape grapples and holds. If an attack is made without your knowledge, you may not apply this skill to your Defense roll.",
+        "notes": "",
+        "career": "Streetpunk|Warrior"
+    },
+    {
+        "skillName": "Driving",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill allows you to pilot all ground vehicles like cars, trucks, tanks and hovercraft. This skill is not useable for piloting aircraft. A skill of +3 is equal to that of a very good non-professional driver. A skill of +6 allows you to drive with the skill of a moderately skilled race driver. An driver with a skill of +8 or greater will be nationally known as a racer, regularly win championship races, and possibly have access to the most advanced ground vehicles available (as long as he makes an endorsement).",
+        "notes": "",
+        "career": "Bodyguard|Bounty Hunter|Covert Tech Remote Ops|Ex-Cybersoldier|Nomad|Outrider|Panzerboy|Runner|Scavenger|Space Marine|Street Samurai|Tabloid-Monger"
+    },
+    {
+        "skillName": "EVA",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "How to use ExtraVehicular Activity packs, hand-held thruster units, etc. Difficulties for such maneuvers as approaching habitats, rendezvousing with another person, and so on, are set by the Referee.",
+        "notes": "",
+        "career": "Highrider/Pilot|Salver|Space Marine|Workganger"
+    },
+    {
+        "skillName": "Fencing",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The mastery of swords, rapiers and monoblades. A Fencing Skill of +3 allows you to be competent with a blade. A Skill of +5 makes you fairly skilled. A Fencing Skill of +6 might win you the National Fencing Competitions. A Skill of +8 will get you a reputation for being a true swordsman of duellist caliber. People like D'Artagnan or Miyamoto Musashi have Skills of +10. They are legendary masters of the blade; the mention of whom will cause all but the stupidest young bravo to run for cover.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Handgun",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You must have this skill to effectively use handguns of any type, including cyberwear types. At +2, you can use a handgun effectively on a target range, though combat will still rattle you. At +5, you are as skilled as most military officers or policemen. At +7, you can do the sort of fancy shooting you see on TV, and have begun to get a reputation of being \"good with a gun\". At +8, you are a recognized gunslinger with a \"rep\". The very sound of your name makes some people back down in fear. At +10, you are a legendary gunslinger, feared by all except the stupid young punks who keep trying to \"take\" you in innumerable gunfight challenges.",
+        "notes": "",
+        "career": "Aerojock|Assassin|Black Marketeer|Bodyguard|Bookie|Cop|Corp Operative|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Credshark|Eurosolo|Fence|Fixer|Japanese SDF Officer|Loan Shark|Panzerboy|Pimp|Private Investigator|Prowler|Pusher|Reapers|Runner|Scavenger|Sleaze|Smuggler|Sniffer|Solo|Space Marine|Street Samurai|Streetpunk|Trader|U.S. or EDF Navy|USAF/EDF Air Force|Warrior"
+    },
+    {
+        "skillName": "Heavy Weapons",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for using grenade launchers, autocannon, mortars, heavy machine guns, missiles and rocket launchers. A Level +5 skill would be equivalent to a general military \"Heavy Weapons\" training course, giving the user the ability to use any or all of these weapon types",
+        "notes": "",
+        "career": "Aquatic Nomad|British Combined Forces|Covert Specialist|Ex-Cybersoldier|Marine Corps|PA Trooper|Panzerboy|U.S. or EDF Army"
+    },
+    {
+        "skillName": "Jeet Kun Do",
+        "baseAttribute": "REF",
+        "ipMultiplier": "3",
+        "description": "Have you seen anyof the old Bruce Lee vids? JKDis the style he created, and the name means “The Way of the Parrying Punch” Its main attack is to Parry the Opponent's attack (thus creating an opening) and deliver one short, deadly punch from very close in. Lee created this style because he felt that Kung Fu had become too structured, and “Martial Arts must evolve” A JKD student must learn his/her own forte (blocking, punching, kicking, etc.) first, and then the teacher will help them expand their forte to include the rest of the style. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block"
+    },
+    {
+        "skillName": "Judo",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This system was designed as a sport form, but is very effective in combat as well. It uses throws and sweeps to knock down the opponent. Key attacks include: dodges, throws, holds, escapes, sweeps & trips and grappling.",
+        "notes": "key attacks add bonus and skill lvl added to all damage",
+        "career": ""
+    },
+    {
+        "skillName": "Karate",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The Japanese version of kung fu, this style uses straight line movements and powerful blows. Variations include shotokan and kenpo, each with their own special moves. Key attacks are: punches, kicks, and blocks & parries.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Koppo",
+        "baseAttribute": "REF",
+        "ipMultiplier": "4",
+        "description": "The full name for this style is Kenkagei-Koppo.It is the urban style of the all-purpose Ninjutsu-Koppo. The founder of this style liked Ninjutsu, but realized that the huge number of Key Actions made it difficult to learn, so he streamlined it down, and made the main attack a Slap/Knifehand (punch) and Grapple combination. Key Actions: Punch, Kick, Sweep, Block, Grapple, Hold, Choke, Escape."
+    },
+    {
+        "skillName": "Melee",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to use knives, axes, clubs and other hand to hand weapons in combat. Note: when using non-ranged cyberweapons such as rippers, scratchers, slicen' dices, cyberbeasts, and battlegloves, you must use this skill.",
+        "notes": "",
+        "career": "Assassin|Black Marketeer|Bodyguard|Bookie|Bounty Hunter|Cop|Covert Specialist|Credshark|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Nomad|PA Trooper|Pimp|Prowler|Pusher|Salver|Sleaze|Solo|Space Marine|Street Samurai|Streetpunk|Trader|Warrior"
+    },
+    {
+        "skillName": "Motorcycle",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill to operate motorcycles, cyberbikes and other two and three-wheeled vehicles.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Ninjutsu",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "5",
+        "specialAbility": "",
+        "description": "The full name for this Style is Ninjutsu-Koppo. This is one of the oldest styles in Japan. The old ninja clans used this Koppo, but with the rise of Kenkagei-Koppo, this is referred to just as Ninjutsu. This is a very all-purpose style, with many key actions, so it is very hard to learn. Also, most Masters are hard to find (they're Ninjas) and unwilling to teach. Only members of a clan are permitted to learn this style. Of course, there is no chip for it. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block, Dodge, Grapple, Throw, Hold, Choke, Escape.",
+        "notes": "",
+        "career": "Shinobi"
+    },
+    {
+        "skillName": "Operate Hvy. Machinery",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill to operate tractors, tanks, very large trucks and construction equipment.",
+        "notes": "",
+        "career": "Covert Tech Remote Ops|Ex-Cybersoldier|Panzerboy|Salver|Workganger"
+    },
+    {
+        "skillName": "Pilot (Watercraft)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "",
+        "notes": "",
+        "career": "Divemaster/Miner"
+    },
+    {
+        "skillName": "Pilot (Dirigible)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The ability to pilot all lighter than air vehicles, including cargo dirigibles, blimps and powered balloons.",
+        "notes": "A Piloting Skill of +1 allows you to take off and land safely in good weather conditions. A Piloting Skill of +3 or more makes you a trained pilot, able to engage in most combat situations or bad weather. Pilots with a Skill of +6 or greater are veteran pilots, able to handle themselves in almost any situation, including aerobatic manuevers. Pilots with a Skill of +9 or greater are so good, they have a rep as pilots, and are widely known among the piloting fraternity for having the \"right stuff\".",
+        "career": ""
+    },
+    {
+        "skillName": "Pilot (Fixed Wing)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The ability to pilot fixed wing jets and light aircraft. Ospreys may be flown with this skill, but only in the straight ahead (non-hover) mode.",
+        "notes": "A Piloting Skill of +1 allows you to take off and land safely in good weather conditions. A Piloting Skill of +3 or more makes you a trained pilot, able to engage in most combat situations or bad weather. Pilots with a Skill of +6 or greater are veteran pilots, able to handle themselves in almost any situation, including aerobatic manuevers. Pilots with a Skill of +9 or greater are so good, they have a rep as pilots, and are widely known among the piloting fraternity for having the \"right stuff\".",
+        "career": ""
+    },
+    {
+        "skillName": "Pilot (Gyro)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The ability to pilot all types of rotorwing aircraft, including gyros, copters and Ospreys.",
+        "notes": "A Piloting Skill of +1 allows you to take off and land safely in good weather conditions. A Piloting Skill of +3 or more makes you a trained pilot, able to engage in most combat situations or bad weather. Pilots with a Skill of +6 or greater are veteran pilots, able to handle themselves in almost any situation, including aerobatic manuevers. Pilots with a Skill of +9 or greater are so good, they have a rep as pilots, and are widely known among the piloting fraternity for having the \"right stuff\".",
+        "career": ""
+    },
+    {
+        "skillName": "Pilot (Hardshell/EVPA Suit)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "Treat this skill exactly like any other vehicle piloting skill. Due to the complicated multi-role design of suits, often times advanced training must be taken in order to utilize them effectively.",
+        "notes": "",
+        "career": "Divemaster/Miner"
+    },
+    {
+        "skillName": "Pilot (Orbital Transfer Vehicle)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The skill of piloting OTV’s and other small cargo-type spacecraft. This skill allows the character to make soft lunar landings (Very Difficult task), dock with space modules (Difficult) and maneuver an OTV through space.",
+        "notes": "",
+        "career": "Salver|Space Marine|Workganger|Highrider/Pilot"
+    },
+    {
+        "skillName": "Pilot (Powered Armor)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "PA Pilot is for other characters who do not specialize in ACPAs, much like someone can learn Streetwise, but not Streedeal. It is used when maneuvering rolls are called for, but does not add to Initiative or Awareness rolls.",
+        "notes": "",
+        "career": "Salver|Space Marine|Workganger|Highrider/Pilot"
+    },
+    {
+        "skillName": "Pilot (RPV (Drone))",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The ability to pilot remote vehicles such as hoverdrones and attack remotes. The operator knows how to use a remote board and interpret its signals. This skill is absolutely necessary for using RPVs in combat. Direct cory-link systems are available, adding +2 to the skill.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Pilot (Ship)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill enables the character to pilot large, ocean-going vessels. The particular focus is on the dangerous practice of harbor navigation, where the pilot is required to have the utmost skill and attention. Frequently ships employ local pilots for their not only their piloting experience in a harbor, but also for their local knowledge of the harbor's regular dangers. The skill covers the operations of any water bourne vessel over 65 feet in length (about 20 meters).",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Pilot (Spaceplane/Shuttle)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "How to pilot a spaceplane or shuttle. Knowledge of scramjet engines, how to dock with stations (Difficult task) and how to make a proper orbital reentry (Very Difficult) without burning up in the atmosphere.",
+        "notes": "",
+        "career": "Highrider/Pilot"
+    },
+    {
+        "skillName": "Pilot (Submersible)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The ability to pilot submersibles. Small subs: Multi-role work sleds or fighter subs; large subs: Gigantic behemoths that roam the deep.",
+        "notes": "",
+        "career": "Aquatic Nomad|Subjock"
+    },
+    {
+        "skillName": "Pilot (Vect.Thrust Vehicle)",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The skill of piloting all types of vectored thrust vehicles, including hovercars, hover rafts and AV-4, 6 and 7 vehicles.",
+        "notes": "A Piloting Skill of +1 allows you to take off and land safely in good weather conditions. A Piloting Skill of +3 or more makes you a trained pilot, able to engage in most combat situations or bad weather. Pilots with a Skill of +6 or greater are veteran pilots, able to handle themselves in almost any situation, including aerobatic manuevers. Pilots with a Skill of +9 or greater are so good, they have a rep as pilots, and are widely known among the piloting fraternity for having the \"right stuff\".",
+        "career": ""
+    },
+    {
+        "skillName": "Rifle",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You must have this skill to use rifles/shotguns effectively (see Handguns for limitations and modifiers).",
+        "notes": "",
+        "career": "British Combined Forces|Covert Specialist|Doctor|Ex-Cybersoldier|Marine Corps|Nomad|PA Trooper|Panzerboy|Pirate|Solo|Space Marine|Spiritual Leader|U.S. or EDF Army|Warrior"
+    },
+    {
+        "skillName": "Sambo",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "ommand Sambo is the New Soviet Army's own Martial Art. This is a hybrid of Wrestling, Judo, and just plain nastiness.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Stealth",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The skill of hiding in shadows, moving silently, evading guards, etc. A Stealth bottle Skill of +1 is about the level of a very sneaky 10 year old stealing cookies. At +3, you are able to get past most guards, or your parents if you've been through grounded. At +6, you are good enough to slip smoothly from shadow to shadow and not make any noise. At +8, you are the equal of most Ninja warriors. At +10, you move as silently as a shadow, making the Ninja sound like elephants.",
+        "notes": "",
+        "career": "Assassin|Covert Specialist|Covert Tech Intrusion Ops|Marine Corps|PA Trooper|Prowler|Scavenger|Shinobi|Solo|U.S. or EDF Army"
+    },
+    {
+        "skillName": "Submachinegun",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You must have this skill to use any type of submachine gun effectively (see Handguns for limitations and modifiers).",
+        "notes": "",
+        "career": "Bodyguard|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Outrider|Panzerboy|Pathfinder|Solo|Space Marine|U.S. or EDF Army"
+    },
+    {
+        "skillName": "Sumo",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "4",
+        "specialAbility": "",
+        "description": "The “big-man” wrestling of Japan. It is one of the most popular sports in Japan, where they fight in a dirt ring called a “dohyo’ There are Power Slaps (punches), but Grappling and Throwing are the main techniques of Sumo. Also, it has the unique Ram Key Attack. This is also very popular among the Samoans and Hawaiians, who have achieved fame in Japan as Sumo wrestlers. Mongolia also has a version of Sumo. Key Actions: Punch, Dodge, Grapple, Throw, Hold, Escape, Ram.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Tae Kwon Do",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "A very fast and precise form, with graceful movements and some aerial kicks. Key attacks include: strikes, punches, kicks, block & parries, dodges.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Tai Chi Chuan",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "This is the basic Martial Art of the Chinese Army. Many beginners learn it as a way to stay healthy, and flexible, and so most people see the slow-motion kata practice. For a master (who goes at full speed), this becomes a very deadly Art. A Tai Chi Martial Artist moves from stillness like an explosion, using all of their inner power. Key Actions: Strike, Punch, Kick, Disarm, Block, Dodge, Grapple.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Te",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "This is a Martial Art from the islands of Okinawa in southern Japan.It is also known as “Ryukyu (Okinawa) Karate. Unlike Karate, Te uses some rather esoteric weapons. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Dodge.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Thai Kick Boxing",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "4",
+        "specialAbility": "",
+        "description": "One of the deadliest forms in existence, this style is known for blinding kicks delivered with incredible power, Key moves include: strikes, punches, kicks, blocks & parries, and grapples.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Underwater Combat",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "Knowledge of how best to fight hand-to-hand underwater. This usually involving grasping holds aimed at the neck or vitals areas (+3 to hold, grapple, and choke), Underwater combat is ineffective on land due to the extremely close-quarters style combat, and the viscosity of the water which forces slower motions.",
+        "notes": "",
+        "career": "U.S. or EDF Navy"
+    },
+    {
+        "skillName": "Underwater Heavy Weapons",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Using such hardware as anti-sub, anti-ship, anti-platform, or area effect weapons such as vehicular railguns, torpedoes,and so forth.",
+        "notes": "",
+        "career": "Subjock"
+    },
+    {
+        "skillName": "Underwater Weapons",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Familiarization with all types of underwater weaponry, from self-contained spear guns (SCSGs) to mini-torpedo launchers.",
+        "notes": "",
+        "career": "Divemaster/Miner|Subjock|U.S. or EDF Navy"
+    },
+    {
+        "skillName": "Wrestling",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This form combines techniques of Olympic and Professonal wres. tling. The style uses a wide variety of throws and holds to incapacitate the opponent. Key attacks include: throws, holds, escapes, chokes, sweeps, trips, and grapples.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Zero-G Maneuver",
+        "baseAttribute":"REF",
+        "modifier": "",
+        "ipMultiplier": "",
+        "specialAbility": "",
+        "description": "This skill is the ability to maneuver in low or zero gravity conditions. It allows a character to kickoff surfaces and catch himself on the rebound, make turns or flips in mid-air by body movements, and to hold position if needed. Orbital-born characters automatically have this skill at +3, and may buy it at higher levels using IP. In order to acquire Zero-Gee Maneuvering, you must first get used to the conditions of weightlessness. This isn’t easy for everyone. Each time a Groundsider character encounters a new condition of weightlessness, such as crossing an airshaft, finding himself suspended at a height without visible means of support, or some other sudden zero-gee shock, he must make a Cool roll (Cool + D10) higher than 10 or be momentarily paralyzed by fear for 1D6 turns. Until the character has successfully made five such rolls, he will be considered unadapted to zero-gee and unable to master this skill. Once adapted, he need not make any further Cool rolls.",
+        "notes": "",
+        "career": "Salver|Space Marine|USAF/EDF Air Force|Workganger"
+    },
+    {
+        "skillName": "Zero-G Combat",
+        "baseAttribute":"REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "Also known as rei-ju-ryoku-ryu, this is a specific fighting style developed for use in zero gravity. This skill replaces Martial Arts or Brawling when you fight in a no-gravity situation (if you were to use those other combat styles in 0-G you would end up a helpless spinning tangle of arms and legs). The training also teaches the character how to use recoil weapons in zero gravity. When firing a recoil weapon, he may add this Skill to the required Recoil Save Roll. You must have at least three points in Zero-Gee Maneuver Skill before you can acquire this skill. Your Zero-Gee Combat Skill can never be higher than your skill in Zero Gee Maneuver.",
+        "notes": "",
+        "career": "Space Marine"
+    },
+    {
+        "skillName": "Aero Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The required skill for repairing fixed wing aircraft, including Ospreys, jets, and light aircraft. With a Skill of +3, you can perform most routine maintenance tasks. With a Skill of +6, you can do engine teardowns and major structural repairs. With a Skill of +9 or better, you are capable of designing and building your own aircraft.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "AV Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The required skill for repairing all ducted fan aerodyne vehicles. At +3, you can perform routine maintenance. At +6, you can tear down engines and modify an AV. At +10, you can design your own AVs on common airframes.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Basic Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The required skills for building or repairing simple mechanical and electrical devices, such as car engines, television sets, etc. With a Basic Tech Skill of +3 or better, you can fix minor car problems, repair basic wiring, etc. A Basic Tech Skill of +6 or better can repair stereos and TVs, rebuild an engine, etc. A Basic Tech Skill of +9 or better can build a simple computer from scratch, put together a race car engine, and maintain any kind of industrial machinery. However, they do not know enough specialized knowledge to apply it to complex things such as aircraft (just like Mr. Goodwrench doesn't know how to build and service an F-16).",
+        "notes": "",
+        "career": "Aerojock|Combat Medic|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Ex-Cybersoldier|Fence|Highrider/Pilot|Med Tech|Pharmacist/Bioware Researcher|Netrunner|Nomad|Outrider|PA Trooper|Panzerboy|Pathfinder|Pirate|Runner|Scavenger|Salver|Spook|Spy|Techie|U.S. or EDF Navy|War Correspondent|Warrior|Workganger"
+    },
+    {
+        "skillName": "Chemistry",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill allows you to make all sorts of useful chemicals, including the more profitable varieties. Those who consider taking this as a backup skill in case cash gets scarce might keep in mind that the Orbitals make drugs in industrial-sized quantities and sell them fairly cheaply. Just Say No.",
+        "notes": "",
+        "career": "Covert Tech Demolitions Ops|Black Marketeer"
+    },
+    {
+        "skillName": "Computer Use",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This represents an average person’s ability to use computers. Some 21st century computers respond to neural link as well as voice and keyboard commands, but most can be used manually only. With this skill you can dive for data without being a netrunner. This skill can be substituted for Interface in most netrunning applications, but only with the -4 Keyboard modifier from Cyberpunk and an additional -2 since this is not a true skill system for netrunning. If pitted against a real netrunner in the Net, the individual on the manual system will always lose the initiative. Computer Use can be used instead of Library Search when looking for information in databases, but at -3.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Cryotank Operation",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": " The required skill for operating, repairing and maintaining life suspension and body chilling devices. A minimum skill of +4 is required to chill down a healthy person. A minumum skill of +6 for chilling a wounded person.",
+        "notes": "",
+        "career": "Med Tech|Pharmacist/Bioware Researcher"
+    },
+    {
+        "skillName": "Cyberdeck Design",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The required skill for designing cyberdecks. At level +4, you can modify an existing cyberdeck for greater speed or memory. At level +6, you can design a deck equal to most existing designs. At +8, you can design decks that are substantially improved over existing designs.",
+        "notes": "",
+        "career": "Netrunner"
+    },
+    {
+        "skillName": "CyberTech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The required skill for repairing and maintaining cyberwear. At level +2, you can keep your cyberwear tuned up and can replace its power batteries. At level +6, you can strip down most cyberwear and even make simple modifications. At level +8, you can design your own cyberwear to order.",
+        "notes": "",
+        "career": "Ex-Cybersoldier|Netrunner|Rogue Hunter|Techie"
+    },
+    {
+        "skillName": "Demolitions",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "This skill allows the character to be knowledgeable in the use of explosives, as well as knowing the best explosives to use for which jobs, how to set timers and detonators, and how much explosive to use to accomplish a desired result.",
+        "notes": "",
+        "career": "Covert Tech Demolitions Ops"
+    },
+    {
+        "skillName": "Desktop Engineering",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "This is the ability to program a computer-driven lathe and turn out useable tools or weapons. Can be used to design guns, knives, or any mechanically driven tool.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Disguise",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of disguising your character to resemble someone else, whether real or fictitious. This skill incorporates elements of both makeup and acting, although it is not the same as the ability to actually be an actor.",
+        "notes": "",
+        "career": "Con Man|Prowler|Shinobi|Spy"
+    },
+    {
+        "skillName": "Electronics",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for maintaining, repairing and modifying electronic instruments such as computers, personal electronics hardware, electronic security systems, cameras and monitors.",
+        "notes": "",
+        "career": "Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Credshark|Netrunner|Rogue Hunter|Spook|Techie|USAF/EDF Air Force|Workganger"
+    },
+    {
+        "skillName": "Electronic Security",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The skill of installing or countering electronic eyes, electronic locks, bugs and tracers, security cameras, pressure plates, etc. At level +3, you can jimmy or install most apartment locks and security cams. At +6, you can override most corporate office locks and traps. At +9, you can enter most high security areas with impunity.",
+        "notes": "",
+        "career": "Bodyguard|Corp Operative|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Remote Ops|Prowler|Reapers|Scavenger|Shinobi|Spook"
+    },
+    {
+        "skillName": "First Aid",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "This skill allows the user to bind wounds, stop bleeding, and revive a stunned patient (see Trauma Team, pg. 116 for details).",
+        "notes": "",
+        "career": "British Combined Forces|Marine Corps|Tatsujin|U.S. or EDF Army|U.S. or EDF Navy|USAF/EDF Air Force"
+    },
+    {
+        "skillName": "Forgery",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of copying and creating false documents and identifications. This skill may also be applied to the detection of same; if you can take it, you can usually tell a fake as well.",
+        "notes": "",
+        "career": "Shoemaker|Sleaze|Smuggler|Con Man|Fence|Fixer|Information Broker"
+    },
+    {
+        "skillName": "Gyro Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "The skill of repairing and maintaining rotorwing aircraft such as helicopters and gyrocopters.",
+        "notes": "",
+        "career": "techie"
+    },
+    {
+        "skillName": "Paint or Draw",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of producing professional drawings. A Skill of +3 allows you to produce salable \"modern\" art. A Skill of +6 will produce artwork that is recognizable and extremely pleasant to the eye-as well as salable. An artist with a Skill of +8 or greater will be nationally known, have exhibits in galleries, and have other lesser artists studying his style in art school.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "PA Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "description": "This is the skill needed for maintaining and repairing Assisted Combat Personal Armors (ACPA).",
+        "notes": "",
+        "career": "PA Trooper"
+    },
+    {
+        "skillName": "Pharmaceuticals",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The skill of designing and manufacturing drugs and medicines. A minimum Chemistry skill of +4 is required. At +4, you can make asprin. At +6, you can make hallucinogenics or antibiotics. At level +9 you can build designer drugs tailored to individual body chemistries",
+        "notes": "",
+        "career": "Black Marketeer|Doctor|Marine Biotech|Med Tech|Pharmacist/Bioware Researcher"
+    },
+    {
+        "skillName": "Photo & Film",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": " The skill of producing professional-caliber photographs or motion pictures. A Skill of +2 allows you to make decent home movies. A Skill of +4 or better creates work capable of winning amateur contests. A Skill of +6 or better will produce work of the level of the average Playboy cover or rock video. A photographer or cinematographer with a Skill of +8 or better will be nationally known and probably famous.",
+        "notes": "",
+        "career": "Celebrity Reporter|Covert Tech Elint Ops|Freelancer|Investigative Reporter|Media|Police Beat Reporter|Photo|The Spin Doctor|War Correspondent"
+    },
+    {
+        "skillName": "Pick Lock",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill required to pick locks and break into sealed containers and rooms. At +3, you can jimmy most simple locks. At +6 you can crack most safes. At +9 or better, you have a rep as a master cracksman, and are known to all the major players in the Cyberpunk world.",
+        "notes": "",
+        "career": "Corp Operative|Covert Tech Intrusion Ops|Prowler|Reapers|Scavenger|Shinobi|Sleaze|Spook|Fixer"
+    },
+    {
+        "skillName": "Pick Pocket",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The required skill for picking pockets without being noticed, as well as \"shoplifting\" small items. For ideas on levels of ability, see Pick Lock, above.",
+        "notes": "",
+        "career": "Fixer|Sleaze"
+    },
+    {
+        "skillName": "Play Instrument",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The skill of knowing how to play a musical instrument. You must take this skill separately for each type of instrument played. A Skill of +4 or higher will qualify your character to play professional \"gigs\". A Skill of +8 and above will gain the musician some professional acclaim, possibly with recording contracts and command performances. At +10, you are widely acclaimed, have lots of Grammys, and regularly jam with Kerry Eurodyne.",
+        "notes": "",
+        "career": "Rockerboy"
+    },
+    {
+        "skillName": "Pressure Suit Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "Technical knowledge of both Deep dive and Hardshell suit systems. This skills assists in repairing, retrofitting, or designing pressure suits. Since suits are modular in design, a +2 is enough for general maintenance.",
+        "notes": "",
+        "career": "Subjock"
+    },
+    {
+        "skillName": "Sonar Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The ability to use, repair and maintain a variety of underwater detection equipment. It also allows the user to interpret the information they provide to assess and identify targets and anomalies.",
+        "notes": "",
+        "career": "Subjock"
+    },
+    {
+        "skillName": "Sub Tech",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "The knowledge of how to repair, maintain, retrofit, or design subs with respect to their class (as above).",
+        "notes": "",
+        "career": "Subjock"
+    },
+    {
+        "skillName": "Weaponsmith",
+        "baseAttribute": "TECH",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "description": "The required skill for repairing and maintaining weapons of all types. At level +2, you can do repairs and field stripping. At level +6, you can repair all types of weapons and make simple modifications. At level +8, you can design your own weapons to order.",
+        "notes": "",
+        "career": "Ex-Cybersoldier|Eurosolo|Solo"
+    }
+]

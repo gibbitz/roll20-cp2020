@@ -1,8 +1,8 @@
 %stat-input {
   box-sizing: border-box;
-  flex: 1 0 auto;
+  flex: 0 1 20%;
   margin-right: 1%;
-  max-width: 20%;
+  // max-width: 20%;
 }
 
 %stat-label {
@@ -18,27 +18,57 @@
   $base: &;
 
   &__stats {
-    &__character-points {
-      width: 41%;
+    &__view-title {
+      display: flex;
+      justify-content: space-between;
+    }
 
-      #{$base}__layout--row-1-1 {
-        > *:first-child {
-          flex: 0 1 250%;
-        }
+    &__character-points {
+      > * {
+        border: 0;
+        display: inline;
+        margin: 0 0 0 0.5em !important;
+        padding: 0 !important;
+        width: auto !important;
+      }
+
+      input[type='number'] {
+        max-width: 2em;
+      }
+    }
+
+    #{$base}__layout--row-1-1 {
+      flex-wrap: wrap;
+      > * {
+        flex: 1 0 30%;
+        height: auto;
+      }
+
+      #{$base}__layout--row-3-1 {
+        justify-content: space-between;
       }
     }
   }
 
   &__stat {
-    &--inline {
-      align-items: baseline;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
+      max-width: 250px;
 
       label {
         @extend %stat-label;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-between;
+        > * {
+          flex: 1 1 auto;
+        }
+
+        input[type='number'] {
+          &[disabled] {
+            font-size: 2em;
+            width: 2em;
+          }
+        }
       }
 
       input[type='number'] {
@@ -47,39 +77,88 @@
         &[disabled] {
           border: 0;
           color: $light-font-color;
+          display: inline;
           font-size: 1.2em;
         }
       }
+
+    &__abbr {
+      font-size: 1.5em;
+    }
+
+    &__name {
+      color: $med-light-font-color;
+      font-size: 1.2em;
+      white-space: nowrap;
+    }
+
+    &__total {
+      align-items: baseline;
+      display: flex;
+      padding-left: 2.2em;
+    }
+
+    &__total-composite {
+      padding-left: 1em !important;
+      width: auto !important;
+    }
+
+    &__breakdown {
+      input[type='number'] {
+        text-align: center;
+        color: $base-font-color;
+      }
+      text-align: center;
     }
 
     &__key--value {
       @extend %stat-input;
+      color: $dim-font-color;
+      font-size: 0.65em;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     &__key--label {
       @extend %stat-label;
     }
+
     &__character-points {
       padding-bottom: 1em;
     }
   }
 
-  button#{$base}__stat__check-btn {
+  button#{$base}__stat__check-btn,
+  button#{$base}__stat__save-btn {
     background: transparent;
     border: 0;
     box-shadow: none;
     color: $base-font-color;
-    margin-left: 0;
+    line-height: 1;
+    margin: 0;
     outline: 0;
-    padding-left: 0;
+    padding: 0;
     text-shadow: none;
 
+    &:hover::before {
+      color: $level-9;
+    }
+
     &::before {
-      padding-right: .3em;
+      content: 'j';
+      font-family: 'dicefontd10';
+      font-size: 2em;
+      padding: 0.1em;
+      transition: color 0.5s ease-in-out;
     }
 
     .sheet-small {
       font-size: 0.8em;
+    }
+  }
+  button#{$base}__stat__save-btn {
+    &::before {
+      content: 'a';
     }
   }
 }

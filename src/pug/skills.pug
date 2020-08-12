@@ -1,0 +1,38 @@
+- var nameToSelector = (name) => name.replace(/\W|\/\(\)/g, '-').replace('.', '').replace('&', 'and').toLowerCase()
+- var allSkills = [...data.skills, ...data.compoundSkills]
+
+div.cp-2020__skills
+  h4 SKILLS
+  input(type='hidden' disabled='true' name='attr_Skill_Toggle_INdicator' value='@{Skill_Toggle}')
+  div.cp-2020__learn-toggle
+    label.cp-2020__learn-tab Learn
+      input(type='radio' name='attr_Skill_Toggle' value='learn' checked='true')
+    label.cp-2020__use-tab Use
+      input(type='radio' name='attr_Skill_Toggle' value='use')
+  div.cp-2020__inner-box
+    input(name='attr_roleSelected' disabled='true' value='@{Role}' type='hidden')
+    h5 Special Abilities
+    div.cp-2020__special-ability
+      each skill in data.specialAbilities
+        +skillField(skill, data.specialAbilities)
+
+    h5 Career Skills
+    div.cp-2020__career-skills
+      each skill in allSkills
+        +skillField(skill, data.skills)
+
+    h5 Pickup Skills
+    div.cp-2020__pickup-skills
+      each skill in allSkills
+        +skillField(skill, data.skills)
+
+
+    // fieldset.repeating_SpecialAbilities
+    //   input.chipped(type='checkbox' name='attr_OtherSpecialAbilitiesChip' value='1')
+    //   span
+    //   button.skillroll(type='roll' value='&{template:skill-spec}{{skill=  @{OtherSpecialAbilities}}}{{character= @{handle} }}{{total= [[1d10!!+@{OtherSpecialAbilities_Skill}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }} ')
+    //     label
+    //       div.subskill(data-i18n='roll') Roll
+    //   input.language(type='text' name='attr_OtherSpecialAbilities')
+    //   input(type='text' name='attr_OtherSpecialAbilities_Skill' Value='0')
+    //   input(type='text' name='attr_OtherSpecialAbilities_IP')

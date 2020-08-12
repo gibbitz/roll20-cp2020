@@ -1,3 +1,4 @@
+@import 'scss/_partials/functions';
 @import 'scss/_partials/reset';
 @import 'scss/_partials/colors';
 @import 'scss/_partials/variables';
@@ -10,6 +11,7 @@
 @import 'scss/_components/stats';
 @import 'scss/_components/armor';
 @import 'scss/_components/health';
+@import 'scss/_components/skills';
 
 
 .sheet- {

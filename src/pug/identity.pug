@@ -1,12 +1,16 @@
 include _mixins
 
+- var roles = data.roles.map(item => ({ value: item, label: item }))
+
+- var genders = [{value:'m', label:'Male'}, {value:'f', label:'Female'}, {value:'a', label:'Androgynous'}]
+
 div.cp-2020__identity
   h3 IDENTITY
   +attrField('Handle', 'handle')(type='text')
   +attrField('Name', 'given name')(type='text')
   div.cp-2020__layout--row-1-2
     +attrField('Age', 'age')(type='number')
-    +attrField('Role', 'role')(type='text')
-  +attrSelect('Gender', [{value:'m', label:'Male'}, {value:'f', label:'Female'}, {value:'a', label:'Androgynous'}], 'gender')(type='text')
+    +attrSelect('Role', roles, 'role')()
+  +attrSelect('Gender', genders, 'gender')()
   +attrField('Nationality', 'ethnicity')(type='text')
   +attrField('Language', 'language')(type='text')

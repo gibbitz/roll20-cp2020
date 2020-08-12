@@ -1,0 +1,30 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function str-list-replace($haystack, $needleList, $replacement) {
+  $output: $haystack;
+  @each $needle in $needleList {
+    $output: str-replace($output, $needle, $replacement);
+  }
+  @return $output;
+}
+
+@function str-to-selector($string, $prefix:'.') {
+  $dash-replaced: (' ', '/', '(', ')');
+  @return $prefix + to-lower-case(
+    str-replace(
+      str-replace(
+        str-list-replace(
+          $string, $dash-replaced, '-'
+        ), '&', 'and'
+      ), '.', ''
+    )
+  )
+}

@@ -3,50 +3,62 @@
 
   &__armor {
     &__figure {
+      background-image: url($assets-male-silhouette);
+      background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
       height: 20em;
-      width: 100%;
+      position: relative;
+      width: 20em;
     }
 
     [value='f'] + &__figure {
-      background-image: url($assets-female-silhouette)
+      background-image: url($assets-female-silhouette);
     }
 
     [value='m'] + &__figure {
-      background-image: url($assets-male-silhouette)
+      background-image: url($assets-male-silhouette);
+    }
+
+    #{$base}__box {
+      position: absolute;
+      width: auto;
+      height: auto;
+        input {
+          width: 5em;
+          display: block;
+
+          + span {
+            color: $base-font-color;
+          }
+        }
+    }
+
+    .sheet-armor-location{
+      &--head {
+        right: 1.6em;
+      }
+      &--torso {
+        left: 1em;
+        top: 3em;
+      }
+      &--right-arm {
+        left: 0em;
+        top: 8em;
+      }
+      &--left-arm {
+        right: -1em;
+        top: 6em;
+      }
+      &--right-leg {
+        bottom: 1em;
+        left: 1em;
+      }
+      &--left-leg {
+        bottom: 3em;
+        right: 1em;
+      }
     }
   }
 
-  &__armor-table{
-
-    td {
-      padding: 0;
-      position: relative;
-      width: 15%;
-
-      input[type=number] {
-        height: 100%; // calc(100% - 2px);
-        left: 0;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        // width: calc(100% - 2px);
-      }
-    }
-
-    th {
-      background-color: $dim-font-color;
-      color: $background;
-      font-weight: normal;
-      padding: 0.3em;
-
-      label {
-        color: $background;
-        padding: 0;
-        text-align: center;
-      }
-    }
-
-  }
 }

@@ -22,3 +22,41 @@ mixin attrSelect(attrName, attrOptions, attrLabel)
         block
       else
         span= attrLabel
+
+mixin armorField(location)
+  - var limb = location.replace(' ', '-').toLowerCase()
+  +box(class=`armor-location--${limb}`)
+    label(for=`armor_${limb}` class=`${attributes.class}`)
+      input(id=`armor_${limb}` name=`attr_Armor_${location.replace('-', '_')}` type='number')
+      span= location
+
+mixin skillField(skillData, additionalData)
+  - var skillAttrName = `Skill_${nameToSelector(skillData.skillName).replace('-', '_')}`
+  - var skillClass = `cp-2020__skill-${nameToSelector(skillData.skillName)}`
+
+  +box(class=`cp-2020__skill ${skillClass}`)
+    label
+
+      if (skillData.skillGroup)
+        select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
+          each skillOption in skillData.skillGroup
+            option(value=skillOption)=skillOption
+        input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name` value=`@{${skillAttrName}_name}`)
+        each skillName in skillData.skillGroup
+          each skill in additionalData
+            if skillName === skill.skillName
+              - var descriptionClass = `cp-2020__skill-${nameToSelector(skill.skillName)}__description`
+              span(class=`cp-2020__skill__description ${descriptionClass}`)=skill.description
+
+      else
+        span.cp-2020__skill__name--view=skillData.skillName
+        input.cp-2020__skill__name--edit(type='hidden' name=`attr_${skillAttrName}_name`)
+        span.cp-2020__skill__description=skillData.description
+
+      input.cp-2020__skill__lvl--edit(type='text' name=`attr_${skillAttrName}_level`)
+      input.cp-2020__skill__ip--view(type='text' disabled='true' name=`@{${skillAttrName}_ip}`)
+      button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
+
+      input.cp-2020__skill__lvl--view(type='text' disabled='true' name=`@{${skillAttrName}_level}`)
+      input.cp-2020__skill__ip--edit(type='text' name=`attr_Skill_${skillData.skillName.replace(' ', '_')}_ip`)
+      span.cp-2020__skill__ip-multiplier=skillData.ipMultiplier

@@ -1,0 +1,158 @@
+[
+   {
+        "skillName": "Techie Tech",
+        "skillGroup": ["Forgery", "Cryotank Operation", "Pharmaceuticals", "Photo & Film", "Cyberdeck Design", "Weaponsmith", "Aero Tech", "Electronic Security", "Gyro Tech", "AV Tech", "Demolitions"],
+        "description": "Skills that require technical aptitude.",
+        "career": "Techie*3"
+    },
+    {
+        "skillName": "Martial Arts",
+        "skillGroup": ["Akido", "Animal Kung Fu", "Boxing", "Capoeria", "Choi Li Fut", "Judo", "Karate", "Tae Kwon Do", "Thai Kick Boxing", "Wrestling", "Sambo", "Sumo", "Tai Chi Chuan", "Te", "Jeet Kun Do", "Ninjutsu", "Koppo"],
+        "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
+        "career": "Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin*2"
+    },
+    {
+        "skillName": "Brawling or Martial Arts",
+        "skillGroup": ["Brawling", "Martial Arts"],
+        "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
+        "career": "PA Trooper|Solo"
+    },
+    {
+        "skillName": "Handgun or SMG",
+        "skillGroup": ["Submachinegun", "Handgun"],
+        "description": "The skills of small firearms.",
+        "career": "Bodyguard|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Panzerboy"
+    },
+    {
+        "skillName": "Brawling or Melee",
+        "skillGroup": ["Brawling", "Melee"],
+        "description": "The skill of fighting man to man with fist, feet and other parts of the body -- or weapons.",
+        "career": "Bookie|Dancer/Prostitute"
+    },
+    {
+        "skillName": "Aero or AV Tech",
+        "skillGroup": ["Aero Tech", "AV Tech"],
+        "description": "Select one",
+        "career": "Aerojock"
+    },
+    {
+        "skillName": "Disguise or Intimidate",
+        "skillGroup": ["Disguise", "Intimidate"],
+        "description": "Select one",
+        "career": "Bounty Hunter"
+    },
+    {
+        "skillName": "Rifle or SMG",
+        "skillGroup": ["Rifle", "Submachinegun"],
+        "description": "The skill of fighting with medium firearms.",
+        "career": "Covert Specialist|Outrider|Pathfinder"
+    },
+    {
+        "skillName": "Persuasion or Oratory",
+        "skillGroup": ["Persuasion & Fast Talk", "Oratory"],
+        "description": "The skill of gab.",
+        "career": "Doctor"
+    },
+    {
+        "skillName": "Motorcycle or Drive",
+        "skillGroup": ["Motorcycle", "Drive"],
+        "description": "The skill of commanding wheeled machines.",
+        "career": "Outrider|Space Marine"
+    },
+    {
+        "skillName": "Athletics or Brawling",
+        "skillGroup": ["Athletics", "Brawling"],
+        "description": "The skill of brawn.",
+        "career": "Pirate|Runner"
+    },
+    {
+        "skillName": "Decks or Electronics",
+        "skillGroup": ["Cyberdeck Design", "Electronics"],
+        "description": "The skill of brains.",
+        "career": "Rogue Hunter"
+    },
+    {
+        "skillName": "Dance or Oratory",
+        "skillGroup": ["Dance", "Oratory"],
+        "description": "Select one.",
+        "career": "Spiritual Leader"
+    },
+    {
+        "skillName": "Trance or Perform",
+        "skillGroup": ["Trance", "Perform"],
+        "description": "Select one.",
+        "career": "Spiritual Leader"
+    },
+    {
+        "skillName": "Leadership or Accounting",
+        "skillGroup": ["Leadership", "Accounting"],
+        "description": "Select one.",
+        "career": "Talent Agent/Manager"
+    },
+    {
+        "skillName": "Weapon or Basic Tech",
+        "skillGroup": ["Basic Tech", "Handgun", "Rifle", "Submachinegun", "Melee", "Fencing", "Archery", "Heavy Weapons"],
+        "description": "Select one.",
+        "career": "Warrior"
+    },
+    {
+        "skillName": "Handgun or Hvy Weapons",
+        "skillGroup": ["Handgun", "Heavy Weapons"],
+        "description": "Select one.",
+        "career": "Warrior"
+    },
+    {
+        "skillName": "Endurance or First Aid",
+        "skillGroup": ["Endurance", "First Aid"],
+        "description": "Select one.",
+        "career": "Warrior"
+    },
+    {
+        "skillName": "Melee or Fencing",
+        "skillGroup": ["Melee", "Fencing"],
+        "description": "The skill of using non-ranged weapons.",
+        "career": "Warrior"
+    },
+    {
+        "skillName": "Water Vehicle",
+        "skillGroup": ["Pilot (Ship), Pilot (Submersible), Pilot (Hovercraft), Pilot (Watercraft)"],
+        "description": "The skill of boating -- select a size",
+        "career": "U.S. or EDF Navy|Aquatic Nomad|Pirate"
+    },
+    {
+        "skillName": "Aircraft",
+        "skillGroup": ["Pilot (Dirigible)", "Pilot (Fixed Wing)", "Pilot (Gyro)", "Pilot (Vect.Thrust Vehicle)"],
+        "description": "The skill of boating -- select a size",
+        "career": "U.S. or EDF Navy|Aquatic Nomad|Pirate"
+    },
+    {
+        "skillName": "Pilot or Drive",
+        "skillGroup": ["Drive", "Pilot"],
+        "description": "The skill of commanding machines.",
+        "career": "Bodyguard|Bounty Hunter|Street Samurai|Runner*3"
+    },
+    {
+        "skillName": "Drive/Pilot/Electronics",
+        "skillGroup": ["Drive", "Pilot", "Electronics"],
+        "description": "The skill of commanding machines.",
+        "career": "Tabloid-Monger"
+    },
+    {
+        "skillName": "Pilot",
+        "skillGroup": ["Water Vehicle", "Aircraft"],
+        "description": "The skill of commanding machines.",
+        "career": ""
+    },
+    {
+        "skillName": "History or Area Knowledge",
+        "skillGroup": ["History", "Area Knowledge"],
+        "description": "The skill of knowing where you come from.",
+        "career": "Administrator"
+    },
+    {
+        "skillName": "One Gang-Related Skill",
+        "skillGroup": ["Resist Torture/Drugs", "Area Knowledge", "Persuasion & Fast Talk", "Pick Pocket", "Pharmaceuticals"],
+        "description": "The skill of knowing where you come from.",
+        "career": "Streetpunk"
+    }
+  ]

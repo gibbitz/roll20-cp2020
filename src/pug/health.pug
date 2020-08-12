@@ -3,20 +3,8 @@
 - var levelSlots = [1, 2, 3, 4]
 
 div.cp-2020__health
-  h4 Health
+  h4 HEALTH
   div.cp-2020__health__wrapper
-    div.cp-2020__health__saves
-      div.cp-2020__health__bordered-input
-        label(for='attr_Stun_Save') STUN SAVE
-        input(type='text' name='attr_Stun_Save')
-
-      div.cp-2020__health__bordered-input
-        label(for='attr_Death_Save') DEATH SAVE
-        input(type='text' name='attr_Death_Save')
-
-      div.cp-2020__health__bordered-input
-        label(for='attr_BTM' title='Body Type Modifier') BTM
-        input(type='text' name='attr_BTM' disabled='true' value='0-floor((@{BODY}-2)/2)')
     input(name='attr_Stun_Level' type='hidden')
     input(name='attr_Wound_Level' type='hidden')
     div.cp-2020__health__wounds
@@ -36,6 +24,18 @@ div.cp-2020__health
               // input(class=woundId id=woundId type='radio' name=`attr_Wound_Indicator` value=woundValue)
               span(class=['cp-2020__wound__wound-icon', woundId])
 
+    div.cp-2020__health__saves
+      div.cp-2020__health__bordered-input
+        label(for='attr_Stun_Save') STUN SAVE
+        input(type='text' name='attr_Stun_Save')
+
+      div.cp-2020__health__bordered-input
+        label(for='attr_Death_Save') DEATH SAVE
+        input(type='text' name='attr_Death_Save')
+
+      div.cp-2020__health__bordered-input
+        label(for='attr_BTM' title='Body Type Modifier') BTM
+        input(type='text' name='attr_BTM' disabled='true' value='0-floor((@{BODY}-2)/2)')
 script(type='text/worker').
   var damageLevels = "#{woundLevels}".split(',');
   changeEvents = ['change:Damage_Indicator', 'sheet:opened'].join(' ').toLowerCase();

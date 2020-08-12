@@ -1,19 +1,8 @@
 - var locations = ['Head', 'Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg']
 
 div.cp-2020__armor
-  h4 Armor
+  h4 ARMOR
   input(name='attr_Armor_Sex' type='hidden' disabled='true' value='@{Gender}')
   div(class='cp-2020__armor__figure')
-
-  table.cp-2020__armor-table
-    tr
-      th Location
-      each location in locations
-        th
-          label(for=`attr_stat_${location.replace(" ", "_")}`) #{location}
-    tr
-      th Armor SP
-      each location in locations
-        - var locId = `attr_stat_${location.replace(" ", "_")}`
-        td
-          input(type='number' name=locId id=locId)
+    each location in locations
+        +armorField(location)

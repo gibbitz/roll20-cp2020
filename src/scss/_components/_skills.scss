@@ -1,0 +1,122 @@
+@import '../_partials/data';
+
+$dataValues: map-get($data, 'data');
+$roles: map-get($dataValues, 'roles');
+$skills: map-get($dataValues, 'skills');
+$special-abilities: map-get($dataValues, 'specialAbilities');
+
+%hide {
+  display: none;
+}
+%show {
+  display: block;
+}
+
+%active-tab {
+  border-bottom: 3px solid $med-light-font-color;
+  color: $med-light-font-color;
+}
+%inactive-tab {
+  border-bottom: 3px solid transparent;
+  color: $base-font-color;
+}
+
+.sheet-cp-2020 {
+  $base: &;
+
+  &__skills {
+    // GENERAL STYLING
+    #{$base}__learn-toggle {
+      border-bottom: 1px solid $dim-font-color;
+      display: flex;
+      position: relative;
+
+      > label {
+        flex: 1 1 auto;
+        max-width: 33%;
+        padding: .5em;
+
+        input {
+          display: none;
+        }
+      }
+    }
+
+    input[value='learn'] {
+      & ~ #{$base}__learn-toggle {
+        #{$base}__use-tab {
+          @extend %inactive-tab;
+        }
+        #{$base}__learn-tab {
+          @extend %active-tab;
+        }
+      }
+      & ~ #{$base}__inner-box {
+        color: green;
+      }
+    }
+    input[value='use'] {
+      & ~ #{$base}__learn-toggle{
+        #{$base}__learn-tab {
+          @extend %inactive-tab;
+        }
+        #{$base}__use-tab {
+          @extend %active-tab;
+        }
+      }
+      & ~ #{$base}__inner-box {
+        color: red;
+      }
+    }
+
+    // BLOCK VISIBILITY
+    @each $role in $roles {
+      $role-selector: str-to-selector($role);
+      [value='#{$role}'] {
+        & ~ #{$base}__special-ability {
+          #{$base}__skill {
+            @extend %hide;
+            @each $special-ability in $special-abilities {
+              $ability-roles: map-get($special-ability, 'specialAbility');
+              $ability-selector: str-to-selector(map-get($special-ability, 'skillName'), '#{$base}__skill-');
+              @if str-index($ability-roles, $role) and 0 < str-index($ability-roles, $role) {
+                &#{$ability-selector} {
+                  @extend %show;
+                }
+              }
+            }
+          }
+        }
+        & ~ #{$base}__career-skills {
+          #{$base}__skill {
+            @extend %hide;
+            @each $skill in $skills {
+              $careers: '#{map-get($skill, 'career')}';
+              $career-selector: str-to-selector(map-get($skill, 'skillName'), '#{$base}__skill-');
+              @if $careers != '' and str-index($careers, $role) and 0 < str-index($careers, $role) {
+                &#{$career-selector} {
+                  @extend %show;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    input#{$base}__skill__name {
+      & ~ #{$base}__skill__description {
+        @extend %hide;
+      }
+    }
+    @each $special-ability in $special-abilities {
+      $ability: map-get($special-ability, 'skillName');
+      $ability-selector: str-to-selector($ability, '#{$base}__skill-');
+      input#{$base}__skill__name[value='#{$ability}'] {
+        & ~ #{$ability-selector}__description {
+          @extend %show;
+        }
+      }
+    }
+  }
+}
