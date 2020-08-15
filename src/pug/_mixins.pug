@@ -42,7 +42,6 @@ mixin attrSelect(attrName, attrOptions, attrLabel)
         span= attrLabel
 
 //- ===================================================================================
-//-
   Creates an input and its surrounding markup for armor values
   @param  {String} location Human readable body part name for label that is turned into css selectors
 //- ===================================================================================
@@ -54,7 +53,84 @@ mixin armorField(location)
       span= location
 
 //- ===================================================================================
-//-
+
+         '||       ||  '||  '||
+   ....   ||  ..  ...   ||   ||   ....
+  ||. '   || .'    ||   ||   ||  ||. '
+  . '|..  ||'|.    ||   ||   ||  . '|..
+  |'..|' .||. ||. .||. .||. .||. |'..|'
+
+//- ===================================================================================
+
+//- ===================================================================================
+  Creates Skill Name Field or Select for compoundSkills.
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillName, skillGroup
+//- ===================================================================================
+mixin skillNameField(skillAttrName, skillData)
+  if (skillData.skillGroup)
+    label(class='cp-2020__skill__name--view cp-2020__skill__name--view--carat-only')
+      input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
+      div.cp-2020__skill__name__carat
+    select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
+      each skillOption in skillData.skillGroup
+        option(value=skillOption)=skillOption
+  else
+    label.cp-2020__skill__name--view=skillData.skillName
+      input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
+      div.cp-2020__skill__name__carat
+
+//- ===================================================================================
+  Creates Ip Multiplier label. This is complicated with compound skills
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillName, skillGroup, ipMultiplier
+  @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
+//- ===================================================================================
+mixin skillIpMultiplier(skillAttrName, skillData, additionalData)
+  if (skillData.skillGroup)
+    input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
+    each skillName in skillData.skillGroup
+      each skill in additionalData
+        if skillName === skill.skillName
+          span(class=`cp-2020__skill__ip-multiplier cp-2020__skill-${nameToSelector(skill.skillName)}__ip-multiplier`)=`ip x ${skill.ipMultiplier}`
+  else
+    span.cp-2020__skill__ip-multiplier=`ip x ${skillData.ipMultiplier}`
+
+//- ===================================================================================
+  Creates Skill descriptions. Complicated by compound skills
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillGroup and description
+  @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
+//- ===================================================================================
+mixin skillDescription(skillAttrName, skillData, additionalData)
+  input(name=`attr_${skillAttrName}_isExpanded` disabled='true' type='hidden' value=`@{${skillAttrName}_expanded}`)
+  if (skillData.skillGroup)
+    input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
+    each skillName in skillData.skillGroup
+      each skill in additionalData
+        if skillName === skill.skillName
+          - var descriptionClass = `cp-2020__skill-${nameToSelector(skill.skillName)}__description`
+          span(class=`cp-2020__skill__description ${descriptionClass}`)=skill.description
+  else
+    input.cp-2020__skill__name--edit(type='hidden' name=`attr_${skillAttrName}_name`)
+    span.cp-2020__skill__description=skillData.description
+
+//- ===================================================================================
+  Creates Skill Stats (Level, IP Multiplier, roll button etc.).
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillGroup and description
+  @param  {Array} additionalData an Array made up of skillData objects used for compoundSkills to render a select to choose the proper skill (for IpMultiplier dependency)
+//- ===================================================================================
+mixin skillStats(skillAttrName, skillData, additionalData)
+  div.cp-2020__skill__stat-wrapper
+    input.cp-2020__skill__lvl--view(type='text' disabled='true' name=`attr_${skillAttrName}_level_view` value=`@{${skillAttrName}_level}`)
+
+    input.cp-2020__skill__lvl--edit(type='number' min='0' max='10' name=`attr_${skillAttrName}_level`)
+    button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
+    input.cp-2020__skill__ip--edit(type='number' name=`attr_Skill_${skillData.skillName.replace(' ', '_')}_ip`)
+    +skillIpMultiplier(skillAttrName, skillData, additionalData)
+
+//- ===================================================================================
   Creates Skill fields with accompanying markup that have both edit and use fields shown/hidden via css by the use/learn tabs
   @param  {Object} skillData      an Object containing skillName, baseAttribute, modifier, ipMultiplier, specialAbility, description, notes, and career keys loaded from data JSON files
   @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
@@ -67,41 +143,8 @@ mixin skillField(skillData, additionalData)
   +box(class=`cp-2020__skill ${skillClass}`)
     div.cp-2020__skill__wrapper
       div.cp-2020__skill__title-wrapper
-        if (skillData.skillGroup)
-          label(class='cp-2020__skill__name--view cp-2020__skill__name--view--carat-only')
-            input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
-            div.cp-2020__skill__name__carat
-          select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
-            each skillOption in skillData.skillGroup
-              option(value=skillOption)=skillOption
-        else
-          label.cp-2020__skill__name--view=skillData.skillName
-            input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
-            div.cp-2020__skill__name__carat
-        div.cp-2020__skill__stat-wrapper
-          input.cp-2020__skill__lvl--view(type='text' disabled='true' name=`attr_${skillAttrName}_level_view` value=`@{${skillAttrName}_level}`)
-
-          input.cp-2020__skill__lvl--edit(type='number' min='0' max='10' name=`attr_${skillAttrName}_level`)
-          button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
-          input.cp-2020__skill__ip--edit(type='number' name=`attr_Skill_${skillData.skillName.replace(' ', '_')}_ip`)
-          if (skillData.skillGroup)
-            input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
-            each skillName in skillData.skillGroup
-              each skill in additionalData
-                if skillName === skill.skillName
-                  span(class=`cp-2020__skill__ip-multiplier cp-2020__skill-${nameToSelector(skill.skillName)}__ip-multiplier`)=`ip x ${skill.ipMultiplier}`
-          else
-            span.cp-2020__skill__ip-multiplier=`ip x ${skillData.ipMultiplier}`
-      input(name=`attr_${skillAttrName}_isExpanded` disabled='true' type='hidden' value=`@{${skillAttrName}_expanded}`)
-      if (skillData.skillGroup)
-        input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
-        each skillName in skillData.skillGroup
-          each skill in additionalData
-            if skillName === skill.skillName
-              - var descriptionClass = `cp-2020__skill-${nameToSelector(skill.skillName)}__description`
-              span(class=`cp-2020__skill__description ${descriptionClass}`)=skill.description
-      else
-        input.cp-2020__skill__name--edit(type='hidden' name=`attr_${skillAttrName}_name`)
-        span.cp-2020__skill__description=skillData.description
+        +skillNameField(skillAttrName, skillData)
+        +skillStats(skillAttrName, skillData, additionalData)
+      +skillDescription(skillAttrName, skillData, additionalData)
 
 
