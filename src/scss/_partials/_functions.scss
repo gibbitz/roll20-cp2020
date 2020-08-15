@@ -28,3 +28,7 @@
     )
   )
 }
+
+@function str-contains($list, $needle) {
+  @return $list != '' and str-index($list, $needle) and 0 < str-index($list, $needle)
+}

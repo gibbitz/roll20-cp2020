@@ -1,4 +1,4 @@
-- var nameToSelector = (name) => name.replace(/\W|\/\(\)/g, '-').replace('.', '').replace('&', 'and').toLowerCase()
+- var nameToSelector = (name) => name.replace(/\s|\/|\(|\)/g, '-').replace('.', '').replace('&', 'and').toLowerCase()
 - var allSkills = [...data.skills, ...data.compoundSkills]
 
 div.cp-2020__skills
@@ -22,7 +22,7 @@ div.cp-2020__skills
 
     h5 Pickup Skills
     div.cp-2020__pickup-skills
-      each skill in allSkills
+      each skill in data.skills
         +skillField(skill, data.skills)
 
 

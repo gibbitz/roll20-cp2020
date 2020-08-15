@@ -6,6 +6,14 @@
   display: block;
 }
 
+%hide-override {
+  display: none !important;
+}
+
+%show-override {
+  display: block !important;
+}
+
 %active-tab {
   // &::before {
   //   content: '';

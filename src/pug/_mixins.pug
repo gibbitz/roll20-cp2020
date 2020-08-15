@@ -68,10 +68,12 @@ mixin skillField(skillData, additionalData)
     div.cp-2020__skill__wrapper
       div.cp-2020__skill__title-wrapper
         if (skillData.skillGroup)
+          label(class='cp-2020__skill__name--view cp-2020__skill__name--view--carat-only')
+            input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
+            div.cp-2020__skill__name__carat
           select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
             each skillOption in skillData.skillGroup
               option(value=skillOption)=skillOption
-          input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name` value=`@{${skillAttrName}_name}`)
         else
           label.cp-2020__skill__name--view=skillData.skillName
             input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
@@ -82,9 +84,17 @@ mixin skillField(skillData, additionalData)
           input.cp-2020__skill__lvl--edit(type='number' min='0' max='10' name=`attr_${skillAttrName}_level`)
           button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
           input.cp-2020__skill__ip--edit(type='number' name=`attr_Skill_${skillData.skillName.replace(' ', '_')}_ip`)
-          span.cp-2020__skill__ip-multiplier=`ip x ${skillData.ipMultiplier}`
+          if (skillData.skillGroup)
+            input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
+            each skillName in skillData.skillGroup
+              each skill in additionalData
+                if skillName === skill.skillName
+                  span(class=`cp-2020__skill__ip-multiplier cp-2020__skill-${nameToSelector(skill.skillName)}__ip-multiplier`)=`ip x ${skill.ipMultiplier}`
+          else
+            span.cp-2020__skill__ip-multiplier=`ip x ${skillData.ipMultiplier}`
       input(name=`attr_${skillAttrName}_isExpanded` disabled='true' type='hidden' value=`@{${skillAttrName}_expanded}`)
       if (skillData.skillGroup)
+        input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
         each skillName in skillData.skillGroup
           each skill in additionalData
             if skillName === skill.skillName
