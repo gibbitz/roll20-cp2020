@@ -1,0 +1,82 @@
+%hide {
+  display: none;
+}
+
+%show {
+  display: block;
+}
+
+%active-tab {
+  // &::before {
+  //   content: '';
+  //   border-bottom: 1px solid $dim-fill-color;
+  //   bottom: 0;
+  //   left: 0;
+  //   position: absolute;
+  //   width: 100%;
+  // }
+  // background-color: rgba($dim-stroke, 0.5);
+  color: $med-light-font-color;
+  background-color: rgba($dim-fill-color, 0.5);
+  position: relative;
+}
+
+%inactive-tab {
+  color: $dim-font-color;
+
+  &:hover {
+    background-color: rgba($dim-stroke, 0.5);
+  }
+}
+
+%tab-group {
+  // border-bottom: 1px solid $dim-stroke;
+  display: flex;
+  font-size: 1.1em;
+  position: relative;
+  text-transform: uppercase;
+
+  > label {
+    @extend %inactive-tab;
+    background-color: rgba($dim-stroke, 0);
+    // border-bottom: 1px solid $dim-stroke;
+    cursor: pointer;
+    flex: 1 1 auto;
+    line-height: 1;
+    max-width: 33%;
+    padding: .5em;
+    transition: background-color 0.6s ease-in;
+
+    input {
+      display: none;
+    }
+  }
+}
+
+%section-wrapper {
+  border: 1px solid $dim-stroke;
+  padding: 1em;
+}
+
+%d10-roll-button {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: $base-font-color;
+  line-height: 0.6;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-shadow: none;
+  &:hover::before {
+    color: $level-9;
+  }
+
+  &::before {
+    content: 'j';
+    font-family: 'dicefontd10';
+    font-size: 2em;
+    padding: 0.1em;
+    transition: color 0.5s ease-in-out;
+  }
+}

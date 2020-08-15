@@ -1,45 +1,122 @@
 @import '../_partials/data';
+@import '../_partials/placeholders';
 
 $dataValues: map-get($data, 'data');
 $roles: map-get($dataValues, 'roles');
 $skills: map-get($dataValues, 'skills');
 $special-abilities: map-get($dataValues, 'specialAbilities');
 
-%hide {
-  display: none;
-}
-%show {
-  display: block;
-}
-
-%active-tab {
-  border-bottom: 3px solid $med-light-font-color;
-  color: $med-light-font-color;
-}
-%inactive-tab {
-  border-bottom: 3px solid transparent;
-  color: $base-font-color;
-}
-
 .sheet-cp-2020 {
   $base: &;
 
+
+  &__skill {
+    &__wrapper {
+      padding: 0 0.3em 0.6em 0.8em;
+    }
+
+    label#{&}__name--view {
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        padding-left: 1em;
+        position: relative;
+
+        > input {
+          opacity: 0.01;
+
+          &:checked + #{$base}__skill__name__carat {
+            &::before {
+              transform: rotate(135deg);
+            }
+          }
+        }
+
+        #{$base}__skill__name__carat {
+          left: 0;
+          position: absolute;
+          top: 30%;
+            &::before {
+              content: '';
+              display: block;
+              height: 0.3em;
+              width: 0.3em;
+              border: 2px solid $dim-font-color;
+              border-left: 0;
+              border-bottom: 0;
+              transform: rotate(45deg);
+              transition: transform 0.5s ease-out;
+            }
+        }
+    }
+
+    &__description {
+      box-sizing: border-box;
+        display: block;
+        font-size: 1.05em;
+        letter-spacing: 1px;
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 0.5em;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    [value='expanded'] ~ &__description {
+      max-height: 500px;
+    }
+
+    button#{$base}__skill__roll {
+      @extend %d10-roll-button;
+    }
+
+    &__stat-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        > * {
+          flex: 0 1 auto;
+          margin: 0 .3em !important;
+          white-space: nowrap;
+        }
+    }
+
+    &__lvl--view {
+      max-width: 5em;
+      text-align: right;
+    }
+
+    &__lvl--edit {
+        border-bottom: 1px solid $dim-font-color !important;
+        max-width: 5em;
+        text-align: right;
+    }
+
+    &__ip--edit {
+        border-bottom: 1px solid $dim-font-color !important;
+        max-width: 5em;
+        text-align: center;
+    }
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  }
+
   &__skills {
     // GENERAL STYLING
+    @extend %section-wrapper;
+
+    #{$base}__inner-box {
+      @extend %section-wrapper;
+    }
+
     #{$base}__learn-toggle {
-      border-bottom: 1px solid $dim-font-color;
-      display: flex;
-      position: relative;
-
-      > label {
-        flex: 1 1 auto;
-        max-width: 33%;
-        padding: .5em;
-
-        input {
-          display: none;
-        }
-      }
+      @extend %tab-group;
     }
 
     input[value='learn'] {
@@ -52,7 +129,14 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
-        color: green;
+        #{$base}__skill__stat-wrapper {
+          #{$base}__skill__lvl--view {
+            @extend %hide;
+          }
+          #{$base}__skill__roll {
+            @extend %hide;
+          }
+        }
       }
     }
     input[value='use'] {
@@ -65,7 +149,24 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
-        color: red;
+        #{$base}__skill__stat-wrapper {
+          #{$base}__skill__lvl--edit {
+            @extend %hide;
+          }
+        }
+
+        #{$base}__pickup-skills {
+          #{$base}__skill-learned {
+            + #{$base}__skill {
+              @extend %hide;
+            }
+          }
+          @each $level in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10') {
+            [value='#{$level}'] + #{$base}__skill {
+              @extend %show;
+            }
+          }
+        }
       }
     }
 
@@ -118,5 +219,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
     }
+
   }
 }
+

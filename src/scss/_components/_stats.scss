@@ -1,3 +1,5 @@
+@import '../_partials/placeholders';
+
 %stat-input {
   box-sizing: border-box;
   flex: 0 1 20%;
@@ -128,35 +130,12 @@
     }
   }
 
-  button#{$base}__stat__check-btn,
-  button#{$base}__stat__save-btn {
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    color: $base-font-color;
-    line-height: 1;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    text-shadow: none;
-
-    &:hover::before {
-      color: $level-9;
-    }
-
-    &::before {
-      content: 'j';
-      font-family: 'dicefontd10';
-      font-size: 2em;
-      padding: 0.1em;
-      transition: color 0.5s ease-in-out;
-    }
-
-    .sheet-small {
-      font-size: 0.8em;
-    }
+  button#{$base}__stat__check-btn{
+    @extend %d10-roll-button;
   }
+
   button#{$base}__stat__save-btn {
+    @extend %d10-roll-button;
     &::before {
       content: 'a';
     }

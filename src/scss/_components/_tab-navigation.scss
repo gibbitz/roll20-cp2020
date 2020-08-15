@@ -1,0 +1,32 @@
+@import '../_partials/placeholders';
+
+.sheet-cp-2020 {
+  $base: &;
+
+  &__nav-tabs {
+    @extend %tab-group;
+  }
+
+  #{$base}__bio,
+  #{$base}__skills,
+  #{$base}__weapons,
+  #{$base}__outfit {
+    @extend %hide;
+  }
+
+  &__nav-toggle {
+
+    @each $tab in ('bio', 'skills', 'weapons', 'outfit') {
+      &[value='#{$tab}'] {
+        & ~ #{$base}__#{$tab} {
+          @extend %show;
+        }
+        & ~ #{$base}__nav-tabs {
+          #{$base}__nav-tab--#{$tab} {
+            @extend %active-tab;
+          }
+        }
+      }
+    }
+  }
+}

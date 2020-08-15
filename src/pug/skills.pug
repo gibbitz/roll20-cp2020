@@ -2,7 +2,6 @@
 - var allSkills = [...data.skills, ...data.compoundSkills]
 
 div.cp-2020__skills
-  h4 SKILLS
   input(type='hidden' disabled='true' name='attr_Skill_Toggle_INdicator' value='@{Skill_Toggle}')
   div.cp-2020__learn-toggle
     label.cp-2020__learn-tab Learn
@@ -11,7 +10,7 @@ div.cp-2020__skills
       input(type='radio' name='attr_Skill_Toggle' value='use')
   div.cp-2020__inner-box
     input(name='attr_roleSelected' disabled='true' value='@{Role}' type='hidden')
-    h5 Special Abilities
+    h5 Special Ability
     div.cp-2020__special-ability
       each skill in data.specialAbilities
         +skillField(skill, data.specialAbilities)
