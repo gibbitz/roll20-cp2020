@@ -1,0 +1,8 @@
+//- ===================================================================================
+//-
+  Creates a simple box with corner treatment for fields and visually separated areas
+//- ===================================================================================
+mixin box()
+  span(class=`cp-2020__box${attributes.class ? ' ' + attributes.class : ''}`)
+    span.cp-2020__box--inner
+      block

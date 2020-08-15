@@ -1,0 +1,10 @@
+//- ===================================================================================
+  Creates an input and its surrounding markup for armor values
+  @param  {String} location Human readable body part name for label that is turned into css selectors
+//- ===================================================================================
+mixin armorField(location)
+  - var limb = location.replace(' ', '-').toLowerCase()
+  +box(class=`armor-location--${limb}`)
+    label(for=`armor_${limb}` class=`${attributes.class}`)
+      input(id=`armor_${limb}` name=`attr_Armor_${location.replace('-', '_')}` type='number')
+      span= location
