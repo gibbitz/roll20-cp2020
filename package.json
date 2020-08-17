@@ -20,9 +20,9 @@
   },
   "scripts": {
     "test": "jest",
-    "build:css": "node-sass src/index.scss -o dist",
-    "build:html": "pug src/index.pug -o dist -O src/data/index.js",
-    "dev:html": "pug src/index.pug --pretty -o dist -O src/data/index.js",
+    "build:css": "node-sass src/cp2020.scss -o dist",
+    "build:html": "pug src/cp2020.pug -o dist -O src/data/index.js",
+    "dev:html": "pug src/cp2020.pug --pretty -o dist -O src/data/index.js",
     "build:data": "json-to-scss ./src/data/index.js ./src/scss/_partials/_data.scss --v=sq --p='$data: '",
     "build": "run-p build:data build:css build:html",
     "watch": "npm-watch"

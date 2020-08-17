@@ -45,7 +45,7 @@ npm i
 
 After the dependencies are installed, developing the sheet is a combination of running a node process and uploading the output HTML and CSS files to a Roll20 character sheet sandbox. 
 
-When built the application will write index.html and index.css to `./dist`.
+When built the application will write cp2020.html and cp2020.css to `./dist`.
 
 ```bash
 npm run build
