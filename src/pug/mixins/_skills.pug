@@ -3,34 +3,70 @@
   @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
   @param  {Object} skillData      an Object containing skillName, skillGroup
 //- ===================================================================================
-mixin skillNameField(skillAttrName, skillData)
+mixin skillNameField(skillAttrName, skillData, additionalData)
   if (skillData.skillGroup)
-    label(class='cp-2020__skill__name--view cp-2020__skill__name--view--carat-only')
-      input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
+    - var baseClass = 'cp-2020__skill__name--view'
+    label(
+      class=`${baseClass} ${baseClass}`
+      for=`attr_${skillAttrName}_expanded`
+    )
+      select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
+        each skillName in skillData.skillGroup
+          each skill in additionalData
+            if (skill.skillName === skillName)
+              option(value=skillName)=skillName
+                small=` [${skill.baseAttribute}]`
+      input(
+        type='checkbox'
+        name=`attr_${skillAttrName}_expanded`
+        id=`attr_${skillAttrName}_expanded`
+        value='expanded'
+      )
       div.cp-2020__skill__name__carat
-    select.cp-2020__skill__name--edit(name=`attr_${skillAttrName}_name`)
-      each skillOption in skillData.skillGroup
-        option(value=skillOption)=skillOption
+
   else
     label.cp-2020__skill__name--view=skillData.skillName
+      small=` [${skillData.baseAttribute}]`
       input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
       div.cp-2020__skill__name__carat
 
 //- ===================================================================================
-  Creates Ip Multiplier label. This is complicated with compound skills
+  Creates Ip Remaining to next level counter and sets up Roll20 to calculate the value.
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {String} skillSelector  CSS friendly name for skill
+  @param  {String} ipMultiplieroptions to render a select to choose the proper skill
+//- ===================================================================================
+mixin ipLevelUp(skillAttrName, skillSelector, ipMultiplier)
+  //- ((level + 1) * 10 * ipx) - ip = level-up
+  - var nextLevelClass = `cp-2020__skill-${skillSelector}__next-level`
+  input(
+    class=`cp-2020__skill__next-level ${nextLevelClass}`
+    type='text'
+    disabled='true'
+    name=`attr_${skillAttrName}_next-level`
+    value=`((@{${skillAttrName}_level}+1)*10*${ipMultiplier})-@{${skillAttrName}_ip}`
+  )
+
+//- ===================================================================================
+  Finds ipMultiplier and creates level-up field. This is complicated by compound skills
   @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
   @param  {Object} skillData      an Object containing skillName, skillGroup, ipMultiplier
   @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
 //- ===================================================================================
-mixin skillIpMultiplier(skillAttrName, skillData, additionalData)
+mixin skillIpRemaining(skillAttrName, skillData, additionalData)
   if (skillData.skillGroup)
-    input.cp-2020__skill__name(type='hidden' disabled='true' name=`attr_${skillAttrName}_name-toggle` value=`@{${skillAttrName}_name}`)
+    input.cp-2020__skill__name(
+      type='hidden'
+      disabled='true'
+      name=`attr_${skillAttrName}_name-toggle`
+      value=`@{${skillAttrName}_name}`
+    )
     each skillName in skillData.skillGroup
       each skill in additionalData
         if skillName === skill.skillName
-          span(class=`cp-2020__skill__ip-multiplier cp-2020__skill-${nameToSelector(skill.skillName)}__ip-multiplier`)=`ip x ${skill.ipMultiplier}`
+          +ipLevelUp(skillAttrName, nameToSelector(skillName), skill.ipMultiplier)
   else
-    span.cp-2020__skill__ip-multiplier=`ip x ${skillData.ipMultiplier}`
+    +ipLevelUp(skillAttrName, '', skillData.ipMultiplier)
 
 //- ===================================================================================
   Creates Skill descriptions. Complicated by compound skills
@@ -59,12 +95,23 @@ mixin skillDescription(skillAttrName, skillData, additionalData)
 //- ===================================================================================
 mixin skillStats(skillAttrName, skillData, additionalData)
   div.cp-2020__skill__stat-wrapper
-    input.cp-2020__skill__lvl--view(type='text' disabled='true' name=`attr_${skillAttrName}_level_view` value=`@{${skillAttrName}_level}`)
+    div.cp-2020__stat-group
+      span.cp-2020__skill__lvl--view
+        //- TODO: use a worker for this crap -- on load + on drop-down change + level change
+        span(name=`attr_${skillAttrName}_level`)
+        input.cp-2020__skill__lvl--total(
+          type='text'
+          disabled='true'
+          name=`attr_${skillAttrName}_level_view`
+          value=`@{${skillAttrName}_level|0}+round((@{${skillData.baseAttribute}_Mod}+@{${skillData.baseAttribute}_Base})/@{Wound_Divisor})`
+        )
 
-    input.cp-2020__skill__lvl--edit(type='number' min='0' max='10' name=`attr_${skillAttrName}_level`)
+      input.cp-2020__skill__lvl--edit(type='number' value='0' min='0' max='10' name=`attr_${skillAttrName}_level`)
+      span.cp-2020__stat-label level/total
+    //- TODO: use a worker for this crap -- be sure to re-calculate based on wounds
     button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
-    input.cp-2020__skill__ip--edit(type='number' name=`attr_Skill_${skillData.skillName.replace(' ', '_')}_ip`)
-    +skillIpMultiplier(skillAttrName, skillData, additionalData)
+    input.cp-2020__skill__ip--edit(type='number' value='0' name=`attr_${skillAttrName}_ip`)
+    +skillIpRemaining(skillAttrName, skillData, additionalData)
 
 //- ===================================================================================
   Creates Skill fields with accompanying markup that have both edit and use fields shown/hidden via css by the use/learn tabs
@@ -79,6 +126,6 @@ mixin skillField(skillData, additionalData)
   +box(class=`cp-2020__skill ${skillClass}`)
     div.cp-2020__skill__wrapper
       div.cp-2020__skill__title-wrapper
-        +skillNameField(skillAttrName, skillData)
+        +skillNameField(skillAttrName, skillData, additionalData)
         +skillStats(skillAttrName, skillData, additionalData)
       +skillDescription(skillAttrName, skillData, additionalData)

@@ -8,7 +8,7 @@
       "patterns": [
         "./src/**"
       ],
-      "extensions": "pug"
+      "extensions": "pug, js, json"
     },
     "build:data": "./src/data/*.{js,json}",
     "build:css": {
@@ -16,17 +16,15 @@
         "./src/**"
       ],
       "extensions": "scss"
-    },
-    "build:js": "./src/**.js"
+    }
   },
   "scripts": {
     "test": "jest",
-    "build:js": "babel -f ./src/index.js --out-file dist/app.js",
     "build:css": "node-sass src/index.scss -o dist",
     "build:html": "pug src/index.pug -o dist -O src/data/index.js",
     "dev:html": "pug src/index.pug --pretty -o dist -O src/data/index.js",
     "build:data": "json-to-scss ./src/data/index.js ./src/scss/_partials/_data.scss --v=sq --p='$data: '",
-    "build": "run-p build:data build:css build:js build:html",
+    "build": "run-p build:data build:css build:html",
     "watch": "npm-watch"
   },
   "repository": {

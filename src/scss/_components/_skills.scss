@@ -14,7 +14,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
   &__skill {
     &__wrapper {
-      padding: 0 0.3em 0.6em 0.8em;
+      padding: 0 0.3em 0 0.8em;
     }
 
     label#{&}__name--view {
@@ -26,12 +26,9 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         padding-left: 1em;
         position: relative;
 
-        &--carat-only {
-          max-width: 1em;
-        }
-
         > input {
           opacity: 0.01;
+          position: absolute;
 
           &:checked + #{$base}__skill__name__carat {
             &::before {
@@ -77,12 +74,16 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
       @each $skill in map-get($compoundSkill, 'skillGroup') {
         $skillSelector: str-to-selector(#{$base}__skill-#{$skill});
         #{$skillSelector}__description,
-        #{$skillSelector}__ip-multiplier {
+        #{$skillSelector}__next-level {
           @extend %hide;
         }
-        [value='#{$skill}'] ~ #{$skillSelector}__description,
-        [value='#{$skill}'] ~ #{$skillSelector}__ip-multiplier {
+        [value='#{$skill}'] ~ #{$skillSelector}__description{
           @extend %show-override;
+        }
+        @at-root [value='learn'] ~ #{$base}__inner-box {
+          [value='#{$skill}'] ~ #{$skillSelector}__next-level {
+            @extend %show-override;
+          }
         }
       }
     }
@@ -101,11 +102,28 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           margin: 0 .3em !important;
           white-space: nowrap;
         }
-    }
 
+        #{$base}__stat-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            max-width: 5em;
+        }
+
+        #{$base}__stat-label {
+            color: $dim-fill-color;
+            font-size: 0.7em;
+            letter-spacing: 1px;
+        }
+    }
+  }
+
+  & &__skill {
     &__lvl--view {
-      max-width: 5em;
       text-align: right;
+      line-height: 1;
+      padding: 0;
+      font-size: 1.4em;
     }
 
     &__lvl--edit {
@@ -170,9 +188,15 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
       }
       & ~ #{$base}__inner-box {
         #{$base}__skill__stat-wrapper {
-          #{$base}__skill__lvl--edit {
+          #{$base}__skill__lvl--edit,
+          #{$base}__skill__next-level,
+          #{$base}__skill__ip--edit {
             @extend %hide;
           }
+        }
+
+        select#{$base}__skill__name--edit {
+          pointer-events: none;
         }
 
         #{$base}__pickup-skills {

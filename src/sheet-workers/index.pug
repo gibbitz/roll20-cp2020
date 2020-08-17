@@ -1,0 +1,6 @@
+- var jsonData = JSON.stringify(data)
+
+script(type='text/worker')
+  | var data = !{jsonData};
+  include ./skills.js
+  include ./health.js

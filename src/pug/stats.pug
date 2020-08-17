@@ -1,5 +1,3 @@
-- var stats = { INT: 'intelligence', REF: 'reflexes', TECH: 'technical aptitude', COOL: 'cool', ATTR: 'attractiveness', LUCK: 'luck', MA: 'movement allowance', BODY: 'body type', EMP: 'empathy' }
-
 div.cp-2020__stats
   h3.cp-2020__stats__view-title
     div STATS
@@ -15,7 +13,7 @@ div.cp-2020__stats
   input(type='hidden' value='1' name='attr_Wound_Divisor')
   input(type='hidden' value='0' name='attr_Wound_Ref_Mod')
   div.cp-2020__layout--row-1-1
-    each name, stat in stats
+    each name, stat in data.stats
       +box.cp-2020__stat
         div.cp-2020__layout--row-3-1
           label(for=`attr_${stat}_Base`)

@@ -1785,6 +1785,17 @@ players- you may elect to swap your original INT and REF stats for characters ge
       career: 'Streetpunk'
     )),
     roles: ('Action Reporter', 'Administrator', 'Aerojock', 'Aquatic Nomad', 'Assassin', 'Attorney/Judge', 'Black Marketeer', 'Bodyguard', 'Bookie', 'Bounty Hunter', 'British Combined Forces', 'Celebrity Reporter', 'Combat Medic', 'Con Man', 'Cop', 'Corp Operative', 'Corporate', 'Covert Specialist', 'Covert Tech Demolitions Ops', 'Covert Tech Elint Ops', 'Covert Tech Intrusion Ops', 'Covert Tech Netrunner Ops', 'Covert Tech Remote Ops', 'Credshark', 'Cultist', 'Dancer/Prostitute', 'Divemaster/Miner', 'Doctor', 'Eurosolo', 'Ex-Cybersoldier', 'Factor', 'Fence', 'Fixer', 'Freelancer', 'Highrider/Pilot', 'Information Broker', 'Investigative Reporter', 'Japanese SDF Officer', 'Lawyer', 'Loan Shark', 'Marine Biotech', 'Marine Corps', 'Med Tech', 'Media', 'Pharmacist/Bioware Researcher', 'Negotiator', 'Netrunner', 'Nomad', 'On-Air Star', 'Outrider', 'Owner', 'PA Trooper', 'Panzerboy', 'Pathfinder', 'Pimp', 'Pirate', 'Police Beat Reporter', 'Private Investigator', 'Prowler', 'Pusher', 'Reapers', 'Rockerboy', 'Rogue Hunter', 'Runner', 'Scavenger', 'Shaman', 'Shinobi', 'Shoemaker', 'Salver', 'Sleaze', 'Smuggler', 'Sniffer', 'Social Reporter', 'Solo', 'Space Marine', 'Spiritual Leader', 'Spook', 'Spy', 'Street Samurai', 'Streetpunk', 'Subjock', 'Tabloid-Monger', 'Talent Agent/Manager', 'Talent Scout', 'Tatsujin', 'Techie', 'The Spin Doctor', 'Trader', 'U.S. or EDF Army', 'U.S. or EDF Navy', 'USAF/EDF Air Force', 'War Correspondent', 'Warrior', 'Workganger'),
-    test: 'fat-tire'
+    stats: (
+      INT: 'intelligence',
+      REF: 'reflexes',
+      TECH: 'technical aptitude',
+      CL: 'cool',
+      ATT: 'attractiveness',
+      LUCK: 'luck',
+      MA: 'movement allowance',
+      BODY: 'body type',
+      EMP: 'empathy'
+    ),
+    woundLevels: ('LIGHT', 'SERIOUS', 'CRITICAL', 'MORTAL 0', 'MORTAL 1', 'MORTAL 2', 'MORTAL 3', 'MORTAL 4', 'MORTAL 5', 'MORTAL 6')
   )
 );
