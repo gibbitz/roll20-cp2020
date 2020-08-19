@@ -2,5 +2,7 @@
 
 script(type='text/worker')
   | var data = !{jsonData};
+  |
+  include ./utils.js
   include ./skills.js
   include ./health.js

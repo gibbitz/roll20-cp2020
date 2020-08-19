@@ -15,8 +15,13 @@ div.cp-2020__health
             - var woundValue = `${woundIndex}.${subLevel}`
             - var stunId = `stun_${woundIndex}_${subLevel}`
             div.cp-2020__wound-input
-              label(for='attr_Damage_Indicator')
-              input(name='attr_Damage_Indicator' id='attr_Damage_Indicator' type='checkbox' value=woundValue)
+              label(for=woundId)
+              input(
+                    name='attr_Damage_Indicator'
+                    id=woundId
+                    type='checkbox'
+                    value=woundValue
+              )
               // input(class=stunId id=stunId type='radio' name=`attr_Stun_Indicator` value=woundValue)
               span(class=['cp-2020__wound__stun-icon', stunId])
               // input(class=woundId id=woundId type='radio' name=`attr_Wound_Indicator` value=woundValue)

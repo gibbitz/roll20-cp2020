@@ -1,5 +1,4 @@
 
-debugger
 var damageLevels = data.woundLevels;
 changeEvents = ['change:Damage_Indicator', 'sheet:opened'].join(' ').toLowerCase();
 function makeFloatOrZero(string) {
@@ -11,7 +10,7 @@ function makeIntOrZero(string) {
 on(changeEvents, function(eventInfo) {
   getAttrs(['Wound_Level', 'Stun_Level', 'Damage_Indicator', 'BODY_Mod', 'BODY_Base'], function(attrs) {
 
-    console.log(eventInfo)
+    // console.log(eventInfo)
     var damageIndAttr = makeFloatOrZero(
       eventInfo.newValue === '0'
         ? eventInfo.previousValue
@@ -45,14 +44,14 @@ on(changeEvents, function(eventInfo) {
       : 0;
 
 
-    console.log({
-      Stun_Level: stunValue,
-      Wound_Level: woundValue,
-      Stun_Save: `${bodyAttr} - ${stunIndex}`,
-      Death_Save: `${bodyAttr} - ${mortalIndex}`,
-      Wound_Divisor: isCritical ? 2 : isMortal ? 3 : 1,
-      Wound_Ref_Mod: isSerious ? 2 : 0
-    })
+    // console.log({
+    //   Stun_Level: stunValue,
+    //   Wound_Level: woundValue,
+    //   Stun_Save: `${bodyAttr} - ${stunIndex}`,
+    //   Death_Save: `${bodyAttr} - ${mortalIndex}`,
+    //   Wound_Divisor: isCritical ? 2 : isMortal ? 3 : 1,
+    //   Wound_Ref_Mod: isSerious ? 2 : 0
+    // })
     setAttrs({
       Stun_Level: stunValue,
       Wound_Level: woundValue,
