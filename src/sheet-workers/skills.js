@@ -4,7 +4,8 @@ var pickupSkills = data.skills;
 var specialAbilities = data.specialAbilities;
 var skills = pickupSkills.concat(specialAbilities);
 var calcSkillEvents = [
-  'change:Damage_Indicator',
+  'change:Wound_Level',
+  'change:Stun_Level',
   'sheet:opened'
 ];
 var statKeys = Object.keys(stats) || [];
