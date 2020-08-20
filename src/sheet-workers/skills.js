@@ -60,7 +60,11 @@ on(calcSkillEvents, function(eventInfo) {
                 (subSkill ? subSkill.ipMultiplier : skill.ipMultiplier),
                 1
               );
-              var stat = makeInt(stats[skill.baseAttribute]);
+              var stat = makeInt(
+                subSkill
+                  ? stats[subSkill.baseAttribute]
+                  : stats[skill.baseAttribute]
+              );
               stat = isNaN(stat) ? 0 : stat;
               attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
               attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
