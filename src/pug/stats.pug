@@ -1,77 +1,196 @@
 div.cp-2020__stats
-  h3.cp-2020__stats__view-title
-    div STATS
-    div.cp-2020__stats__character-points
-      label(for='CharacterPoints_Base') Character Points
-      input(type='number' name='attr_CharacterPoints_Base' id='CharacterPoints_Base' min='18' max='90')
-      label(for='attr_CharacterPoints_Base') Base
-      input(type='number' name='attr_CharacterPoints' disabled='true' value=`@{INT_Base}+@{REF_Base}+@{TECH_Base}+@{CL_Base}+@{ATT_Base}+@{LUCK_Base}+@{MA_Base}+@{BODY_Base}+@{EMP_Base}`)
-      label(for='attr_CharacterPoints') Used
-      input(type='number' name='attr_CharacterPoints_Left' disabled='true' value=`(@{CharacterPoints}-@{CharacterPoints_Base})*-1`)
-      label(for='attr_CharacterPoints_Left') Remaining
+  h3.cp-2020__stats__view-title STATS
+  div.cp-2020__inner-box
+    +box.cp-2020__stats__character-points
+      div.cp-2020__character-points__group
+        input(
+          type='number'
+          name='attr_CharacterPoints_Base'
+          id='CharacterPoints_Base'
+          min='18'
+          max='90'
+        )
+        label(for='CharacterPoints_Base') Character Points
+      div.cp-2020__character-points__group
+        input(
+          type='number'
+          name='attr_CharacterPoints'
+          disabled='true'
+          value=`@{INT_Base}+@{REF_Base}+@{TECH_Base}+@{CL_Base}+@{ATT_Base}+@{LUCK_Base}+@{MA_Base}+@{BODY_Base}+@{EMP_Base}`
+        )
+        label(for='attr_CharacterPoints') Used
+      div.cp-2020__character-points__group
+        input(
+          type='number'
+          name='attr_CharacterPoints_Left'
+          disabled='true'
+          value=`(@{CharacterPoints}-@{CharacterPoints_Base})*-1`
+        )
+        label(for='attr_CharacterPoints_Left') Remaining
 
-  input(type='hidden' value='1' name='attr_Wound_Divisor')
-  input(type='hidden' value='0' name='attr_Wound_Ref_Mod')
-  div.cp-2020__layout--row-1-1
-    each name, stat in data.stats
+    input(type='hidden' value='1' name='attr_Wound_Divisor')
+    input(type='hidden' value='0' name='attr_Wound_Ref_Mod')
+    div.cp-2020__stats__view-grid
+      each name, stat in data.stats
+        input.cp-2020__stats__value-indicator(
+          type='hidden'
+          disabled='true'
+          name=`attr_${stat}_ind`
+          value=`@{${stat}}`
+        )
+        +box.cp-2020__stat
+          div.cp-2020__stat__total-wrapper
+            label.cp-2020__stat__total-inner(for=`attr_${stat}_Base`)
+              div.cp-2020__stat__name=name
+              div.cp-2020__stat__total
+                span.cp-2020__stat__value(name=`attr_${stat}`)
+                span.cp-2020__stat__abbr=`[${stat}]`
+            div.cp-2020__stat__breakdown
+              div.cp-2020__stat__component
+                input.cp-2020__stat__value(
+                  type='number'
+                  id=`attr_${stat}_Base`
+                  name=`attr_${stat}_Base`
+                  min='2'
+                  max='10'
+                )
+                span.cp-2020__stat__key--value base
+              div.cp-2020__stat__component
+                input.cp-2020__stat__value(
+                  type='number'
+                  name=`attr_${stat}_Mod`
+                  value='0'
+                )
+                span.cp-2020__stat__key--value modifier
+              div.cp-2020__stat__component
+                span.cp-2020__stat__value(name=`attr_${stat}_Damage_Mod`)
+                span.cp-2020__stat__key--value dam. mod.
+
+          div.cp-2020__stat__roll-btns
+            button.cp-2020__stat__check-btn(
+              type='roll'
+              title=`roll ${name} check`
+              value=`&{template:general} {{roll=@{Handle} ^{rolls} ^{${stat}} [[1d10!! + [[@{${stat}}]] ]]}}`
+            )
+            button.cp-2020__stat__save-btn(
+              type='roll'
+              title=`roll ${name} save`
+              value=`'&{template:general} {{roll=@{Handle} ^{rolls} ^{save}! [[1d10]] ^{${stat}}: [[@{Body}]]}}'`
+            )
+
+
+
+
+
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Humanity_ind'
+        value='@{Hum|0}'
+      )
       +box.cp-2020__stat
-        div.cp-2020__layout--row-3-1
-          label(for=`attr_${stat}_Base`)
-            div.cp-2020__stat__name=name
+        div.cp-2020__stat__total-wrapper
+          label.cp-2020__stat__total-inner(
+            for='attr_HUM'
+          )
+            span.cp-2020__stat__name humanity
             div.cp-2020__stat__total
-              //- if stat === 'INT' || stat === 'CL'
-              //-   input(type='number' disabled='true' name=`attr_${stat}` value=`round((@{${stat}_Mod}+@{${stat}_Base})/@{Wound_Divisor})`)
-              //- else if stat === 'REF'
-              //-   input(type='number' disabled='true' name=`attr_${stat}` value=`round((@{${stat}_Mod}+@{${stat}_Base}-@{Wound_Ref_Mod})/@{Wound_Divisor})`)
-              //- else
-              //-   input(type='number' disabled='true' name=`attr_${stat}` value=`@{${stat}_Mod}+@{${stat}_Base}`)
-              span.cp-2020__stat__value(name=`attr_${stat}`)
-              span.cp-2020__stat__abbr=`[${stat}]`
-          div.cp-2020__layout--col-1-1
-            button.cp-2020__stat__check-btn(type='roll' title=`roll ${name} check` value=`&{template:general} {{roll=@{Handle} ^{rolls} ^{${stat}} [[1d10!! + [[@{${stat}}]] ]]}}`)
-            button.cp-2020__stat__save-btn(type='roll' title=`roll ${name} save` value=`'&{template:general} {{roll=@{Handle} ^{rolls} ^{save}! [[1d10]] ^{${stat}}: [[@{Body}]]}}'`)
-        div(class='cp-2020__layout--row-1-1 cp-2020__stat__breakdown')
-          div
-            input(type='number' id=`attr_${stat}_Base` name=`attr_${stat}_Base` min='2' max='10')
-            span.cp-2020__stat__key--value base
-          div
-            input(type='number' name=`attr_${stat}_Mod` value='0')
-            span.cp-2020__stat__key--value modifier
-          div
-            span.cp-2020__stat__value(name=`attr_${stat}_Damage_Mod`)
-            span.cp-2020__stat__key--value dam. mod.
+              span.cp-2020__stat__value(
+                name='attr_HUM'
+              )
+              span.cp-2020__stat__abbr='[HUM]'
+        div.cp-2020__stat__roll-btns
 
-    +box.cp-2020__stat
-      label(for='attr_Humanity')
-        span.cp-2020__stat__name humanity
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Humanity' value='((@{EMP_Base|0}-@{EMP_Mod|0})*10)-@{Humanity_loss|0}')
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Humanity_loss_ind'
+        value='@{HL|0}'
+      )
+      +box.cp-2020__stat
+        label(for='attr_Humanity_Loss')
+          span.cp-2020__stat__name humanity loss
+          div.cp-2020__stat__total
+            input.cp-2020__stat__value(
+              id='attr_Humanity_Loss'
+              name='attr_HL'
+              type='number'
+              value='0'
+            )
+            span.cp-2020__stat__abbr='[HL]'
+        div.cp-2020__stat__roll-btns
 
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Rep_ind'
+        value='@{Rep|0}'
+      )
+      +box.cp-2020__stat
+        label(for='Rep')
+          span.cp-2020__stat__name reputation
+          div.cp-2020__stat__total
+            input.cp-2020__stat__value(
+              type='number'
+              name='attr_Rep'
+              value='0'
+            )
+            span.cp-2020__stat__abbr='[REP]'
+        div.cp-2020__stat__roll-btns
 
-    +box.cp-2020__stat
-      label(for='attr_Humanity_loss')
-        span.cp-2020__stat__name humanity loss
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Humanity_loss' value='0')
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Run_ind'
+        value='@{Run|0}'
+      )
+      +box.cp-2020__stat
+        label(for='attr_Run')
+          span.cp-2020__stat__name run
+          div.cp-2020__stat__total
+            span.cp-2020__stat__value(
+              name='attr_Run'
+            )
+            span.cp-2020__stat__abbr='[RUN]'
+        div.cp-2020__stat__roll-btns
 
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Leap_ind'
+        value='@{Leap|0}'
+      )
+      +box.cp-2020__stat
+        label(for='attr_Leap')
+          span.cp-2020__stat__name leap
+          div.cp-2020__stat__total
+            span.cp-2020__stat__value(
+              name='attr_Leap'
+            )
+            span.cp-2020__stat__abbr='[LEAP]'
+        div.cp-2020__stat__roll-btns
 
-    +box.cp-2020__stat
-      label(for='attr_Run')
-        span.cp-2020__stat__name run
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Run' value='(@{MA_Base|0}-@{MA_Mod|0})*3')
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Carry_ind'
+        value='@{Carry|0}'
+      )
+      +box.cp-2020__stat
+        label(for='attr_Carry')
+          span.cp-2020__stat__name carry
+           div.cp-2020__stat__total
+            span.cp-2020__stat__value(
+              name='attr_Carry'
+            )
+            span.cp-2020__stat__abbr='[CARRY]'
+        div.cp-2020__stat__roll-btns
 
-
-    +box.cp-2020__stat
-      label(for='attr_Leap')
-        span.cp-2020__stat__name leap
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Leap' value='round(((@{MA_Base|0}-@{MA_Mod|0})*3)/4)')
-
-
-    +box.cp-2020__stat
-      label(for='attr_Carry')
-        span.cp-2020__stat__name carry
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Carry' value='(@{BODY_Base|0}-@{BODY_Mod|0})*10')
-
-
-    +box.cp-2020__stat
-      label(for='attr_Lift')
-        span.cp-2020__stat__name lift
-        input.cp-2020__stat__total-composite(type='number' disabled='true' name='attr_Lift' value='(@{BODY_Base|0}-@{BODY_Mod|0})*40')
+      input.cp-2020__stats__value-indicator(
+        disabled='true'
+        name='attr_Lift_ind'
+        value='@{Lift|0}'
+      )
+      +box.cp-2020__stat
+        label(for='attr_Lift')
+          span.cp-2020__stat__name lift
+          div.cp-2020__stat__total
+            span.cp-2020__stat__value(
+              name='attr_Lift'
+            )
+            span.cp-2020__stat__abbr='[LIFT]'
+        div.cp-2020__stat__roll-btns

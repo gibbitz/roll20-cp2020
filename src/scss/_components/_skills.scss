@@ -90,12 +90,17 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
     button#{$base}__skill__roll {
       @extend %d10-roll-button;
+      bottom: 0.3em;
+      position: relative;
     }
 
     &__stat-wrapper {
         align-items: center;
+        cursor: pointer;
         display: flex;
         justify-content: space-around;
+        padding: 0.3em !important;
+        width: auto;
 
         > * {
           flex: 0 1 auto;
@@ -104,16 +109,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
 
         #{$base}__stat-group {
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            max-width: 5em;
-        }
-
-        #{$base}__stat-label {
-            color: $dim-fill-color;
-            font-size: 0.7em;
-            letter-spacing: 1px;
+          @extend %stat-group;
         }
     }
   }
@@ -123,19 +119,10 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
       text-align: right;
       line-height: 1;
       padding: 0;
-      font-size: 1.4em;
     }
 
-    &__lvl--edit {
-        border-bottom: 1px solid $dim-font-color !important;
+    &--edit {
         max-width: 5em;
-        text-align: right;
-    }
-
-    &__ip--edit {
-        border-bottom: 1px solid $dim-font-color !important;
-        max-width: 5em;
-        text-align: center;
     }
 
     &__title-wrapper {
@@ -143,15 +130,15 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         align-items: center;
         justify-content: space-between;
     }
+    &-stat {
+      color: $dim-font-color;
+      font-size: 0.8em;
+    }
   }
 
   &__skills {
     // GENERAL STYLING
     @extend %section-wrapper;
-
-    #{$base}__inner-box {
-      @extend %section-wrapper;
-    }
 
     #{$base}__learn-toggle {
       @extend %tab-group;
@@ -188,9 +175,9 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
       }
       & ~ #{$base}__inner-box {
         #{$base}__skill__stat-wrapper {
-          #{$base}__skill__lvl--edit,
-          #{$base}__skill__next-level,
-          #{$base}__skill__ip--edit {
+          #{$base}__skill--edit,
+          #{$base}__stat-group#{$base}__skill--edit,
+          #{$base}__skill__next-level {
             @extend %hide;
           }
         }
@@ -213,12 +200,36 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
     }
+    // #{$base}__inner-box {
+    //   display: flex;
+    //   justify-content: space-between;
+
+    //   #{$base}__skills__column {
+    //     flex: 1 1 40%;
+    //     margin: 0.3em;
+    //   }
+    // }
+
+    #{$base}__skills__column {
+      #{$base}__special-abilty,
+      #{$base}__career-skills,
+      #{$base}__pickup-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+         > * {
+          flex: 1 1 40%;
+          margin: 0.3em;
+        }
+      }
+    }
 
     // BLOCK VISIBILITY
     @each $role in $roles {
       $role-selector: str-to-selector($role);
       [value='#{$role}'] {
-        & ~ #{$base}__special-ability {
+        & ~ #{$base}__skills__column #{$base}__special-ability {
           #{$base}__skill {
             @extend %hide;
             @each $special-ability in $special-abilities {
@@ -232,7 +243,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
             }
           }
         }
-        & ~ #{$base}__career-skills {
+        & ~ #{$base}__skills__column #{$base}__career-skills {
           #{$base}__skill {
             @extend %hide;
             @each $skill in $allSkills {
@@ -248,7 +259,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
 
-      #{$base}__inner-box [value='#{$role}'] ~ #{$base}__pickup-skills {
+      #{$base}__inner-box [value='#{$role}'] ~ #{$base}__skills__column #{$base}__pickup-skills {
         @each $skill in $skills {
           $careers: '#{map-get($skill, 'career')}';
           $career-selector: str-to-selector(map-get($skill, 'skillName'), '#{$base}__skill-');

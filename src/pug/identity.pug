@@ -2,11 +2,12 @@
 
 div.cp-2020__identity
   h3 IDENTITY
-  +attrField('Handle', 'handle')(type='text')
-  +attrField('Name', 'given name')(type='text')
-  div.cp-2020__layout--row-1-2
-    +attrField('Age', 'age')(type='number')
-    +attrSelect('Role', rollOptions, 'role')()
-  +attrSelect('Gender', genders, 'gender')()
-  +attrField('Nationality', 'ethnicity')(type='text')
-  +attrField('Language', 'language')(type='text')
+  div.cp-2020__inner-box
+    +attrField('Handle', 'handle')(type='text')
+    +attrField('Name', 'given name')(type='text')
+    div.cp-2020__layout--row-1-2
+      +attrField('Age', 'age')(type='number')
+      +attrSelect('Role', rollOptions, 'role')()
+    +attrSelect('Gender', genders, 'gender')()
+    +attrField('Nationality', 'ethnicity')(type='text')
+    +attrField('Language', 'language')(type='text')

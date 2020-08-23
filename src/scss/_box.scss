@@ -16,11 +16,11 @@
     box-sizing: border-box;
     display: inline-block;
     height: calc(100% - 9px);
-    margin: 0 $box-spacing $box-spacing 0;
+    margin: $box-spacing;
     padding: $box-spacing;
     position: relative;
     transition: background-color .6s ease-out;
-    width: 100%;
+    width: calc(100% - #{$box-spacing * 2}); // adjust for margin
     z-index: 0;
 
     &:hover,

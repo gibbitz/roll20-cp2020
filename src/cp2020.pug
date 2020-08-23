@@ -4,12 +4,14 @@ div.cp-2020
     include ./pug/_globals.pug
     div.cp-2020__character__column--identity
       include ./pug/identity.pug
-    div.cp-2020__character__column--vitals
+    div.cp-2020__character__column--stats
       include ./pug/stats.pug
-      div.cp-2020__layout--row-1-1
+    div.cp-2020__character__row--vitals
+      div.cp-2020__character__column--armor
         include ./pug/armor.pug
+      div.cp-2020__character__column--health
         include ./pug/health.pug
-    div.cp-2020__character__column--tabs
+    div.cp-2020__character__row--tabs
       include ./pug/tab-navigation.pug
       include ./pug/bio.pug
       include ./pug/skills.pug

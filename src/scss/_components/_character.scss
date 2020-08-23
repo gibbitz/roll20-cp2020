@@ -5,22 +5,37 @@
 .sheet-cp-2020{
   $base: &;
   &__character {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @extend %row-1;
     justify-content: space-between;
 
     > .sheet-cp-2020__character__column {
       &--identity {
         @extend %character-column;
-        max-width: 25%;
+        max-width: 30%;
       }
 
-      &--vitals {
+      &--stats {
         @extend %character-column;
-        max-width: 72%;
+        max-width: 69%;
       }
 
+      &--armor {
+        @extend %character-column;
+        max-width: 30%;
+      }
+
+      &--health {
+        @extend %character-column;
+        max-width: 69%;
+      }
+    }
+
+    > .sheet-cp-2020__character__row {
+      &--vitals {
+        @extend %row-1;
+        @extend %character-column;
+        width: 100%;
+      }
       &--tabs {
         @extend %character-column;
         width: 100%;

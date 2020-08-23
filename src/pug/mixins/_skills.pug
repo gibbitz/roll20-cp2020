@@ -15,7 +15,7 @@ mixin skillNameField(skillAttrName, skillData, additionalData)
           each skill in additionalData
             if (skill.skillName === skillName)
               option(value=skillName)=skillName
-                small=` [${skill.baseAttribute}]`
+                span.cp-2020__skill-stat=` [${skill.baseAttribute}]`
       input(
         type='checkbox'
         name=`attr_${skillAttrName}_expanded`
@@ -26,7 +26,7 @@ mixin skillNameField(skillAttrName, skillData, additionalData)
 
   else
     label.cp-2020__skill__name--view=skillData.skillName
-      small=` [${skillData.baseAttribute}]`
+      span.cp-2020__skill-stat=` [${skillData.baseAttribute}]`
       input(type='checkbox' name=`attr_${skillAttrName}_expanded` value='expanded')
       div.cp-2020__skill__name__carat
 
@@ -56,20 +56,37 @@ mixin skillDescription(skillAttrName, skillData, additionalData)
   @param  {Array} additionalData an Array made up of skillData objects used for compoundSkills to render a select to choose the proper skill (for IpMultiplier dependency)
 //- ===================================================================================
 mixin skillStats(skillAttrName, skillData, additionalData)
-  div.cp-2020__skill__stat-wrapper
+  label.cp-2020__skill__stat-wrapper(for=`${skillAttrName}_roll`)
     div.cp-2020__stat-group
-      span.cp-2020__skill__lvl--view
+      span(class='cp-2020__skill__lvl--view cp-2020__stat-group__value')
         //- TODO: use a worker for this crap -- on load + on drop-down change + level change
         span(name=`attr_${skillAttrName}_level`)
         span &sol;
         span(name=`attr_${skillAttrName}_roll_total`)
 
-      input.cp-2020__skill__lvl--edit(type='number' value='0' min='0' max='10' name=`attr_${skillAttrName}_level`)
-      span.cp-2020__stat-label level/total
+      input(class='cp-2020__skill__lvl cp-2020__skill--edit cp-2020__stat-group__value' type='number' value='0' min='0' max='10' name=`attr_${skillAttrName}_level`)
+      span.cp-2020__stat-group__label lvl/tot
+
     //- TODO: use a worker for this crap -- be sure to re-calculate based on wounds
-    button.cp-2020__skill__roll(type='roll' value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`)
-    input.cp-2020__skill__ip--edit(type='number' value='0' name=`attr_${skillAttrName}_ip`)
-    span(name=`attr_${skillAttrName}_next_level`)
+    button.cp-2020__skill__roll(
+      type='roll'
+      id=`${skillAttrName}_roll`
+      value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`
+    )
+
+    div(class='cp-2020__stat-group cp-2020__skill--edit')
+      input.cp-2020__stat-group__value(
+        type='number'
+        value='0'
+        name=`attr_${skillAttrName}_ip`
+      )
+      span.cp-2020__stat-group__label ip
+
+    div(class='cp-2020__stat-group cp-2020__skill--edit')
+      span.cp-2020__stat-group__value(
+        name=`attr_${skillAttrName}_next_level`
+      )
+      span.cp-2020__stat-group__label lvl up
 
 //- ===================================================================================
   Creates Skill fields with accompanying markup that have both edit and use fields shown/hidden via css by the use/learn tabs

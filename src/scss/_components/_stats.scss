@@ -1,143 +1,131 @@
-@import '../_partials/placeholders';
-
-%stat-input {
-  box-sizing: border-box;
-  flex: 0 1 20%;
-  margin-right: 1%;
-  // max-width: 20%;
-}
-
-%stat-label {
-  @extend %stat-input;
-  flex: 2 0 auto;
-  max-width: 30%;
-  min-width: 10em;
-  padding: 0;
-}
-
-
-.sheet-cp-2020{
+.sheet-cp-2020 {
   $base: &;
 
   &__stats {
-    &__view-title {
-      display: flex;
-      justify-content: space-between;
-    }
 
     &__character-points {
-      > * {
-        border: 0;
-        display: inline;
-        margin: 0 0 0 0.5em !important;
-        padding: 0 !important;
-        width: auto !important;
-      }
+      // width: calc(100% - #{$box-spacing * 2});
 
-      input[type='number'] {
-        max-width: 2em;
+      #{$base}__box--inner{
+        @extend %flex-1;
+        @extend %flex-row;
+
+
+        &__group {
+          @extend %stat-group;
+        }
+
+        > *:first-child {
+          flex: 3;
+        }
       }
     }
 
-    #{$base}__layout--row-1-1 {
+    &__view-grid {
+      display: flex;
       flex-wrap: wrap;
-      > * {
-        flex: 1 0 30%;
-        height: auto;
-      }
 
-      #{$base}__layout--row-3-1 {
-        justify-content: space-between;
+      > * {
+        flex: 1 1 auto;
+        height: auto;
+        width: 24%;
+      }
+    }
+
+    &__value-indicator {
+      @extend %hide;
+    }
+    $level-colors: $level-1, $level-2, $level-3, $level-4, $level-5, $level-6, $level-7, $level-8, $level-9, $level-10;
+    @for $index from 2 through 10 {
+      $color: nth($level-colors, $index - 1);
+      &__value-indicator[value='#{$index}']{
+        + #{$base}__box {
+          background-color: rgba($color, 0.1);
+
+          &:hover,
+          &:focus-within {
+            background-color: rgba($color, 0.2);
+          }
+        }
       }
     }
   }
 
   &__stat {
-      max-width: 250px;
-
-      label {
-        @extend %stat-label;
-        display: flex;
-        flex-direction: column;
-        height: 70%;
-        justify-content: space-between;
-        > * {
-          flex: 1 1 auto;
-        }
-
-        input[type='number'] {
-          &[disabled] {
-            font-size: 2em;
-            width: 2em;
-          }
-        }
-      }
-
-      input[type='number'] {
-        @extend %stat-input;
-
-        &[disabled] {
-          border: 0;
-          color: $light-font-color;
-          display: inline;
-          font-size: 1.2em;
-        }
-      }
-
-    &__abbr {
-      font-size: 1.5em;
+    #{$base}__box--inner{
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
     }
 
-    &__name {
-      color: $med-light-font-color;
-      font-size: 1.2em;
-      white-space: nowrap;
+    &__total-wrapper {
+      display: flex;
+      flex: 0.5 1 auto;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
     }
 
     &__total {
-      align-items: baseline;
-      display: flex;
-      padding-left: 2.2em;
+      font-size: 1.7em;
+      // text-align: right;
+
+      #{$base}__stat__value {
+        color: $light-font-color;
+        display: inline;
+        max-width: 1em;
+        text-align: right;
+      }
+
+      #{$base}__stat__abbr {
+        color: $dim-font-color;
+        font-size: 0.7em;
+        margin-left: 0.3em;
+      }
+
     }
 
-    &__total-composite {
-      padding-left: 1em !important;
-      width: auto !important;
+    &__name {
+      color: $base-font-color;
+      font-size: 0.9em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 99%;
+    }
+
+    &__roll-btns {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      font-size: 0.8em;
+      // min-width: 4em;
     }
 
     &__breakdown {
-      input[type='number'] {
-        text-align: center;
-        color: $base-font-color;
+      display: flex;
+      font-size: 0.6em;
+      justify-content: space-between;
+      max-width: 80%;
+    }
+
+    &__component {
+      @extend %stat-group;
+      flex: 0;
+      font-size: 0.9em;
+    }
+  }
+
+  @at-root .charsheet &__stat {
+    &__check-btn{
+      @extend %d10-roll-button;
+    }
+
+    &__save-btn {
+      @extend %d10-roll-button;
+      &::before {
+        content: 'a';
       }
-      text-align: center;
-    }
-
-    &__key--value {
-      @extend %stat-input;
-      color: $dim-font-color;
-      font-size: 0.65em;
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
-
-    &__key--label {
-      @extend %stat-label;
-    }
-
-    &__character-points {
-      padding-bottom: 1em;
-    }
-  }
-
-  button#{$base}__stat__check-btn{
-    @extend %d10-roll-button;
-  }
-
-  button#{$base}__stat__save-btn {
-    @extend %d10-roll-button;
-    &::before {
-      content: 'a';
     }
   }
 }

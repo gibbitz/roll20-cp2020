@@ -10,20 +10,21 @@ div.cp-2020__skills
   div.cp-2020__inner-box
     input(name='attr_roleSelected' disabled='true' value='@{Role}' type='hidden')
     h5 Special Ability
-    div.cp-2020__special-ability
-      each skill in data.specialAbilities
-        +skillField(skill, data.specialAbilities)
-
+    div.cp-2020__skills__column
+      div.cp-2020__special-ability
+        each skill in data.specialAbilities
+          +skillField(skill, data.specialAbilities)
     h5 Career Skills
-    div.cp-2020__career-skills
-      each skill in allSkills
-        +skillField(skill, data.skills)
+    div.cp-2020__skills__column
+      div.cp-2020__career-skills
+        each skill in allSkills
+          +skillField(skill, data.skills)
 
     h5 Pickup Skills
-    div.cp-2020__pickup-skills
-      each skill in data.skills
-        +skillField(skill, data.skills)
-
+    div.cp-2020__skills__column
+      div.cp-2020__pickup-skills
+        each skill in data.skills
+          +skillField(skill, data.skills)
 
     // fieldset.repeating_SpecialAbilities
     //   input.chipped(type='checkbox' name='attr_OtherSpecialAbilitiesChip' value='1')

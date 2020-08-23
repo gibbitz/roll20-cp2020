@@ -10,5 +10,17 @@
   min-width: calc(100% - 6px);
   padding: 1rem;
   position: absolute;
+
+  input {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0
+    }
+
+    &[type='number'] {
+      -moz-appearance:textfield;
+    }
+  }
 }
 

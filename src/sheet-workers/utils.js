@@ -24,7 +24,7 @@ function updateStats(callback) {
   statKeys.forEach(function(statKey) {
     statAttrs = statAttrs.concat([`${statKey}_Base`, `${statKey}_Mod`]);
   });
-  var fetchAttrs = statAttrs.concat(['Wound_Level', 'Stun_Level']);
+  var fetchAttrs = statAttrs.concat(['Wound_Level', 'Stun_Level', 'HL']);
   getAttrs(fetchAttrs, function(attrs) {
     var updatedStatAttrs = {};
 
@@ -50,6 +50,19 @@ function updateStats(callback) {
       } else {
         updatedStatAttrs[stat] = defaultAttrValue;
         updatedStatAttrs[`${stat}_Damage_Mod`] = '';
+      }
+      if (stat === 'BODY') {
+        updatedStatAttrs.Lift = defaultAttrValue * 40;
+        updatedStatAttrs.Carry = defaultAttrValue * 10;
+      }
+      if (stat === 'MA') {
+        updatedStatAttrs.Run = defaultAttrValue * 3;
+        updatedStatAttrs.Leap = Math.round(defaultAttrValue * 3 / 4);
+      }
+      if (stat === 'EMP') {
+        var empValue = defaultAttrValue - Math.floor((attrs.HL | 1)/10);
+        updatedStatAttrs.Hum = empValue * 10;
+        updatedStatAttrs[stat] = empValue;
       }
     });
     console.log('>>>>', updatedStatAttrs);

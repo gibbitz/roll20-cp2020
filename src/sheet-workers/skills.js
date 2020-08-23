@@ -61,10 +61,11 @@ on(calcSkillEvents, function(eventInfo) {
                 1
               );
               var stat = makeInt(
-                subSkill
+                Object.keys(subSkill).length > 0
                   ? stats[subSkill.baseAttribute]
                   : stats[skill.baseAttribute]
               );
+              if (!isNaN(stat)) console.log(skill.skillName, stat, skill.baseAttribute)
               stat = isNaN(stat) ? 0 : stat;
               attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
               attrsToSet[`${skillAttrName}_roll_total`] = level + stat;

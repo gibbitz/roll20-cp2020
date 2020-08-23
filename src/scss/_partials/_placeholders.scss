@@ -63,14 +63,39 @@
 
 %section-wrapper {
   border: 1px solid $dim-stroke;
-  padding: 1em;
+  padding: 0.5em;
+}
+
+%stat-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  max-width: 4em;
+
+  > *:first-child, input {
+    @extend %title-font;
+    box-sizing: border-box;
+    color: $med-light-font-color;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    min-height: 1.7em;
+    text-align: center;
+  }
+
+  > *:last-child {
+    color: $dim-font-color;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
 }
 
 %d10-roll-button {
   background: transparent;
   border: 0;
   box-shadow: none;
-  color: $base-font-color;
+  color: $dim-font-color !important;
   line-height: 0.6;
   margin: 0;
   outline: 0;
@@ -81,10 +106,12 @@
   }
 
   &::before {
-    content: 'j';
-    font-family: 'dicefontd10';
+    // roll20 ties this styling to the .ui-dialog which can't be overridden with selectors :(
+    content: 'j' !important;
+    font-family: 'dicefontd10' !important;
     font-size: 2em;
-    padding: 0.1em;
+    line-height: 1;
+    padding: 0.1em !important;
     transition: color 0.5s ease-in-out;
   }
 }
