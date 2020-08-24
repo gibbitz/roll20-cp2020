@@ -54,6 +54,9 @@ function updateStats(callback) {
       if (stat === 'BODY') {
         updatedStatAttrs.Lift = defaultAttrValue * 40;
         updatedStatAttrs.Carry = defaultAttrValue * 10;
+        updatedStatAttrs.BTM = defaultAttrValue <= 2
+          ? 0
+          : 0 - Math.floor((defaultAttrValue -2) / 2);
       }
       if (stat === 'MA') {
         updatedStatAttrs.Run = defaultAttrValue * 3;

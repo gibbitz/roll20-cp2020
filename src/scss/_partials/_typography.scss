@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Share Tech Mono';
   src: url(https://fonts.gstatic.com/s/sharetechmono/v9/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2) format('woff2');
@@ -24,6 +25,44 @@
   line-height: 1.5;
 }
 
+%heading-1 {
+  @extend %title-font;
+  font-size: 1.5em;
+}
+
+%heading-2 {
+  @extend %title-font;
+  font-size: 1.4em;
+}
+
+%heading-3 {
+  @extend %title-font;
+  font-size: 1.3em;
+}
+
+%heading-4 {
+  @extend %title-font;
+  font-size: 1.2em;
+}
+
+%heading-5 {
+  @extend %title-font;
+  font-size: 1.1em;
+}
+
+%heading-6 {
+  @extend %title-font;
+  font-size: 1em;
+}
+
+%section-title {
+  @extend %title-font;
+  color: $base-font-color;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  padding-left: $wrapper-padding;
+}
+
 .sheet-cp-2020 {
   @extend %base-font;
 
@@ -31,42 +70,39 @@
     @extend %title-font;
   }
 
-  p {
+  html {
     @extend %base-font;
   }
 
   h1 {
-    @extend %title-font;
-    font-size: 1.5em;
+    @extend %heading-1;
   }
   h2 {
-    @extend %title-font;
-    font-size: 1.4em;
+    @extend %heading-2;
   }
   h3 {
-    @extend %title-font;
-    font-size: 1.3em;
+    @extend %heading-3;
   }
   h4 {
-    @extend %title-font;
-    font-size: 1.2em;
+    @extend %heading-4;
   }
   h5 {
-    @extend %title-font;
-    font-size: 1.1em;
+    @extend %heading-5;
   }
   h6 {
-    @extend %title-font;
-    font-size: 1em;
+    @extend %heading-6;
   }
+
   label {
     @extend %title-font;
     font-size: 0.9em;
   }
+
   input,
   select,
-  textarea {
-    @extend %title-font;
-    font-size: 1.2em;
+  textarea,
+  span[name] {
+    @extend %base-font;
+    font-size: 1.1em;
   }
 }

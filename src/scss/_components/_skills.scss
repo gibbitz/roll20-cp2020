@@ -142,13 +142,13 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
     #{$base}__learn-toggle {
       @extend %tab-group;
+      font-size: 1em; // corrects wrong application order from SCSS compliation
+      // TODO: fix issue where 0.9 is applied before 1.1em
+      padding-top : 1em;
     }
 
     input[value='learn'] {
       & ~ #{$base}__learn-toggle {
-        #{$base}__use-tab {
-          @extend %inactive-tab;
-        }
         #{$base}__learn-tab {
           @extend %active-tab;
         }
@@ -166,9 +166,6 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
     }
     input[value='use'] {
       & ~ #{$base}__learn-toggle{
-        #{$base}__learn-tab {
-          @extend %inactive-tab;
-        }
         #{$base}__use-tab {
           @extend %active-tab;
         }
@@ -200,15 +197,16 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
     }
-    // #{$base}__inner-box {
-    //   display: flex;
-    //   justify-content: space-between;
 
-    //   #{$base}__skills__column {
-    //     flex: 1 1 40%;
-    //     margin: 0.3em;
-    //   }
-    // }
+    #{$base}__inner-box {
+      padding-top: 1em;
+
+      h5 {
+        @extend %section-title;
+        font-size: 0.9em;
+        padding-top: 0.8em;
+      }
+    }
 
     #{$base}__skills__column {
       #{$base}__special-abilty,

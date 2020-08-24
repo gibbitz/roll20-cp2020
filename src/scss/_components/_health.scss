@@ -36,36 +36,62 @@
 
   &__health {
 
+    #{$base}__inner-box{
+      @extend %flex;
+      align-items: center;
+    }
+
     &__wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      @extend %flex;
+      @extend %flex-row;
+      justify-content: space-between;
     }
 
     &__saves {
-      align-items: flex-end;
-      display: flex;
-      flex-direction: row;
-      flex: 0 0 20%;
-      height: 50%;
+      @extend %row-1;
+      flex: 1;
       justify-content: space-between;
-      max-width: 26%;
-
       > * {
-        flex: 1 1 25%;
-        max-width: 25%;
+        min-width: 40px;
+
+        &:last-child {
+          flex: 0;
+        }
+      }
+    }
+
+    &__save {
+      @extend %flex;
+      flex-wrap: wrap;
+    }
+
+    &__save-btn {
+      @extend %d10-roll-button;
+      flex: 1;
+      overflow: hidden;
+
+      &::before {
+        content: 'a' !important;
+      }
+    }
+
+    &__save-component {
+      @extend %stat-group;
+      flex: 1;
+      justify-content: space-around;
+
+      > *:last-child {
+        white-space: normal !important;
       }
     }
 
     &__wounds {
-      display: flex;
-      flex: 6 5 auto;
-      flex-direction: row;
+      @extend %row-0-1;
+      flex: 3;
       flex-wrap: wrap;
-      max-width: 360px;
+      max-width: 410px;
 
       > * {
-        flex: 0 1 auto;
         padding: 0 0.3em;
       }
 

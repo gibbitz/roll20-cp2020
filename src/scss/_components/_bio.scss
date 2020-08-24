@@ -3,5 +3,46 @@
 
   &__bio {
     @extend %section-wrapper;
+
+    &__row {
+      @extend %row-1;
+      justify-content: space-between;
+    }
+
+    &__col {
+      @extend %col-1;
+      justify-content: stretch;
+      max-width: 49.5%;
+
+      #{$base}__style,
+      #{$base}__family,
+      #{$base}__siblings,
+      #{$base}__motivations {
+        @extend %bordered-section;
+
+        .repitem {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    &__sibling-row {
+      @extend %row-1;
+    }
+
+    #{$base}__history {
+      .repcontainer{
+        @extend %row-1;
+        > * {
+          max-width: 49.5%;
+        }
+      }
+    }
+
+    h3 {
+      @extend %section-title;
+      font-size: 0.9em;
+      margin-top: 1.5em;
+    }
   }
 }

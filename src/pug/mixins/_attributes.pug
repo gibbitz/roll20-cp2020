@@ -7,11 +7,37 @@
 mixin attrField(attrName, attrLabel)
   +box(class=attributes.class)
     label(for=attrName)
-      input(id=attrName name=`attr_${attrName}` type=attributes.type)
+      input(
+        id=attrName
+        name=`attr_${attrName}`
+        type=attributes.type
+        value=attributes.value
+      )
       if block
         block
       else
         span=attrLabel
+
+//- ===================================================================================
+//-
+  Creates an Input textfield box and the surrounding markup for visual consistency
+  @param  {[type]} attrName  Roll20 Attribute name (snake or camel cased -- no spaces)
+  @param  {[type]} attrLabel Human readable Label copy
+//- ===================================================================================
+mixin attrTextArea(attrName, attrLabel)
+  +box(class=attributes.class)
+    label(for=attrName)
+      textarea(
+        id=attrName
+        name=`attr_${attrName}`
+        rows=attributes.rows
+        cols=attributes.cols
+      )
+      if block
+        block
+      else
+        span=attrLabel
+
 
 //- ===================================================================================
   Creates a Select box and the surrounding markup for visual consistency
@@ -24,7 +50,10 @@ mixin attrSelect(attrName, attrOptions, attrLabel)
     label(for=attrName class=attributes.class)
       select(id=attrName name=`attr_${attrName}`)
         each attrOption in attrOptions
-          option(value=attrOption.value default=attrOption.default)= attrOption.label
+          option(
+            value=attrOption.value
+            default=attrOption.default
+          )= attrOption.label
       if block
         block
       else

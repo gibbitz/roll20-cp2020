@@ -1,16 +1,14 @@
+include ./pug/mixins/_index.pug
+include ./pug/_globals.pug
+
 div.cp-2020
   div.cp-2020__character
-    include ./pug/mixins/_index.pug
-    include ./pug/_globals.pug
-    div.cp-2020__character__column--identity
+    div.cp-2020__character__row--basics
       include ./pug/identity.pug
-    div.cp-2020__character__column--stats
       include ./pug/stats.pug
     div.cp-2020__character__row--vitals
-      div.cp-2020__character__column--armor
-        include ./pug/armor.pug
-      div.cp-2020__character__column--health
-        include ./pug/health.pug
+      include ./pug/armor.pug
+      include ./pug/health.pug
     div.cp-2020__character__row--tabs
       include ./pug/tab-navigation.pug
       include ./pug/bio.pug

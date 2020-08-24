@@ -1,0 +1,25 @@
+//- ===================================================================================
+//-
+  Creates markup for a save button
+  @param  {[String]} attrName  Roll20 Attribute name (snake or camel cased -- no spaces)
+  @param  {[String]} saveLabel Human readable name of the save type
+  @param  {[Bool]} showButton Toggle for the roll button
+//- ===================================================================================
+mixin saveField(attrName, saveLabel, showButton=true)
+  +box
+    label(
+      class=attributes.class
+      for=`${attrName}_save_button`
+    )
+      div.cp-2020__health__save-component
+        span.cp-2020__health__save-value(
+          name=`attr_${attrName}`
+        )
+        span.cp-2020__health__save-key=saveLabel
+      if showButton
+        button.cp-2020__health__save-btn(
+          id=`${attrName}_save_button`
+          title=`@${attrName}`
+          type='roll'
+          value=`'&{template:general} {{roll=@{Handle} ^{rolls} ^{save}! [[1d10]] ^{${attrName}}: [[@{Body}]]}}'`
+        )

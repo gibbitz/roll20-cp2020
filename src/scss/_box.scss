@@ -15,9 +15,9 @@
     border: 1px solid $dim-stroke;
     box-sizing: border-box;
     display: inline-block;
-    height: calc(100% - 9px);
+    // height: calc(100% - 9px);
     margin: $box-spacing;
-    padding: $box-spacing;
+    padding: $box-spacing * 2;
     position: relative;
     transition: background-color .6s ease-out;
     width: calc(100% - #{$box-spacing * 2}); // adjust for margin

@@ -40,11 +40,11 @@
       $color: nth($level-colors, $index - 1);
       &__value-indicator[value='#{$index}']{
         + #{$base}__box {
-          background-color: rgba($color, 0.1);
+          background-color: rgba($color, 0.06);
 
           &:hover,
           &:focus-within {
-            background-color: rgba($color, 0.2);
+            background-color: rgba($color, 0.15);
           }
         }
       }
@@ -64,23 +64,30 @@
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
+
+      #{$base}__stat__total {
+        text-align: right;
+      }
     }
 
     &__total {
       font-size: 1.7em;
-      // text-align: right;
+      text-align: center;
 
       #{$base}__stat__value {
         color: $light-font-color;
-        display: inline;
-        max-width: 1em;
+        display: inline-block;
+        max-width: 2.2em;
         text-align: right;
       }
 
       #{$base}__stat__abbr {
         color: $dim-font-color;
+        display: inline-block;
         font-size: 0.7em;
+        letter-spacing: 1px;
         margin-left: 0.3em;
+        vertical-align: text-top;
       }
 
     }
@@ -106,13 +113,22 @@
       display: flex;
       font-size: 0.6em;
       justify-content: space-between;
-      max-width: 80%;
+      max-width: 90%;
     }
 
     &__component {
       @extend %stat-group;
       flex: 0;
-      font-size: 0.9em;
+      font-size: 1.1em;
+
+      &:last-child {
+        input:not(:empty) {
+          color : red;
+          & + span {
+            color: red;
+          }
+        }
+      }
     }
   }
 
@@ -123,8 +139,9 @@
 
     &__save-btn {
       @extend %d10-roll-button;
+
       &::before {
-        content: 'a';
+        content: 'a' !important;
       }
     }
   }

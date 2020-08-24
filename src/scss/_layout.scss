@@ -1,75 +1,34 @@
-%flex {
-  display: flex;
-}
+.sheet-cp-2020{
+  $base: &;
+  &__character {
+    &__row--basics {
+      @extend %row-0-1;
+      justify-content: space-between;
+    }
 
-%flex-row {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-%flex-col {
-  flex-direction: column;
-}
-
-%flex-1-1 {
-  @extend %flex;
-  > * {
-    flex: 1 1 auto;
+    &__row--vitals {
+      @extend %row-1;
+      justify-content: space-between;
+    }
   }
-}
 
-%flex-1 {
-  @extend %flex;
-  > * {
-    flex: 1;
+  &__identity {
+    @extend %bordered-section;
+    max-width: 30%;
   }
-}
 
-%flex-3-1 {
-  @extend %flex;
-  > * {
-    flex: 3 1 auto;
+  &__stats {
+    @extend %bordered-section;
+    max-width: 69%;
   }
-}
 
-%flex-1-2 {
-  @extend %flex;
-  > * {
-    flex: 1 2 auto;
+  &__armor {
+    @extend %bordered-section;
+    max-width: 30%;
   }
-}
 
-%row-1-1 {
-  @extend %flex-1-1;
-  @extend %flex-row;
-}
-
-%row-1 {
-  @extend %flex-1;
-  @extend %flex-row;
-}
-
-%col-1-1 {
-  @extend %flex-1-1;
-  @extend %flex-col;
-}
-
-%row-3-1 {
-  @extend %flex-3-1;
-  @extend %flex-row;
-}
-
-%col-3-1 {
-  @extend %flex-3-1;
-  @extend %flex-col;
-}
-
-%row-1-2 {
-  @extend %flex-1-2;
-  @extend %flex-row;
-}
-
-%col-1-2 {
-  @extend %flex-1-2;
-  @extend %flex-col;
+  &__health {
+    @extend %bordered-section;
+    max-width: 69%;
+  }
 }

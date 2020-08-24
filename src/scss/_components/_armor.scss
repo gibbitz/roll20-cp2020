@@ -7,9 +7,9 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
-      height: 20em;
+      height: 18em;
       position: relative;
-      width: 20em;
+      width: 100%;
     }
 
     [value='f'] + &__figure {
@@ -47,7 +47,7 @@
         top: 8em;
       }
       &--left-arm {
-        right: -1em;
+        right: 0em;
         top: 6em;
       }
       &--right-leg {

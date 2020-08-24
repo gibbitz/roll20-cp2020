@@ -1,7 +1,6 @@
 - var locations = ['Head', 'Torso', 'Right Arm', 'Left Arm', 'Right Leg', 'Left Leg']
 
-div.cp-2020__armor
-  h4 ARMOR
++section('armor')
   input(name='attr_Armor_Sex' type='hidden' disabled='true' value='@{Gender}')
   div(class='cp-2020__armor__figure')
     each location in locations

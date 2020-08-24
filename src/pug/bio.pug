@@ -1,12 +1,41 @@
 div.cp-2020__bio
-  label(for='attr_Age') Age
-  input(type='text' name='attr_Age')
-  label(for='attr_LifeEvents') Life Events
-  textarea(name='attr_LifeEvents')
-  label(for='attr_Style') Style and Motivations
-  textarea(name='attr_Style')
+  div.cp-2020__bio__row
+    div.cp-2020__bio__col
+      +section('style')
+        +attrField('Clothes', 'clothes')(type='text')
+        +attrField('Hair', 'hair')(type='text')
+        +attrField('Affectations', 'affectations')(type='text')
 
-  label(for='attr_Family') Family
-  textarea(name='attr_Family')
-  label(for='attr_Notes') Other Notes
-  textarea(name='attr_Notes')
+      +section('motivations')
+        +attrField('Traits', 'personality traits')(type='text')
+        +attrField('Idol', 'valued person')(type='text')
+        +attrField('Ideal', 'valued most')(type='text')
+        +attrField('Attitude', 'feel about people')(type='text')
+        +attrField('Treasure', 'valued possession')(type='text')
+
+    div.cp-2020__bio__col
+      +section('family')
+        +attrField('Parents', 'parents')(type='text')
+        +attrField('Family_Rank', 'family ranking')(type='text')
+        +attrField('Family_Status', 'family status')(type='text')
+        +attrField('Childhood', 'childhood environment')(type='text')
+
+      +section('siblings')
+        +attrField('Sib_Count', 'number of siblings')(type='number')
+
+        fieldset.repeating_Sibling
+          div.cp-2020__bio__sibling-row
+            +attrField('Name', 'full name')(type='text')
+            +attrField('Handle', 'handle')(type='text')
+          div.cp-2020__bio__sibling-row
+            +attrSelect('Gender', genders, 'gender')()
+            +attrSelect('Age', siblingAge, 'relatve age')()
+          +attrTextArea('Relationship', 'relationship')(rows='3')
+
+  +section('history')
+    fieldset.repeating_LifeEvents
+      +attrField('Year', 'year')(type='number')
+      +attrTextArea('Event', 'event')(rows='3')
+
+  +section('notes')
+    +attrTextArea('Notes', 'Other Notes').cp-2020__bio__notes

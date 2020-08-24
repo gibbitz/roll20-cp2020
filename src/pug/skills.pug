@@ -9,18 +9,18 @@ div.cp-2020__skills
       input(type='radio' name='attr_Skill_Toggle' value='use')
   div.cp-2020__inner-box
     input(name='attr_roleSelected' disabled='true' value='@{Role}' type='hidden')
-    h5 Special Ability
+    h5 SPECIAL ABILITY
     div.cp-2020__skills__column
       div.cp-2020__special-ability
         each skill in data.specialAbilities
           +skillField(skill, data.specialAbilities)
-    h5 Career Skills
+    h5 CAREER SKILLS
     div.cp-2020__skills__column
       div.cp-2020__career-skills
         each skill in allSkills
           +skillField(skill, data.skills)
 
-    h5 Pickup Skills
+    h5 PICKUP SKILLS
     div.cp-2020__skills__column
       div.cp-2020__pickup-skills
         each skill in data.skills

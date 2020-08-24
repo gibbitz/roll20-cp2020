@@ -1,6 +1,6 @@
 
 var damageLevels = data.woundLevels;
-changeEvents = ['change:Damage_Indicator', 'sheet:opened'].join(' ').toLowerCase();
+changeEvents = ['change:Damage_Indicator', 'change:BODY_Mod', 'change:BODY_Base', 'sheet:opened'].join(' ').toLowerCase();
 function makeFloatOrZero(string) {
   return string ? parseFloat(string) : 0;
 }

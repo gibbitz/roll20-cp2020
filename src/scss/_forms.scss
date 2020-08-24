@@ -3,6 +3,7 @@
   border-radius: 0;
   border-color: $dim-font-color;
   color: $light-font-color;
+  letter-spacing: 1px;
   width: 100%;
 
   &:focus {
@@ -16,7 +17,7 @@
   label {
     color: $dim-font-color;
     margin: 0;
-    padding: 0.7em 1em .3em 0;
+    // padding: 0.7em 1em .3em 0;
   }
 
   input {
@@ -37,6 +38,7 @@
   textarea {
     @extend %text-field;
     box-sizing: border-box;
+    height: auto;
   }
 
   &__box {

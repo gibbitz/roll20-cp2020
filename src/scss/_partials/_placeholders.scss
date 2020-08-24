@@ -1,3 +1,5 @@
+// view toggling
+// =======================================
 %hide {
   display: none;
 }
@@ -14,45 +16,179 @@
   display: block !important;
 }
 
-%active-tab {
-  // &::before {
-  //   content: '';
-  //   border-bottom: 1px solid $dim-fill-color;
-  //   bottom: 0;
-  //   left: 0;
-  //   position: absolute;
-  //   width: 100%;
-  // }
-  // background-color: rgba($dim-stroke, 0.5);
-  color: $med-light-font-color;
-  background-color: rgba($dim-fill-color, 0.5);
-  position: relative;
+// layout
+// ==========================================
+%flex {
+  display: flex;
 }
 
+%flex-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+%flex-col {
+  flex-direction: column;
+}
+
+%flex-0-1 {
+  @extend %flex;
+  > * {
+    flex: 0 1 auto;
+  }
+}
+
+%flex-1-1 {
+  @extend %flex;
+  > * {
+    flex: 1 1 auto;
+  }
+}
+
+%flex-1-0 {
+  @extend %flex;
+  > * {
+    flex: 1 0 auto;
+  }
+}
+
+%flex-1 {
+  @extend %flex;
+  > * {
+    flex: 1;
+  }
+}
+
+%flex-3-1 {
+  @extend %flex;
+  > * {
+    flex: 3 1 auto;
+  }
+}
+
+%flex-1-2 {
+  @extend %flex;
+  > * {
+    flex: 1 2 auto;
+  }
+}
+
+%row-0-1 {
+  @extend %flex-0-1;
+  @extend %flex-row;
+}
+
+%row-1-0 {
+  @extend %flex-1-0;
+  @extend %flex-row;
+}
+
+%row-1-1 {
+  @extend %flex-1-1;
+  @extend %flex-row;
+}
+
+%row-1 {
+  @extend %flex-1;
+  @extend %flex-row;
+}
+
+%col-1 {
+  @extend %flex-1;
+  @extend %flex-col;
+}
+
+%col-1-1 {
+  @extend %flex-1-1;
+  @extend %flex-col;
+}
+
+%row-3-1 {
+  @extend %flex-3-1;
+  @extend %flex-row;
+}
+
+%col-3-1 {
+  @extend %flex-3-1;
+  @extend %flex-col;
+}
+
+%row-1-2 {
+  @extend %flex-1-2;
+  @extend %flex-row;
+}
+
+%col-1-2 {
+  @extend %flex-1-2;
+  @extend %flex-col;
+}
+
+%bordered-section {
+  @extend %col-1;
+  padding-bottom: 1em;
+
+  > h3 {
+    flex: 0 1 auto;
+    @extend %section-title;
+  }
+}
+
+// tabs
+// ========================================
+
 %inactive-tab {
-  color: $dim-font-color;
+  @extend %section-title;
+  color: $dim-fill-color;
+  padding-bottom: $wrapper-padding;
+  position: relative;
+  transition: font-color 0.4s ease-out;
+
+  &::before {
+    content: '';
+    border-bottom: 1px solid rgba($dim-font-color, 0);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: border-color 0.4s ease-out, width 0.6s ease-in;
+    width: 0;
+  }
 
   &:hover {
-    background-color: rgba($dim-stroke, 0.5);
+    // background-color: rgba($dim-fill-color, 0.5);
+    color: $dim-font-color;
+    &::before {
+      border-bottom: 1px solid $dim-font-color;
+      width: 100%;
+    }
   }
+}
+
+%active-tab {
+  color: $base-font-color;
+  // background-color: rgba($dim-stroke, 0.5);
+  // background-color: rgba($dim-fill-color, 0.5);
+
+  &::before {
+    border-bottom: 1px solid $med-light-font-color;
+    width: 100%;
+  }
+
 }
 
 %tab-group {
   // border-bottom: 1px solid $dim-stroke;
   display: flex;
-  font-size: 1.1em;
+  font-size: 1.2em;
   position: relative;
   text-transform: uppercase;
 
   > label {
     @extend %inactive-tab;
     background-color: rgba($dim-stroke, 0);
-    // border-bottom: 1px solid $dim-stroke;
     cursor: pointer;
     flex: 1 1 auto;
     line-height: 1;
-    max-width: 33%;
-    padding: .5em;
+    max-width: 25%;
     transition: background-color 0.6s ease-in;
 
     input {
@@ -61,11 +197,26 @@
   }
 }
 
+// sections
+// ==========================================
 %section-wrapper {
-  border: 1px solid $dim-stroke;
-  padding: 0.5em;
+  padding: $wrapper-padding;
+  position: relative;
+
+  &::before {
+    border: 1px solid $dim-stroke;
+    bottom: 0;
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
+// forms
+// ============================================
 %stat-group {
   display: flex;
   flex-direction: column;
@@ -75,18 +226,22 @@
   > *:first-child, input {
     @extend %title-font;
     box-sizing: border-box;
-    color: $med-light-font-color;
-    font-size: 1.7em;
+    color: $base-font-color;
+    font-size: 1.4em;
     letter-spacing: 1px;
-    line-height: 1.7;
-    min-height: 1.7em;
+    line-height: 1.4;
     text-align: center;
+
+    &:empty {
+      height: 1.4em;
+    }
   }
 
   > *:last-child {
     color: $dim-font-color;
     font-size: 0.9em;
     letter-spacing: 1px;
+    line-height: 1;
     white-space: nowrap;
   }
 }
