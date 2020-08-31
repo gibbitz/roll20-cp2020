@@ -224,6 +224,16 @@
   }
 }
 
+// weapons
+// ===========================================
+
+%weapon-stat-label {
+  &::before {
+    content: '';
+    display: inline-block;
+  }
+}
+
 // forms
 // ============================================
 %stat-group {
