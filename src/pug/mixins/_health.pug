@@ -6,6 +6,8 @@
   @param  {[Bool]} showButton Toggle for the roll button
 //- ===================================================================================
 mixin saveField(attrName, saveLabel, showButton=true)
+  - let failMsg = saveLabel === 'Death' ? 'dead' : 'unconscious';
+  - let successMsg = saveLabel === 'Death' ? 'living' : 'conscious';
   +box
     label(
       class=attributes.class
@@ -15,11 +17,18 @@ mixin saveField(attrName, saveLabel, showButton=true)
         span.cp-2020__health__save-value(
           name=`attr_${attrName}`
         )
-        span.cp-2020__health__save-key=saveLabel
+        span.cp-2020__health__save-key=`${saveLabel}${showButton ? ' Save' : ''}`
       if showButton
         button.cp-2020__health__save-btn(
           id=`${attrName}_save_button`
           title=`@${attrName}`
           type='roll'
-          value=`'&{template:general} {{roll=@{Handle} ^{rolls} ^{save}! [[1d10]] ^{${attrName}}: [[@{Body}]]}}'`
+          value=compressString(`
+            &{template:save-template}
+            {{handle=@{Handle}}}
+            {{targetName=${saveLabel}}}
+            {{roll=[[1d10]]}}
+            {{targetValue=[[@{${attrName}}]]}}
+            {{failMsg=${failMsg}}}
+            {{successMsg=${successMsg}}}`)
         )

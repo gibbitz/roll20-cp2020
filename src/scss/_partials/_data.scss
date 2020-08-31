@@ -1,5 +1,148 @@
 $data: (
   data: (
+    compoundSkills: ((
+      skillName: 'Techie Tech',
+      skillGroup: ('Forgery', 'Cryotank Operation', 'Pharmaceuticals', 'Photo & Film', 'Cyberdeck Design', 'Weaponsmith', 'Aero Tech', 'Electronic Security', 'Gyro Tech', 'AV Tech', 'Demolitions'),
+      description: 'Skills that require technical aptitude.',
+      career: 'Techie*3'
+    ), (
+      skillName: 'Martial Arts',
+      skillGroup: ('Akido', 'Animal Kung Fu', 'Boxing', 'Capoeria', 'Choi Li Fut', 'Judo', 'Karate', 'Tae Kwon Do', 'Thai Kick Boxing', 'Wrestling', 'Sambo', 'Sumo', 'Tai Chi Chuan', 'Te', 'Jeet Kun Do', 'Ninjutsu', 'Koppo'),
+      description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
+      career: 'Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin*2'
+    ), (
+      skillName: 'Brawling or Martial Arts',
+      skillGroup: ('Brawling', 'Martial Arts'),
+      description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
+      career: 'PA Trooper|Solo'
+    ), (
+      skillName: 'Handgun or SMG',
+      skillGroup: ('Submachinegun', 'Handgun'),
+      description: 'The skills of small firearms.',
+      career: 'Bodyguard|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Panzerboy'
+    ), (
+      skillName: 'Brawling or Melee',
+      skillGroup: ('Brawling', 'Melee'),
+      description: 'The skill of fighting man to man with fist, feet and other parts of the body -- or weapons.',
+      career: 'Bookie|Dancer/Prostitute'
+    ), (
+      skillName: 'Aero or AV Tech',
+      skillGroup: ('Aero Tech', 'AV Tech'),
+      description: 'Select one',
+      career: 'Aerojock'
+    ), (
+      skillName: 'Disguise or Intimidate',
+      skillGroup: ('Disguise', 'Intimidate'),
+      description: 'Select one',
+      career: 'Bounty Hunter'
+    ), (
+      skillName: 'Rifle or SMG',
+      skillGroup: ('Rifle', 'Submachinegun'),
+      description: 'The skill of fighting with medium firearms.',
+      career: 'Covert Specialist|Outrider|Pathfinder'
+    ), (
+      skillName: 'Persuasion or Oratory',
+      skillGroup: ('Persuasion & Fast Talk', 'Oratory'),
+      description: 'The skill of gab.',
+      career: 'Doctor'
+    ), (
+      skillName: 'Motorcycle or Drive',
+      skillGroup: ('Motorcycle', 'Drive'),
+      description: 'The skill of commanding wheeled machines.',
+      career: 'Outrider|Space Marine'
+    ), (
+      skillName: 'Athletics or Brawling',
+      skillGroup: ('Athletics', 'Brawling'),
+      description: 'The skill of brawn.',
+      career: 'Pirate|Runner'
+    ), (
+      skillName: 'Decks or Electronics',
+      skillGroup: ('Cyberdeck Design', 'Electronics'),
+      description: 'The skill of brains.',
+      career: 'Rogue Hunter'
+    ), (
+      skillName: 'Dance or Oratory',
+      skillGroup: ('Dance', 'Oratory'),
+      description: 'Select one.',
+      career: 'Spiritual Leader'
+    ), (
+      skillName: 'Trance or Perform',
+      skillGroup: ('Trance', 'Perform'),
+      description: 'Select one.',
+      career: 'Spiritual Leader'
+    ), (
+      skillName: 'Leadership or Accounting',
+      skillGroup: ('Leadership', 'Accounting'),
+      description: 'Select one.',
+      career: 'Talent Agent/Manager'
+    ), (
+      skillName: 'Weapon or Basic Tech',
+      skillGroup: ('Basic Tech', 'Handgun', 'Rifle', 'Submachinegun', 'Melee', 'Fencing', 'Archery', 'Heavy Weapons'),
+      description: 'Select one.',
+      career: 'Warrior'
+    ), (
+      skillName: 'Handgun or Hvy Weapons',
+      skillGroup: ('Handgun', 'Heavy Weapons'),
+      description: 'Select one.',
+      career: 'Warrior'
+    ), (
+      skillName: 'Endurance or First Aid',
+      skillGroup: ('Endurance', 'First Aid'),
+      description: 'Select one.',
+      career: 'Warrior'
+    ), (
+      skillName: 'Melee or Fencing',
+      skillGroup: ('Melee', 'Fencing'),
+      description: 'The skill of using non-ranged weapons.',
+      career: 'Warrior'
+    ), (
+      skillName: 'Water Vehicle',
+      skillGroup: ('Pilot (Ship), Pilot (Submersible), Pilot (Hovercraft), Pilot (Watercraft)'),
+      description: 'The skill of boating -- select a size',
+      career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
+    ), (
+      skillName: 'Aircraft',
+      skillGroup: ('Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Vect.Thrust Vehicle)'),
+      description: 'The skill of boating -- select a size',
+      career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
+    ), (
+      skillName: 'Pilot or Drive',
+      skillGroup: ('Drive', 'Pilot'),
+      description: 'The skill of commanding machines.',
+      career: 'Bodyguard|Bounty Hunter|Street Samurai|Runner*3'
+    ), (
+      skillName: 'Drive/Pilot/Electronics',
+      skillGroup: ('Drive', 'Pilot', 'Electronics'),
+      description: 'The skill of commanding machines.',
+      career: 'Tabloid-Monger'
+    ), (
+      skillName: 'Pilot',
+      skillGroup: ('Water Vehicle', 'Aircraft'),
+      description: 'The skill of commanding machines.',
+      career: ''
+    ), (
+      skillName: 'History or Area Knowledge',
+      skillGroup: ('History', 'Area Knowledge'),
+      description: 'The skill of knowing where you come from.',
+      career: 'Administrator'
+    ), (
+      skillName: 'One Gang-Related Skill',
+      skillGroup: ('Resist Torture/Drugs', 'Area Knowledge', 'Persuasion & Fast Talk', 'Pick Pocket', 'Pharmaceuticals'),
+      description: 'The skill of knowing where you come from.',
+      career: 'Streetpunk'
+    )),
+    fumbles: (
+      Combat: ('No fumble. You just screw up.', 'No fumble. You just screw up.', 'No fumble. You just screw up.', 'No fumble. You just screw up.', 'You drop your weapon.', 'Weapon discharges (make reliability roll for non-auto weapon) or strikes something harmiess.', 'Weapon jams (make reliability roll for non-auto weapon) or imbeds itself in the ground for one turn.', 'You manage to wound yourself. Roll for location.', 'You manage to wound a member of your own party.', 'You manage to wound a member of your own party.'),
+      REF: ('No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1.'),
+      BODY: ('No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'You fail miserably. Take 1 point in minor damage (sprain), plus make a Save vs. Stun.', 'You fail miserably. Take 1 point in minor damage (sprain), plus make a Save vs. Stun.', 'You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1.'),
+      CL: ('No fumble, but your confidence is shaken and it shows.', 'No fumble, but your confidence is shaken and it shows.', 'No fumble, but your confidence is shaken and it shows.', 'No fumble, but your confidence is shaken and it shows.', 'You fail miserably. Your target can smell the fear on you. They get +1 to bring you down a peg on their next try', 'You fail miserably. Your target can smell the fear on you. They get +1 to bring you down a peg on their next try', 'You lose your shit. Make a Cool save or be forced to retreat or completely give in.', 'You lose your shit. Make a Cool save or be forced to retreat or completely give in.', 'You lose your shit. Make a Cool save or be forced to retreat or completely give in.'),
+      MA: ('No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.'),
+      TECH: ('No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.'),
+      EMP: ('No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'So much for your people skills. You not only don"t convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.', 'So much for your people skills. You not only don"t convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.'),
+      ATT: ('No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.'),
+      INT: ('No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.')
+    ),
+    roles: ('Action Reporter', 'Administrator', 'Aerojock', 'Aquatic Nomad', 'Assassin', 'Attorney/Judge', 'Black Marketeer', 'Bodyguard', 'Bookie', 'Bounty Hunter', 'British Combined Forces', 'Celebrity Reporter', 'Combat Medic', 'Con Man', 'Cop', 'Corp Operative', 'Corporate', 'Covert Specialist', 'Covert Tech Demolitions Ops', 'Covert Tech Elint Ops', 'Covert Tech Intrusion Ops', 'Covert Tech Netrunner Ops', 'Covert Tech Remote Ops', 'Credshark', 'Cultist', 'Dancer/Prostitute', 'Divemaster/Miner', 'Doctor', 'Eurosolo', 'Ex-Cybersoldier', 'Factor', 'Fence', 'Fixer', 'Freelancer', 'Highrider/Pilot', 'Information Broker', 'Investigative Reporter', 'Japanese SDF Officer', 'Lawyer', 'Loan Shark', 'Marine Biotech', 'Marine Corps', 'Med Tech', 'Media', 'Pharmacist/Bioware Researcher', 'Negotiator', 'Netrunner', 'Nomad', 'On-Air Star', 'Outrider', 'Owner', 'PA Trooper', 'Panzerboy', 'Pathfinder', 'Pimp', 'Pirate', 'Police Beat Reporter', 'Private Investigator', 'Prowler', 'Pusher', 'Reapers', 'Rockerboy', 'Rogue Hunter', 'Runner', 'Scavenger', 'Shaman', 'Shinobi', 'Shoemaker', 'Salver', 'Sleaze', 'Smuggler', 'Sniffer', 'Social Reporter', 'Solo', 'Space Marine', 'Spiritual Leader', 'Spook', 'Spy', 'Street Samurai', 'Streetpunk', 'Subjock', 'Tabloid-Monger', 'Talent Agent/Manager', 'Talent Scout', 'Tatsujin', 'Techie', 'The Spin Doctor', 'Trader', 'U.S. or EDF Army', 'U.S. or EDF Navy', 'USAF/EDF Air Force', 'War Correspondent', 'Warrior', 'Workganger'),
     skills: ((
       skillName: 'Personal Grooming',
       baseAttribute: 'ATT',
@@ -1653,138 +1796,6 @@ players- you may elect to swap your original INT and REF stats for characters ge
       specialAbility: 'British Combined Forces|Japanese SDF Officer|Marine Corps|U.S. or EDF Army|U.S. or EDF Navy|USAF/EDF Air Force',
       description: 'Special Ability by Field for soldier or officer.'
     )),
-    compoundSkills: ((
-      skillName: 'Techie Tech',
-      skillGroup: ('Forgery', 'Cryotank Operation', 'Pharmaceuticals', 'Photo & Film', 'Cyberdeck Design', 'Weaponsmith', 'Aero Tech', 'Electronic Security', 'Gyro Tech', 'AV Tech', 'Demolitions'),
-      description: 'Skills that require technical aptitude.',
-      career: 'Techie*3'
-    ), (
-      skillName: 'Martial Arts',
-      skillGroup: ('Akido', 'Animal Kung Fu', 'Boxing', 'Capoeria', 'Choi Li Fut', 'Judo', 'Karate', 'Tae Kwon Do', 'Thai Kick Boxing', 'Wrestling', 'Sambo', 'Sumo', 'Tai Chi Chuan', 'Te', 'Jeet Kun Do', 'Ninjutsu', 'Koppo'),
-      description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
-      career: 'Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin*2'
-    ), (
-      skillName: 'Brawling or Martial Arts',
-      skillGroup: ('Brawling', 'Martial Arts'),
-      description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
-      career: 'PA Trooper|Solo'
-    ), (
-      skillName: 'Handgun or SMG',
-      skillGroup: ('Submachinegun', 'Handgun'),
-      description: 'The skills of small firearms.',
-      career: 'Bodyguard|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Panzerboy'
-    ), (
-      skillName: 'Brawling or Melee',
-      skillGroup: ('Brawling', 'Melee'),
-      description: 'The skill of fighting man to man with fist, feet and other parts of the body -- or weapons.',
-      career: 'Bookie|Dancer/Prostitute'
-    ), (
-      skillName: 'Aero or AV Tech',
-      skillGroup: ('Aero Tech', 'AV Tech'),
-      description: 'Select one',
-      career: 'Aerojock'
-    ), (
-      skillName: 'Disguise or Intimidate',
-      skillGroup: ('Disguise', 'Intimidate'),
-      description: 'Select one',
-      career: 'Bounty Hunter'
-    ), (
-      skillName: 'Rifle or SMG',
-      skillGroup: ('Rifle', 'Submachinegun'),
-      description: 'The skill of fighting with medium firearms.',
-      career: 'Covert Specialist|Outrider|Pathfinder'
-    ), (
-      skillName: 'Persuasion or Oratory',
-      skillGroup: ('Persuasion & Fast Talk', 'Oratory'),
-      description: 'The skill of gab.',
-      career: 'Doctor'
-    ), (
-      skillName: 'Motorcycle or Drive',
-      skillGroup: ('Motorcycle', 'Drive'),
-      description: 'The skill of commanding wheeled machines.',
-      career: 'Outrider|Space Marine'
-    ), (
-      skillName: 'Athletics or Brawling',
-      skillGroup: ('Athletics', 'Brawling'),
-      description: 'The skill of brawn.',
-      career: 'Pirate|Runner'
-    ), (
-      skillName: 'Decks or Electronics',
-      skillGroup: ('Cyberdeck Design', 'Electronics'),
-      description: 'The skill of brains.',
-      career: 'Rogue Hunter'
-    ), (
-      skillName: 'Dance or Oratory',
-      skillGroup: ('Dance', 'Oratory'),
-      description: 'Select one.',
-      career: 'Spiritual Leader'
-    ), (
-      skillName: 'Trance or Perform',
-      skillGroup: ('Trance', 'Perform'),
-      description: 'Select one.',
-      career: 'Spiritual Leader'
-    ), (
-      skillName: 'Leadership or Accounting',
-      skillGroup: ('Leadership', 'Accounting'),
-      description: 'Select one.',
-      career: 'Talent Agent/Manager'
-    ), (
-      skillName: 'Weapon or Basic Tech',
-      skillGroup: ('Basic Tech', 'Handgun', 'Rifle', 'Submachinegun', 'Melee', 'Fencing', 'Archery', 'Heavy Weapons'),
-      description: 'Select one.',
-      career: 'Warrior'
-    ), (
-      skillName: 'Handgun or Hvy Weapons',
-      skillGroup: ('Handgun', 'Heavy Weapons'),
-      description: 'Select one.',
-      career: 'Warrior'
-    ), (
-      skillName: 'Endurance or First Aid',
-      skillGroup: ('Endurance', 'First Aid'),
-      description: 'Select one.',
-      career: 'Warrior'
-    ), (
-      skillName: 'Melee or Fencing',
-      skillGroup: ('Melee', 'Fencing'),
-      description: 'The skill of using non-ranged weapons.',
-      career: 'Warrior'
-    ), (
-      skillName: 'Water Vehicle',
-      skillGroup: ('Pilot (Ship), Pilot (Submersible), Pilot (Hovercraft), Pilot (Watercraft)'),
-      description: 'The skill of boating -- select a size',
-      career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
-    ), (
-      skillName: 'Aircraft',
-      skillGroup: ('Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Vect.Thrust Vehicle)'),
-      description: 'The skill of boating -- select a size',
-      career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
-    ), (
-      skillName: 'Pilot or Drive',
-      skillGroup: ('Drive', 'Pilot'),
-      description: 'The skill of commanding machines.',
-      career: 'Bodyguard|Bounty Hunter|Street Samurai|Runner*3'
-    ), (
-      skillName: 'Drive/Pilot/Electronics',
-      skillGroup: ('Drive', 'Pilot', 'Electronics'),
-      description: 'The skill of commanding machines.',
-      career: 'Tabloid-Monger'
-    ), (
-      skillName: 'Pilot',
-      skillGroup: ('Water Vehicle', 'Aircraft'),
-      description: 'The skill of commanding machines.',
-      career: ''
-    ), (
-      skillName: 'History or Area Knowledge',
-      skillGroup: ('History', 'Area Knowledge'),
-      description: 'The skill of knowing where you come from.',
-      career: 'Administrator'
-    ), (
-      skillName: 'One Gang-Related Skill',
-      skillGroup: ('Resist Torture/Drugs', 'Area Knowledge', 'Persuasion & Fast Talk', 'Pick Pocket', 'Pharmaceuticals'),
-      description: 'The skill of knowing where you come from.',
-      career: 'Streetpunk'
-    )),
-    roles: ('Action Reporter', 'Administrator', 'Aerojock', 'Aquatic Nomad', 'Assassin', 'Attorney/Judge', 'Black Marketeer', 'Bodyguard', 'Bookie', 'Bounty Hunter', 'British Combined Forces', 'Celebrity Reporter', 'Combat Medic', 'Con Man', 'Cop', 'Corp Operative', 'Corporate', 'Covert Specialist', 'Covert Tech Demolitions Ops', 'Covert Tech Elint Ops', 'Covert Tech Intrusion Ops', 'Covert Tech Netrunner Ops', 'Covert Tech Remote Ops', 'Credshark', 'Cultist', 'Dancer/Prostitute', 'Divemaster/Miner', 'Doctor', 'Eurosolo', 'Ex-Cybersoldier', 'Factor', 'Fence', 'Fixer', 'Freelancer', 'Highrider/Pilot', 'Information Broker', 'Investigative Reporter', 'Japanese SDF Officer', 'Lawyer', 'Loan Shark', 'Marine Biotech', 'Marine Corps', 'Med Tech', 'Media', 'Pharmacist/Bioware Researcher', 'Negotiator', 'Netrunner', 'Nomad', 'On-Air Star', 'Outrider', 'Owner', 'PA Trooper', 'Panzerboy', 'Pathfinder', 'Pimp', 'Pirate', 'Police Beat Reporter', 'Private Investigator', 'Prowler', 'Pusher', 'Reapers', 'Rockerboy', 'Rogue Hunter', 'Runner', 'Scavenger', 'Shaman', 'Shinobi', 'Shoemaker', 'Salver', 'Sleaze', 'Smuggler', 'Sniffer', 'Social Reporter', 'Solo', 'Space Marine', 'Spiritual Leader', 'Spook', 'Spy', 'Street Samurai', 'Streetpunk', 'Subjock', 'Tabloid-Monger', 'Talent Agent/Manager', 'Talent Scout', 'Tatsujin', 'Techie', 'The Spin Doctor', 'Trader', 'U.S. or EDF Army', 'U.S. or EDF Navy', 'USAF/EDF Air Force', 'War Correspondent', 'Warrior', 'Workganger'),
     stats: (
       INT: 'intelligence',
       REF: 'reflexes',
@@ -1796,6 +1807,74 @@ players- you may elect to swap your original INT and REF stats for characters ge
       BODY: 'body type',
       EMP: 'empathy'
     ),
+    weaponTypes: ((
+      value: 'Bow',
+      label: 'Bow'
+    ), (
+      value: 'Heavy Weapons',
+      label: 'Heavy Weapons'
+    ), (
+      value: 'Melee',
+      label: 'Melee'
+    ), (
+      value: 'Pistol',
+      label: 'Pistol'
+    ), (
+      value: 'Rifle',
+      label: 'Rifle'
+    ), (
+      value: 'Submachinegun',
+      label: 'Submachinegun'
+    )),
+    weaponConcealabilities: ((
+      value: 'Not concealable',
+      label: 'Not concealable'
+    ), (
+      value: 'Long Coat',
+      label: 'Long Coat'
+    ), (
+      value: 'Pocket',
+      label: 'Pocket'
+    ), (
+      value: 'Jacket',
+      label: 'Jacket'
+    )),
+    weaponReliabilities: ((
+      value: 'standard',
+      label: 'standard'
+    ), (
+      value: 'very reliable',
+      label: 'very reliable'
+    ), (
+      value: 'unreliable',
+      label: 'unreliable'
+    )),
+    genders: ((
+      value: 'm',
+      label: 'Male'
+    ), (
+      value: 'f',
+      label: 'Female'
+    ), (
+      value: 'mf',
+      label: 'Male presenting Female'
+    ), (
+      value: 'fm',
+      label: 'Female presenting Male'
+    ), (
+      value: 'a',
+      label: 'Androgynous'
+    )),
+    siblingAge: ((
+      value: 'younger',
+      label: 'Younger'
+    ), (
+      value: 'older',
+      label: 'Older'
+    ), (
+      value: 'twin',
+      label: 'Twin'
+    )),
     woundLevels: ('LIGHT', 'SERIOUS', 'CRITICAL', 'MORTAL 0', 'MORTAL 1', 'MORTAL 2', 'MORTAL 3', 'MORTAL 4', 'MORTAL 5', 'MORTAL 6')
   )
 );

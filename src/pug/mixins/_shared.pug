@@ -12,7 +12,9 @@ mixin box()
   @param  {[String]} sectionName the name of the section displayed (in caps + the name used in the css)
 //- ===================================================================================
 mixin section(sectionName)
-  div(class=`cp-2020__${sectionName}`)
-    h3(class=`cp-2020__${sectionName}__view-title`)=sectionName.toUpperCase()
+  - var name = sectionName ? sectionName : 'section'
+  div(class=`cp-2020__${name} ${attributes.class}`)
+    if sectionName
+      h3(class=`cp-2020__${name}__view-title`)=name.toUpperCase()
     div.cp-2020__inner-box
       block

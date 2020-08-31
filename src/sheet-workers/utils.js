@@ -79,7 +79,6 @@ function updateStats(callback) {
 function getStats(callback) {
   updateStats();
   var statKeys = Object.keys(data.stats);
-  var outputStats = {};
   getAttrs(statKeys, function(stats) {
     callback(stats);
   });

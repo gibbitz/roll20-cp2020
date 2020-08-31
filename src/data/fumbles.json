@@ -1,0 +1,114 @@
+{
+  "Combat": [
+    "No fumble. You just screw up.",
+    "No fumble. You just screw up.",
+    "No fumble. You just screw up.",
+    "No fumble. You just screw up.",
+    "You drop your weapon.",
+    "Weapon discharges (make reliability roll for non-auto weapon) or strikes something harmiess.",
+    "Weapon jams (make reliability roll for non-auto weapon) or imbeds itself in the ground for one turn.",
+    "You manage to wound yourself. Roll for location.",
+    "You manage to wound a member of your own party.",
+    "You manage to wound a member of your own party."
+  ],
+
+  "REF": [
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.",
+    "You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling or strained muscles. Also make roll vs Stun at -1."
+  ],
+
+  "BODY": [
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "You fail miserably. Take 1 point in minor damage (sprain), plus make a Save vs. Stun.",
+    "You fail miserably. Take 1 point in minor damage (sprain), plus make a Save vs. Stun.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from strained muscles. Also make roll vs Stun at -1."
+  ],
+
+  "CL": [
+    "No fumble, but your confidence is shaken and it shows.",
+    "No fumble, but your confidence is shaken and it shows.",
+    "No fumble, but your confidence is shaken and it shows.",
+    "No fumble, but your confidence is shaken and it shows.",
+    "You fail miserably. Your target can smell the fear on you. They get +1 to bring you down a peg on their next try",
+    "You fail miserably. Your target can smell the fear on you. They get +1 to bring you down a peg on their next try",
+    "You lose your shit. Make a Cool save or be forced to retreat or completely give in.",
+    "You lose your shit. Make a Cool save or be forced to retreat or completely give in.",
+    "You lose your shit. Make a Cool save or be forced to retreat or completely give in."
+  ],
+
+  "MA": [
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "No fumble. You just mess up and make an idiot of yourself.",
+    "You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.",
+    "You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.",
+    "You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1."
+  ],
+
+  "TECH": [
+    "No fumble. You just can't get it together.",
+    "No fumble. You just can't get it together.",
+    "No fumble. You just can't get it together.",
+    "No fumble. You just can't get it together.",
+    "You not only fail, you make it worse! You drop the tools you're working with, or you lose your grip and damage the thing you're working with even more. Raise the Difficulty by 5 points and try again.",
+    "You not only fail, you make it worse! You drop the tools you're working with, or you lose your grip and damage the thing you're working with even more. Raise the Difficulty by 5 points and try again.",
+    "You not only fail, you make it worse! You drop the tools you're working with, or you lose your grip and damage the thing you're working with even more. Raise the Difficulty by 5 points and try again.",
+    "Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.",
+    "Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.",
+    "Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one."
+  ],
+
+  "EMP": [
+    "No fumble. They just won't buy it.",
+    "No fumble. They just won't buy it.",
+    "No fumble. They just won't buy it.",
+    "No fumble. They just won't buy it.",
+    "So much for your people skills. You not only don't convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.",
+    "So much for your people skills. You not only don't convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.",
+    "Yow! You blew it royally. You not only didn't convince them, but now they're actually, violently opposedto anything you want to do. there's a 40% chance they actually attempt to do you physical harm.",
+    "Yow! You blew it royally. You not only didn't convince them, but now they're actually, violently opposedto anything you want to do. there's a 40% chance they actually attempt to do you physical harm.",
+    "Yow! You blew it royally. You not only didn't convince them, but now they're actually, violently opposedto anything you want to do. there's a 40% chance they actually attempt to do you physical harm.",
+    "Yow! You blew it royally. You not only didn't convince them, but now they're actually, violently opposedto anything you want to do. there's a 40% chance they actually attempt to do you physical harm."
+  ],
+
+  "ATT": [
+    "No fumble. They're just not that into you'.",
+    "No fumble. They're just not that into you'.",
+    "No fumble. They're just not that into you'.",
+    "No fumble. They're just not that into you'.",
+    "The equivalent of toilet paper stuck to your shoe. They can't unsee it. -4 to your next ATTR based role with the target.",
+    "The equivalent of toilet paper stuck to your shoe. They can't unsee it. -4 to your next ATTR based role with the target.",
+    "Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There's a 40% chance they will do anythign possible to get away from you.",
+    "Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There's a 40% chance they will do anythign possible to get away from you.",
+    "Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There's a 40% chance they will do anythign possible to get away from you.",
+    "Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There's a 40% chance they will do anythign possible to get away from you."
+  ],
+
+  "INT": [
+    "No fumble; You just don't know how to do it. You don't know what's going on. You carry on, oblivious to higher concerns.",
+    "No fumble; You just don't know how to do it. You don't know what's going on. You carry on, oblivious to higher concerns.",
+    "No fumble; You just don't know how to do it. You don't know what's going on. You carry on, oblivious to higher concerns.",
+    "No fumble; You just don't know how to do it. You don't know what's going on. You carry on, oblivious to higher concerns.",
+    "You don't know anything about what's going on, and you haven't clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.",
+    "You don't know anything about what's going on, and you haven't clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.",
+    "You don't know anything about what's going on, and you haven't clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.",
+    "Wow, are you oblivious. You not only don’t know what's going on or anything about the subject.",
+    "Wow, are you oblivious. You not only don’t know what's going on or anything about the subject.",
+    "Wow, are you oblivious. You not only don’t know what's going on or anything about the subject."
+  ]
+}

@@ -1,0 +1,88 @@
+.sheet-cp-2020 {
+  $base: &;
+
+  &__weapons-cyber{
+
+    &__buy-toggle {
+      @extend %tab-group;
+    }
+
+    &__wrapper {
+      @extend %section-wrapper;
+    }
+
+    #{$base}__weapon-section {
+      &--buy {
+        #{$base}__weapon-section__row {
+          @extend %row-1;
+        }
+      }
+      &--use {
+        #{$base}__weapon-section__row {
+          @extend %row-0-1;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          > * {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    input[value='use'] ~ &__buy-toggle {
+      #{$base}__weapons-cyber__use-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='buy'] ~ &__buy-toggle {
+      #{$base}__weapons-cyber__buy-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='use'] ~ &__wrapper {
+
+      #{$base}__cyberware-section--buy,
+      #{$base}__weapon-section--buy {
+        @extend %hide;
+      }
+
+      #{$base}__cyberware-section--use,
+      #{$base}__weapon-section--use {
+        @extend %show;
+      }
+    }
+
+    input[value='buy'] ~ &__wrapper {
+      #{$base}__cyberware-section--buy,
+      #{$base}__weapon-section--buy {
+        @extend %show;
+      }
+
+      #{$base}__cyberware-section--use,
+      #{$base}__weapon-section--use {
+        @extend %hide;
+      }
+    }
+
+  }
+
+  %weapon-stat-label {
+    &::before {
+      content: '';
+      display: inline-block;
+      font-family: 'Pictos';
+    }
+  }
+
+  &__weapon {
+    &-cost {
+      @extend %weapon-stat-label;
+      &::before {
+        // content: attr(title) !important;
+        content: '' !important;
+      }
+    }
+  }
+}

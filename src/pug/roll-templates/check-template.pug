@@ -1,0 +1,25 @@
+rolltemplate.sheet-rolltemplate-check-template
+  h3.cp-2020__roll-template__title {{handle}} :: Unskilled Check
+  div.cp-2020__roll-template__result-wrapper
+    div.cp-2020__total Roll total: {{total}}
+    div.cp-2020__breakdown
+      span.cp-2020__roll-template__digit {{stat}}&nbsp;
+      |[{{statName}}] + modifiers + 1d10
+      |{{#rollWasCrit()}}
+    div.cp-2020__critial A critical roll is worthy of IP towards the relevant skill.
+      |{{/rollWasCrit()}}
+      |{{#rollWasFumble()}}
+    div.cp-2020__fumble A fumble. What did you expect?
+      div(class='cp-2020__fumble-wrapper--{{statName}}')
+        each statName, statKey in data.stats
+            each index in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+              if(data.fumbles[statKey])
+                |{{#rollTotal() fumble #{index}}}
+                span(class=`cp-2020__fumble--${statKey}`)=data.fumbles[statKey][index]
+                |{{/rollTotal() fumble #{index}}}
+      |{{/rollWasFumble()}}
+    div.cp-2020__details
+      |{{#allprops()}}
+      div {{key}}:&nbsp;
+        span.cp-2020__roll-template__digit {{value}}
+        |{{/allprops()}}

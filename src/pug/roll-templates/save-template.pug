@@ -1,0 +1,17 @@
+rolltemplate.sheet-rolltemplate-save-template
+  h3.cp-2020__roll-template__title {{handle}} :: Save
+  div.cp-2020__roll-template__result-wrapper
+    |{{#rollLess() roll targetValue}}
+    span.cp-2020__success {{#successMsg}} {{successMsg}} {{/successMsg}}
+      |{{/rollLess() roll targetValue}}
+      |{{#rollTotal() roll targetValue}}
+      |{{#failMsg}}
+    span.cp-2020__fail {{failMsg}} &hellip; barely.
+      |{{/failMsg}}
+      |{{/rollTotal() roll targetValue}}
+      |{{#rollGreater() roll targetValue}}
+      |{{#failMsg}}
+    span.cp-2020__fail {{failMsg}}
+      |{{/failMsg}}
+      |{{/rollGreater() roll targetValue}}
+    div.cp-2020__details roll: {{roll}} vs {{targetName}}: {{targetValue}}

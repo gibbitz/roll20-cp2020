@@ -71,7 +71,14 @@ mixin skillStats(skillAttrName, skillData, additionalData)
     button.cp-2020__skill__roll(
       type='roll'
       id=`${skillAttrName}_roll`
-      value=`&{template:skill-spec}{{skill=${skillData.skillName}}}{{character= @{handle} }}{{total= [[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]] }} {{fumble= [[@{fumble-social}]] }}`
+      value=compressString(`&{template:skill-check-template}
+        {{skill=${skillData.skillName}}}
+        {{handle=@{handle}}}
+        {{skillLevel=@{${skillAttrName}_level}}}
+        {{stat=@{${skillData.baseAttribute}}}}
+        {{statName=${skillData.baseAttribute}}}
+        {{total=[[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]]}}
+        {{fumble=[[1d10]]}}`)
     )
 
     div(class='cp-2020__stat-group cp-2020__skill--edit')

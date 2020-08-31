@@ -1,0 +1,122 @@
+@import '../_partials/data';
+
+$dataValues: map-get($data, 'data');
+$stats: map-get($dataValues, 'stats');
+$base: '.sheet-cp-2020';
+
+%crit {
+  border: 0 !important;
+  color: rgba($level-9, 0.5) !important;
+}
+
+%fumble {
+  border: 0 !important;
+  color: rgba($level-2, 0.5) !important;
+}
+
+%roll-template {
+  @extend %basic-colors;
+  @extend %bordered-section;
+  @extend %base-font;
+  color: $dim-font-color !important;
+  padding: 0.5em;
+
+  h3 {
+    @extend %section-title;
+    text-transform: uppercase;
+  }
+
+  #{$base}__roll-template__result-wrapper {
+    @extend %section-wrapper;
+    letter-spacing: 1px;
+  }
+
+  .inlinerollresult,
+  #{$base}__roll-template__digit {
+    background: transparent;
+    border: 0;
+    color: $light-font-color;
+
+    &.fullfail {
+      @extend %fumble;
+    }
+
+    &.fullcrit {
+      @extend %crit;
+    }
+  }
+
+  #{$base}__fail,
+  #{$base}__fumble {
+    @extend %fumble;
+  }
+
+  #{$base}__critical,
+  #{$base}__success {
+    @extend %crit;
+  }
+
+  #{$base}__details {
+    cursor: pointer;
+    height: auto;
+    max-height: 1em;
+    overflow: hidden;
+    pointer-events: initial;
+    transition: max-height 0.5s ease-in;
+
+    &::before {
+      content: '+ details';
+      display: block;
+      height: 1em;
+      padding-bottom: .5em;
+    }
+
+    &:hover {
+      max-height: 500px;
+      &::before {
+        content: '   details';
+        white-space: pre;
+      }
+    }
+
+  }
+}
+
+
+
+
+.sheet-rolltemplate-save-template{
+  @extend %roll-template;
+  #{$base}__details {
+     .fullfail,
+     .fullcrit {
+      color: $light-font-color !important;
+     }
+  }
+}
+
+.sheet-rolltemplate-general {
+  @extend %roll-template;
+}
+
+.sheet-rolltemplate-skill-check-template {
+  @extend %roll-template;
+}
+
+.sheet-rolltemplate-check-template{
+  @extend %roll-template;
+
+  #{$base}__check-rolled {
+
+  }
+  @each $stat, $statName in $stats {
+    #{$base}__fumble-wrapper--#{$stat} {
+      > * {
+        display: none;
+      }
+      #{$base}__fumble--#{$stat} {
+        display: block;
+      }
+    }
+  }
+}

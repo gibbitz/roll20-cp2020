@@ -133,6 +133,14 @@
   }
 }
 
+// base coloring
+// ========================================
+%basic-colors {
+  background-color: $background;
+  box-sizing: border-box;
+  color: $base-font-color;
+}
+
 // tabs
 // ========================================
 
@@ -189,6 +197,7 @@
     flex: 1 1 auto;
     line-height: 1;
     max-width: 25%;
+    padding-top: 1.5em;
     transition: background-color 0.6s ease-in;
 
     input {

@@ -2,6 +2,7 @@ include ./pug/mixins/_index.pug
 include ./pug/_globals.pug
 
 div.cp-2020
+  include ./pug/attribute-macros.pug
   div.cp-2020__character
     div.cp-2020__character__row--basics
       include ./pug/identity.pug
@@ -13,4 +14,7 @@ div.cp-2020
       include ./pug/tab-navigation.pug
       include ./pug/bio.pug
       include ./pug/skills.pug
+      include ./pug/weapons.pug
+      include ./pug/outfit.pug
+  include ./pug/roll-templates/index.pug
   include ./sheet-workers/index.pug

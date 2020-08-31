@@ -1,10 +1,5 @@
-
 .sheet-cp-2020 {
-  background-color: #1e1e1e;
-  background-color: #1e1e1e;
-  box-sizing: border-box;
-  color: #aaa;
-  color: #AAAAAA;
+  @extend %basic-colors;
   left: 0;
   min-height: calc(100% - 81px);
   min-width: calc(100% - 6px);

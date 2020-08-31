@@ -1,0 +1,9 @@
+div.cp-2020__outfit
+  +section()
+    div.cp-2020__outfit__row
+      fieldset.repeating_outfit-item
+        div.cp-2020__outfit-item-section
+          +attrField('item_name', 'item')(type='text')
+          +attrField('kg', 'weight')(type='number')
+          +attrField('Cost', 'cost')(type='number')
+          +attrTextArea('item_description', 'description')(rows='3')

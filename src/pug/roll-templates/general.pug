@@ -1,0 +1,10 @@
+rolltemplate.sheet-rolltemplate-general
+  h3.cp-2020__roll-template__title {{handle}} :: Roll
+  div.cp-2020__roll-template__result-wrapper
+    div.cp-2020__message-source {{message}}
+    div.cp-2020__content {{roll}}
+    div.cp-2020__details
+      |{{#allprops()}}
+      div {{key}}:&nbsp;
+        span.cp-2020____roll-template__digit {{value}}
+      |{{/allprops()}}

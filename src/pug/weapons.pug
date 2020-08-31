@@ -1,0 +1,63 @@
+div.cp-2020__weapons-cyber
+  div.cp-2020__weapons-cyber__row
+    input(
+      disabled='true'
+      name='attr_Weapon_Toggle_Indicator'
+      type='hidden'
+      value='@{Weapon_Toggle}'
+    )
+    div.cp-2020__weapons-cyber__buy-toggle
+      label.cp-2020__weapons-cyber__buy-tab Buy/Sell/Drop
+        input(type='radio' name='attr_Weapon_Toggle' value='buy' checked='true')
+      label.cp-2020__weapons-cyber__use-tab Use
+        input(type='radio' name='attr_Weapon_Toggle' value='use')
+
+    div.cp-2020__weapons-cyber__wrapper
+      div.cp-2020__weapons-cyber__col
+        +section('weapons')
+          fieldset.repeating_outfit-item
+
+            div.cp-2020__weapon-section--buy
+              +attrField('weapon_name', 'weapon')(type='text')
+              div.cp-2020__weapon-section__row
+                +attrSelect('weapon_type', data.weaponTypes, 'type')
+                +attrSelect('weapon_conc', data.weaponConcealabilities, 'concealability')
+                +attrSelect('weapon_rel', data.weaponReliabilities, 'reliability')
+              div.cp-2020__weapon-section__row
+                +attrField('weapon_magazine', 'magazine')(type='number')
+                +attrField('weapon_cartridge', 'cartridge')(type='text')
+                +attrField('weapon_damage', 'damage')(type='text')
+                +attrField('weapon_rof', 'rate of fire')(type='text')
+                +attrField('weapon_accuracy', 'accuracy')(type='number')
+                +attrField('weapon_range', 'range')(type='number')
+                +attrField('weapon_kg', 'weight')(type='number')
+                +attrField('weapon_cost', 'cost')(type='number')
+              div.cp-2020__weapon-section__row
+                +attrTextArea('weapon_description', 'description')(rows='3')
+
+            div.cp-2020__weapon-section--use
+              span.cp-2020__weapon_name(name='attr_weapon_name')
+              div.cp-2020__weapon-section__row
+                span.cp-2020__weapon-weight(name='attr_weapon_kg')
+                span.cp-2020__weapon-cost(name='attr_weapon_cost' title='&#xf153;')
+                span.cp-2020__weapon-magazine(name='attr_weapon_magazine')
+                span.cp-2020__weapon-cartridge(name='attr_weapon_cartridge')
+                span.cp-2020__weapon-range(name='attr_weapon_range')
+                span.cp-2020__weapon-accuracy(name='attr_weapon_accuracy')
+                span.cp-2020__weapon-rof(name='attr_weapon_rof')
+                span.cp-2020__weapon-damage(name='attr_weapon_damage')
+                span.cp-2020__weapon-type(name='attr_weapon_type')
+                span.cp-2020__weapon-conc(name='attr_weapon_conc')
+                span.cp-2020__weapon-rel(name='attr_weapon_rel')
+              div.cp-2020__weapon-section__row
+                span.cp-2020__weapon-description(name='attr_weapon_description')
+
+      div.cp-2020__weapons-cyber__col
+        +section('cyberware')
+          fieldset.repeating_outfit-item
+            div.cp-2020__cyberware-section--buy
+              +attrField('aug_name', 'augmentation')(type='text')
+              +attrField('aug_hl', 'humanity cost')(type='number')
+              +attrField('aug_cost', 'cost')(type='number')
+              +attrTextArea('aug_description', 'description')(rows='3')
+            div.cp-2020__cyberware-section--use
