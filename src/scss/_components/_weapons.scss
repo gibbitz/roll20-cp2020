@@ -71,10 +71,14 @@
   &__weapon {
     &-cost {
       @extend %weapon-stat-label;
-
       &::before {
-        // content: attr(title) !important;
         content: url($assets-icon-euro);
+      }
+    }
+    &-rel {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-code);
       }
     }
   }
