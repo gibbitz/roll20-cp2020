@@ -68,21 +68,21 @@
 
   }
 
-  %weapon-stat-label {
-    &::before {
-      content: '';
-      display: inline-block;
-      font-family: 'Pictos';
-    }
-  }
-
   &__weapon {
     &-cost {
       @extend %weapon-stat-label;
+
       &::before {
         // content: attr(title) !important;
-        content: '' !important;
+        content: url($assets-icon-euro);
       }
     }
+  }
+}
+
+%weapon-stat-label {
+  &::before {
+    content: '';
+    display: inline-block;
   }
 }

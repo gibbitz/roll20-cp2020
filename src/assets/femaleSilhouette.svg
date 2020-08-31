@@ -68,6 +68,5 @@
      stroke-miterlimit="10"
      mask="url(#path-1-inside-1)"
      id="path1882"
-     stroke-width="2"
-     stroke="#707070" />
+     style="fill:#707070;fill-opacity:0.4;stroke-width:0.2" />
 </svg>

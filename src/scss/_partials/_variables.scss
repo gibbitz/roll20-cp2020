@@ -1,5 +1,7 @@
 $box-spacing: .2em;
 $wrapper-padding: $box-spacing * 2;
 
-$assets-female-silhouette: 'https://raw.githubusercontent.com/gibbitz/rolll20-cp2020/develop/src/assets/femaleSilhouette.svg';
-$assets-male-silhouette: 'https://raw.githubusercontent.com/gibbitz/rolll20-cp2020/develop/src/assets/maleSilhouette.svg';
+$assets-base-path: 'https://raw.githubusercontent.com/gibbitz/roll20-cp2020/develop';
+$assets-female-silhouette: '#{$assets-base-path}/src/assets/femaleSilhouette.svg';
+$assets-male-silhouette: '#{$assets-base-path}/src/assets/maleSilhouette.svg';
+$assets-icon-euro: '#{$assets-base-path}/src/assets/euro.svg';
