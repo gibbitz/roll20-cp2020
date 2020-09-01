@@ -20,6 +20,7 @@
       &--use {
         #{$base}__weapon-section__row {
           @extend %row-0-1;
+          align-items: baseline;
           flex-wrap: wrap;
           justify-content: space-between;
           > * {
