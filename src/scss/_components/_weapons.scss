@@ -69,16 +69,64 @@
   }
 
   &__weapon {
+    &-accuracy {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-accuracy);
+      }
+    }
+    &-cartridge {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-cartridge);
+      }
+    }
+    &-conc {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-concealability);
+      }
+    }
     &-cost {
       @extend %weapon-stat-label;
       &::before {
-        content: url($assets-icon-euro);
+        content: url($assets-icon-cost);
+      }
+    }
+    &-damage {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-damage);
+      }
+    }
+    &-magazine {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-magazine);
+      }
+    }
+    &-range {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-range);
       }
     }
     &-rel {
       @extend %weapon-stat-label;
       &::before {
-        content: url($assets-icon-code);
+        content: url($assets-icon-reliability);
+      }
+    }
+    &-rof {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-rof);
+      }
+    }
+    &-type {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-type);
       }
     }
   }
