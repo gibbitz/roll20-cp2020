@@ -129,5 +129,11 @@
         content: url($assets-icon-type);
       }
     }
+    &-weight {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-weight);
+      }
+    }
   }
 }
