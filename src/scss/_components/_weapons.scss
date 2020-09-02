@@ -18,13 +18,56 @@
         }
       }
       &--use {
+        #{$base}__weapon-section__first-row {
+          @extend %row-0-1;
+          align-items: center;
+          justify-content: space-between;
+
+          #{$base}__weapon__attack-button {
+            @extend %d10-roll-button;
+          }
+        }
+
         #{$base}__weapon-section__row {
           @extend %row-0-1;
           align-items: baseline;
           flex-wrap: wrap;
           justify-content: space-between;
+
           > * {
             white-space: nowrap;
+          }
+        }
+
+        #{$base}__weapon__description-toggle {
+
+          > input {
+            pointer-events: none;
+            position: absolute;
+            visibility: hidden;
+          }
+
+          #{$base}__weapon-description {
+            &::before {
+              content: '+ details';
+              cursor: pointer;
+              display: block;
+              height: 1em;
+            }
+            display: block;
+            margin-bottom: 1.3em;
+            max-height: 1em;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+          }
+
+          input:checked ~ #{$base}__weapon-description {
+            &::before {
+              content: ' - details';
+              white-space: pre;
+            }
+
+            max-height: 6em; // consider auto if descriptions are too tall
           }
         }
       }

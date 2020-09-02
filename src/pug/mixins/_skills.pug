@@ -68,18 +68,18 @@ mixin skillStats(skillAttrName, skillData, additionalData)
       span.cp-2020__stat-group__label lvl/tot
 
     //- TODO: use a worker for this crap -- be sure to re-calculate based on wounds
-    button.cp-2020__skill__roll(
-      type='roll'
-      id=`${skillAttrName}_roll`
-      value=compressString(`&{template:skill-check-template}
+    +rollBtn(
+      skillAttrName,
+      skillAttrName,
+      `&{template:skill-check-template}
         {{skill=${skillData.skillName}}}
         {{handle=@{handle}}}
         {{skillLevel=@{${skillAttrName}_level}}}
         {{stat=@{${skillData.baseAttribute}}}}
         {{statName=${skillData.baseAttribute}}}
         {{total=[[1d10!!+@{${skillAttrName}_level}+?{Modifier|0}]]}}
-        {{fumble=[[1d10]]}}`)
-    )
+        {{fumble=[[1d10]]}}`
+    ).cp-2020__skill__roll
 
     div(class='cp-2020__stat-group cp-2020__skill--edit')
       input.cp-2020__stat-group__value(

@@ -65,32 +65,30 @@
               span.cp-2020__stat__key--value DAM.
 
         div.cp-2020__stat__roll-btns
-          button.cp-2020__stat__check-btn(
-            type='roll'
-            title=`roll ${name} check`
-            id=`${stat}_stat_roll`
-            name=`act_${stat}_stat_roll`
-            value=compressString(`
-              &{template:check-template}
+
+          +rollBtn(
+            `${name} check`,
+            `${stat}_stat`,
+            `&{template:check-template}
               {{name=Stat Check}}
               {{handle=@{Handle}}}
               {{statName=${stat}}}
               {{stat=@{${stat}}}}
               {{total=[[1d10!! + @{${stat}} + ?{Modifier|0} ]]}}
-              {{fumble=[[1d10]]}}`)
-          )
-          button.cp-2020__stat__save-btn(
-            type='roll'
-            title=`roll ${name} save`
-            value=compressString(`
-              &{template:save-template}
+              {{fumble=[[1d10]]}}`
+          ).cp-2020__stat__check-btn
+
+          +rollBtn(
+            `${name} save`,
+            `${name}_save`,
+            `&{template:save-template}
               {{handle=@{Handle}}}
               {{targetName=${stat}}}
               {{roll=[[ 1d10 ]]}}
               {{targetValue=[[ @{${stat}} ]]}}
               {{failMsg=${stat}&nbsp;save&nbsp;failed.}}
-              {{successMsg=${stat}&nbsp;save&nbsp;succeeded.}}`)
-          )
+              {{successMsg=${stat}&nbsp;save&nbsp;succeeded.}}`
+          ).cp-2020__stat__save-btn
 
 
 

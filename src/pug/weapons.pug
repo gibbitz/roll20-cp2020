@@ -15,12 +15,12 @@ div.cp-2020__weapons-cyber
     div.cp-2020__weapons-cyber__wrapper
       div.cp-2020__weapons-cyber__col
         +section('weapons')
-          fieldset.repeating_outfit-item
+          fieldset.repeating_weapons
 
             div.cp-2020__weapon-section--buy
               +attrField('weapon_name', 'weapon')(type='text')
               div.cp-2020__weapon-section__row
-                +attrSelect('weapon_type', data.weaponTypes, 'type')
+                +attrSelect('weapon_skill', data.weaponTypes, 'type')
                 +attrSelect('weapon_conc', data.weaponConcealabilities, 'concealability')
                 +attrSelect('weapon_rel', data.weaponReliabilities, 'reliability')
               div.cp-2020__weapon-section__row
@@ -36,21 +36,36 @@ div.cp-2020__weapons-cyber
                 +attrTextArea('weapon_description', 'description')(rows='3')
 
             div.cp-2020__weapon-section--use
-              span.cp-2020__weapon_name(name='attr_weapon_name')
+              div.cp-2020__weapon-section__first-row
+                span.cp-2020__weapon_name(name='attr_weapon_name')
+                +rollBtn(
+                  'weapon_attack',
+                  'weapon_attack',
+                  `&{{template:general-template}}
+                    {{ref=@{REF}}}
+                    {{skill=@{weapon_skill}}}
+                    {{skillLevel=@{Skill_@{weapon_skill}_level}}}
+                    {{accuracy=@{weapon_accuracy}}}`
+                ).cp-2020__weapon__attack-button
+                    //- {{skill=@{Skill_@{weapon_type}}}}
+                    //- {{skillLevel=@{Skill_@{weapon_type}_level}}}
+                    //- {{total=[[1d10!! + @{REF} + @{Skill_@{weapon_type}_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}`
               div.cp-2020__weapon-section__row
-                span.cp-2020__weapon-weight(name='attr_weapon_kg')
                 span.cp-2020__weapon-cost(name='attr_weapon_cost')
-                span.cp-2020__weapon-magazine(name='attr_weapon_magazine')
                 span.cp-2020__weapon-cartridge(name='attr_weapon_cartridge')
-                span.cp-2020__weapon-range(name='attr_weapon_range')
-                span.cp-2020__weapon-accuracy(name='attr_weapon_accuracy')
-                span.cp-2020__weapon-rof(name='attr_weapon_rof')
-                span.cp-2020__weapon-damage(name='attr_weapon_damage')
-                span.cp-2020__weapon-type(name='attr_weapon_type')
+                span.cp-2020__weapon-type(name='attr_weapon_skill')
+                span.cp-2020__weapon-weight(name='attr_weapon_kg')
                 span.cp-2020__weapon-conc(name='attr_weapon_conc')
                 span.cp-2020__weapon-rel(name='attr_weapon_rel')
+                span.cp-2020__weapon-magazine(name='attr_weapon_magazine')
+                span.cp-2020__weapon-rof(name='attr_weapon_rof')
+                span.cp-2020__weapon-accuracy(name='attr_weapon_accuracy')
+                span.cp-2020__weapon-range(name='attr_weapon_range')
+                span.cp-2020__weapon-damage(name='attr_weapon_damage')
               div.cp-2020__weapon-section__row
-                span.cp-2020__weapon-description(name='attr_weapon_description')
+                label.cp-2020__weapon__description-toggle
+                  input(type='checkbox' value='show')
+                  span.cp-2020__weapon-description(name='attr_weapon_description')
 
       div.cp-2020__weapons-cyber__col
         +section('cyberware')

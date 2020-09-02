@@ -30,10 +30,10 @@ const woundLevels = [
 ]
 
 const weaponTypes = [
-  { value: 'Bow', label: 'Bow' },
+  { value: 'Archery', label: 'Bow' },
   { value: 'Heavy Weapons', label: 'Heavy Weapons' },
   { value: 'Melee', label: 'Melee' },
-  { value: 'Pistol', label: 'Pistol' },
+  { value: 'Handgun', label: 'Pistol' },
   { value: 'Rifle', label: 'Rifle' },
   { value: 'Submachinegun', label: 'Submachinegun' }
 ]

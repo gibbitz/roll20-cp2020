@@ -18,3 +18,14 @@ mixin section(sectionName)
       h3(class=`cp-2020__${name}__view-title`)=name.toUpperCase()
     div.cp-2020__inner-box
       block
+
+
+mixin rollBtn(nameOfRoll, rollId, valueCalc)
+  button(
+    class=(attributes.class || '')
+    id=`${rollId}_roll`
+    name=`act_${id}`
+    title=`roll ${nameOfRoll}`
+    type='roll'
+    value=compressString(valueCalc)
+  )
