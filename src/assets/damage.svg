@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 8 8"
+ >
   <path
-    d="M3 0l-3 5h2v3l3-5h-2v-3z"
-    transform="translate(1)"
-    style="fill:#707070;fill-opacity:0.4;"
-  />
+     d="M 6.3132186,0.08585708 1.073701,4.209678 3.1988943,4.5614562 1.1451607,7.9632519 6.3612492,3.9573618 4.14546,3.5571625 Z"
+     style="fill:#707070;fill-opacity:0.4;stroke-width:0.98299032"/>
 </svg>

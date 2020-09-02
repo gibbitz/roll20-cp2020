@@ -49,14 +49,20 @@
 
           #{$base}__weapon-description {
             &::before {
+              color: $dim-font-color;
               content: '+ details';
               cursor: pointer;
               display: block;
-              height: 1em;
+              font-size: 0.8em;
+              height: 1.6em;
+              position: relative;
+              right: 1.5em;
             }
             display: block;
             margin-bottom: 1.3em;
             max-height: 1em;
+            padding-left: 1.5em;
+            padding-top: 0.3em;
             overflow: hidden;
             transition: max-height 0.4s ease-in-out;
           }
@@ -67,7 +73,7 @@
               white-space: pre;
             }
 
-            max-height: 6em; // consider auto if descriptions are too tall
+            max-height: 6.6em; // consider auto if descriptions are too tall
           }
         }
       }
