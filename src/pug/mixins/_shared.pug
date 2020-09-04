@@ -13,7 +13,7 @@ mixin box()
 //- ===================================================================================
 mixin section(sectionName)
   - var name = sectionName ? sectionName : 'section'
-  div(class=`cp-2020__${name} ${attributes.class}`)
+  div(class=`cp-2020__${name} ${attributes.class | ''}`)
     if sectionName
       h3(class=`cp-2020__${name}__view-title`)=name.toUpperCase()
     div.cp-2020__inner-box

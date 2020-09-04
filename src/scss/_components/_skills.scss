@@ -1,6 +1,3 @@
-@import '../_partials/data';
-@import '../_partials/placeholders';
-
 $dataValues: map-get($data, 'data');
 $roles: map-get($dataValues, 'roles');
 $skills: map-get($dataValues, 'skills');

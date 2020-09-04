@@ -118,6 +118,11 @@
   @extend %flex-row;
 }
 
+%col-1 {
+  @extend %flex-1;
+  @extend %flex-col;
+}
+
 %col-1-2 {
   @extend %flex-1-2;
   @extend %flex-col;
@@ -227,14 +232,76 @@
 // weapons
 // ===========================================
 
+%weapons-cyber-section-header {
+  @extend %section-title;
+  font-size: 0.9em;
+  padding-top: 0.8em;
+}
+
+%weapon-stat-name {
+  color: $med-light-font-color;
+  font-size: 1em;
+}
+
+%weapon-stat-label-text {
+  font-size: 0.8em !important;
+}
+
+%weapon-stat-description {
+  font-size: 0.7em;
+}
+
 %weapon-stat-label {
+  @extend %weapon-stat-label-text;
+
   &::before {
     content: '';
     display: inline-block;
-    height: 0.9em;
+    height: 1.3em;
     margin-right: 0.4em;
-    width: 0.9em;
+    vertical-align: sub;
+    width: 1.3em;
   }
+}
+
+%weapon-description-toggle {
+  > input {
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+%weapon-description {
+  @extend %weapon-stat-description;
+  display: block;
+  margin-bottom: 0.8em;
+  max-height: 1em;
+  padding-left: 1.5em;
+  padding-top: 0.3em;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  white-space: normal;
+
+  &::before {
+    color: $dim-font-color;
+    content: '+ details';
+    cursor: pointer;
+    display: block;
+    font-size: 0.8em;
+    height: 1.6em;
+    position: relative;
+    right: 1.5em;
+  }
+}
+
+%weapon-description-visible {
+  &::before {
+    content: ' - details';
+    white-space: pre;
+  }
+
+  max-height: 15em; // consider auto if descriptions are too tall
 }
 
 // forms
@@ -273,11 +340,16 @@
   border: 0;
   box-shadow: none;
   color: $dim-font-color !important;
+  height: 2em;
   line-height: 0.6;
-  margin: 0;
+  margin: 0 !important;
+  min-width: 2em;
   outline: 0;
-  padding: 0;
+  padding: 0 !important;
+  position: relative;
   text-shadow: none;
+  width: 2em;
+
   &:hover::before {
     color: $level-9;
   }
@@ -287,8 +359,12 @@
     content: 'j' !important;
     font-family: 'dicefontd10' !important;
     font-size: 2em;
-    line-height: 1;
-    padding: 0.1em !important;
+    left: 50%;
+    line-height: 0.7em;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
     transition: color 0.5s ease-in-out;
   }
 }

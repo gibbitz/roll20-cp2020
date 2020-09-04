@@ -103,10 +103,10 @@
 
     &__roll-btns {
       display: flex;
-      flex: 1;
+      flex: 1 1 9%;
       flex-direction: column;
       font-size: 0.8em;
-      // min-width: 4em;
+      max-width: 3em;
     }
 
     &__breakdown {

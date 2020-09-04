@@ -2,6 +2,7 @@
   $base: &;
 
   &__weapons-cyber{
+    @extend %section-wrapper;
 
     &__buy-toggle {
       @extend %tab-group;
@@ -9,12 +10,31 @@
 
     &__wrapper {
       @extend %section-wrapper;
+      @extend %flex-1;
+      justify-content: space-between;
+    }
+
+    &__col {
+      max-width: 49.5%;
+    }
+
+    #{$base}__weapons {
+      @extend %bordered-section;
+      height: 100%;
+
+      h3 {
+        @extend %weapons-cyber-section-header;
+      }
     }
 
     #{$base}__weapon-section {
       &--buy {
         #{$base}__weapon-section__row {
           @extend %row-1;
+
+          > * {
+            min-width: 20%;
+          }
         }
       }
       &--use {
@@ -25,6 +45,7 @@
 
           #{$base}__weapon__attack-button {
             @extend %d10-roll-button;
+            height: 1.5em;
           }
         }
 
@@ -35,47 +56,65 @@
           justify-content: space-between;
 
           > * {
+            min-width: 14%;
+            padding: 0 0.15em;
             white-space: nowrap;
           }
         }
+      }
+    }
 
-        #{$base}__weapon__description-toggle {
+    #{$base}__cyberware {
+      @extend %bordered-section;
+      height: 100%;
 
-          > input {
-            pointer-events: none;
-            position: absolute;
-            visibility: hidden;
-          }
+      h3 {
+        @extend %weapons-cyber-section-header;
+      }
 
-          #{$base}__weapon-description {
-            &::before {
-              color: $dim-font-color;
-              content: '+ details';
-              cursor: pointer;
-              display: block;
-              font-size: 0.8em;
-              height: 1.6em;
-              position: relative;
-              right: 1.5em;
-            }
-            display: block;
-            margin-bottom: 1.3em;
-            max-height: 1em;
-            padding-left: 1.5em;
-            padding-top: 0.3em;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
-          }
+      &-name[name] {
+        @extend %weapon-stat-name;
+      }
 
-          input:checked ~ #{$base}__weapon-description {
-            &::before {
-              content: ' - details';
-              white-space: pre;
-            }
+      &-type {
+        @extend %weapon-stat-label-text;
+      }
+      &-damage {
+        @extend %weapon-stat-label-text;
+      }
+      &-sdp {
+        @extend %weapon-stat-label-text;
+      }
+      &-hl {
+        @extend %weapon-stat-label-text;
+      }
+      &-cost {
+        @extend %weapon-stat-label-text;
+      }
 
-            max-height: 6.6em; // consider auto if descriptions are too tall
-          }
+      &__description-toggle {
+        @extend %weapon-description-toggle;
+
+        input:checked ~ #{$base}__cyberware-description {
+          @extend %weapon-description-visible;
         }
+      }
+
+      &-description {
+        @extend %weapon-description;
+      }
+
+    }
+
+    #{$base}__cyberware-section {
+      &--use {
+
+      }
+      &--buy {
+
+      }
+      &__row {
+        @extend %row-1;
       }
     }
 
@@ -96,6 +135,9 @@
       #{$base}__cyberware-section--buy,
       #{$base}__weapon-section--buy {
         @extend %hide;
+      }
+      .repcontrol {
+        display: none;
       }
 
       #{$base}__cyberware-section--use,
@@ -118,7 +160,24 @@
 
   }
 
+  #{$base}__weapon-name[name] {
+    @extend %weapon-stat-name;
+  }
+
   &__weapon {
+
+    &__description-toggle {
+      @extend %weapon-description-toggle;
+
+      input:checked ~ #{$base}__weapon-description {
+        @extend %weapon-description-visible;
+      }
+    }
+
+    &-description {
+      @extend %weapon-description;
+    }
+
     &-accuracy {
       @extend %weapon-stat-label;
       &::before {

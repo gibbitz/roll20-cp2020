@@ -20,7 +20,7 @@ div.cp-2020__weapons-cyber
             div.cp-2020__weapon-section--buy
               +attrField('weapon_name', 'weapon')(type='text')
               div.cp-2020__weapon-section__row
-                +attrSelect('weapon_skill', data.weaponTypes, 'type')
+                +attrSelect('weapon_type', data.weaponTypes, 'type')
                 +attrSelect('weapon_conc', data.weaponConcealabilities, 'concealability')
                 +attrSelect('weapon_rel', data.weaponReliabilities, 'reliability')
               div.cp-2020__weapon-section__row
@@ -32,28 +32,43 @@ div.cp-2020__weapons-cyber
                 +attrField('weapon_range', 'range')(type='number')
                 +attrField('weapon_kg', 'weight')(type='number')
                 +attrField('weapon_cost', 'cost')(type='number')
+                input(
+                  name='attr_weapon_stat'
+                  type='hidden'
+                  value='REF'
+                )
+                input(
+                  name='attr_weapon_skill'
+                  type='hidden'
+                  value=''
+                )
+                input(
+                  name='attr_weapon_skill_level'
+                  type='hidden'
+                  value=''
+                )
               div.cp-2020__weapon-section__row
                 +attrTextArea('weapon_description', 'description')(rows='3')
 
             div.cp-2020__weapon-section--use
               div.cp-2020__weapon-section__first-row
-                span.cp-2020__weapon_name(name='attr_weapon_name')
+                span.cp-2020__weapon-name(name='attr_weapon_name')
                 +rollBtn(
                   'weapon_attack',
                   'weapon_attack',
-                  `&{{template:general-template}}
-                    {{ref=@{REF}}}
+                  `&{template:general}
+                    {{handle=@{Handle}}}
+                    {{ref=@{weapon_stat}}}
                     {{skill=@{weapon_skill}}}
-                    {{skillLevel=@{Skill_@{weapon_skill}_level}}}
-                    {{accuracy=@{weapon_accuracy}}}`
+                    {{skillLevel=@{weapon_skill_level}}}
+                    {{accuracy=@{weapon_accuracy}}}
+                    {{total=[[1d10!! + @{REF} + @{weapon_skill_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}
+                    {{breakdown=1d10 + @{REF}(@{weapon_stat}) + @{weapon_skill_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}`
                 ).cp-2020__weapon__attack-button
-                    //- {{skill=@{Skill_@{weapon_type}}}}
-                    //- {{skillLevel=@{Skill_@{weapon_type}_level}}}
-                    //- {{total=[[1d10!! + @{REF} + @{Skill_@{weapon_type}_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}`
               div.cp-2020__weapon-section__row
                 span.cp-2020__weapon-cost(name='attr_weapon_cost')
                 span.cp-2020__weapon-cartridge(name='attr_weapon_cartridge')
-                span.cp-2020__weapon-type(name='attr_weapon_skill')
+                span.cp-2020__weapon-type(name='attr_weapon_type')
                 span.cp-2020__weapon-weight(name='attr_weapon_kg')
                 span.cp-2020__weapon-conc(name='attr_weapon_conc')
                 span.cp-2020__weapon-rel(name='attr_weapon_rel')
@@ -71,8 +86,26 @@ div.cp-2020__weapons-cyber
         +section('cyberware')
           fieldset.repeating_outfit-item
             div.cp-2020__cyberware-section--buy
-              +attrField('aug_name', 'augmentation')(type='text')
-              +attrField('aug_hl', 'humanity cost')(type='number')
-              +attrField('aug_cost', 'cost')(type='number')
-              +attrTextArea('aug_description', 'description')(rows='3')
+              div.cp-2020__cyberware-section__row
+                +attrField('aug_name', 'augmentation')(type='text')
+              div.cp-2020__cyberware-section__row
+                +attrField('aug_type', 'type')(type='text')
+                +attrField('aug_damage', 'damage')(type='text')
+                +attrField('aug_sdp', 'SDP')(type='number')
+                +attrField('aug_hl', '[HUM] cost')(type='number')
+                +attrField('aug_cost', 'cost')(type='number')
+              div.cp-2020__cyberware-section__row
+                +attrTextArea('aug_description', 'description')(rows='3')
             div.cp-2020__cyberware-section--use
+              div.cp-2020__cyberware-section__row
+                span.cp-2020__cyberware-name(name='attr_aug_name')
+              div.cp-2020__cyberware-section__row
+                span.cp-2020__cyberware-type(name='attr_aug_type')
+                span.cp-2020__cyberware-damage(name='attr_aug_damage')
+                span.cp-2020__cyberware-sdp(name='attr_aug_sdp')
+                span.cp-2020__cyberware-hl(name='attr_aug_hl')
+                span.cp-2020__cyberware-cost(name='attr_aug_cost')
+              div.cp-2020__cyberware-section__row
+                label.cp-2020__cyberware__description-toggle
+                  input(type='checkbox' value='show')
+                  span.cp-2020__cyberware-description(name='attr_aug_description')

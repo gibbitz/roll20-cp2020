@@ -44,13 +44,18 @@
     &__wrapper {
       @extend %flex;
       @extend %flex-row;
-      justify-content: space-between;
+      justify-content: space-around;
+      width: 100%;
     }
 
     &__saves {
       @extend %row-1;
       flex: 1;
       justify-content: space-between;
+      max-width: 360px;
+      margin-bottom: 1em;
+      min-width: 150px;
+
       > * {
         min-width: 40px;
 
@@ -61,34 +66,45 @@
     }
 
     &__save {
-      @extend %flex;
+      @extend %col-1;
+
+      align-items: center;
+      cursor: pointer;
       flex-wrap: wrap;
-    }
+      height: 100%;
 
-    &__save-btn {
-      @extend %d10-roll-button;
-      flex: 1;
-      overflow: hidden;
-
-      &::before {
-        content: 'a' !important;
+      &-value {
+        flex: 1;
+        min-width: 1.2em;
+        text-align: center;
       }
-    }
+      &-btn {
+        @extend %d10-roll-button;
+        flex: 1;
 
-    &__save-component {
-      @extend %stat-group;
-      flex: 1;
-      justify-content: space-around;
+        &::before {
+          content: 'a' !important;
+        }
+      }
 
-      > *:last-child {
-        white-space: normal !important;
+      &-key {
+        text-align: center;
+        line-height: 1.25em;
+        max-height: 2.5em;
+      }
+
+      &-component {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
       }
     }
 
     &__wounds {
       @extend %row-0-1;
-      flex: 3;
+      flex: 1 0 auto;
       flex-wrap: wrap;
+      margin-bottom: 1em;
       max-width: 410px;
 
       > * {

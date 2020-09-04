@@ -17,18 +17,18 @@ mixin saveField(attrName, saveLabel, showButton=true)
         span.cp-2020__health__save-value(
           name=`attr_${attrName}`
         )
-        span.cp-2020__health__save-key=`${saveLabel}${showButton ? ' Save' : ''}`
-      if showButton
-        button.cp-2020__health__save-btn(
-          id=`${attrName}_save_button`
-          title=`@${attrName}`
-          type='roll'
-          value=compressString(`
-            &{template:save-template}
-            {{handle=@{Handle}}}
-            {{targetName=${saveLabel}}}
-            {{roll=[[1d10]]}}
-            {{targetValue=[[@{${attrName}}]]}}
-            {{failMsg=${failMsg}}}
-            {{successMsg=${successMsg}}}`)
-        )
+        if showButton
+          button.cp-2020__health__save-btn(
+            id=`${attrName}_save_button`
+            title=`@${attrName}`
+            type='roll'
+            value=compressString(`
+              &{template:save-template}
+              {{handle=@{Handle}}}
+              {{targetName=${saveLabel}}}
+              {{roll=[[1d10]]}}
+              {{targetValue=[[@{${attrName}}]]}}
+              {{failMsg=${failMsg}}}
+              {{successMsg=${successMsg}}}`)
+          )
+      div.cp-2020__health__save-key=`${saveLabel}${showButton ? ' Save' : ''}`
