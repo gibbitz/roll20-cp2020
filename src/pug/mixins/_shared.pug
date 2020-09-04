@@ -1,16 +1,17 @@
-//- ===================================================================================
+//- ==============================================================
 //-
   Creates a simple box with corner treatment for fields and visually separated areas
-//- ===================================================================================
+//- ==============================================================
 mixin box()
   span(class=`cp-2020__box${attributes.class ? ' ' + attributes.class : ''}`)
     span.cp-2020__box--inner
       block
-//- ===================================================================================
+
+//- ==============================================================
 //-
   Creates section with a title and a wrapped block for visual and markup consistency... used with styling to make sure bordered selection fills height in flex-row
   @param  {[String]} sectionName the name of the section displayed (in caps + the name used in the css)
-//- ===================================================================================
+//- ==============================================================
 mixin section(sectionName)
   - var name = sectionName ? sectionName : 'section'
   div(class=`cp-2020__${name} ${attributes.class | ''}`)
@@ -19,7 +20,14 @@ mixin section(sectionName)
     div.cp-2020__inner-box
       block
 
-
+//- ==============================================================
+//-
+  Creates roll20 roll button with a name title and a value macro with linebreaks removed
+  @param  {[String]} nameOfRoll the human readable name of the roll displayed in the title attribute
+  @param  {[String]} rollId the unique string used for label linking via the `for` attribute
+  @param  {[String]} valueCalc the macro executed on click. This sting has the line endings stripped so the macro can be expanded for legibility
+  @attribute {[Sting]} class takes the css class from the attributes applied to the mixin
+//- ==============================================================
 mixin rollBtn(nameOfRoll, rollId, valueCalc)
   button(
     class=(attributes.class || '')

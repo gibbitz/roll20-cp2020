@@ -78,6 +78,7 @@
 
       &-type {
         @extend %weapon-stat-label-text;
+        text-transform: lowercase;
       }
       &-damage {
         @extend %weapon-stat-label-text;

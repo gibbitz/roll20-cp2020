@@ -12,6 +12,7 @@ mixin attrField(attrName, attrLabel)
         name=`attr_${attrName}`
         type=attributes.type
         value=attributes.value
+        step=(attributes.step || 1)
       )
       if block
         block
