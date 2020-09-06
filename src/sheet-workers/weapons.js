@@ -42,6 +42,17 @@ on("sheet:opened", eventInfo => {
         const weaponSkillsToSet = {};
         ids.forEach((id, index) => {
           const rowBase = `repeating_weapons_${id}_weapon`;
+          const type = values[`repeating_weapons_${id}_weapon_type`]
+          weaponSkillsToSet[`${rowBase}_is_melee`] = type === 'Melee';
+          weaponSkillsToSet[`${rowBase}_is_ranged`] = [
+            'Handgun',
+            'Rifle',
+            'Submachinegun',
+            'Heavy'
+          ].indexOf(type) > -1;
+          weaponSkillsToSet[`${rowBase}_is_full_auto`] = rof > 2;
+          weaponSkillsToSet[`${rowBase}_is_explosive`] = !!blastRadius;
+
           weaponSkillsToSet[`${rowBase}_skill_level`] = skillLevels[Object.keys(skillLevels)[index]]
           weaponSkillsToSet[`${rowBase}_weapon_stat`] = statNames[Object.keys(statNames)[index]]
         });

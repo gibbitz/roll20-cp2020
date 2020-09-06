@@ -1,7 +1,98 @@
+%item-flex {
+  @extend %flex-1;
+  flex-wrap: wrap;
+
+  > *:first-child,
+  > *:last-child {
+    min-width: 100%;
+  }
+}
 .sheet-cp-2020 {
   $base: &;
 
   &__outfit{
+
+    &__buy-toggle {
+      @extend %tab-group;
+    }
+
+    &__wrapper {
+      @extend %section-wrapper;
+
+      .repcontainer {
+        @extend %flex;
+        justify-content: space-between;
+        > * {
+          flex: 1 1 49.5%;
+        }
+      }
+    }
+
+
+
+
+
+    input[value='use'] ~ &__buy-toggle {
+      #{$base}__outfit__use-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='buy'] ~ &__buy-toggle {
+      #{$base}__outfit__buy-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='use'] ~ &__wrapper {
+
+      #{$base}__outfit__item-section--buy {
+        @extend %hide;
+      }
+      .repcontrol {
+        @extend %hide;
+      }
+
+      #{$base}__outfit__item-section--use {
+        @extend %item-flex;
+      }
+    }
+
+    input[value='buy'] ~ &__wrapper {
+      #{$base}__outfit__item-section--buy{
+        @extend %item-flex;
+      }
+
+      #{$base}__outfit__item-section--use{
+        @extend %hide;
+      }
+    }
+
+    &-cost {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-cost);
+      }
+    }
+
+    &-weight {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-weight);
+      }
+    }
+
+    &__description-toggle {
+      @extend %weapon-description-toggle;
+
+      input:checked ~ #{$base}__outfit-description {
+        @extend %weapon-description-visible;
+      }
+    }
+
+    &-description {
+      @extend %weapon-description;
+    }
 
   }
 }

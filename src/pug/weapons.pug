@@ -30,6 +30,7 @@ div.cp-2020__weapons-cyber
                   +attrField('weapon_rof', 'rate of fire')(type='text')
                   +attrField('weapon_accuracy', 'accuracy')(type='number')
                   +attrField('weapon_range', 'range')(type='number')
+                  +attrField('weapon_blast_radius', 'blast radius')(type='number')
                   +attrField('weapon_kg', 'weight')(
                     type='number'
                     step='0.01'
@@ -63,6 +64,7 @@ div.cp-2020__weapons-cyber
                     'weapon_attack',
                     'weapon_attack',
                     `&{template:general}
+                      {{isRanged={@{weapon_skill}=='Handgun'}}}
                       {{handle=@{Handle}}}
                       {{ref=@{weapon_stat}}}
                       {{skill=@{weapon_skill}}}
@@ -82,6 +84,7 @@ div.cp-2020__weapons-cyber
                   span.cp-2020__weapon-rof(name='attr_weapon_rof')
                   span.cp-2020__weapon-accuracy(name='attr_weapon_accuracy')
                   span.cp-2020__weapon-range(name='attr_weapon_range')
+                  span.cp-2020__weapon-blast-radius(name='attr_weapon_blast_radius')
                   span.cp-2020__weapon-damage(name='attr_weapon_damage')
                 div.cp-2020__weapon-section__row
                   label.cp-2020__weapon__description-toggle

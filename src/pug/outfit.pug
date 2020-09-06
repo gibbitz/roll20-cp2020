@@ -1,9 +1,32 @@
 div.cp-2020__outfit
-  +section()
-    div.cp-2020__outfit__row
-      fieldset.repeating_outfit-item
-        div.cp-2020__outfit-item-section
-          +attrField('item_name', 'item')(type='text')
-          +attrField('kg', 'weight')(type='number')
-          +attrField('Cost', 'cost')(type='number')
-          +attrTextArea('item_description', 'description')(rows='3')
+  input(
+    disabled='true'
+    name='attr_Outfit_Toggle_Indicator'
+    type='hidden'
+    value='@{Outfit_Toggle}'
+  )
+  div.cp-2020__outfit__buy-toggle
+    label.cp-2020__outfit__buy-tab Buy/Sell/Drop
+      input(type='radio' name='attr_Outfit_Toggle' value='buy' checked='true')
+    label.cp-2020__outfit__use-tab Use
+      input(type='radio' name='attr_Outfit_Toggle' value='use')
+  +section().cp-2020__outfit__wrapper
+    fieldset.repeating_outfit-item
+      +box().cp-2020__outfit__item-section
+        div.cp-2020__outfit__item-section--buy
+          +attrField('outfit_item_name', 'item')(type='text')
+          +attrField('outfit_item_kg', 'weight')(type='number' step='0.01')
+          +attrField('outfit_item_cost', 'cost')(type='number' step='0.01')
+          +attrTextArea('outfit_item_description', 'description')(rows='3')
+        div.cp-2020__outfit__item-section--use
+          span.cp-2020__outfit-name(name='attr_outfit_item_name')
+          span.cp-2020__outfit-weight(name='attr_outfit_item_kg')
+          span.cp-2020__outfit-cost(name='attr_outfit_item_cost')
+          label.cp-2020__outfit__description-toggle
+            input(type='checkbox' value='show')
+            span.cp-2020__outfit-description(name='attr_outfit_item_description')
+  input(name='attr_test_roll' value='[[1d10]]' type='hidden')
+  input(name='attr_test_roll_temp' value='temp_name' type='hidden')
+  label(for='test_check_trigger')
+    button(type='roll' value='&{template:general} {{@{test_roll_temp}=@{test_roll}}} {{ roll=[@{test_roll_temp}+1]}}')
+      input(id='test_check_trigger' type='checkbox' name='attr_test_check' value='hi')

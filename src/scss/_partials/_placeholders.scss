@@ -266,6 +266,10 @@
     vertical-align: sub;
     width: 1.3em;
   }
+
+  &:empty {
+    @extend %hide;
+  }
 }
 
 %weapon-description-toggle {

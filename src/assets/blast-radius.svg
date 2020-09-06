@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3428"
+   sodipodi:docname="blast-radius.svg"
+   viewBox="0 0 20.000001 20.000001"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   width="20"
+   height="20">
+  <defs
+     id="defs3430" />
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="0"
+     fit-margin-left="0"
+     pagecolor="#ffffff"
+     fit-margin-top="0"
+     inkscape:window-maximized="1"
+     inkscape:zoom="6.7923078"
+     inkscape:window-x="1920"
+     inkscape:window-height="1054"
+     showgrid="false"
+     borderopacity="1.0"
+     inkscape:current-layer="layer1"
+     inkscape:cx="28.568061"
+     inkscape:cy="49.340478"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true">
+    <sodipodi:guide
+       position="50.248801,100.4976"
+       orientation="1,0"
+       id="guide4152"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="100.4976,50.248802"
+       orientation="0,1"
+       id="guide4154"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="43.677161,37.727641"
+       orientation="0,1"
+       id="guide4156"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="50.248801,50.248802"
+       orientation="-0.8660254,-0.5"
+       id="guide4160"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="50.248801,50.248802"
+       orientation="-0.8660254,0.5"
+       id="guide4162"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="9.0523603,52.664642"
+       orientation="1,0"
+       id="guide4166"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="36.146162,51.227642"
+       orientation="1,0"
+       id="guide4168"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-144.03384,-194.03264)">
+    <path
+       id="path4176"
+       style="fill:#000000;stroke:none;stroke-width:0.19426979"
+       d="m 158.09173,211.20181 c -2.47621,1.42964 -5.52701,1.42964 -8.00322,0 l 2.63175,-4.55833 c 0.84767,0.48941 1.89205,0.48941 2.73972,0 z m 0,-13.86199 c 2.47621,1.42963 4.00161,4.07171 4.00161,6.931 h -5.26349 c 0,-0.97881 -0.5222,-1.88327 -1.36987,-2.37267 z m -2.18638,6.931 c 0,1.00252 -0.8127,1.81522 -1.81522,1.81522 -1.00253,0 -1.81523,-0.8127 -1.81523,-1.81522 0,-1.00253 0.8127,-1.81523 1.81523,-1.81523 1.00252,0 1.81522,0.8127 1.81522,1.81523 z m -9.81844,0 c 0,-2.85929 1.5254,-5.50137 4.0016,-6.931 l 2.63175,4.55833 c -0.84767,0.4894 -1.36985,1.39386 -1.36985,2.37267 z m 8.00322,-9.76183 c -5.39131,0 -9.76183,4.37052 -9.76183,9.76183 0,5.3913 4.37052,9.76182 9.76183,9.76182 5.3913,0 9.76182,-4.37052 9.76182,-9.76182 0,-5.39131 -4.37052,-9.76183 -9.76182,-9.76183 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccssssscccccsssss" />
+  </g>
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2013-06-25T14:56:12</dc:date>
+        <dc:description>Radiation symbol nuclear</dc:description>
+        <dc:source>https://openclipart.org/detail/179477/radiation-symbol-nuclear-by-keistutis-179477</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Keistutis</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Radiation symbol nuclear</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -138,7 +138,7 @@
         @extend %hide;
       }
       .repcontrol {
-        display: none;
+        @extend %hide;
       }
 
       #{$base}__cyberware-section--use,
@@ -219,6 +219,12 @@
       @extend %weapon-stat-label;
       &::before {
         content: url($assets-icon-range);
+      }
+    }
+    &-blast-radius {
+      @extend %weapon-stat-label;
+      &::before {
+        content: url($assets-icon-blast-radius);
       }
     }
     &-rel {
