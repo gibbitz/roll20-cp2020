@@ -3,6 +3,18 @@ mixin useFieldStats(skillAttrName, rollMacro)
     class='cp-2020__skill__stat-wrapper cp-2020__skill__stat-wrapper--view'
   )
     label.cp-2020__skill__stat-wrapper(
+      for=`${skillAttrName}_chipped-flip`
+    )
+      input(
+        type='hidden'
+        name=`attr_${skillAttrName}_chipped-flip`
+        id=`${skillAttrName}_chipped-flip`
+        value=`@{${skillAttrName}_chipped}`
+        disabled='true'
+      )
+      span(title='chipped').cp-2020__skill__chipped
+
+    label.cp-2020__skill__stat-wrapper(
       for=`${skillAttrName}_roll`
     )
       div.cp-2020__stat-group
@@ -17,14 +29,3 @@ mixin useFieldStats(skillAttrName, rollMacro)
         skillAttrName,
         rollMacro
       ).cp-2020__skill__roll
-    label.cp-2020__skill__stat-wrapper(
-      for=`${skillAttrName}_chipped-flip`
-    )
-      input(
-        type='hidden'
-        name=`attr_${skillAttrName}_chipped-flip`
-        id=`${skillAttrName}_chipped-flip`
-        value=`@{${skillAttrName}_chipped}`
-        disabled='true'
-      )
-      span.cp-2020__skill__chipped

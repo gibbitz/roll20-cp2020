@@ -158,6 +158,25 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
         #{$base}__skill__stat-wrapper {
 
+          #{$base}__skill__chipped {
+            @extend %show;
+            opacity: 0.4;
+            transition: opacity 0.4s ease-out;
+
+            &:hover {
+              opacity: 0.8;
+              filter: sepia(100%) saturate(300%) brightness(250%) hue-rotate(57deg);
+            }
+          }
+
+          #{$base}__stat-group__chipped-skill {
+            @extend %hide;
+          }
+
+          input:checked + #{$base}__skill__chipped {
+            opacity: 1;
+          }
+
           #{$base}__skill__lvl--view {
             @extend %hide;
           }
@@ -165,10 +184,15 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           #{$base}__skill__roll {
             @extend %hide;
           }
-
-          select + #{$base}__skill-name--view {
-            @extend %hide;
-          }
+        }
+        select#{$base}__skill__name--edit {
+          max-width: calc(100% - 4em);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: auto;
+        }
+        select + #{$base}__skill-name--view {
+          @extend %hide;
         }
       }
     }
@@ -179,6 +203,9 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
+        repcontrol {
+          @extend %hide;
+        }
         #{$base}__skill__stat-wrapper--edit {
           @extend %hide;
         }
@@ -193,6 +220,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         select#{$base}__skill__name--edit,
         input#{$base}__skill__name--edit {
           pointer-events: none;
+          @extend %hide;
         }
 
         #{$base}__pickup-skills {
@@ -211,9 +239,19 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
     }
 
     #{$base}__skill__chipped {
+      @extend %hide;
+
       &::before {
         content: url($assets-icon-chipped);
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+        width: 20px;
       }
+    }
+
+    [value='chipped'] + #{$base}__skill__chipped {
+      @extend %show;
     }
 
     #{$base}__inner-box {

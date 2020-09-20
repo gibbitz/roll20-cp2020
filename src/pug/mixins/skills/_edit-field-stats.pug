@@ -8,6 +8,20 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
   div(
     class='cp-2020__skill__stat-wrapper cp-2020__skill__stat-wrapper--edit'
   )
+
+    label(
+      class='cp-2020__stat-group cp-2020__skill--edit'
+      for=`${skillAttrName}_chipped`
+    )
+      input(
+        class='cp-2020__stat-group__value cp-2020__stat-group__chipped-skill'
+        type='checkbox'
+        value='chipped'
+        id=`${skillAttrName}_chipped`
+        name=`attr_${skillAttrName}_chipped`
+      )
+      span(title='chipped').cp-2020__skill__chipped
+
     label(
       for=`${skillAttrName}_level`
     ).cp-2020__stat-group
@@ -38,18 +52,6 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
         name=`attr_${skillAttrName}_ip`
       )
       span.cp-2020__stat-group__label ip
-
-    label(
-      class='cp-2020__stat-group cp-2020__skill--edit'
-      for=`${skillAttrName}_chipped`
-    )
-      input.cp-2020__stat-group__value(
-        type='checkbox'
-        value='chipped'
-        id=`${skillAttrName}_chipped`
-        name=`attr_${skillAttrName}_chipped`
-      )
-      span.cp-2020__stat-group__label chipped
 
     label(class='cp-2020__stat-group cp-2020__skill--edit')
       span.cp-2020__stat-group__value(
