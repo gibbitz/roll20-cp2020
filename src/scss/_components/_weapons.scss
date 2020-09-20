@@ -43,9 +43,39 @@
           align-items: center;
           justify-content: space-between;
 
-          #{$base}__weapon__attack-button {
+          #{$base}__weapon__attack-button--melee,
+          #{$base}__weapon__attack-button--ranged,
+          #{$base}__weapon__attack-button--full-auto,
+          #{$base}__weapon__attack-button--explosive,
+          #{$base}__weapon__attack-button--hit {
+            @extend %hide;
             @extend %d10-roll-button;
             height: 1.5em;
+          }
+
+          #{$base}__weapon-buttons {
+            display: flex;
+
+            input {
+              // @extend %hide;
+
+              &[value='1']{
+                + #{$base}__weapon__attack-button--melee,
+                + #{$base}__weapon__attack-button--ranged,
+                + #{$base}__weapon__attack-button--full-auto,
+                + #{$base}__weapon__attack-button--explosive,
+                ~ #{$base}__weapon__attack-button--hit  {
+                  @extend %show;
+                }
+              }
+            }
+            #{$base}__weapon__attack-button--hit {
+              &::before {
+                font-family: 'dicefontd6' !important;
+                font-size: 1.6em;
+                line-height: 1em;
+              }
+            }
           }
         }
 

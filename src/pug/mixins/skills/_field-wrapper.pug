@@ -1,0 +1,44 @@
+//- ====================================================================
+  Creates Skill Name Field or Select for compoundSkills.
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillName, skillGroup
+//- ====================================================================
+mixin skillFieldWrapper(skillAttrName, skillData)
+  label(
+    for=`${skillAttrName}_expanded`
+  ).cp-2020__skill__name--view
+
+    if (block)
+      block
+
+    span(
+      name=`attr_${skillAttrName}_name`
+      class='cp-2020__skill-name cp-2020__skill-name--view'
+    )
+    span.cp-2020__skill-stat &nbsp;[
+      span(
+        name=`attr_${skillAttrName}_stat`
+      ).cp-2020__skill-stat
+      | ]
+    input(
+      type='hidden'
+      name=`attr_${skillAttrName}_name`
+      value=skillData.skillName
+    )
+    input(
+      type='hidden'
+      name=`attr_${skillAttrName}_stat`
+      value=skillData.baseAttribute
+    )
+    input(
+      type='hidden'
+      name=`attr_${skillAttrName}_stat_level`
+      value=`@{${skillData.baseAttribute}}`
+    )
+    input(
+      type='checkbox'
+      name=`attr_${skillAttrName}_expanded`
+      id=`${skillAttrName}_expanded`
+      value='expanded'
+    )
+    div.cp-2020__skill__name__carat

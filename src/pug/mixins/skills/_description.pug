@@ -1,0 +1,32 @@
+
+//- ===================================================================
+  Creates Skill descriptions. Complicated by compound skills
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillGroup and description
+  @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
+//- ====================================================================
+mixin skillDescription(skillAttrName, skillData, additionalData)
+  input(
+    name=`attr_${skillAttrName}_isExpanded`
+    disabled='true'
+    type='hidden'
+    value=`@{${skillAttrName}_expanded}`
+  )
+  if (skillData.skillGroup)
+    input.cp-2020__skill__name(
+      type='hidden'
+      disabled='true'
+      name=`attr_${skillAttrName}_name-toggle`
+      value=`@{${skillAttrName}_name}`
+    )
+    each skillName in skillData.skillGroup
+      each skill in additionalData
+        if skillName === skill.skillName
+          - var descriptionClass = `cp-2020__skill-${nameToSelector(skill.skillName)}__description`
+          span(class=`cp-2020__skill__description ${descriptionClass}`)=skill.description
+  else
+    input.cp-2020__skill__name--edit(
+      type='hidden'
+      name=`attr_${skillAttrName}_name`
+    )
+    span.cp-2020__skill__description=skillData.description

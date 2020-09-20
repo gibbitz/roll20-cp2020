@@ -1,0 +1,42 @@
+{
+  "Very Weak": {
+    "body": [1,2],
+    "btm": 0,
+    "damageModifier": -2
+  },
+  "Weak": {
+    "body": [3, 4],
+    "btm": -1,
+    "damageModifier": -1
+  },
+  "Average": {
+    "body": [5, 6, 7],
+    "btm": -2,
+    "damageModifier": 0
+  },
+  "Strong": {
+    "body": [8, 9],
+    "btm": -3,
+    "damageModifier": 1
+  },
+  "Very Strong": {
+    "body": [10],
+    "btm": -4,
+    "damageModifier": 2
+  },
+  "Superhuman": {
+    "body": [11, 12],
+    "btm": -5,
+    "damageModifier": 4
+  },
+  "Superpowered": {
+    "body": [13, 14],
+    "btm": -5,
+    "damageModifier": 6
+  },
+  "Ridiculous": {
+    "body": [15, 16, 17],
+    "btm": -5,
+    "damageModifier": 8
+  }
+}

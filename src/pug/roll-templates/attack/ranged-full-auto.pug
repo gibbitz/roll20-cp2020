@@ -1,0 +1,22 @@
+div unleashing full-auto with {{roundsFired}} rounds
+
+div.cp-2020__ranged-attack__hit
+  |{{#rollLess() targetDistance pointBlank}}
+  +rollFullAutoRange('point blank', 'pointBlank', 'FAPointBlankDC')
+  |{{/rollLess() targetDistance pointBlank}}
+
+  |{{#rollBetween() targetDistance closeStart close}}
+  +rollFullAutoRange('close', 'close', 'FACloseDC')
+  |{{/rollBetween() targetDistance closeStart close}}
+
+  |{{#rollBetween() targetDistance mediumStart medium}}
+  +rollFullAutoRange('medium', 'medium', 'FAMediumDC')
+  |{{/rollBetween() targetDistance mediumStart medium}}
+
+  |{{#rollBetween() targetDistance longStart long}}
+  +rollFullAutoRange('long', 'long', 'FALongDC')
+  |{{/rollBetween() targetDistance longStart long}}
+
+  |{{#rollBetween() targetDistance extremeStart extreme}}
+  +rollFullAutoRange('extreme', 'extreme', 'FAExtremeDC')
+  |{{/rollBetween() targetDistance extremeStart extreme}}

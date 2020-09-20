@@ -39,6 +39,7 @@
     @extend %text-field;
     box-sizing: border-box;
     height: auto;
+    resize: vertical;
   }
 
   &__box {

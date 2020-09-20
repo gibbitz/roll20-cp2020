@@ -1,0 +1,42 @@
+//- ===================================================================
+  Creates Skill fields with accompanying markup that have both edit and use fields shown/hidden via css by the use/learn tabs
+  @param  {Object} skillData      an Object containing skillName, baseAttribute, modifier, ipMultiplier, specialAbility, description, notes, and career keys loaded from data JSON files
+  @param  {Array} additionalData an Array made up of skillData objects used for compound options to render a select to choose the proper skill
+//- ====================================================================
+mixin conditionalRepeater(condition, repeatName)
+  if (condition)
+    block
+    fieldset(class=`repeating_${repeatName}`)
+      block
+  else
+    block
+
+mixin skillWrapper(skillData, additionalData)
+  - var skillAttrName = `Skill_${nameToAttrName(skillData.skillName)}`
+  - var skillClass = `cp-2020__skill-${nameToSelector(skillData.skillName)}`
+  - var isExpert = skillData.skillName === 'Expert'
+
+  +conditionalRepeater((isExpert && !skillData.career), 'expert-skills')
+    input.cp-2020__skill-learned(
+      type='hidden'
+      disabled='true'
+      name=`attr_${skillAttrName}_learned`
+      value=`@{${skillAttrName}_level}`
+    )
+    +box(class=`cp-2020__skill ${skillClass}`)
+      div.cp-2020__skill__wrapper
+
+        if (skillData.skillGroup)
+          div.cp-2020__skill__title-wrapper
+            +skillSelectField(skillAttrName, skillData, additionalData)
+          +skillDescription(skillAttrName, skillData, additionalData)
+
+        else if (isExpert)
+          div.cp-2020__skill__title-wrapper
+            +skillInputField(skillAttrName, skillData, additionalData)
+          +skillDescription(skillAttrName, skillData, additionalData)
+
+        else
+          div.cp-2020__skill__title-wrapper
+            +skillNameField(skillAttrName, skillData, additionalData)
+          +skillDescription(skillAttrName, skillData, additionalData)

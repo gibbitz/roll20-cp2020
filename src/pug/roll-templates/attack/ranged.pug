@@ -1,0 +1,28 @@
++rollTemplate('attack-ranged', 'ranged attack')
+  div.cp-2020__ranged-attack-intro
+    span.cp-2020__initial-cap {{handle}}&nbsp;
+    | fires:
+
+  +fumbleFactory('fumbleType')
+
+  div.cp-2020__roll-success
+    |{{#rollLess() roundsFired 3}}
+    div.cp-2020__ranged-attack__single
+      include ./ranged-single.pug
+    |{{/rollLess() roundsFired 3}}
+
+    |{{#rollTotal() roundsFired 3}}
+    div.cp-2020__ranged-attack__burst
+      include ./ranged-burst.pug
+    |{{/rollTotal() roundsFired 3}}
+
+    |{{#rollGreater() roundsFired 3}}
+    div.cp-2020__ranged-attack__full-auto
+      include ./ranged-full-auto.pug
+    |{{/rollGreater() roundsFired 3}}
+
+    |{{#rollGreater() targetDistance extreme}}
+    div.cp-2020__roll-fail Misses with all {{roundsFired}} rounds. Your target is out of range, choomba. Think before you shoot...
+    |{{/rollGreater() targetDistance extreme}}
+
+  +critFactory('your {{skill}}')

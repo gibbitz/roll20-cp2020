@@ -1,7 +1,7 @@
 function nameToSelector(name) {
   return name
     .replace(/\s|\/|\(|\)/g, '-')
-    .replace('.', '')
+    .replace(/\.|\:/, '')
     .replace('&', 'and')
     .toLowerCase();
 }
@@ -40,7 +40,7 @@ function updateStats(callback) {
       var defaultAttrValue = makeInt(attrs[`${stat}_Base`])
         + makeInt(attrs[`${stat}_Mod`]);
       if (['INT', 'REF', 'CL'].indexOf(stat) > -1 && damageIndex) {
-        if(stat === 'REF') {
+        if (stat === 'REF') {
           updatedStatAttrs[stat] = Math.round((defaultAttrValue - woundRefMod)/woundDivisor);
           updatedStatAttrs[`${stat}_Damage_Mod`] = updatedStatAttrs[stat] - defaultAttrValue;
         } else {
@@ -49,14 +49,23 @@ function updateStats(callback) {
         }
       } else {
         updatedStatAttrs[stat] = defaultAttrValue;
-        updatedStatAttrs[`${stat}_Damage_Mod`] = '';
+        if (['INT', 'REF', 'CL'].indexOf(stat) > -1) {
+          updatedStatAttrs[`${stat}_Damage_Mod`] = '';
+        }
       }
       if (stat === 'BODY') {
         updatedStatAttrs.Lift = defaultAttrValue * 40;
         updatedStatAttrs.Carry = defaultAttrValue * 10;
-        updatedStatAttrs.BTM = defaultAttrValue <= 2
-          ? 0
-          : 0 - Math.floor((defaultAttrValue -2) / 2);
+        const bodyTypeNames = Object.keys(data.bodyTypes);
+        const bodyType = bodyTypeNames.filter(type =>
+          data.bodyTypes[type].body.indexOf(defaultAttrValue) > -1
+        );
+        updatedStatAttrs.Damage_Bonus = data.bodyTypes[bodyType]
+          ? data.bodyTypes[bodyType].damageModifier
+          : 0;
+        updatedStatAttrs.BTM = data.bodyTypes[bodyType]
+          ? data.bodyTypes[bodyType].btm
+          : 0;
       }
       if (stat === 'MA') {
         updatedStatAttrs.Run = defaultAttrValue * 3;
@@ -69,7 +78,7 @@ function updateStats(callback) {
       }
     });
     console.log('>>>>', updatedStatAttrs);
-    setAttrs(updatedStatAttrs, callback);
+    setAttrs(updatedStatAttrs, () => callback(updatedStatAttrs));
   });
 }
 

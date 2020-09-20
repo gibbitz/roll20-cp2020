@@ -28,8 +28,8 @@ div.cp-2020__weapons-cyber
                   +attrField('weapon_cartridge', 'cartridge')(type='text')
                   +attrField('weapon_damage', 'damage')(type='text')
                   +attrField('weapon_rof', 'rate of fire')(type='text')
-                  +attrField('weapon_accuracy', 'accuracy')(type='number')
-                  +attrField('weapon_range', 'range')(type='number')
+                  +attrField('weapon_accuracy', 'accuracy')(type='number' value='0')
+                  +attrField('weapon_range', 'range')(type='number' value='0')
                   +attrField('weapon_blast_radius', 'blast radius')(type='number')
                   +attrField('weapon_kg', 'weight')(
                     type='number'
@@ -39,40 +39,136 @@ div.cp-2020__weapons-cyber
                     type='number'
                     step='0.01'
                   )
-                  input(
-                    name='attr_weapon_stat'
-                    type='hidden'
-                    value='REF'
-                  )
-                  input(
-                    name='attr_weapon_skill'
-                    type='hidden'
-                    value=''
-                  )
-                  input(
-                    name='attr_weapon_skill_level'
-                    type='hidden'
-                    value=''
-                  )
+                  -
+                    var hiddenAttributes = [
+                      'stat',
+                      'stat_level',
+                      'skill',
+                      'skill_level',
+                      'is_melee',
+                      'is_ranged',
+                      'is_explosive',
+                      'is_full_auto'
+                    ]
+                  each weaponAttr in hiddenAttributes
+                    input(
+                      name=`attr_weapon_${weaponAttr}`
+                      type='hidden'
+                      value=`@{weapon_${weaponAttr}|${weaponAttr==='stat' ? 'REF' : 0}`
+                    )
                 div.cp-2020__weapon-section__row
                   +attrTextArea('weapon_description', 'description')(rows='3')
 
               div.cp-2020__weapon-section--use
                 div.cp-2020__weapon-section__first-row
                   span.cp-2020__weapon-name(name='attr_weapon_name')
-                  +rollBtn(
-                    'weapon_attack',
-                    'weapon_attack',
-                    `&{template:general}
-                      {{isRanged={@{weapon_skill}=='Handgun'}}}
-                      {{handle=@{Handle}}}
-                      {{ref=@{weapon_stat}}}
-                      {{skill=@{weapon_skill}}}
-                      {{skillLevel=@{weapon_skill_level}}}
-                      {{accuracy=@{weapon_accuracy}}}
-                      {{total=[[1d10!! + @{REF} + @{weapon_skill_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}
-                      {{breakdown=1d10 + @{REF}(@{weapon_stat}) + @{weapon_skill_level} + @{weapon_accuracy} + ?{Modifier|0}]]}}`
-                  ).cp-2020__weapon__attack-button
+                  div.cp-2020__weapon-buttons
+                    -
+                      var boilerplate = `
+                        {{handle=@{Handle}}}
+                        {{stat=@{weapon_stat}}}
+                        {{skill=@{weapon_skill}}}
+                        {{statLevel=@{weapon_stat_level}}}
+                        {{skillLevel=@{weapon_skill_level}}}
+                        {{fumble=[[1d10]]}}
+                        {{fumbleType=Combat}}
+                        {{total=[[1d10!
+                          + @{weapon_stat_level}
+                          + @{weapon_skill_level}
+                          + @{weapon_accuracy}
+                          + ?{Modifier|0}]]
+                        }}
+                        {{breakdown=1d10
+                          + @{weapon_stat_level}(@{weapon_stat})
+                          + @{weapon_skill_level}
+                          + @{weapon_accuracy}
+                          + ?{Modifier|0}
+                        }}`
+                    //- melee
+                    input.cp-2020__field-toggle(
+                      disabled='true'
+                      type='hidden'
+                      name='attr_weapon_is_melee_toggle'
+                      value='@{weapon_is_melee}'
+                    )
+                    +rollBtn(
+                      'melee_weapon_attack',
+                      'melee_weapon_attack',
+                      `&{template:attack-melee}
+                        {{accuracy=@{weapon_accuracy}}}
+                        ${boilerplate}`
+                    ).cp-2020__weapon__attack-button--melee
+
+                    //- ranged
+                    input.cp-2020__field-toggle(
+                      disabled='true'
+                      type='hidden'
+                      name='attr_weapon_is_ranged_toggle'
+                      value='@{weapon_is_ranged}'
+                    )
+                    +rollBtn(
+                      'ranged_weapon_attack',
+                      'ranged_weapon_attack',
+                      `&{template:attack-ranged}
+                        {{accuracy=@{weapon_accuracy}}}
+                        {{pointBlank=[[2]]}}
+                        {{closeStart=[[3]]}}
+                        {{close=[[floor(@{weapon_range}/4)]]}}
+                        {{mediumStart=[[floor(@{weapon_range}/4) + 1]]}}
+                        {{medium=[[floor(@{weapon_range}/2)]]}}
+                        {{longStart=[[floor(@{weapon_range}/2) + 1]]}}
+                        {{long=[[@{weapon_range}]]}}
+                        {{extremeStart=[[@{weapon_range}+1]]}}
+                        {{extreme=[[@{weapon_range}*2]]}}
+                        {{roundsFired=[[?{rounds&nbsp;fired|1|@{weapon_rof}} + (1d1-1)]]}}
+                        {{targetDistance=[[?{distance&nbsp;to&nbsptarget|@{weapon_range}} + (1d1-1)]]}}
+                        {{burstHitCount=[[1d3]]}}
+                        {{FAPointBlankDC=[[10-round(?{rounds&nbsp;fired|1|@{weapon_rof}}/10)]]}}
+                        {{FACloseDC=[[15-round(?{rounds&nbsp;fired|1|@{weapon_rof}}/10)]]}}
+                        {{FAMediumDC=[[20+round(?{rounds&nbsp;fired|1|@{weapon_rof}}/10)]]}}
+                        {{FALongDC=[[25+round(?{rounds&nbsp;fired|1|@{weapon_rof}}/10)]]}}
+                        {{FAExtremeDC=[[30+round(?{rounds&nbsp;fired|1|@{weapon_rof}}/10)]]}}
+                        ${boilerplate}`
+                    ).cp-2020__weapon__attack-button--ranged
+
+                    //- spray
+                    input.cp-2020__field-toggle(
+                      disabled='true'
+                      type='hidden'
+                      name='attr_weapon_is_full_auto_toggle'
+                      value='@{weapon_is_full_auto}'
+                    )
+                    +rollBtn(
+                      'supressive_fire',
+                      'supressive_fire',
+                      `&{template:supressive-fire}
+                        {{roundsFired=?{rounds&nbsp;fired|@{weapon_rof}}}}
+                        {{fireZone=?{width&nbsp;of&nbsp;firezone&nbsp;in&nbsp;meters|2}}}
+                        {{save=[[
+                          1d10!
+                          + round(
+                            ?{rounds&nbsp;fired|@{weapon_rof}} /
+                            ?{width&nbsp;of&nbsp;firezone&nbsp;in&nbsp;meters|2}
+                          )
+                        ]]}}
+                        ${boilerplate}`
+                    ).cp-2020__weapon__attack-button--full-auto
+
+                    //- hit
+                    +rollBtn(
+                      'weapon_hit',
+                      'weapon_hit',
+                      `&{template:attack-hit}
+                        {{isExplosive=[[@{weapon_is_explosive}+1d0]]}}
+                        {{blastRadius=@{blast_radius}}}
+                        {{isMelee=[[@{weapon_is_melee}+1d0]]}}
+                        {{damageBonus=@{Damage_Bonus}}}
+                        {{handle=@{handle}}}
+                        {{damage=[[@{weapon_damage}]]}}
+                        {{meleeDamage=[[@{weapon_damage}+@{Damage_Bonus}]]}}
+                        {{location=[[1d100]]}}`
+                    ).cp-2020__weapon__attack-button--hit
+
                 div.cp-2020__weapon-section__row
                   span.cp-2020__weapon-cost(name='attr_weapon_cost')
                   span.cp-2020__weapon-cartridge(name='attr_weapon_cartridge')

@@ -1,0 +1,51 @@
+-
+  var getMoves = maTable => Object.keys(maTable)
+    .reduce(
+      (moves, moveName)=>`${moves}|${moveName},${maTable[moveName]}`,
+    'none,0')
+
+//- ============================================================
+  Creates Skill Name Field or Select for compoundSkills.
+  @param  {String} skillAttrName  Roll20 "attr_" name for skill as attribute
+  @param  {Object} skillData      an Object containing skillName, skillGroup
+//- ============================================================
+
+mixin skillNameField(skillAttrName, skillData, additionalData)
+  -
+    var rollMacro = skillData.martialArtBonuses
+      ? `&{template:attack-melee}
+      {{handle=@{handle}}}
+      {{skill=@{${skillAttrName}_name}}}
+      {{skillLevel=@{${skillAttrName}_level}}}
+      {{statName=@{${skillAttrName}_stat}}}
+      {{stat=@{${skillAttrName}_stat_level}}}
+      {{modifier=[[?{Modifier|0}+1d0]]}}
+      {{maBonus=[[?{move|${getMoves(skillData.martialArtBonuses)}}]]}}
+      {{total=[[
+        1d10!
+        + @{${skillAttrName}_stat_level}
+        + @{${skillAttrName}_level}
+        + ?{Modifier|0}
+        + ?{move|${getMoves(skillData.martialArtBonuses)}}
+        ]]
+      }}
+      {{fumble=[[1d10]]}}`
+      : `&{template:skill-check}
+      {{skill=@{${skillAttrName}_name}}}
+      {{handle=@{handle}}}
+      {{skillLevel=@{${skillAttrName}_level}}}
+      {{statName=@{${skillAttrName}_stat}}}
+      {{stat=@{${skillAttrName}_stat_level}}}
+      {{modifier=[[?{Modifier|0}+1d0]]}}
+      {{total=[[
+        1d10!
+        + @{${skillAttrName}_stat_level}
+        + @{${skillAttrName}_level}
+        + ?{Modifier|0}
+        ]]
+      }}
+      {{fumble=[[1d10]]}}`
+
+  +skillFieldWrapper(skillAttrName, skillData)
+  +editFieldStats(skillAttrName, skillData, additionalData)
+  +useFieldStats(skillAttrName, rollMacro)

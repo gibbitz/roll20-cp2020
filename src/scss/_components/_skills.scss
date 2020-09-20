@@ -10,6 +10,8 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
 
   &__skill {
+    font-size: 0.7em;
+
     &__wrapper {
       padding: 0 0.3em 0 0.8em;
     }
@@ -23,7 +25,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         padding-left: 1em;
         position: relative;
 
-        > input {
+        > input[type='checkbox'] {
           opacity: 0.01;
           position: absolute;
 
@@ -151,11 +153,20 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
+        #{$base}__skill__stat-wrapper--view {
+          @extend %hide;
+        }
         #{$base}__skill__stat-wrapper {
+
           #{$base}__skill__lvl--view {
             @extend %hide;
           }
+
           #{$base}__skill__roll {
+            @extend %hide;
+          }
+
+          select + #{$base}__skill-name--view {
             @extend %hide;
           }
         }
@@ -168,6 +179,9 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
+        #{$base}__skill__stat-wrapper--edit {
+          @extend %hide;
+        }
         #{$base}__skill__stat-wrapper {
           #{$base}__skill--edit,
           #{$base}__stat-group#{$base}__skill--edit,
@@ -176,7 +190,8 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           }
         }
 
-        select#{$base}__skill__name--edit {
+        select#{$base}__skill__name--edit,
+        input#{$base}__skill__name--edit {
           pointer-events: none;
         }
 
@@ -192,6 +207,12 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
             }
           }
         }
+      }
+    }
+
+    #{$base}__skill__chipped {
+      &::before {
+        content: url($assets-icon-chipped);
       }
     }
 
@@ -283,5 +304,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
     }
 
   }
+
+
 }
 

@@ -1,23 +1,21 @@
-+rollTemplate('skill-check', '{{skill}} check')
++rollTemplate('unskilled-check', '{{statName}} check')
   div.cp-2020__roll-template__intro
     span.cp-2020__initial-cap {{handle}}&nbsp;
-    | tries using {{skill}}
+    | tries using {{statName}}
 
   +fumbleFactory('statName')
 
   div.cp-2020__roll-success
     div.cp-2020__total Roll total: {{total}}
     div.cp-2020__breakdown
-      span.cp-2020__roll-template__digit {{skillLevel}}&nbsp;
-      | [{{skill}}]
-      | +&nbsp;
       span.cp-2020__roll-template__digit {{stat}}&nbsp;
       | [{{statName}}]
       | {{#rollGreater() modifier 0}}
       | +
-      span.cp-2020__roll-template__digit {{modifier}}
+      span.cp-2020__roll-template__digit {{modifier}}&nbsp;
       | [modifiers]
       | {{/rollGreater() modifier 0}}
       | + 1d10
 
-  +critFactory('your {{skill}}')
+  +critFactory()
+

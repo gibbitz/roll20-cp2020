@@ -1,31 +1,57 @@
 [
-   {
+    {
         "skillName": "Techie Tech",
         "skillGroup": ["Forgery", "Cryotank Operation", "Pharmaceuticals", "Photo & Film", "Cyberdeck Design", "Weaponsmith", "Aero Tech", "Electronic Security", "Gyro Tech", "AV Tech", "Demolitions"],
         "description": "Skills that require technical aptitude.",
-        "career": "Techie*3"
+        "career": "Techie",
+        "baseAttribute": "TECH"
+    },
+    {
+        "skillName": "Techie Tech a",
+        "skillGroup": ["Forgery", "Cryotank Operation", "Pharmaceuticals", "Photo & Film", "Cyberdeck Design", "Weaponsmith", "Aero Tech", "Electronic Security", "Gyro Tech", "AV Tech", "Demolitions"],
+        "description": "Skills that require technical aptitude.",
+        "career": "Techie",
+        "baseAttribute": "TECH"
+    },
+    {
+        "skillName": "Techie Tech b",
+        "skillGroup": ["Forgery", "Cryotank Operation", "Pharmaceuticals", "Photo & Film", "Cyberdeck Design", "Weaponsmith", "Aero Tech", "Electronic Security", "Gyro Tech", "AV Tech", "Demolitions"],
+        "description": "Skills that require technical aptitude.",
+        "career": "Techie",
+        "baseAttribute": "TECH"
     },
     {
         "skillName": "Martial Arts",
         "skillGroup": ["Akido", "Animal Kung Fu", "Boxing", "Capoeria", "Choi Li Fut", "Judo", "Karate", "Tae Kwon Do", "Thai Kick Boxing", "Wrestling", "Sambo", "Sumo", "Tai Chi Chuan", "Te", "Jeet Kun Do", "Ninjutsu", "Koppo"],
         "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
-        "career": "Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin*2"
+        "baseAttribute": "REF",
+        "career": "Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin"
+    },
+    {
+        "skillName": "Martial Arts a",
+        "skillGroup": ["Akido", "Animal Kung Fu", "Boxing", "Capoeria", "Choi Li Fut", "Judo", "Karate", "Tae Kwon Do", "Thai Kick Boxing", "Wrestling", "Sambo", "Sumo", "Tai Chi Chuan", "Te", "Jeet Kun Do", "Ninjutsu", "Koppo"],
+        "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
+        "baseAttribute": "REF",
+        "career": "Tatsujin"
     },
     {
         "skillName": "Brawling or Martial Arts",
         "skillGroup": ["Brawling", "Martial Arts"],
         "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
+        "baseAttribute": "REF",
         "career": "PA Trooper|Solo"
     },
     {
         "skillName": "Handgun or SMG",
         "skillGroup": ["Submachinegun", "Handgun"],
         "description": "The skills of small firearms.",
+        "baseAttribute": "REF",
         "career": "Bodyguard|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Panzerboy"
     },
     {
         "skillName": "Brawling or Melee",
         "skillGroup": ["Brawling", "Melee"],
+        "baseAttribute": "REF",
         "description": "The skill of fighting man to man with fist, feet and other parts of the body -- or weapons.",
         "career": "Bookie|Dancer/Prostitute"
     },
@@ -33,48 +59,56 @@
         "skillName": "Aero or AV Tech",
         "skillGroup": ["Aero Tech", "AV Tech"],
         "description": "Select one",
+        "baseAttribute": "TECH",
         "career": "Aerojock"
     },
     {
         "skillName": "Disguise or Intimidate",
         "skillGroup": ["Disguise", "Intimidate"],
         "description": "Select one",
+        "baseAttribute": "",
         "career": "Bounty Hunter"
     },
     {
         "skillName": "Rifle or SMG",
         "skillGroup": ["Rifle", "Submachinegun"],
         "description": "The skill of fighting with medium firearms.",
+        "baseAttribute": "REF",
         "career": "Covert Specialist|Outrider|Pathfinder"
     },
     {
         "skillName": "Persuasion or Oratory",
         "skillGroup": ["Persuasion & Fast Talk", "Oratory"],
         "description": "The skill of gab.",
+        "baseAttribute": "EMP",
         "career": "Doctor"
     },
     {
         "skillName": "Motorcycle or Drive",
         "skillGroup": ["Motorcycle", "Drive"],
         "description": "The skill of commanding wheeled machines.",
+        "baseAttribute": "REF",
         "career": "Outrider|Space Marine"
     },
     {
         "skillName": "Athletics or Brawling",
         "skillGroup": ["Athletics", "Brawling"],
         "description": "The skill of brawn.",
+        "baseAttribute": "REF",
         "career": "Pirate|Runner"
     },
     {
         "skillName": "Decks or Electronics",
         "skillGroup": ["Cyberdeck Design", "Electronics"],
         "description": "The skill of brains.",
+        "baseAttribute": "TECH",
         "career": "Rogue Hunter"
     },
     {
         "skillName": "Dance or Oratory",
         "skillGroup": ["Dance", "Oratory"],
         "description": "Select one.",
+        "baseAttribute": "",
         "career": "Spiritual Leader"
     },
     {
@@ -87,72 +121,329 @@
         "skillName": "Leadership or Accounting",
         "skillGroup": ["Leadership", "Accounting"],
         "description": "Select one.",
+        "baseAttribute": "",
         "career": "Talent Agent/Manager"
     },
     {
         "skillName": "Weapon or Basic Tech",
         "skillGroup": ["Basic Tech", "Handgun", "Rifle", "Submachinegun", "Melee", "Fencing", "Archery", "Heavy Weapons"],
         "description": "Select one.",
+        "baseAttribute": "",
         "career": "Warrior"
     },
     {
         "skillName": "Handgun or Hvy Weapons",
         "skillGroup": ["Handgun", "Heavy Weapons"],
         "description": "Select one.",
+        "baseAttribute": "REF",
         "career": "Warrior"
     },
     {
         "skillName": "Endurance or First Aid",
         "skillGroup": ["Endurance", "First Aid"],
         "description": "Select one.",
+        "baseAttribute": "",
         "career": "Warrior"
     },
     {
         "skillName": "Melee or Fencing",
         "skillGroup": ["Melee", "Fencing"],
         "description": "The skill of using non-ranged weapons.",
+        "baseAttribute": "REF",
         "career": "Warrior"
     },
     {
         "skillName": "Water Vehicle",
         "skillGroup": ["Pilot (Ship), Pilot (Submersible), Pilot (Hovercraft), Pilot (Watercraft)"],
         "description": "The skill of boating -- select a size",
+        "baseAttribute": "REF",
         "career": "U.S. or EDF Navy|Aquatic Nomad|Pirate"
     },
     {
         "skillName": "Aircraft",
         "skillGroup": ["Pilot (Dirigible)", "Pilot (Fixed Wing)", "Pilot (Gyro)", "Pilot (Vect.Thrust Vehicle)"],
-        "description": "The skill of boating -- select a size",
+        "description": "The skill of flying -- select a size",
+        "baseAttribute": "REF",
         "career": "U.S. or EDF Navy|Aquatic Nomad|Pirate"
     },
     {
         "skillName": "Pilot or Drive",
-        "skillGroup": ["Drive", "Pilot"],
+        "skillGroup": [
+          "Drive",
+          "Pilot (Dirigible)",
+          "Pilot (Fixed Wing)",
+          "Pilot (Gyro)",
+          "Pilot (Hardshell/EVPA Suit)",
+          "Pilot (Orbital Transfer Vehicle)",
+          "Pilot (Powered Armor)",
+          "Pilot (RPV (Drone))",
+          "Pilot (Ship)",
+          "Pilot (Spaceplane/Shuttle)",
+          "Pilot (Submersible)",
+          "Pilot (Vector Thrust Vehicle)",
+          "Pilot (Watercraft)"
+        ],
         "description": "The skill of commanding machines.",
-        "career": "Bodyguard|Bounty Hunter|Street Samurai|Runner*3"
+        "baseAttribute": "REF",
+        "career": "Bodyguard|Bounty Hunter|Street Samurai|Runner"
+    },
+    {
+        "skillName": "Pilot or Drive a",
+        "skillGroup": [
+          "Drive",
+          "Pilot (Dirigible)",
+          "Pilot (Fixed Wing)",
+          "Pilot (Gyro)",
+          "Pilot (Hardshell/EVPA Suit)",
+          "Pilot (Orbital Transfer Vehicle)",
+          "Pilot (Powered Armor)",
+          "Pilot (RPV (Drone))",
+          "Pilot (Ship)",
+          "Pilot (Spaceplane/Shuttle)",
+          "Pilot (Submersible)",
+          "Pilot (Vector Thrust Vehicle)",
+          "Pilot (Watercraft)"
+        ],
+        "description": "The skill of commanding machines.",
+        "baseAttribute": "REF",
+        "career": "Runner"
+    },
+    {
+        "skillName": "Pilot or Drive b",
+        "skillGroup": [
+          "Drive",
+          "Pilot (Dirigible)",
+          "Pilot (Fixed Wing)",
+          "Pilot (Gyro)",
+          "Pilot (Hardshell/EVPA Suit)",
+          "Pilot (Orbital Transfer Vehicle)",
+          "Pilot (Powered Armor)",
+          "Pilot (RPV (Drone))",
+          "Pilot (Ship)",
+          "Pilot (Spaceplane/Shuttle)",
+          "Pilot (Submersible)",
+          "Pilot (Vector Thrust Vehicle)",
+          "Pilot (Watercraft)"
+        ],
+        "description": "The skill of commanding machines.",
+        "baseAttribute": "REF",
+        "career": "Runner"
     },
     {
         "skillName": "Drive/Pilot/Electronics",
-        "skillGroup": ["Drive", "Pilot", "Electronics"],
+        "skillGroup": [
+          "Drive",
+          "Electronics",
+          "Pilot (Dirigible)",
+          "Pilot (Fixed Wing)",
+          "Pilot (Gyro)",
+          "Pilot (Hardshell/EVPA Suit)",
+          "Pilot (Orbital Transfer Vehicle)",
+          "Pilot (Powered Armor)",
+          "Pilot (RPV (Drone))",
+          "Pilot (Ship)",
+          "Pilot (Spaceplane/Shuttle)",
+          "Pilot (Submersible)",
+          "Pilot (Vector Thrust Vehicle)",
+          "Pilot (Watercraft)"
+        ],
         "description": "The skill of commanding machines.",
+        "baseAttribute": "",
         "career": "Tabloid-Monger"
     },
     {
         "skillName": "Pilot",
-        "skillGroup": ["Water Vehicle", "Aircraft"],
+        "skillGroup": [
+          "Drive",
+          "Pilot (Dirigible)",
+          "Pilot (Fixed Wing)",
+          "Pilot (Gyro)",
+          "Pilot (Hardshell/EVPA Suit)",
+          "Pilot (Orbital Transfer Vehicle)",
+          "Pilot (Powered Armor)",
+          "Pilot (RPV (Drone))",
+          "Pilot (Ship)",
+          "Pilot (Spaceplane/Shuttle)",
+          "Pilot (Submersible)",
+          "Pilot (Vector Thrust Vehicle)",
+          "Pilot (Watercraft)"
+        ],
         "description": "The skill of commanding machines.",
+        "baseAttribute": "REF",
         "career": ""
     },
     {
         "skillName": "History or Area Knowledge",
         "skillGroup": ["History", "Area Knowledge"],
         "description": "The skill of knowing where you come from.",
+        "baseAttribute": "INT",
         "career": "Administrator"
     },
     {
         "skillName": "One Gang-Related Skill",
         "skillGroup": ["Resist Torture/Drugs", "Area Knowledge", "Persuasion & Fast Talk", "Pick Pocket", "Pharmaceuticals"],
         "description": "The skill of knowing where you come from.",
+        "baseAttribute": "",
         "career": "Streetpunk"
+    },
+    {
+        "skillName": "Expert: Sports",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Action Reporter"
+    },
+    {
+        "skillName": "Expert: Ocean Life forms",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Aquatic Nomad"
+    },
+    {
+        "skillName": "Expert: Vessel ID",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Aquatic Nomad"
+    },
+    {
+        "skillName": "Expert: Law",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Attorney/Judge|Japanese SDF Officer|Lawyer"
+    },
+    {
+        "skillName": "Expert: Exotic Weapons",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Bounty Hunter"
+    },
+    {
+        "skillName": "Expert: Corporate Administration",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Corp Operative"
+    },
+    {
+        "skillName": "Expert: Structural Architecture",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Covert Tech Demolitions Ops"
+    },
+    {
+        "skillName": "Expert: Electronic Warfare",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Covert Tech Elint Ops"
+    },
+    {
+        "skillName": "Expert",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Information Broker|Negotiator|Talent Scout"
+    },
+    {
+        "skillName": "Expert: Psychology",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Marine Biotech"
+    },
+    {
+        "skillName": "Expert: World Net Systems",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Rogue Hunter"
+    },
+    {
+        "skillName": "Expert: Computer Systems",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Rogue Hunter"
+    },
+    {
+        "skillName": "Expert: Fortune Telling",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Shaman"
+    },
+    {
+        "skillName": "Expert: Theology/History",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Spiritual Leader"
+    },
+    {
+        "skillName": "Expert: Entertainment",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Talent Agent/Manager"
+    },
+    {
+        "skillName": "Expert: Construction",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": "Workganger"
     }
   ]

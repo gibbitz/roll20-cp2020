@@ -1,69 +1,142 @@
 $data: (
   data: (
+    bodyTypes: (
+      Very Weak: (
+        body: ('1', '2'),
+        btm: '0',
+        damageModifier: '-2'
+      ),
+      Weak: (
+        body: ('3', '4'),
+        btm: '-1',
+        damageModifier: '-1'
+      ),
+      Average: (
+        body: ('5', '6', '7'),
+        btm: '-2',
+        damageModifier: '0'
+      ),
+      Strong: (
+        body: ('8', '9'),
+        btm: '-3',
+        damageModifier: '1'
+      ),
+      Very Strong: (
+        body: ('10'),
+        btm: '-4',
+        damageModifier: '2'
+      ),
+      Superhuman: (
+        body: ('11', '12'),
+        btm: '-5',
+        damageModifier: '4'
+      ),
+      Superpowered: (
+        body: ('13', '14'),
+        btm: '-5',
+        damageModifier: '6'
+      ),
+      Ridiculous: (
+        body: ('15', '16', '17'),
+        btm: '-5',
+        damageModifier: '8'
+      )
+    ),
     compoundSkills: ((
       skillName: 'Techie Tech',
       skillGroup: ('Forgery', 'Cryotank Operation', 'Pharmaceuticals', 'Photo & Film', 'Cyberdeck Design', 'Weaponsmith', 'Aero Tech', 'Electronic Security', 'Gyro Tech', 'AV Tech', 'Demolitions'),
       description: 'Skills that require technical aptitude.',
-      career: 'Techie*3'
+      career: 'Techie',
+      baseAttribute: 'TECH'
+    ), (
+      skillName: 'Techie Tech a',
+      skillGroup: ('Forgery', 'Cryotank Operation', 'Pharmaceuticals', 'Photo & Film', 'Cyberdeck Design', 'Weaponsmith', 'Aero Tech', 'Electronic Security', 'Gyro Tech', 'AV Tech', 'Demolitions'),
+      description: 'Skills that require technical aptitude.',
+      career: 'Techie',
+      baseAttribute: 'TECH'
+    ), (
+      skillName: 'Techie Tech b',
+      skillGroup: ('Forgery', 'Cryotank Operation', 'Pharmaceuticals', 'Photo & Film', 'Cyberdeck Design', 'Weaponsmith', 'Aero Tech', 'Electronic Security', 'Gyro Tech', 'AV Tech', 'Demolitions'),
+      description: 'Skills that require technical aptitude.',
+      career: 'Techie',
+      baseAttribute: 'TECH'
     ), (
       skillName: 'Martial Arts',
       skillGroup: ('Akido', 'Animal Kung Fu', 'Boxing', 'Capoeria', 'Choi Li Fut', 'Judo', 'Karate', 'Tae Kwon Do', 'Thai Kick Boxing', 'Wrestling', 'Sambo', 'Sumo', 'Tai Chi Chuan', 'Te', 'Jeet Kun Do', 'Ninjutsu', 'Koppo'),
       description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
-      career: 'Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin*2'
+      baseAttribute: 'REF',
+      career: 'Assassin|Bodyguard|Bounty Hunter|British Combined Forces|Combat Medic|Corp Operative|overt Specialist|Covert Tech Demolitions Ops|overt Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|overt Tech Remote Ops|Eurosolo|Ex-Cybersoldier|Japanese SDF Officer|Reapers|Shinobi|Spy|Street Samurai|Tatsujin'
+    ), (
+      skillName: 'Martial Arts a',
+      skillGroup: ('Akido', 'Animal Kung Fu', 'Boxing', 'Capoeria', 'Choi Li Fut', 'Judo', 'Karate', 'Tae Kwon Do', 'Thai Kick Boxing', 'Wrestling', 'Sambo', 'Sumo', 'Tai Chi Chuan', 'Te', 'Jeet Kun Do', 'Ninjutsu', 'Koppo'),
+      description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
+      baseAttribute: 'REF',
+      career: 'Tatsujin'
     ), (
       skillName: 'Brawling or Martial Arts',
       skillGroup: ('Brawling', 'Martial Arts'),
       description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
+      baseAttribute: 'REF',
       career: 'PA Trooper|Solo'
     ), (
       skillName: 'Handgun or SMG',
       skillGroup: ('Submachinegun', 'Handgun'),
       description: 'The skills of small firearms.',
+      baseAttribute: 'REF',
       career: 'Bodyguard|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Panzerboy'
     ), (
       skillName: 'Brawling or Melee',
       skillGroup: ('Brawling', 'Melee'),
+      baseAttribute: 'REF',
       description: 'The skill of fighting man to man with fist, feet and other parts of the body -- or weapons.',
       career: 'Bookie|Dancer/Prostitute'
     ), (
       skillName: 'Aero or AV Tech',
       skillGroup: ('Aero Tech', 'AV Tech'),
       description: 'Select one',
+      baseAttribute: 'TECH',
       career: 'Aerojock'
     ), (
       skillName: 'Disguise or Intimidate',
       skillGroup: ('Disguise', 'Intimidate'),
       description: 'Select one',
+      baseAttribute: '',
       career: 'Bounty Hunter'
     ), (
       skillName: 'Rifle or SMG',
       skillGroup: ('Rifle', 'Submachinegun'),
       description: 'The skill of fighting with medium firearms.',
+      baseAttribute: 'REF',
       career: 'Covert Specialist|Outrider|Pathfinder'
     ), (
       skillName: 'Persuasion or Oratory',
       skillGroup: ('Persuasion & Fast Talk', 'Oratory'),
       description: 'The skill of gab.',
+      baseAttribute: 'EMP',
       career: 'Doctor'
     ), (
       skillName: 'Motorcycle or Drive',
       skillGroup: ('Motorcycle', 'Drive'),
       description: 'The skill of commanding wheeled machines.',
+      baseAttribute: 'REF',
       career: 'Outrider|Space Marine'
     ), (
       skillName: 'Athletics or Brawling',
       skillGroup: ('Athletics', 'Brawling'),
       description: 'The skill of brawn.',
+      baseAttribute: 'REF',
       career: 'Pirate|Runner'
     ), (
       skillName: 'Decks or Electronics',
       skillGroup: ('Cyberdeck Design', 'Electronics'),
       description: 'The skill of brains.',
+      baseAttribute: 'TECH',
       career: 'Rogue Hunter'
     ), (
       skillName: 'Dance or Oratory',
       skillGroup: ('Dance', 'Oratory'),
       description: 'Select one.',
+      baseAttribute: '',
       career: 'Spiritual Leader'
     ), (
       skillName: 'Trance or Perform',
@@ -74,62 +147,230 @@ $data: (
       skillName: 'Leadership or Accounting',
       skillGroup: ('Leadership', 'Accounting'),
       description: 'Select one.',
+      baseAttribute: '',
       career: 'Talent Agent/Manager'
     ), (
       skillName: 'Weapon or Basic Tech',
       skillGroup: ('Basic Tech', 'Handgun', 'Rifle', 'Submachinegun', 'Melee', 'Fencing', 'Archery', 'Heavy Weapons'),
       description: 'Select one.',
+      baseAttribute: '',
       career: 'Warrior'
     ), (
       skillName: 'Handgun or Hvy Weapons',
       skillGroup: ('Handgun', 'Heavy Weapons'),
       description: 'Select one.',
+      baseAttribute: 'REF',
       career: 'Warrior'
     ), (
       skillName: 'Endurance or First Aid',
       skillGroup: ('Endurance', 'First Aid'),
       description: 'Select one.',
+      baseAttribute: '',
       career: 'Warrior'
     ), (
       skillName: 'Melee or Fencing',
       skillGroup: ('Melee', 'Fencing'),
       description: 'The skill of using non-ranged weapons.',
+      baseAttribute: 'REF',
       career: 'Warrior'
     ), (
       skillName: 'Water Vehicle',
       skillGroup: ('Pilot (Ship), Pilot (Submersible), Pilot (Hovercraft), Pilot (Watercraft)'),
       description: 'The skill of boating -- select a size',
+      baseAttribute: 'REF',
       career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
     ), (
       skillName: 'Aircraft',
       skillGroup: ('Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Vect.Thrust Vehicle)'),
-      description: 'The skill of boating -- select a size',
+      description: 'The skill of flying -- select a size',
+      baseAttribute: 'REF',
       career: 'U.S. or EDF Navy|Aquatic Nomad|Pirate'
     ), (
       skillName: 'Pilot or Drive',
-      skillGroup: ('Drive', 'Pilot'),
+      skillGroup: ('Drive', 'Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Hardshell/EVPA Suit)', 'Pilot (Orbital Transfer Vehicle)', 'Pilot (Powered Armor)', 'Pilot (RPV (Drone))', 'Pilot (Ship)', 'Pilot (Spaceplane/Shuttle)', 'Pilot (Submersible)', 'Pilot (Vector Thrust Vehicle)', 'Pilot (Watercraft)'),
       description: 'The skill of commanding machines.',
-      career: 'Bodyguard|Bounty Hunter|Street Samurai|Runner*3'
+      baseAttribute: 'REF',
+      career: 'Bodyguard|Bounty Hunter|Street Samurai|Runner'
+    ), (
+      skillName: 'Pilot or Drive a',
+      skillGroup: ('Drive', 'Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Hardshell/EVPA Suit)', 'Pilot (Orbital Transfer Vehicle)', 'Pilot (Powered Armor)', 'Pilot (RPV (Drone))', 'Pilot (Ship)', 'Pilot (Spaceplane/Shuttle)', 'Pilot (Submersible)', 'Pilot (Vector Thrust Vehicle)', 'Pilot (Watercraft)'),
+      description: 'The skill of commanding machines.',
+      baseAttribute: 'REF',
+      career: 'Runner'
+    ), (
+      skillName: 'Pilot or Drive b',
+      skillGroup: ('Drive', 'Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Hardshell/EVPA Suit)', 'Pilot (Orbital Transfer Vehicle)', 'Pilot (Powered Armor)', 'Pilot (RPV (Drone))', 'Pilot (Ship)', 'Pilot (Spaceplane/Shuttle)', 'Pilot (Submersible)', 'Pilot (Vector Thrust Vehicle)', 'Pilot (Watercraft)'),
+      description: 'The skill of commanding machines.',
+      baseAttribute: 'REF',
+      career: 'Runner'
     ), (
       skillName: 'Drive/Pilot/Electronics',
-      skillGroup: ('Drive', 'Pilot', 'Electronics'),
+      skillGroup: ('Drive', 'Electronics', 'Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Hardshell/EVPA Suit)', 'Pilot (Orbital Transfer Vehicle)', 'Pilot (Powered Armor)', 'Pilot (RPV (Drone))', 'Pilot (Ship)', 'Pilot (Spaceplane/Shuttle)', 'Pilot (Submersible)', 'Pilot (Vector Thrust Vehicle)', 'Pilot (Watercraft)'),
       description: 'The skill of commanding machines.',
+      baseAttribute: '',
       career: 'Tabloid-Monger'
     ), (
       skillName: 'Pilot',
-      skillGroup: ('Water Vehicle', 'Aircraft'),
+      skillGroup: ('Drive', 'Pilot (Dirigible)', 'Pilot (Fixed Wing)', 'Pilot (Gyro)', 'Pilot (Hardshell/EVPA Suit)', 'Pilot (Orbital Transfer Vehicle)', 'Pilot (Powered Armor)', 'Pilot (RPV (Drone))', 'Pilot (Ship)', 'Pilot (Spaceplane/Shuttle)', 'Pilot (Submersible)', 'Pilot (Vector Thrust Vehicle)', 'Pilot (Watercraft)'),
       description: 'The skill of commanding machines.',
+      baseAttribute: 'REF',
       career: ''
     ), (
       skillName: 'History or Area Knowledge',
       skillGroup: ('History', 'Area Knowledge'),
       description: 'The skill of knowing where you come from.',
+      baseAttribute: 'INT',
       career: 'Administrator'
     ), (
       skillName: 'One Gang-Related Skill',
       skillGroup: ('Resist Torture/Drugs', 'Area Knowledge', 'Persuasion & Fast Talk', 'Pick Pocket', 'Pharmaceuticals'),
       description: 'The skill of knowing where you come from.',
+      baseAttribute: '',
       career: 'Streetpunk'
+    ), (
+      skillName: 'Expert: Sports',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Action Reporter'
+    ), (
+      skillName: 'Expert: Ocean Life forms',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Aquatic Nomad'
+    ), (
+      skillName: 'Expert: Vessel ID',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Aquatic Nomad'
+    ), (
+      skillName: 'Expert: Law',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Attorney/Judge|Japanese SDF Officer|Lawyer'
+    ), (
+      skillName: 'Expert: Exotic Weapons',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Bounty Hunter'
+    ), (
+      skillName: 'Expert: Corporate Administration',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Corp Operative'
+    ), (
+      skillName: 'Expert: Structural Architecture',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Covert Tech Demolitions Ops'
+    ), (
+      skillName: 'Expert: Electronic Warfare',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Covert Tech Elint Ops'
+    ), (
+      skillName: 'Expert',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Information Broker|Negotiator|Talent Scout'
+    ), (
+      skillName: 'Expert: Psychology',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Marine Biotech'
+    ), (
+      skillName: 'Expert: World Net Systems',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Rogue Hunter'
+    ), (
+      skillName: 'Expert: Computer Systems',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Rogue Hunter'
+    ), (
+      skillName: 'Expert: Fortune Telling',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Shaman'
+    ), (
+      skillName: 'Expert: Theology/History',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Spiritual Leader'
+    ), (
+      skillName: 'Expert: Entertainment',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Talent Agent/Manager'
+    ), (
+      skillName: 'Expert: Construction',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: 'Workganger'
     )),
     fumbles: (
       Combat: ('No fumble. You just screw up.', 'No fumble. You just screw up.', 'No fumble. You just screw up.', 'No fumble. You just screw up.', 'You drop your weapon.', 'Weapon discharges (make reliability roll for non-auto weapon) or strikes something harmiess.', 'Weapon jams (make reliability roll for non-auto weapon) or imbeds itself in the ground for one turn.', 'You manage to wound yourself. Roll for location.', 'You manage to wound a member of your own party.', 'You manage to wound a member of your own party.'),
@@ -139,10 +380,71 @@ $data: (
       MA: ('No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'No fumble. You just mess up and make an idiot of yourself.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail miserably. Take 1 point in minor damage (sprain, fall, stumble), plus make a Save vs. Stun.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.', 'You fail abysmally. if a physical action, take 1D6 in damage from falling. Also make roll vs Stun at -1.'),
       TECH: ('No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'No fumble. You just can"t get it together.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'You not only fail, you make it worse! You drop the tools you"re working with, or you lose your grip and damage the thing you"re working with even more. Raise the Difficulty by 5 points and try again.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.', 'Wow. Did you ever blow it! You damaged the device or creation beyond repair. Buy a new one.'),
       EMP: ('No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'No fumble. They just won"t buy it.', 'So much for your people skills. You not only don"t convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.', 'So much for your people skills. You not only don"t convice them; you leave them totally cold (-4 to your next EMP die roll) to any other suggestion you might have.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.', 'Yow! You blew it royally. You not only didn"t convince them, but now they"re actually, violently opposedto anything you want to do. there"s a 40% chance they actually attempt to do you physical harm.'),
-      ATT: ('No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anythign possible to get away from you.'),
+      ATT: ('No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'No fumble. They"re just not that into you".', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'The equivalent of toilet paper stuck to your shoe. They can"t unsee it. -4 to your next ATTR based role with the target.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anything possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anything possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anything possible to get away from you.', 'Not your look. Not only were you unable to pull it off, you exude an air of desperation that totally turns off your target. There"s a 40% chance they will do anything possible to get away from you.'),
       INT: ('No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'No fumble; You just don"t know how to do it. You don"t know what"s going on. You carry on, oblivious to higher concerns.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'You don"t know anything about what"s going on, and you haven"t clue about how to do anything about it. Make a Convince check at -2 to see if anyone else notices how dumb you are.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.', 'Wow, are you oblivious. You not only don’t know what"s going on or anything about the subject.')
     ),
+    genders: ((
+      value: 'm',
+      label: 'Male'
+    ), (
+      value: 'f',
+      label: 'Female'
+    ), (
+      value: 'mf',
+      label: 'Male presenting Female'
+    ), (
+      value: 'fm',
+      label: 'Female presenting Male'
+    ), (
+      value: 'a',
+      label: 'Androgynous'
+    )),
+    hitLocations: (
+      skull: ('1', '2', '3'),
+      right eye: ('4'),
+      left eye: ('5'),
+      face: ('6', '7', '8'),
+      neck: ('9', '10'),
+      right chest: ('11', '12', '13', '14', '15', '16', '17'),
+      left chest: ('18', '19', '20', '21', '22', '23', '24'),
+      right stomach: ('25', '26', '27', '28'),
+      left stomach: ('29', '30', '31', '32'),
+      right hip bone: ('33', '34', '35'),
+      left hip bone: ('36', '37', '38'),
+      right shoulder: ('39', '40'),
+      right upper arm: ('41', '42', '43'),
+      right elbow: ('44'),
+      right forearm: ('45', '46', '47'),
+      right hand: ('48', '49'),
+      left shoulder: ('50', '51'),
+      left upper arm: ('52', '53', '54'),
+      left elbow: ('55'),
+      left forearm: ('56', '57', '58'),
+      left hand: ('59', '60'),
+      right groin: ('61', '62'),
+      right hip joint: ('63', '64'),
+      right thigh: ('65', '66', '67', '68', '69', '70', '71', '72'),
+      right knee: ('73', '74'),
+      right shin: ('75', '76', '77', '78'),
+      right foot: ('79', '80'),
+      left groin: ('81', '82'),
+      left hip joint: ('83', '84'),
+      left thigh: ('85', '86', '87', '88', '89', '90', '91', '92'),
+      left knee: ('93', '94'),
+      left shin: ('95', '96', '97', '98'),
+      left foot: ('99', '100')
+    ),
     roles: ('Action Reporter', 'Administrator', 'Aerojock', 'Aquatic Nomad', 'Assassin', 'Attorney/Judge', 'Black Marketeer', 'Bodyguard', 'Bookie', 'Bounty Hunter', 'British Combined Forces', 'Celebrity Reporter', 'Combat Medic', 'Con Man', 'Cop', 'Corp Operative', 'Corporate', 'Covert Specialist', 'Covert Tech Demolitions Ops', 'Covert Tech Elint Ops', 'Covert Tech Intrusion Ops', 'Covert Tech Netrunner Ops', 'Covert Tech Remote Ops', 'Credshark', 'Cultist', 'Dancer/Prostitute', 'Divemaster/Miner', 'Doctor', 'Eurosolo', 'Ex-Cybersoldier', 'Factor', 'Fence', 'Fixer', 'Freelancer', 'Highrider/Pilot', 'Information Broker', 'Investigative Reporter', 'Japanese SDF Officer', 'Lawyer', 'Loan Shark', 'Marine Biotech', 'Marine Corps', 'Med Tech', 'Media', 'Pharmacist/Bioware Researcher', 'Negotiator', 'Netrunner', 'Nomad', 'On-Air Star', 'Outrider', 'Owner', 'PA Trooper', 'Panzerboy', 'Pathfinder', 'Pimp', 'Pirate', 'Police Beat Reporter', 'Private Investigator', 'Prowler', 'Pusher', 'Reapers', 'Rockerboy', 'Rogue Hunter', 'Runner', 'Scavenger', 'Shaman', 'Shinobi', 'Shoemaker', 'Salver', 'Sleaze', 'Smuggler', 'Sniffer', 'Social Reporter', 'Solo', 'Space Marine', 'Spiritual Leader', 'Spook', 'Spy', 'Street Samurai', 'Streetpunk', 'Subjock', 'Tabloid-Monger', 'Talent Agent/Manager', 'Talent Scout', 'Tatsujin', 'Techie', 'The Spin Doctor', 'Trader', 'U.S. or EDF Army', 'U.S. or EDF Navy', 'USAF/EDF Air Force', 'War Correspondent', 'Warrior', 'Workganger'),
+    siblingAge: ((
+      value: 'younger',
+      label: 'Younger'
+    ), (
+      value: 'older',
+      label: 'Older'
+    ), (
+      value: 'twin',
+      label: 'Twin'
+    )),
     skills: ((
       skillName: 'Personal Grooming',
       baseAttribute: 'ATT',
@@ -471,15 +773,6 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       notes: '',
       career: 'Action Reporter|Administrator|Attorney/Judge|Celebrity Reporter|Combat Medic|Cop|Corporate|Cultist|Doctor|Factor|Freelancer|Information Broker|Investigative Reporter|Lawyer|Marine Biotech|Med Tech|Media|Pharmacist/Bioware Researcher|Negotiator|Netrunner|On-Air Star|Pimp|Police Beat Reporter|Rogue Hunter|Shoemaker|Social Reporter|Spy|Tabloid-Monger|Talent Agent/Manager|Talent Scout|Techie|The Spin Doctor|Trader|War Correspondent'
     ), (
-      skillName: 'Expert',
-      baseAttribute: 'INT',
-      modifier: '',
-      ipMultiplier: '1',
-      specialAbility: '',
-      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
-      notes: '',
-      career: 'Action Reporter:Sport|Aquatic Nomad:Ocean Life forms+Vessel ID|Attorney/Judge:Law|Bounty Hunter:Exotic Weapons|Corp Operative:Corp. Admin|Covert Tech Demolitions Ops:Structural Architecture|Covert Tech Elint Ops:Electronic Warfare|Information Broker:CHOOSE|Japanese SDF Officer:Law|Lawyer:Law|Marine Biotech:Psychology|Negotiator:CHOOSE |Rogue Hunter:World Net Systems+Computer Systems|Shaman:Fortune Telling|Spiritual Leader:Theology/History|Talent Agent/Manager:Entertainment|Talent Scout:CHOOSE|Workganger:Construction'
-    ), (
       skillName: 'Farsi',
       baseAttribute: 'INT',
       modifier: '',
@@ -800,6 +1093,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '0',
+        kick: '0',
+        disarm: '3',
+        sweep: '3',
+        block: '4',
+        dodge: '3',
+        grapple: '2',
+        throw: '3',
+        hold: '3',
+        choke: '1',
+        escape: '3',
+        ram: '0'
+      ),
       description: 'This form relies on using the opponent"s strength and momentum against him. It is a perfect form for stopping an opponent peacefully while making yourself very hard to hit. Key attacks are: blocks & parries, dodges, throws, holds, escapes, chokes, sweeps, trips & sweeps, grapples.',
       notes: '',
       career: ''
@@ -809,7 +1117,46 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '2',
+        punch: '0',
+        kick: '2',
+        disarm: '0',
+        sweep: '1',
+        block: '2',
+        dodge: '0',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'These are forms based on animal movements, such as crane, mantis, tiger, leopard and dragon forms. These attacks are fast and dangerous, with a style that is exciting and flashy. Key attacks include: strikes, punches, kicks, blocks & parries, sweeps & trips.',
+      notes: '',
+      career: ''
+    ), (
+      skillName: 'Arasaka Te',
+      baseAttribute: 'REF',
+      modifier: '',
+      ipMultiplier: '2',
+      specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '1',
+        kick: '1',
+        disarm: '1',
+        sweep: '0',
+        block: '1',
+        dodge: '1',
+        grapple: '1',
+        throw: '1',
+        hold: '1',
+        choke: '2',
+        escape: '0',
+        ram: '0'
+      ),
+      description: 'When Arasaka wanted to select a martial art to train its forces in selected leading hand to hand fighting experts to create the world"s greatest martial art to date. After several years of development, Arasaka troops began to learn Arasaka Te. Several smash hit videos were made based on corporate Solos armed only with this martial art style defeating opponents against all odds. Soon Arasaka sponsored dojos began teaching Arasakate at reasonable rates. While this fighting form is widely respected, anyone who has any actual experience with Arasakate will tell you that it is a bland style made up of the easiest moves of seven different styles. Martial Arts designed by committees don"t usually work too well.',
       notes: '',
       career: ''
     ), (
@@ -829,13 +1176,28 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       specialAbility: '',
       description: 'This skill is required for accurate throwing, climbing, and balancing. It combines the basic elements of any high school level sports program. At +3 and above, you are the equivalent of a real high school "jock". At +5 and above, you can perform in college level competitions. At +8 and above, you are of Olympic or Professional caliber.',
       notes: '',
-      career: 'Aerojock|Assassin|British Combined Forces|Combat Medic|Cop|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Nomad|Outrider|PA Trooper|Pathfinder|Pirate|Prowler|Runner|Shinobi|Solo|Tatsujin|USAF/EDF Air Force'
+      career: 'Aerojock|Assassin|British Combined Forces|Combat Medic|Cop|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Nomad|Outrider|PA Trooper|Pathfinder|Pirate|Prowler|Shinobi|Solo|Tatsujin|USAF/EDF Air Force'
     ), (
       skillName: 'Boxing',
       baseAttribute: 'REF',
       modifier: '',
       ipMultiplier: '1',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '3',
+        kick: '0',
+        disarm: '0',
+        sweep: '0',
+        block: '3',
+        dodge: '1',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'The manly art of fisticuffs, this form delivers lightning punches and a tight blocking defense. Key attacks are: punches, blocks & parries.',
       notes: '',
       career: ''
@@ -847,13 +1209,28 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       specialAbility: '',
       description: 'The skill of fighting man to man with fist, feet and other parts of the body. Brawling is not a trained skill it is learned on the Street by getting into a lot of fights. Unlike Martial Arts, there are no specialized attacks and no damage bonuses based on level of mastery.',
       notes: '',
-      career: 'Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Runner|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior'
+      career: 'Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior'
     ), (
       skillName: 'Capoeria',
       baseAttribute: 'REF',
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '1',
+        kick: '2',
+        disarm: '0',
+        sweep: '3',
+        block: '2',
+        dodge: '2',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'Created by Carribean slaves, this form combines dancelike movements with fast kicks and low line sweeps. It is a relatively unknown form and can be combined with dance moves to disguise it"s true power. Key attacks are: punches, kicks, blocks & parries, dodges, and sweeps & trips.',
       notes: '',
       career: ''
@@ -863,6 +1240,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '2',
+        punch: '2',
+        kick: '2',
+        disarm: '1',
+        sweep: '2',
+        block: '2',
+        dodge: '1',
+        grapple: '1',
+        throw: '1',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'Descended directly from the ancient Shaolin temples, this form combines powerful roundhouse blows and sweeping kicks into a dynamic fighting style. Key attacks are: strikes, punches, kicks, blocks & parries, dodges, throws, and sweeps & trips.',
       notes: '',
       career: ''
@@ -912,6 +1304,30 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       notes: '',
       career: ''
     ), (
+      skillName: 'Gun-fu',
+      baseAttribute: 'REF',
+      modifier: '',
+      ipMultiplier: '4',
+      specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '0',
+        kick: '0',
+        disarm: '0',
+        sweep: '3',
+        block: '2',
+        dodge: '4',
+        grapple: '4',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '2',
+        ram: '0'
+      ),
+      description: 'This "style" is generally thought to be of Chinese origin. Developed as a system for more effective combat hand-gunnery within enclosed spaces, Gun-fu (sometimes known as Gunjitsu) is based on the concept of the handgun as an extension of the user"s body. Within this martial art, the handgun is used like a melee weapon. Most commonly, the attacker will run right up to his opponent, shove his gun into the gonk"s stomach, and pull the trigger as many times as it takes. The advantage to this is that gunshots delivered at point-blank range do MAXIMUM damage. The basic principle of Gun-fu the handgun as a part of the body also serves to increase fire fight mobility. This martial art reduces the penalty for multiple actions by +1/4 skill level (round down). In this way, Gun-fu allows such combination maneuvers as fast-draws, off-handed shooting, two-weapon attacks and firing while running or dodging to be carried out more effectively note that these modifiers only apply to Point Blank or Close Range distances, and you still need to have a Handgun skill. Gun-fu is a very fast-paced, frantic combat style, requiring physical fitness and shooting skills. It is a favorite of the Triads.',
+      notes: '',
+      career: ''
+    ), (
       skillName: 'Handgun',
       baseAttribute: 'REF',
       modifier: '',
@@ -933,6 +1349,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       skillName: 'Jeet Kun Do',
       baseAttribute: 'REF',
       ipMultiplier: '3',
+      martialArtBonuses: (
+        strike: '3',
+        punch: '3',
+        kick: '2',
+        disarm: '1',
+        sweep: '1',
+        block: '2',
+        dodge: '0',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'Have you seen anyof the old Bruce Lee vids? JKDis the style he created, and the name means “The Way of the Parrying Punch” Its main attack is to Parry the Opponent"s attack (thus creating an opening) and deliver one short, deadly punch from very close in. Lee created this style because he felt that Kung Fu had become too structured, and “Martial Arts must evolve” A JKD student must learn his/her own forte (blocking, punching, kicking, etc.) first, and then the teacher will help them expand their forte to include the rest of the style. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block'
     ), (
       skillName: 'Judo',
@@ -940,6 +1371,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '1',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '0',
+        kick: '0',
+        disarm: '0',
+        sweep: '2',
+        block: '0',
+        dodge: '1',
+        grapple: '2',
+        throw: '3',
+        hold: '2',
+        choke: '1',
+        escape: '2',
+        ram: '0'
+      ),
       description: 'This system was designed as a sport form, but is very effective in combat as well. It uses throws and sweeps to knock down the opponent. Key attacks include: dodges, throws, holds, escapes, sweeps & trips and grappling.',
       notes: 'key attacks add bonus and skill lvl added to all damage',
       career: ''
@@ -949,6 +1395,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '2',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '2',
+        kick: '2',
+        disarm: '1',
+        sweep: '0',
+        block: '2',
+        dodge: '0',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'The Japanese version of kung fu, this style uses straight line movements and powerful blows. Variations include shotokan and kenpo, each with their own special moves. Key attacks are: punches, kicks, and blocks & parries.',
       notes: '',
       career: ''
@@ -956,6 +1417,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       skillName: 'Koppo',
       baseAttribute: 'REF',
       ipMultiplier: '4',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '4',
+        kick: '2',
+        disarm: '0',
+        sweep: '3',
+        block: '3',
+        dodge: '0',
+        grapple: '2',
+        throw: '0',
+        hold: '2',
+        choke: '1',
+        escape: '2',
+        ram: '0'
+      ),
       description: 'The full name for this style is Kenkagei-Koppo.It is the urban style of the all-purpose Ninjutsu-Koppo. The founder of this style liked Ninjutsu, but realized that the huge number of Key Actions made it difficult to learn, so he streamlined it down, and made the main attack a Slap/Knifehand (punch) and Grapple combination. Key Actions: Punch, Kick, Sweep, Block, Grapple, Hold, Choke, Escape.'
     ), (
       skillName: 'Melee',
@@ -981,6 +1457,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '5',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '3',
+        punch: '3',
+        kick: '1',
+        disarm: '2',
+        sweep: '2',
+        block: '2',
+        dodge: '2',
+        grapple: '1',
+        throw: '2',
+        hold: '1',
+        choke: '1',
+        escape: '1',
+        ram: '0'
+      ),
       description: 'The full name for this Style is Ninjutsu-Koppo. This is one of the oldest styles in Japan. The old ninja clans used this Koppo, but with the rise of Kenkagei-Koppo, this is referred to just as Ninjutsu. This is a very all-purpose style, with many key actions, so it is very hard to learn. Also, most Masters are hard to find (they"re Ninjas) and unwilling to teach. Only members of a clan are permitted to learn this style. Of course, there is no chip for it. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block, Dodge, Grapple, Throw, Hold, Choke, Escape.',
       notes: '',
       career: 'Shinobi'
@@ -1093,7 +1584,7 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       notes: '',
       career: 'Aquatic Nomad|Subjock'
     ), (
-      skillName: 'Pilot (Vect.Thrust Vehicle)',
+      skillName: 'Pilot (Vector Thrust Vehicle)',
       baseAttribute: 'REF',
       modifier: '',
       ipMultiplier: '3',
@@ -1116,7 +1607,22 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
-      description: 'ommand Sambo is the New Soviet Army"s own Martial Art. This is a hybrid of Wrestling, Judo, and just plain nastiness.',
+      martialArtBonuses: (
+        strike: '2',
+        punch: '2',
+        kick: '2',
+        disarm: '2',
+        sweep: '2',
+        block: '0',
+        dodge: '0',
+        grapple: '2',
+        throw: '3',
+        hold: '2',
+        choke: '0',
+        escape: '2',
+        ram: '0'
+      ),
+      description: 'Command Sambo is the New Soviet Army"s own Martial Art. This is a hybrid of Wrestling, Judo, and just plain nastiness.',
       notes: '',
       career: ''
     ), (
@@ -1143,6 +1649,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '4',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '2',
+        kick: '0',
+        disarm: '0',
+        sweep: '2',
+        block: '0',
+        dodge: '2',
+        grapple: '2',
+        throw: '3',
+        hold: '1',
+        choke: '0',
+        escape: '1',
+        ram: '4'
+      ),
       description: 'The “big-man” wrestling of Japan. It is one of the most popular sports in Japan, where they fight in a dirt ring called a “dohyo’ There are Power Slaps (punches), but Grappling and Throwing are the main techniques of Sumo. Also, it has the unique Ram Key Attack. This is also very popular among the Samoans and Hawaiians, who have achieved fame in Japan as Sumo wrestlers. Mongolia also has a version of Sumo. Key Actions: Punch, Dodge, Grapple, Throw, Hold, Escape, Ram.',
       notes: '',
       career: ''
@@ -1152,6 +1673,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '3',
+        kick: '3',
+        disarm: '0',
+        sweep: '2',
+        block: '2',
+        dodge: '1',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'A very fast and precise form, with graceful movements and some aerial kicks. Key attacks include: strikes, punches, kicks, block & parries, dodges.',
       notes: '',
       career: ''
@@ -1161,6 +1697,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '2',
+        punch: '2',
+        kick: '1',
+        disarm: '1',
+        sweep: '0',
+        block: '2',
+        dodge: '1',
+        grapple: '1',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'This is the basic Martial Art of the Chinese Army. Many beginners learn it as a way to stay healthy, and flexible, and so most people see the slow-motion kata practice. For a master (who goes at full speed), this becomes a very deadly Art. A Tai Chi Martial Artist moves from stillness like an explosion, using all of their inner power. Key Actions: Strike, Punch, Kick, Disarm, Block, Dodge, Grapple.',
       notes: '',
       career: ''
@@ -1170,6 +1721,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '3',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '2',
+        punch: '2',
+        kick: '1',
+        disarm: '1',
+        sweep: '2',
+        block: '0',
+        dodge: '1',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'This is a Martial Art from the islands of Okinawa in southern Japan.It is also known as “Ryukyu (Okinawa) Karate. Unlike Karate, Te uses some rather esoteric weapons. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Dodge.',
       notes: '',
       career: ''
@@ -1179,7 +1745,70 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '4',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '3',
+        kick: '4',
+        disarm: '0',
+        sweep: '0',
+        block: '2',
+        dodge: '0',
+        grapple: '1',
+        throw: '0',
+        hold: '0',
+        choke: '0',
+        escape: '0',
+        ram: '0'
+      ),
       description: 'One of the deadliest forms in existence, this style is known for blinding kicks delivered with incredible power, Key moves include: strikes, punches, kicks, blocks & parries, and grapples.',
+      notes: '',
+      career: ''
+    ), (
+      skillName: 'ThAMoC',
+      baseAttribute: 'REF',
+      modifier: '',
+      ipMultiplier: '2',
+      specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '0',
+        kick: '0',
+        disarm: '1',
+        sweep: '1',
+        block: '2',
+        dodge: '1',
+        grapple: '0',
+        throw: '0',
+        hold: '0',
+        choke: '2',
+        escape: '0',
+        ram: '0'
+      ),
+      description: 'ThAMoC, or "The Art of Modem Confrontation" or just "The Art", was created at the end of the 20th century by the police departments around the world to train their officers in weapon retention skills. Unlike its predecessors. Thamoc stresses flexibility right before impact Weapon retention is achieved by use of stances that allow for the maximum distance between your weapon and your opponent that is, until you attack). This skill works equally well with handguns, knives and other small melee weapons. In game terms, this style gives the user a defense against a Disarm attack at Thamoc Skill level +4! Remember, you still need Handgun or Melee skill to use the weapons themselves Due to its defensive nature, Thamoc cannot be used at the same time as Gun-fu.',
+      notes: '',
+      career: ''
+    ), (
+      skillName: 'Thrash Boxing',
+      baseAttribute: 'REF',
+      modifier: '',
+      ipMultiplier: '3',
+      specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '2',
+        kick: '3',
+        disarm: '0',
+        sweep: '3',
+        block: '0',
+        dodge: '1',
+        grapple: '0',
+        throw: '1',
+        hold: '0',
+        choke: '0',
+        escape: '2',
+        ram: '0'
+      ),
+      description: 'Like Capoeria, this form integrates dance movements into a powerful fighting style. This martial art grew up in the nightclub environment where chromer gangs (de)evolved dance contests into flashy rituals of intimide use Face-Off/Reputation rules and brutality. After a while, these rituals coalesced into an effective combat style. The key attacks of Thrash Boxing include tight, straight punches, contrasted by extravagant flying jump kicks. Special moves assume that the usual fighting environment is the dance floor, for example, performing a running slide on the slippery floor surface that ends in a sweep kick',
       notes: '',
       career: ''
     ), (
@@ -1215,6 +1844,21 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       modifier: '',
       ipMultiplier: '1',
       specialAbility: '',
+      martialArtBonuses: (
+        strike: '0',
+        punch: '0',
+        kick: '0',
+        disarm: '0',
+        sweep: '2',
+        block: '0',
+        dodge: '0',
+        grapple: '4',
+        throw: '3',
+        hold: '4',
+        choke: '2',
+        escape: '4',
+        ram: '0'
+      ),
       description: 'This form combines techniques of Olympic and Professonal wres. tling. The style uses a wide variety of throws and holds to incapacitate the opponent. Key attacks include: throws, holds, escapes, chokes, sweeps, trips, and grapples.',
       notes: '',
       career: ''
@@ -1479,6 +2123,15 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       description: 'The required skill for repairing and maintaining weapons of all types. At level +2, you can do repairs and field stripping. At level +6, you can repair all types of weapons and make simple modifications. At level +8, you can design your own weapons to order.',
       notes: '',
       career: 'Ex-Cybersoldier|Eurosolo|Solo'
+    ), (
+      skillName: 'Expert',
+      baseAttribute: 'INT',
+      modifier: '',
+      ipMultiplier: '1',
+      specialAbility: '',
+      description: 'You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.',
+      notes: '',
+      career: ''
     )),
     specialAbilities: ((
       skillName: 'ACPA Combat Sense',
@@ -1807,25 +2460,6 @@ players- you may elect to swap your original INT and REF stats for characters ge
       BODY: 'body type',
       EMP: 'empathy'
     ),
-    weaponTypes: ((
-      value: 'Archery',
-      label: 'Bow'
-    ), (
-      value: 'Heavy Weapons',
-      label: 'Heavy Weapons'
-    ), (
-      value: 'Melee',
-      label: 'Melee'
-    ), (
-      value: 'Handgun',
-      label: 'Pistol'
-    ), (
-      value: 'Rifle',
-      label: 'Rifle'
-    ), (
-      value: 'Submachinegun',
-      label: 'Submachinegun'
-    )),
     weaponConcealabilities: ((
       value: 'Not concealable',
       label: 'Not concealable'
@@ -1849,31 +2483,24 @@ players- you may elect to swap your original INT and REF stats for characters ge
       value: 'unreliable',
       label: 'unreliable'
     )),
-    genders: ((
-      value: 'm',
-      label: 'Male'
+    weaponTypes: ((
+      value: 'Archery',
+      label: 'Bow'
     ), (
-      value: 'f',
-      label: 'Female'
+      value: 'Heavy Weapons',
+      label: 'Heavy Weapons'
     ), (
-      value: 'mf',
-      label: 'Male presenting Female'
+      value: 'Melee',
+      label: 'Melee'
     ), (
-      value: 'fm',
-      label: 'Female presenting Male'
+      value: 'Handgun',
+      label: 'Pistol'
     ), (
-      value: 'a',
-      label: 'Androgynous'
-    )),
-    siblingAge: ((
-      value: 'younger',
-      label: 'Younger'
+      value: 'Rifle',
+      label: 'Rifle'
     ), (
-      value: 'older',
-      label: 'Older'
-    ), (
-      value: 'twin',
-      label: 'Twin'
+      value: 'Submachinegun',
+      label: 'Submachinegun'
     )),
     woundLevels: ('LIGHT', 'SERIOUS', 'CRITICAL', 'MORTAL 0', 'MORTAL 1', 'MORTAL 2', 'MORTAL 3', 'MORTAL 4', 'MORTAL 5', 'MORTAL 6')
   )

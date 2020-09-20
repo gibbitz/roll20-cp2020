@@ -1,0 +1,30 @@
+mixin useFieldStats(skillAttrName, rollMacro)
+  div(
+    class='cp-2020__skill__stat-wrapper cp-2020__skill__stat-wrapper--view'
+  )
+    label.cp-2020__skill__stat-wrapper(
+      for=`${skillAttrName}_roll`
+    )
+      div.cp-2020__stat-group
+        span(class='cp-2020__skill__lvl--view cp-2020__stat-group__value')
+          span(name=`attr_${skillAttrName}_level`)
+          span &sol;
+          span(name=`attr_${skillAttrName}_roll_total`)
+        span.cp-2020__stat-group__label lvl/tot
+
+      +rollBtn(
+        skillAttrName,
+        skillAttrName,
+        rollMacro
+      ).cp-2020__skill__roll
+    label.cp-2020__skill__stat-wrapper(
+      for=`${skillAttrName}_chipped-flip`
+    )
+      input(
+        type='hidden'
+        name=`attr_${skillAttrName}_chipped-flip`
+        id=`${skillAttrName}_chipped-flip`
+        value=`@{${skillAttrName}_chipped}`
+        disabled='true'
+      )
+      span.cp-2020__skill__chipped

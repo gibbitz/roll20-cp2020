@@ -1,0 +1,29 @@
++rollTemplate('attack-hit', 'damage and location')
+  div.cp-2020__roll-template__intro
+    span.cp-2020__initial-cap {{handle}}&nbsp;
+    | inflicts:
+  div.cp-2020__roll-template__result
+    |{{#rollTotal() isMelee 0}}
+    div.cp-2020__damage {{damage}} points of damage
+    |{{/rollTotal() isMelee 0}}
+
+    |{{#rollTotal() isMelee 1}}
+    div.cp-2020__damage {{meleeDamage}} points of damage
+    |{{/rollTotal() isMelee 1}}
+
+    |{{#rollTotal() isExplosive 0}}
+    div.cp-2020__location to the &nbsp;
+      each range, location in data.hitLocations
+        if range.length === 1
+          |{{#rollTotal() location #{range[0]}}}
+          span.cp-2020__hit-location=location
+          |{{/rollTotal() location #{range[0]}}}
+        else
+          |{{#rollBetween() location #{range[0]} #{range.slice(-1)[0]}}}
+          span.cp-2020__hit-location=location
+          |{{/rollBetween() location #{range[0]} #{range.slice(-1)[0]}}}
+    |{{/rollTotal() isExplosive 0}}
+
+    |{{#rollTotal() isExplosive 1}}
+    div.cp-2020__location to the whole body. Be sure to adjust armor accordingly.
+    |{{/rollTotal() isExplosive 1}}

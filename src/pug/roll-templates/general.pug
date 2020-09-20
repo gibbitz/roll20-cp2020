@@ -3,6 +3,7 @@ rolltemplate.sheet-rolltemplate-general
   div.cp-2020__roll-template__result-wrapper
     div.cp-2020__message-source {{message}}
     div.cp-2020__content {{roll}}
+    div(class='cp-2020__content-{{handle}}')
     div.cp-2020__details
       |{{#allprops()}}
       div {{key}}:&nbsp;

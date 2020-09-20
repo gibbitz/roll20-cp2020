@@ -1,0 +1,22 @@
+div {{roundsFired}} rounds in a burst.
+
+div.cp-2020__ranged-attack__hit
+  |{{#rollBetween() targetDistance 0 pointBlank}}
+  +rollBurstFireRange( 'point blank', 'pointBlank', (10 - 3))
+  |{{/rollBetween() targetDistance 0 pointBlank}}
+
+  |{{#rollBetween() targetDistance closeStart close}}
+  +rollBurstFireRange( 'close', 'close', (15 - 3))
+  |{{/rollBetween() targetDistance closeStart close}}
+
+  |{{#rollBetween() targetDistance mediumStart medium}}
+  +rollBurstFireRange( 'medium', 'medium', (20 - 3))
+  |{{/rollBetween() targetDistance mediumStart medium}}
+
+  |{{#rollBetween() targetDistance longStart long}}
+  +rollBurstFireRange( 'long', 'long', (25 - 3))
+  |{{/rollBetween() targetDistance longStart long}}
+
+  |{{#rollBetween() targetDistance extremeStart extreme}}
+  +rollBurstFireRange( 'long', 'long', (30 - 3))
+  |{{/rollBetween() targetDistance extremeStart extreme}}

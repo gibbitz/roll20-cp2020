@@ -1,0 +1,26 @@
+mixin skillInputField(skillAttrName, skillData, additionalData)
+  -
+    var rollMacro = `&{template:skill-check}
+      {{skill=@{${skillAttrName}_name}}}
+      {{handle=@{handle}}}
+      {{skillLevel=@{${skillAttrName}_level}}}
+      {{stat=@{${skillAttrName}_stat}}}
+      {{statName=@{${skillAttrName}_stat_level}}}
+      {{modifier=[[?{Modifier|0}+1d0]]}}
+      {{total=[[1d10!
+        + @{${skillAttrName}_level}
+        + ?{Modifier|0}]]
+      }}
+      {{fumble=[[1d10]]}}`
+
+  +skillFieldWrapper(skillAttrName, skillData)
+    input.cp-2020__skill__name--edit(
+      name=`attr_${skillAttrName}_name`
+      type='text'
+      value='Expert:'
+    )
+    select.cp-2020__skill__stat--edit(name=`attr_${skillAttrName}_stat`)
+      each statname, stat in data.stats
+        option=stat
+  +editFieldStats(skillAttrName, skillData, additionalData)
+  +useFieldStats(skillAttrName, rollMacro)

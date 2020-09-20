@@ -1,8 +1,13 @@
 @import '../_partials/data';
 
 $dataValues: map-get($data, 'data');
-$stats: map-get($dataValues, 'stats');
+$stats: append(map-get($dataValues, 'stats'),'Combat');
 $base: '.sheet-cp-2020';
+
+%roll-reset {
+  border: 0 !important;
+  color: $light-font-color;
+}
 
 %crit {
   border: 0 !important;
@@ -10,8 +15,14 @@ $base: '.sheet-cp-2020';
 }
 
 %fumble {
-  border: 0 !important;
-  color: rgba($level-2, 0.5) !important;
+  @extend %roll-reset;
+  color: rgba($level-1, 0.7) !important;
+}
+
+%important-title {
+  color: $background;
+  padding: 2px 2px 0;
+  margin-bottom: 0.2em;
 }
 
 %roll-template {
@@ -26,16 +37,24 @@ $base: '.sheet-cp-2020';
     text-transform: uppercase;
   }
 
+  #{$base}__initial-cap {
+    text-transform: capitalize;
+  }
+
   #{$base}__roll-template__result-wrapper {
     @extend %section-wrapper;
     letter-spacing: 1px;
   }
 
   .inlinerollresult,
-  #{$base}__roll-template__digit {
+  #{$base}__roll-template__digit,
+  #{$base}__roll-template__result-digit {
+    @extend %roll-reset;
     background: transparent;
-    border: 0;
-    color: $light-font-color;
+
+    &.importantroll {
+      @extend %roll-reset;
+    }
 
     &.fullfail {
       @extend %fumble;
@@ -46,23 +65,40 @@ $base: '.sheet-cp-2020';
     }
   }
 
-  #{$base}__fail,
-  #{$base}__fumble {
+  #{$base}__roll-fail,
+  #{$base}__roll-fumble {
     @extend %fumble;
+
+    &__title {
+      @extend %important-title;
+      background: rgba($level-1, 0.5) !important;
+    }
+
+    + #{$base}__roll-success {
+      @extend %hide;
+    }
   }
 
-  #{$base}__critical,
-  #{$base}__success {
+  #{$base}__roll-critical{
     @extend %crit;
+
+    &__title {
+      @extend %important-title;
+      background: rgba($level-9, 0.5) !important;
+    }
   }
 
-  #{$base}__details {
+  #{$base}__roll-success {
+  }
+
+
+  #{$base}__roll-template__result-details {
     cursor: pointer;
     height: auto;
     max-height: 1em;
     overflow: hidden;
     pointer-events: initial;
-    transition: max-height 0.5s ease-in;
+    // transition: max-height 0.5s ease-in;
 
     &::before {
       content: '+ details';
@@ -72,7 +108,8 @@ $base: '.sheet-cp-2020';
     }
 
     &:hover {
-      max-height: 500px;
+      max-height: 100%;
+      // max-height: 500px;
       &::before {
         content: '   details';
         white-space: pre;
@@ -81,9 +118,18 @@ $base: '.sheet-cp-2020';
 
   }
 }
-
-
-
+%fumbleable-template {
+  @each $stat, $statName in $stats {
+    #{$base}__roll-fumble-wrapper--#{$stat} {
+      > * {
+        display: none;
+      }
+      #{$base}__roll-fumble--#{$stat} {
+        display: block;
+      }
+    }
+  }
+}
 
 .sheet-rolltemplate-save-template{
   @extend %roll-template;
@@ -95,28 +141,16 @@ $base: '.sheet-cp-2020';
   }
 }
 
-.sheet-rolltemplate-general {
+.sheet-rolltemplate-general,
+.sheet-rolltemplate-attack-hit {
   @extend %roll-template;
 }
 
-.sheet-rolltemplate-skill-check-template {
+.sheet-rolltemplate-skill-check,
+.sheet-rolltemplate-supressive-fire,
+.sheet-rolltemplate-unskilled-check,
+.sheet-rolltemplate-attack-melee,
+.sheet-rolltemplate-attack-ranged {
   @extend %roll-template;
-}
-
-.sheet-rolltemplate-check-template{
-  @extend %roll-template;
-
-  #{$base}__check-rolled {
-
-  }
-  @each $stat, $statName in $stats {
-    #{$base}__fumble-wrapper--#{$stat} {
-      > * {
-        display: none;
-      }
-      #{$base}__fumble--#{$stat} {
-        display: block;
-      }
-    }
-  }
+  @extend %fumbleable-template;
 }

@@ -29,11 +29,15 @@ mixin section(sectionName)
   @attribute {[Sting]} class takes the css class from the attributes applied to the mixin
 //- ==============================================================
 mixin rollBtn(nameOfRoll, rollId, valueCalc)
-  button(
-    class=(attributes.class || '')
-    id=`${rollId}_roll`
-    name=`act_${id}`
-    title=`roll ${nameOfRoll}`
-    type='roll'
-    value=compressString(valueCalc)
-  )
+  if(nameOfRoll && valueCalc)
+    button(
+      class=(attributes.class || '')
+      id=`${rollId}_roll`
+      name=`act_${id}`
+      title=`roll ${nameOfRoll.replace(/_|-/g, ' ')}`
+      type='roll'
+      value=compressString(valueCalc)
+    )
+  else
+    p there is a problem with the parameters passed to this mixin:
+    |

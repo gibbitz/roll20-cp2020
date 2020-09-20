@@ -1,33 +1,7 @@
 +section('stats')
-  +box.cp-2020__stats__character-points
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints_Base'
-        id='CharacterPoints_Base'
-        min='18'
-        max='90'
-      )
-      label(for='CharacterPoints_Base') Character Points
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints'
-        disabled='true'
-        value=`@{INT_Base}+@{REF_Base}+@{TECH_Base}+@{CL_Base}+@{ATT_Base}+@{LUCK_Base}+@{MA_Base}+@{BODY_Base}+@{EMP_Base}`
-      )
-      label(for='attr_CharacterPoints') Used
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints_Left'
-        disabled='true'
-        value=`(@{CharacterPoints}-@{CharacterPoints_Base})*-1`
-      )
-      label(for='attr_CharacterPoints_Left') Remaining
-
   input(type='hidden' value='1' name='attr_Wound_Divisor')
   input(type='hidden' value='0' name='attr_Wound_Ref_Mod')
+  input(type='hidden' value='0' name='attr_Damage_Bonus')
   div.cp-2020__stats__view-grid
     each name, stat in data.stats
       input.cp-2020__stats__value-indicator(
@@ -69,12 +43,16 @@
           +rollBtn(
             `${name} check`,
             `${stat}_stat`,
-            `&{template:check-template}
+            `&{template:unskilled-check}
               {{name=Stat Check}}
               {{handle=@{Handle}}}
               {{statName=${stat}}}
               {{stat=@{${stat}}}}
-              {{total=[[1d10!! + @{${stat}} + ?{Modifier|0} ]]}}
+              {{modifier=[[?{Modifier|0}+1d0]]}}
+              {{total=[[1d10!
+                + @{${stat}}
+                + ?{Modifier|0}]]
+              }}
               {{fumble=[[1d10]]}}`
           ).cp-2020__stat__check-btn
 
@@ -84,8 +62,8 @@
             `&{template:save-template}
               {{handle=@{Handle}}}
               {{targetName=${stat}}}
-              {{roll=[[ 1d10 ]]}}
-              {{targetValue=[[ @{${stat}} ]]}}
+              {{roll=[[1d10]]}}
+              {{targetValue=[[@{${stat}}]]}}
               {{failMsg=${stat}&nbsp;save&nbsp;failed.}}
               {{successMsg=${stat}&nbsp;save&nbsp;succeeded.}}`
           ).cp-2020__stat__save-btn
@@ -203,3 +181,30 @@
           )
           span.cp-2020__stat__abbr='[LIFT]'
       div.cp-2020__stat__roll-btns
+
+  +box.cp-2020__stats__character-points
+    div.cp-2020__character-points__group
+      input(
+        type='number'
+        name='attr_CharacterPoints_Base'
+        id='CharacterPoints_Base'
+        min='18'
+        max='90'
+      )
+      label(for='CharacterPoints_Base') Character Points
+    div.cp-2020__character-points__group
+      input(
+        type='number'
+        name='attr_CharacterPoints'
+        disabled='true'
+        value=`@{INT_Base}+@{REF_Base}+@{TECH_Base}+@{CL_Base}+@{ATT_Base}+@{LUCK_Base}+@{MA_Base}+@{BODY_Base}+@{EMP_Base}`
+      )
+      label(for='attr_CharacterPoints') Used
+    div.cp-2020__character-points__group
+      input(
+        type='number'
+        name='attr_CharacterPoints_Left'
+        disabled='true'
+        value=`(@{CharacterPoints}-@{CharacterPoints_Base})*-1`
+      )
+      label(for='attr_CharacterPoints_Left') Remaining

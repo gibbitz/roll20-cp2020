@@ -3,6 +3,8 @@ const specialAbilities = require('./special-abilities.json')
 const compoundSkills = require('./compound-skills.json')
 const roles = require('./roles.json')
 const fumbles = require('./fumbles.json')
+const hitLocations = require('./hit-locations.json')
+const bodyTypes = require('./body-types.json')
 
 const stats = {
   INT: 'intelligence',
@@ -67,17 +69,19 @@ const siblingAge = [
 
 module.exports = {
   data: {
+    bodyTypes,
     compoundSkills,
     fumbles,
+    genders,
+    hitLocations,
     roles,
+    siblingAge,
     skills,
     specialAbilities,
     stats,
-    weaponTypes,
     weaponConcealabilities,
     weaponReliabilities,
-    genders,
-    siblingAge,
+    weaponTypes,
     woundLevels
   }
 }

@@ -10,6 +10,58 @@ function getStatsBySkill(skills) {
   return output;
 }
 
+function updateWeapons() {
+  const WEAPON_REPEATER = 'repeating_weapons'
+  const WEAPON = '_weapon';
+  const getWeaponValue = (id, key='') =>
+    `${WEAPON_REPEATER}_${id}${key ? WEAPON + '_' + key : ''}`;
+  getSectionIDs(WEAPON_REPEATER, ids => {
+    const attrsToGet  = []
+    ids.forEach(id => {
+      attrsToGet.push(getWeaponValue(id, 'type'))
+      attrsToGet.push(getWeaponValue(id, 'rof'))
+      attrsToGet.push(getWeaponValue(id, 'blast_radius'))
+    });
+    getAttrs(attrsToGet, values => {
+      const skillsToGetLevels = [];
+      const skillsToGetStats = Object.keys(values).map(key => {
+        if(key.indexOf(`${WEAPON}_type`) > -1){
+          skillsToGetLevels.push(`Skill_${values[key]}_level`);
+          return values[key];
+        }
+      });
+      const statNames = getStatsBySkill(skillsToGetStats);
+      updateStats((statValues) => {
+        getAttrs(skillsToGetLevels, (skillLevels) => {
+          const attrsToSet = {};
+          ids.forEach((id, index) => {
+            const type = values[getWeaponValue(id, 'type')]
+            const rof = values[getWeaponValue(id, 'rof')]
+            const blastRadius = values[getWeaponValue(id, 'blast_radius')]
+            const statName = statNames[Object.keys(statNames)[index]]
+            attrsToSet[getWeaponValue(id, 'is_melee')] = type === 'Melee' ? 1 : 0;
+            attrsToSet[getWeaponValue(id, 'is_ranged')] = [
+              'Handgun',
+              'Rifle',
+              'Submachinegun',
+              'Heavy',
+              'Bow'
+            ].indexOf(type) > -1 ? 1 : 0;
+            attrsToSet[getWeaponValue(id, 'is_full_auto')] = parseInt(rof.split('|').pop(), 10) > 2 ? 1 : 0;
+            attrsToSet[getWeaponValue(id, 'is_explosive')] = !!blastRadius ? 1 : 0;
+
+            attrsToSet[getWeaponValue(id, 'skill_level')] = skillLevels[Object.keys(skillLevels)[index]]
+            attrsToSet[getWeaponValue(id, 'stat')] = statName
+            attrsToSet[getWeaponValue(id, 'stat_level')] = statValues[statName]
+          });
+          // console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', attrsToSet);
+          setAttrs(attrsToSet);
+        });
+      });
+    });
+  });
+}
+
 on('change:repeating_weapons:weapon_type', function(eventInfo) {
   const skillAttrName = `Skill_${eventInfo.newValue}`
   const attrsToGet = [
@@ -28,37 +80,4 @@ on('change:repeating_weapons:weapon_type', function(eventInfo) {
   })
 });
 
-on("sheet:opened", eventInfo => {
-  getSectionIDs("repeating_weapons", ids => {
-    const attrsToGet = ids.map(id => `repeating_weapons_${id}_weapon_type`);
-    getAttrs(attrsToGet, values => {
-      const skillsToGetLevels = [];
-      const skillsToGetStats = Object.keys(values).map(key => {
-        skillsToGetLevels.push(`Skill_${values[key]}_level`);
-        return values[key];
-      });
-      const statNames = getStatsBySkill(skillsToGetStats);
-      getAttrs(skillsToGetLevels, (skillLevels) => {
-        const weaponSkillsToSet = {};
-        ids.forEach((id, index) => {
-          const rowBase = `repeating_weapons_${id}_weapon`;
-          const type = values[`repeating_weapons_${id}_weapon_type`]
-          weaponSkillsToSet[`${rowBase}_is_melee`] = type === 'Melee';
-          weaponSkillsToSet[`${rowBase}_is_ranged`] = [
-            'Handgun',
-            'Rifle',
-            'Submachinegun',
-            'Heavy'
-          ].indexOf(type) > -1;
-          weaponSkillsToSet[`${rowBase}_is_full_auto`] = rof > 2;
-          weaponSkillsToSet[`${rowBase}_is_explosive`] = !!blastRadius;
-
-          weaponSkillsToSet[`${rowBase}_skill_level`] = skillLevels[Object.keys(skillLevels)[index]]
-          weaponSkillsToSet[`${rowBase}_weapon_stat`] = statNames[Object.keys(statNames)[index]]
-        });
-        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', weaponSkillsToSet);
-        setAttrs(weaponSkillsToSet);
-      });
-    });
-  });
-});
+on("sheet:opened change:repeating_weapons", updateWeapons);

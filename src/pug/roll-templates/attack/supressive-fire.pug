@@ -1,0 +1,14 @@
++rollTemplate('supressive-fire', 'suppressive fire')
+  div.cp-2020__roll-template__intro
+     span.cp-2020__initial-cap {{handle}}&nbsp;
+     | fills a&nbsp;
+     span.cp-2020__roll-template__digit {{fireZone}}&nbsp;
+     | meter fize-zone with&nbsp;
+     span.cp-2020__roll-template__digit {{roundsFired}}&nbsp;
+     | rounds.
+
+  +fumbleFactory('fumbleType', 'save')
+
+  div.cp-2020__roll-success Those in the firezone must beat a difficulty {{save}} Atheletics to avoid being hit.
+
+  +critFactory('your {{skill}}', 'save')

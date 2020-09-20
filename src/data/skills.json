@@ -358,16 +358,6 @@
         "career": "Action Reporter|Administrator|Attorney/Judge|Celebrity Reporter|Combat Medic|Cop|Corporate|Cultist|Doctor|Factor|Freelancer|Information Broker|Investigative Reporter|Lawyer|Marine Biotech|Med Tech|Media|Pharmacist/Bioware Researcher|Negotiator|Netrunner|On-Air Star|Pimp|Police Beat Reporter|Rogue Hunter|Shoemaker|Social Reporter|Spy|Tabloid-Monger|Talent Agent/Manager|Talent Scout|Techie|The Spin Doctor|Trader|War Correspondent"
     },
     {
-        "skillName": "Expert",
-        "baseAttribute": "INT",
-        "modifier": "",
-        "ipMultiplier": "1",
-        "specialAbility": "",
-        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
-        "notes": "",
-        "career": "Action Reporter:Sport|Aquatic Nomad:Ocean Life forms+Vessel ID|Attorney/Judge:Law|Bounty Hunter:Exotic Weapons|Corp Operative:Corp. Admin|Covert Tech Demolitions Ops:Structural Architecture|Covert Tech Elint Ops:Electronic Warfare|Information Broker:CHOOSE|Japanese SDF Officer:Law|Lawyer:Law|Marine Biotech:Psychology|Negotiator:CHOOSE |Rogue Hunter:World Net Systems+Computer Systems|Shaman:Fortune Telling|Spiritual Leader:Theology/History|Talent Agent/Manager:Entertainment|Talent Scout:CHOOSE|Workganger:Construction"
-    },
-    {
         "skillName": "Farsi",
         "baseAttribute": "INT",
         "modifier": "",
@@ -723,6 +713,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 0,
+          "kick": 0,
+          "disarm": 3,
+          "sweep": 3,
+          "block": 4,
+          "dodge": 3,
+          "grapple": 2,
+          "throw": 3,
+          "hold": 3,
+          "choke": 1,
+          "escape": 3,
+          "ram": 0
+        },
         "description": "This form relies on using the opponent's strength and momentum against him. It is a perfect form for stopping an opponent peacefully while making yourself very hard to hit. Key attacks are: blocks & parries, dodges, throws, holds, escapes, chokes, sweeps, trips & sweeps, grapples.",
         "notes": "",
         "career": ""
@@ -733,7 +738,47 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike":2,
+          "punch": 0,
+          "kick": 2,
+          "disarm": 0,
+          "sweep": 1,
+          "block": 2,
+          "dodge": 0,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "These are forms based on animal movements, such as crane, mantis, tiger, leopard and dragon forms. These attacks are fast and dangerous, with a style that is exciting and flashy. Key attacks include: strikes, punches, kicks, blocks & parries, sweeps & trips.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Arasaka Te",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 1,
+          "kick": 1,
+          "disarm": 1,
+          "sweep": 0,
+          "block": 1,
+          "dodge": 1,
+          "grapple": 1,
+          "throw": 1,
+          "hold": 1,
+          "choke": 2,
+          "escape": 0,
+          "ram": 0
+        },
+        "description": "When Arasaka wanted to select a martial art to train its forces in selected leading hand to hand fighting experts to create the world's greatest martial art to date. After several years of development, Arasaka troops began to learn Arasaka Te. Several smash hit videos were made based on corporate Solos armed only with this martial art style defeating opponents against all odds. Soon Arasaka sponsored dojos began teaching Arasakate at reasonable rates. While this fighting form is widely respected, anyone who has any actual experience with Arasakate will tell you that it is a bland style made up of the easiest moves of seven different styles. Martial Arts designed by committees don't usually work too well.",
         "notes": "",
         "career": ""
     },
@@ -755,7 +800,7 @@
         "specialAbility": "",
         "description": "This skill is required for accurate throwing, climbing, and balancing. It combines the basic elements of any high school level sports program. At +3 and above, you are the equivalent of a real high school \"jock\". At +5 and above, you can perform in college level competitions. At +8 and above, you are of Olympic or Professional caliber.",
         "notes": "",
-        "career": "Aerojock|Assassin|British Combined Forces|Combat Medic|Cop|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Nomad|Outrider|PA Trooper|Pathfinder|Pirate|Prowler|Runner|Shinobi|Solo|Tatsujin|USAF/EDF Air Force"
+        "career": "Aerojock|Assassin|British Combined Forces|Combat Medic|Cop|Covert Specialist|Covert Tech Demolitions Ops|Covert Tech Elint Ops|Covert Tech Intrusion Ops|Covert Tech Netrunner Ops|Covert Tech Remote Ops|Eurosolo|Nomad|Outrider|PA Trooper|Pathfinder|Pirate|Prowler|Shinobi|Solo|Tatsujin|USAF/EDF Air Force"
     },
     {
         "skillName": "Boxing",
@@ -763,6 +808,21 @@
         "modifier": "",
         "ipMultiplier": "1",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 3,
+          "kick": 0,
+          "disarm": 0,
+          "sweep": 0,
+          "block": 3,
+          "dodge": 1,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "The manly art of fisticuffs, this form delivers lightning punches and a tight blocking defense. Key attacks are: punches, blocks & parries.",
         "notes": "",
         "career": ""
@@ -775,7 +835,7 @@
         "specialAbility": "",
         "description": "The skill of fighting man to man with fist, feet and other parts of the body. Brawling is not a trained skill it is learned on the Street by getting into a lot of fights. Unlike Martial Arts, there are no specialized attacks and no damage bonuses based on level of mastery.",
         "notes": "",
-        "career": "Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Runner|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior"
+        "career": "Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior"
     },
     {
         "skillName": "Capoeria",
@@ -783,6 +843,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 1,
+          "kick": 2,
+          "disarm": 0,
+          "sweep": 3,
+          "block": 2,
+          "dodge": 2,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "Created by Carribean slaves, this form combines dancelike movements with fast kicks and low line sweeps. It is a relatively unknown form and can be combined with dance moves to disguise it's true power. Key attacks are: punches, kicks, blocks & parries, dodges, and sweeps & trips.",
         "notes": "",
         "career": ""
@@ -793,6 +868,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 2,
+          "punch": 2,
+          "kick": 2,
+          "disarm": 1,
+          "sweep": 2,
+          "block": 2,
+          "dodge": 1,
+          "grapple": 1,
+          "throw": 1,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "Descended directly from the ancient Shaolin temples, this form combines powerful roundhouse blows and sweeping kicks into a dynamic fighting style. Key attacks are: strikes, punches, kicks, blocks & parries, dodges, throws, and sweeps & trips.",
         "notes": "",
         "career": ""
@@ -848,6 +938,31 @@
         "career": ""
     },
     {
+        "skillName": "Gun-fu",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "4",
+        "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 0,
+          "kick": 0,
+          "disarm": 0,
+          "sweep": 3,
+          "block": 2,
+          "dodge": 4,
+          "grapple": 4,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 2,
+          "ram": 0
+        },
+        "description": "This \"style\" is generally thought to be of Chinese origin. Developed as a system for more effective combat hand-gunnery within enclosed spaces, Gun-fu (sometimes known as Gunjitsu) is based on the concept of the handgun as an extension of the user's body. Within this martial art, the handgun is used like a melee weapon. Most commonly, the attacker will run right up to his opponent, shove his gun into the gonk's stomach, and pull the trigger as many times as it takes. The advantage to this is that gunshots delivered at point-blank range do MAXIMUM damage. The basic principle of Gun-fu the handgun as a part of the body also serves to increase fire fight mobility. This martial art reduces the penalty for multiple actions by +1/4 skill level (round down). In this way, Gun-fu allows such combination maneuvers as fast-draws, off-handed shooting, two-weapon attacks and firing while running or dodging to be carried out more effectively note that these modifiers only apply to Point Blank or Close Range distances, and you still need to have a Handgun skill. Gun-fu is a very fast-paced, frantic combat style, requiring physical fitness and shooting skills. It is a favorite of the Triads.",
+        "notes": "",
+        "career": ""
+    },
+    {
         "skillName": "Handgun",
         "baseAttribute": "REF",
         "modifier": "",
@@ -871,6 +986,21 @@
         "skillName": "Jeet Kun Do",
         "baseAttribute": "REF",
         "ipMultiplier": "3",
+        "martialArtBonuses": {
+          "strike": 3,
+          "punch": 3,
+          "kick": 2,
+          "disarm": 1,
+          "sweep": 1  ,
+          "block": 2,
+          "dodge": 0,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "Have you seen anyof the old Bruce Lee vids? JKDis the style he created, and the name means “The Way of the Parrying Punch” Its main attack is to Parry the Opponent's attack (thus creating an opening) and deliver one short, deadly punch from very close in. Lee created this style because he felt that Kung Fu had become too structured, and “Martial Arts must evolve” A JKD student must learn his/her own forte (blocking, punching, kicking, etc.) first, and then the teacher will help them expand their forte to include the rest of the style. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block"
     },
     {
@@ -879,6 +1009,21 @@
         "modifier": "",
         "ipMultiplier": "1",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 0,
+          "kick": 0,
+          "disarm": 0,
+          "sweep": 2,
+          "block": 0,
+          "dodge": 1,
+          "grapple": 2,
+          "throw": 3,
+          "hold": 2,
+          "choke": 1,
+          "escape": 2,
+          "ram": 0
+        },
         "description": "This system was designed as a sport form, but is very effective in combat as well. It uses throws and sweeps to knock down the opponent. Key attacks include: dodges, throws, holds, escapes, sweeps & trips and grappling.",
         "notes": "key attacks add bonus and skill lvl added to all damage",
         "career": ""
@@ -889,6 +1034,21 @@
         "modifier": "",
         "ipMultiplier": "2",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 2,
+          "kick": 2,
+          "disarm": 1,
+          "sweep": 0  ,
+          "block": 2,
+          "dodge": 0,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "The Japanese version of kung fu, this style uses straight line movements and powerful blows. Variations include shotokan and kenpo, each with their own special moves. Key attacks are: punches, kicks, and blocks & parries.",
         "notes": "",
         "career": ""
@@ -897,6 +1057,21 @@
         "skillName": "Koppo",
         "baseAttribute": "REF",
         "ipMultiplier": "4",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 4,
+          "kick": 2,
+          "disarm": 0,
+          "sweep": 3,
+          "block": 3,
+          "dodge": 0,
+          "grapple": 2,
+          "throw": 0,
+          "hold": 2,
+          "choke": 1,
+          "escape": 2,
+          "ram": 0
+        },
         "description": "The full name for this style is Kenkagei-Koppo.It is the urban style of the all-purpose Ninjutsu-Koppo. The founder of this style liked Ninjutsu, but realized that the huge number of Key Actions made it difficult to learn, so he streamlined it down, and made the main attack a Slap/Knifehand (punch) and Grapple combination. Key Actions: Punch, Kick, Sweep, Block, Grapple, Hold, Choke, Escape."
     },
     {
@@ -925,6 +1100,21 @@
         "modifier": "",
         "ipMultiplier": "5",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 3,
+          "punch": 3,
+          "kick": 1,
+          "disarm": 2,
+          "sweep": 2,
+          "block": 2,
+          "dodge": 2,
+          "grapple": 1,
+          "throw": 2,
+          "hold": 1,
+          "choke": 1,
+          "escape": 1,
+          "ram": 0
+        },
         "description": "The full name for this Style is Ninjutsu-Koppo. This is one of the oldest styles in Japan. The old ninja clans used this Koppo, but with the rise of Kenkagei-Koppo, this is referred to just as Ninjutsu. This is a very all-purpose style, with many key actions, so it is very hard to learn. Also, most Masters are hard to find (they're Ninjas) and unwilling to teach. Only members of a clan are permitted to learn this style. Of course, there is no chip for it. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Block, Dodge, Grapple, Throw, Hold, Choke, Escape.",
         "notes": "",
         "career": "Shinobi"
@@ -1050,7 +1240,7 @@
         "career": "Aquatic Nomad|Subjock"
     },
     {
-        "skillName": "Pilot (Vect.Thrust Vehicle)",
+        "skillName": "Pilot (Vector Thrust Vehicle)",
         "baseAttribute": "REF",
         "modifier": "",
         "ipMultiplier": "3",
@@ -1075,7 +1265,22 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
-        "description": "ommand Sambo is the New Soviet Army's own Martial Art. This is a hybrid of Wrestling, Judo, and just plain nastiness.",
+        "martialArtBonuses": {
+          "strike": 2,
+          "punch": 2,
+          "kick": 2,
+          "disarm": 2,
+          "sweep": 2,
+          "block": 0,
+          "dodge": 0,
+          "grapple": 2,
+          "throw": 3,
+          "hold": 2,
+          "choke": 0,
+          "escape": 2,
+          "ram": 0
+        },
+        "description": "Command Sambo is the New Soviet Army's own Martial Art. This is a hybrid of Wrestling, Judo, and just plain nastiness.",
         "notes": "",
         "career": ""
     },
@@ -1105,6 +1310,21 @@
         "modifier": "",
         "ipMultiplier": "4",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 2,
+          "kick": 0,
+          "disarm": 0,
+          "sweep": 2,
+          "block": 0,
+          "dodge": 2,
+          "grapple": 2,
+          "throw": 3,
+          "hold": 1,
+          "choke": 0,
+          "escape": 1,
+          "ram": 4
+        },
         "description": "The “big-man” wrestling of Japan. It is one of the most popular sports in Japan, where they fight in a dirt ring called a “dohyo’ There are Power Slaps (punches), but Grappling and Throwing are the main techniques of Sumo. Also, it has the unique Ram Key Attack. This is also very popular among the Samoans and Hawaiians, who have achieved fame in Japan as Sumo wrestlers. Mongolia also has a version of Sumo. Key Actions: Punch, Dodge, Grapple, Throw, Hold, Escape, Ram.",
         "notes": "",
         "career": ""
@@ -1115,6 +1335,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 3,
+          "kick": 3,
+          "disarm": 0,
+          "sweep": 2,
+          "block": 2,
+          "dodge": 1,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "A very fast and precise form, with graceful movements and some aerial kicks. Key attacks include: strikes, punches, kicks, block & parries, dodges.",
         "notes": "",
         "career": ""
@@ -1125,6 +1360,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 2,
+          "punch": 2,
+          "kick": 1,
+          "disarm": 1,
+          "sweep": 0,
+          "block": 2,
+          "dodge": 1,
+          "grapple": 1,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "This is the basic Martial Art of the Chinese Army. Many beginners learn it as a way to stay healthy, and flexible, and so most people see the slow-motion kata practice. For a master (who goes at full speed), this becomes a very deadly Art. A Tai Chi Martial Artist moves from stillness like an explosion, using all of their inner power. Key Actions: Strike, Punch, Kick, Disarm, Block, Dodge, Grapple.",
         "notes": "",
         "career": ""
@@ -1135,6 +1385,21 @@
         "modifier": "",
         "ipMultiplier": "3",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 2,
+          "punch": 2,
+          "kick": 1,
+          "disarm": 1,
+          "sweep": 2,
+          "block": 0,
+          "dodge": 1,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "This is a Martial Art from the islands of Okinawa in southern Japan.It is also known as “Ryukyu (Okinawa) Karate. Unlike Karate, Te uses some rather esoteric weapons. Key Actions: Strike, Punch, Kick, Disarm, Sweep, Dodge.",
         "notes": "",
         "career": ""
@@ -1145,7 +1410,72 @@
         "modifier": "",
         "ipMultiplier": "4",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 3,
+          "kick": 4,
+          "disarm": 0,
+          "sweep": 0,
+          "block": 2,
+          "dodge": 0,
+          "grapple": 1,
+          "throw": 0,
+          "hold": 0,
+          "choke": 0,
+          "escape": 0,
+          "ram": 0
+        },
         "description": "One of the deadliest forms in existence, this style is known for blinding kicks delivered with incredible power, Key moves include: strikes, punches, kicks, blocks & parries, and grapples.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "ThAMoC",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "2",
+        "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 0,
+          "kick": 0,
+          "disarm": 1,
+          "sweep": 1,
+          "block": 2,
+          "dodge": 1,
+          "grapple": 0,
+          "throw": 0,
+          "hold": 0,
+          "choke": 2,
+          "escape": 0,
+          "ram": 0
+        },
+        "description": "ThAMoC, or \"The Art of Modem Confrontation\" or just \"The Art\", was created at the end of the 20th century by the police departments around the world to train their officers in weapon retention skills. Unlike its predecessors. Thamoc stresses flexibility right before impact Weapon retention is achieved by use of stances that allow for the maximum distance between your weapon and your opponent that is, until you attack). This skill works equally well with handguns, knives and other small melee weapons. In game terms, this style gives the user a defense against a Disarm attack at Thamoc Skill level +4! Remember, you still need Handgun or Melee skill to use the weapons themselves Due to its defensive nature, Thamoc cannot be used at the same time as Gun-fu.",
+        "notes": "",
+        "career": ""
+    },
+    {
+        "skillName": "Thrash Boxing",
+        "baseAttribute": "REF",
+        "modifier": "",
+        "ipMultiplier": "3",
+        "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 2,
+          "kick": 3,
+          "disarm": 0,
+          "sweep": 3,
+          "block": 0,
+          "dodge": 1,
+          "grapple": 0,
+          "throw": 1,
+          "hold": 0,
+          "choke": 0,
+          "escape": 2,
+          "ram": 0
+        },
+        "description": "Like Capoeria, this form integrates dance movements into a powerful fighting style. This martial art grew up in the nightclub environment where chromer gangs (de)evolved dance contests into flashy rituals of intimide use Face-Off/Reputation rules and brutality. After a while, these rituals coalesced into an effective combat style. The key attacks of Thrash Boxing include tight, straight punches, contrasted by extravagant flying jump kicks. Special moves assume that the usual fighting environment is the dance floor, for example, performing a running slide on the slippery floor surface that ends in a sweep kick",
         "notes": "",
         "career": ""
     },
@@ -1185,6 +1515,21 @@
         "modifier": "",
         "ipMultiplier": "1",
         "specialAbility": "",
+        "martialArtBonuses": {
+          "strike": 0,
+          "punch": 0,
+          "kick": 0,
+          "disarm": 0,
+          "sweep": 2,
+          "block": 0,
+          "dodge": 0,
+          "grapple": 4,
+          "throw": 3,
+          "hold": 4,
+          "choke": 2,
+          "escape": 4,
+          "ram": 0
+        },
         "description": "This form combines techniques of Olympic and Professonal wres. tling. The style uses a wide variety of throws and holds to incapacitate the opponent. Key attacks include: throws, holds, escapes, chokes, sweeps, trips, and grapples.",
         "notes": "",
         "career": ""
@@ -1478,5 +1823,15 @@
         "description": "The required skill for repairing and maintaining weapons of all types. At level +2, you can do repairs and field stripping. At level +6, you can repair all types of weapons and make simple modifications. At level +8, you can design your own weapons to order.",
         "notes": "",
         "career": "Ex-Cybersoldier|Eurosolo|Solo"
+    },
+    {
+        "skillName": "Expert",
+        "baseAttribute": "INT",
+        "modifier": "",
+        "ipMultiplier": "1",
+        "specialAbility": "",
+        "description": "You may use this skill to be an expert on one specific subject, such as rare postage stamps, obscure weapons, a foreign language, etc. At +3, you are the local expert. At +6, you know enough to publish a few books on the subject. At +8 or better, your books are recognized as major texts on the subject, and you could do the talk-show circuit if you wanted to.",
+        "notes": "",
+        "career": ""
     }
 ]

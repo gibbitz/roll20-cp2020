@@ -1,0 +1,11 @@
++rollTemplate('attack-melee', 'Hand to Hand')
+  div.cp-2020__roll-template__intro
+    span.cp-2020__initial-cap {{handle}}&nbsp;
+    | Takes a Swing
+  +fumbleFactory('fumbleType')
+
+  div.cp-2020__roll-template__success
+    div.cp-2020__total Roll total: {{total}}
+    div.cp-2020__result Defender must beat {{total}} or take damage.
+
+  +critFactory('your {{skill}}')

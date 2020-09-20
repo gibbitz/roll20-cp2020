@@ -6,8 +6,9 @@ var compoundSkills = data.compoundSkills;
 var skills = pickupSkills.concat(specialAbilities, compoundSkills);
 var potentialCompoundSkills = compoundSkills.concat(specialAbilities);
 var calcSkillEvents = [
-  'change:Wound_Level',
-  'change:Stun_Level',
+  'change:Wound_Level',// TODO: change case?
+  'change:Stun_Level', // TODO: change case?
+  'change:role',
   'sheet:opened'
 ];
 var statKeys = Object.keys(stats) || [];
@@ -29,7 +30,7 @@ skills.forEach(function(skill) {
 });
 
 calcSkillEvents = calcSkillEvents.join(' ').toLowerCase();
-
+// console.log('|>|>|>|>|>|>|>|>|> ', calcSkillEvents);
 on(calcSkillEvents, function(eventInfo) {
   updateStats(function() {
     getStats(function(stats) {
@@ -39,7 +40,7 @@ on(calcSkillEvents, function(eventInfo) {
           var attrName = `Skill_${nameToAttrName(skill.skillName)}`;
           attrsToFetch.push(`${attrName}_level`);
           attrsToFetch.push(`${attrName}_ip`);
-          attrsToFetch.push(`${attrName}_name`)
+          attrsToFetch.push(`${attrName}_name`);
         }
       });
       getAttrs(attrsToFetch, function(skillAttrs) {
@@ -67,12 +68,24 @@ on(calcSkillEvents, function(eventInfo) {
               );
               // if (!isNaN(stat)) console.log(skill.skillName, stat, skill.baseAttribute)
               stat = isNaN(stat) ? 0 : stat;
+              attrsToSet[`${skillAttrName}_stat`] = Object.keys(subSkill).length > 0
+                ? subSkill.baseAttribute
+                : subSkill.baseAttribute;
+              if (Object.keys(subSkill).length > 0) {
+                attrsToSet[`${skillAttrName}_ma_roll_table`] = subSkill.martialArtBonuses
+                  && Object.keys(subSkill.martialArtBonuses)
+                    .reduce(
+                      (moves, moveName) =>
+                        `${moves}|${moveName},${subSkill.martialArtBonuses[moveName]}`,
+                    'none,0')
+              }
               attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
               attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
             }
           }
         });
         // TODO: Not all skills are showing -- need to cover compound skills
+        // console.log('|>|>|>|>|>|>|>|>|> ', attrsToSet);
         setAttrs(attrsToSet)
       });
     });

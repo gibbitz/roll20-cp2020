@@ -21,10 +21,12 @@
   @return $prefix + to-lower-case(
     str-replace(
       str-replace(
-        str-list-replace(
-          $string, $dash-replaced, '-'
-        ), '&', 'and'
-      ), '.', ''
+        str-replace(
+          str-list-replace(
+            $string, $dash-replaced, '-'
+          ), '&', 'and'
+        ), '.', ''
+      ), ':', ''
     )
   )
 }

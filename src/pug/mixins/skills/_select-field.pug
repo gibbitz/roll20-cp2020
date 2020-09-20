@@ -1,0 +1,36 @@
+-
+  var getMoves = maTable => maTable && Object.keys(maTable)
+    .reduce(
+      (moves, moveName)=>`${moves}|${moveName},${maTable[moveName]}`,
+    '')
+
+mixin skillSelectField(skillAttrName, skillData, additionalData)
+  -
+    var rollMacro = `&{template:skill-check}
+      {{skill=@{${skillAttrName}_name}}}
+      {{handle=@{handle}}}
+      {{skillLevel=@{${skillAttrName}_level}}}
+      {{statName=@{${skillAttrName}_stat}}}
+      {{stat=@{${skillAttrName}_stat_level}}}
+      {{modifier=[[?{Modifier|0}+1d0]]}}
+      {{total=[[1d10!
+        + @{${skillAttrName}_stat_level}
+        + @{${skillAttrName}_level}
+        + ?{Modifier|0}
+        + ?{MA Attack?|@{${skillAttrName}_ma_roll_table}}]]
+      }}
+      {{fumble=[[1d10]]}}`
+
+  +skillFieldWrapper(skillAttrName, skillData)
+    input(type='hidden' name=`attr_${skillAttrName}_ma_roll_table` value='')
+    select(
+      name=`attr_${skillAttrName}_name`
+      class='cp-2020__skill__name cp-2020__skill__name--edit'
+    )
+      option(value='') select one
+      each skillName in skillData.skillGroup
+        each skill in additionalData
+          if (skill.skillName === skillName)
+            option(value=skillName)=skillName
+  +editFieldStats(skillAttrName, skillData, additionalData)
+  +useFieldStats(skillAttrName, rollMacro)

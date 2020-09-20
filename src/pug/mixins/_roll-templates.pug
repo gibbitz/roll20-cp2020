@@ -1,0 +1,83 @@
+mixin rollTemplate(templateName, title)
+  rolltemplate(class=`sheet-rolltemplate-${templateName}`)
+    h3.cp-2020__roll-template__title #{title}
+    div.cp-2020__roll-template__result-wrapper
+      block
+      div.cp-2020__roll-template__result-details
+        | {{#allprops()}}
+        div {{key}}:&nbsp;
+          span.cp-2020__roll-template__result-digit {{value}}
+        | {{/allprops()}}
+
+//- partial to define fumbles
+mixin fumbleFactory(statNameVar='statName', roll='total')
+  |{{#^rollWasCrit() #{roll}}}
+  |{{#rollWasFumble() #{roll}}}
+  div.cp-2020__roll-fumble
+    h4.cp-2020__roll-fumble__title {{#{statNameVar}}} fumble
+    div(class=`cp-2020__roll-fumble-wrapper--{{${statNameVar}}}`)
+      each fumbleArray, fumbleKey in data.fumbles
+          each fumbleCopy, index in fumbleArray
+            -
+              var insult = [
+                'It\'s just not your day. ',
+                'Figures...',
+                'Sux to be you: ',
+                'Hate to break it to ya: ',
+                'This would be a good time to consider a career change...'
+              ][Math.round(Math.random()*5)]
+            |{{#rollTotal() fumble #{index + 1}}}
+            span(class=`cp-2020__roll-fumble--${fumbleKey}`)=`${insult} ${fumbleCopy}`
+            |{{/rollTotal() fumble #{index + 1}}}
+  |{{/rollWasFumble() #{roll}}}
+  |{{/^rollWasCrit() #{roll}}}
+
+mixin critFactory(skillPhrase='the task related', roll='total')
+  |{{#rollWasCrit() #{roll}}}
+  div.cp-2020__roll-critical
+    h4.cp-2020__roll-critical__title Critial Success
+    div.cp-2020__roll-critical__body A critical roll is worthy of IP towards #{skillPhrase} skill.
+  |{{/rollWasCrit() #{roll}}}
+
+mixin rollSingleFireRange(range, distance, difficulty)
+  |{{#rollGreater() total #{difficulty}}}
+  div.cp-2020__roll-success
+    span.cp-2020__roll-hit-count {{roundsFired}} round(s)&nbsp;
+    | hit at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-next Roll damage and hit locations.
+  div.cp-2020__roll-breakdown {{total}} beats #{difficulty} {{#{difficulty}}}
+  |{{/rollGreater() total #{difficulty}}}
+
+  |{{#rollLess() total #{difficulty}}}
+  div.cp-2020__roll-fail {{roundsFired}} round(s) all miss at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-breakdown {{total}} doesn't beat #{difficulty} {{#{difficulty}}}
+  |{{/rollLess() total #{difficulty}}}
+
+mixin rollBurstFireRange(range, distance, difficulty)
+  |{{#rollGreater() total #{difficulty}}}
+  div.cp-2020__roll-success
+    span.cp-2020__roll-hit-count {{burstHitCount}} round(s)&nbsp;
+    | hit at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-next Roll damage and hit locations.
+  div.cp-2020__roll-breakdown {{total}} beats #{difficulty} {{#{difficulty}}}
+  |{{/rollGreater() total #{difficulty}}}
+
+  |{{#rollLess() total #{difficulty}}}
+  div.cp-2020__roll-fail {{roundsFired}} round(s) all miss at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-breakdown {{total}} doesn't beat #{difficulty} {{#{difficulty}}}
+  |{{/rollLess() total #{difficulty}}}
+
+mixin rollFullAutoRange(range, distance, difficulty)
+  |{{#rollGreater() total #{difficulty}}}
+  div.cp-2020__roll-success
+    span.cp-2020__roll-hit-count {{total}} - {{#{difficulty}}} (not to exceed {{roundsFired}}) round(s)&nbsp;
+    | hit at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-next Roll damage and hit locations.
+  div.cp-2020__roll-breakdown {{total}} beats #{difficulty} {{#{difficulty}}}
+  |{{/rollGreater() total #{difficulty}}}
+
+  |{{#rollLess() total #{difficulty}}}
+  div.cp-2020__roll-fail {{roundsFired}} round(s) all miss at #{range} range (less than {{#{distance}}}m)
+  div.cp-2020__roll-breakdown {{total}} doesn't beat #{difficulty} {{#{difficulty}}}
+  |{{/rollLess() total #{difficulty}}}
+

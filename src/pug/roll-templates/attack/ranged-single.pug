@@ -1,0 +1,22 @@
+div {{roundsFired}} rounds
+
+div.cp-2020__ranged-attack__hit
+  |{{#rollBetween() targetDistance 0 pointBlank}}
+  +rollSingleFireRange('point blank', 'pointBlank', 10)
+  |{{/rollBetween() targetDistance 0 pointBlank}}
+
+  |{{#rollBetween() targetDistance closeStart close}}
+  +rollSingleFireRange('close', 'close', 15)
+  |{{/rollBetween() targetDistance closeStart close}}
+
+  |{{#rollBetween() targetDistance mediumStart medium}}
+  +rollSingleFireRange('medium', 'medium', 20)
+  |{{/rollBetween() targetDistance mediumStart medium}}
+
+  |{{#rollBetween() targetDistance longStart long}}
+  +rollSingleFireRange('long', 'long', 25)
+  |{{/rollBetween() targetDistance longStart long}}
+
+  |{{#rollBetween() targetDistance extremeStart extreme}}
+  +rollSingleFireRange('extreme', 'extreme', 30)
+  |{{/rollBetween() targetDistance extremeStart extreme}}
