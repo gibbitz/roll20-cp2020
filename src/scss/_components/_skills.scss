@@ -203,7 +203,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         }
       }
       & ~ #{$base}__inner-box {
-        repcontrol {
+        .repcontrol {
           @extend %hide;
         }
         #{$base}__skill__stat-wrapper--edit {
