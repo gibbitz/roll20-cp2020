@@ -21,15 +21,18 @@
 
       .repcontainer {
         @extend %flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         > * {
           flex: 1 1 49.5%;
+          min-width: 49%;
         }
       }
+
+      #{$base}__outfit__item-section {
+        height: 100%;
+      }
     }
-
-
-
 
 
     input[value='use'] ~ &__buy-toggle {
@@ -66,6 +69,12 @@
       #{$base}__outfit__item-section--use{
         @extend %hide;
       }
+    }
+
+    [name]#{&}-name {
+      color: $light-font-color;
+      font-size: 0.95em;
+      letter-spacing: 1px;
     }
 
     &-cost {

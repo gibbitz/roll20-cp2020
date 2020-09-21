@@ -52,6 +52,10 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
               transition: transform 0.5s ease-out;
             }
         }
+
+        [name]#{$base}__skill-name {
+          color:$light-font-color;
+        }
     }
 
     &__description {
@@ -110,6 +114,10 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         #{$base}__stat-group {
           @extend %stat-group;
         }
+
+        &#{$base}__skill__stat-wrapper--edit {
+          font-size: 1.15em;
+        }
     }
   }
 
@@ -129,8 +137,9 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         align-items: center;
         justify-content: space-between;
     }
-    &-stat {
-      color: $dim-font-color;
+    &-stat,
+    [name]#{&}-stat {
+      color: $dim-font-color !important;
       font-size: 0.8em;
     }
   }
@@ -252,6 +261,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
     [value='chipped'] + #{$base}__skill__chipped {
       @extend %show;
+      filter: brightness(1.5);
     }
 
     #{$base}__inner-box {
@@ -275,6 +285,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
          > * {
           flex: 1 1 40%;
           margin: 0.3em;
+          min-width: 49%;
         }
       }
     }

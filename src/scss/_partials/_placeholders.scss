@@ -323,14 +323,27 @@
   > *:first-child, input {
     @extend %title-font;
     box-sizing: border-box;
-    color: $base-font-color;
-    font-size: 1.4em;
+    color: $light-font-color;
+    font-size: 1.3em;
     letter-spacing: 1px;
     line-height: 1.4;
     text-align: center;
 
     &:empty {
-      height: 1.4em;
+      height: 1.8em;
+    }
+  }
+
+  > *:first-child {
+    line-height: 1.7;
+
+    > *:first-child,
+    > *:last-child {
+      color: $light-font-color;
+    }
+
+    > *:nth-child(2) {
+      color: $dim-font-color;
     }
   }
 

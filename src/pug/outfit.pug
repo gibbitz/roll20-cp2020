@@ -27,6 +27,3 @@ div.cp-2020__outfit
             span.cp-2020__outfit-description(name='attr_outfit_item_description')
   input(name='attr_test_roll' value='[[1d10]]' type='hidden')
   input(name='attr_test_roll_temp' value='temp_name' type='hidden')
-  label(for='test_check_trigger')
-    button(type='roll' value='&{template:general} {{@{test_roll_temp}=@{test_roll}}} {{ roll=[@{test_roll_temp}+1]}}')
-      input(id='test_check_trigger' type='checkbox' name='attr_test_check' value='hi')
