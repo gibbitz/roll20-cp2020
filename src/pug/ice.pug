@@ -1,0 +1,96 @@
+div.cp-2020__ice-deck
+  input(
+    disabled='true'
+    name='attr_Deck_Toggle_Indicator'
+    type='hidden'
+    value='@{Deck_Toggle}'
+  )
+  div.cp-2020__ice-deck__buy-toggle
+    label.cp-2020__ice-deck__buy-tab Buy/Sell/Drop
+      input(type='radio' name='attr_Deck_Toggle' value='buy' checked='true')
+    label.cp-2020__ice-deck__use-tab Use
+      input(type='radio' name='attr_Deck_Toggle' value='use')
+  +section('cyberdeck').cp-2020__deck__wrapper
+    fieldset.repeating_deck
+      +box().cp-2020__deck-section
+        div.cp-2020__deck-section--buy
+          div.cp-2020__section-row
+            +attrField('deck_make', 'make')(type='text')
+            +attrField('deck_name', 'model')(type='text')
+            +attrSelect('deck_type', data.deckTypes, 'type')
+          div.cp-2020__section-row
+            +attrField('deck_cpu', 'cpu count')(type='number')
+            +attrField('deck_spd', 'deck speed')(type='number')
+            +attrField('deck_mu', 'memory')(type='number')
+            +attrField('deck_dws', 'data wall str')(type='number')
+            +attrField('deck_cgs', 'code gate str')(type='number')
+            +attrField('deck_kg', 'weight')(type='number' step='0.01')
+            +attrField('deck_cost', 'cost')(type='number' step='0.01')
+          +attrTextArea('deck_description', 'description')(rows='3')
+        div.cp-2020__deck-section--use
+          div.cp-2020__section-row
+            +attrSpan('deck_make', 'make').cp-2020__deck-make
+            +attrSpan('deck_name', 'model').cp-2020__deck-name
+            +attrSpan('deck_type', 'type').cp-2020__deck-type
+          div.cp-2020__section-row
+            +attrSpan('deck_cpu', 'cpu count').cp-2020__deck-cpu
+            +attrSpan('deck_spd', 'deck speed').cp-2020__deck-spd
+            +attrSpan('deck_mu', 'memory').cp-2020__deck-mu
+            +attrSpan('deck_dws', 'data wall str').cp-2020__deck-dws
+            +attrSpan('deck_cgs', 'code gate str').cp-2020__deck-cgs
+            +attrSpan('deck_kg', 'weight').cp-2020__deck-kg
+            +attrSpan('deck_cost', 'cost').cp-2020__deck-cost
+          label.cp-2020__deck__description-toggle
+            input(type='checkbox' value='show')
+            span.cp-2020__deck-description(name='attr_deck_description')
+
+  +section('ice').cp-2020__ice__wrapper
+    fieldset.repeating_ice
+      +box().cp-2020__ice-section
+        div.cp-2020__ice-section--buy
+          div.cp-2020__section-row
+            +attrField('ice_name', 'program')(type='text')
+            +attrSelect('ice_type', data.iceClasses, 'class')
+          div.cp-2020__section-row
+            +attrField('ice_str', 'strength')(type='number')
+            +attrField('ice_mu', 'Memory')(type='number')
+            +attrField('ice_cost', 'cost')(type='number' step='0.01')
+          +attrTextArea('ice_description', 'description')(rows='3')
+        div.cp-2020__ice-section--use
+          div.cp-2020__section-row
+            +attrSpan('ice_name', 'program').cp-2020__ice-name
+            +attrSpan('ice_type', 'type').cp-2020__ice-type
+            +attrSpan('ice_str', 'strength').cp-2020__ice-str
+            +attrSpan('ice_mu', 'memory').cp-2020__ice-mu
+            +attrSpan('ice_cost', 'cost').cp-2020__ice-cost
+            input.cp-2020__button-toggle(
+              disabled='true'
+              type='hidden'
+              name='attr_ice_type_indicator'
+              value='@{ice_type}'
+            )
+            +rollBtn(
+            'anti_personel_ice',
+            'anti_personel_ice',
+            `&{template: general}
+            {{total=[[
+              1d10!
+              + @{INT}
+              + @{Skill_interface_level}
+              + @{ice_str}
+              + ?{Modifier|0}]]
+            }}
+            `).cp-2020__ice__roll--anti-personel
+            +rollBtn(
+            'general_ice',
+            'general_ice',
+            `&{template: general}
+            {{total=[[
+              1d10!
+              + @{ice_str}
+              + ?{Modifier|0}]]
+            }}
+            `).cp-2020__ice__roll--general
+          label.cp-2020__ice__description-toggle
+            input(type='checkbox' value='show')
+            span.cp-2020__ice-description(name='attr_ice_description')

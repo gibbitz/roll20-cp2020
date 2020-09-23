@@ -14,7 +14,7 @@
 
   &__nav-toggle {
 
-    @each $tab in ('bio', 'skills', 'weapons-cyber', 'outfit') {
+    @each $tab in ('bio', 'skills', 'weapons-cyber', 'outfit', 'ice') {
       &[value='#{$tab}'] {
         & ~ #{$base}__#{$tab} {
           @extend %show;

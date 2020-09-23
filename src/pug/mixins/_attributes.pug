@@ -19,6 +19,16 @@ mixin attrField(attrName, attrLabel)
       else
         span=attrLabel
 
+mixin attrSpan(attrName, attrLabel)
+  label(class=`cp-2020__static-wrapper ${attributes.class}`)
+    span.cp-2020__static-value(
+      name=`attr_${attrName}`
+    )
+    if block
+      block
+    else
+      span.cp-2020__static-label=attrLabel
+
 //- ===================================================================================
 //-
   Creates an Input textfield box and the surrounding markup for visual consistency

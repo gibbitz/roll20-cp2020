@@ -1,0 +1,119 @@
+.sheet-cp-2020 {
+  $base: &;
+
+  &__ice-deck{
+    $section: &;
+    @extend %section-wrapper;
+
+    h3 {
+      @extend %weapons-cyber-section-header;
+    }
+
+    &__buy-toggle {
+      @extend %tab-group;
+    }
+
+    input[value='use'] ~ &__buy-toggle {
+      #{$section}__use-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='buy'] ~ &__buy-toggle {
+      #{$section}__buy-tab {
+        @extend %active-tab;
+      }
+    }
+
+    input[value='use'] ~ #{$base}__deck__wrapper,
+    input[value='use'] ~ #{$base}__ice__wrapper, {
+      #{$base}__deck-section--buy,
+      #{$base}__ice-section--buy,
+      .repcontrol {
+        @extend %hide;
+      }
+    }
+
+    input[value='buy'] ~ #{$base}__deck__wrapper,
+    input[value='buy'] ~ #{$base}__ice__wrapper, {
+      #{$base}__deck-section--use,
+      #{$base}__ice-section--use {
+        @extend %hide;
+      }
+    }
+
+    #{$base}__section-row {
+      @extend %flex-1;
+      flex-wrap: wrap;
+
+      #{$base}__static-label {
+        display: block;
+      }
+    }
+  }
+
+  &__ice,
+  &__deck {
+    &__description-toggle {
+      @extend %weapon-description-toggle;
+
+      input:checked ~ #{$base}__deck-description,
+      input:checked ~ #{$base}__ice-description {
+        @extend %weapon-description-visible;
+      }
+    }
+
+    &-description {
+      @extend %weapon-description;
+    }
+  }
+
+  &__deck {
+    &__wrapper {
+    }
+  }
+
+  &__ice{
+    &__wrapper {
+
+      #{$base}__static-wrapper:not(#{$base}__ice-name) {
+        text-align: center;
+      }
+
+      .repcontainer {
+        @extend %flex-1;
+        flex-wrap: wrap;
+
+        > * {
+          min-width: 49%;
+        }
+      }
+
+      [value='Anti-Personel'] {
+        ~ #{$base}__ice__roll--general {
+          @extend %hide;
+        }
+
+        ~ #{$base}__ice__roll--anti-personel {
+          @extend %show;
+        }
+      }
+    }
+
+    &__roll--anti-personel,
+    &__roll--general {
+      @extend %d10-roll-button;
+    }
+
+    &__roll--anti-personel {
+      @extend %hide;
+    }
+
+    &-section {
+      height: 100%;
+    }
+
+
+  }
+
+}

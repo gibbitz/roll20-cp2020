@@ -42,6 +42,7 @@
           @extend %row-0-1;
           align-items: center;
           justify-content: space-between;
+          margin-bottom: 0.4em;
 
           #{$base}__weapon__attack-button--melee,
           #{$base}__weapon__attack-button--ranged,

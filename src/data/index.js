@@ -31,6 +31,31 @@ const woundLevels = [
   'MORTAL 6'
 ]
 
+const deckTypes = [
+  { value: 'Standard', label: 'Standard' },
+  { value: 'Portable', label: 'Portable' },
+  { value: 'Portable Cellular', label: 'Portable Cellular' },
+  { value: 'Cyberlimb Deck', label: 'Cyberlimb Deck' },
+  { value: 'Combat Deck', label: 'Combat Deck' },
+  { value: 'Cellular', label: 'Cellular' },
+  { value: 'Cellular Cyberlimb Deck', label: 'Cellular Cyberlimb Deck' },
+  { value: 'Cellular Combat Deck', label: 'Cellular Combat Deck' }
+]
+
+const iceClasses = [
+  { value: 'Intrusion', label: 'Intrusion' },
+  { value: 'Decryption', label: 'Decryption' },
+  { value: 'Detection/Alarm', label: 'Detection/Alarm' },
+  { value: 'Anti-system', label: 'Anti-system' },
+  { value: 'Evasion/Stealth', label: 'Evasion/Stealth' },
+  { value: 'Protection', label: 'Protection' },
+  { value: 'Anti-IC', label: 'Anti-IC' },
+  { value: 'Anti-Personel', label: 'Anti-Personel' },
+  { value: 'Controllers', label: 'Controllers' },
+  { value: 'Utilities', label: 'Utilities' },
+  { value: 'Demon', label: 'Demon' },
+]
+
 const weaponTypes = [
   { value: 'Archery', label: 'Bow' },
   { value: 'Heavy Weapons', label: 'Heavy Weapons' },
@@ -82,6 +107,8 @@ module.exports = {
     weaponConcealabilities,
     weaponReliabilities,
     weaponTypes,
-    woundLevels
+    woundLevels,
+    deckTypes,
+    iceClasses
   }
 }
