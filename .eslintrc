@@ -38,6 +38,18 @@
       "import/resolver": {
       }
     },
+    "globals":{
+      "on": "readonly",
+      "setAttrs": "readonly",
+      "getAttrs": "readonly",
+      "data": "readonly",
+      "nameToSelector": "readonly",
+      "nameToAttrName": "readonly",
+      "makeInt": "readonly",
+      "updateStats": "readonly",
+      "getStats": "readonly",
+      "calculateHealthStatus": "readonly",
+    },
     "env": {
         "browser": true,
         "jest": true

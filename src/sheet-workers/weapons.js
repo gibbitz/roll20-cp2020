@@ -1,4 +1,3 @@
-
 function getStatsBySkill(skills) {
   const skillSet = data.skills.filter(
     skillData => skills.indexOf(skillData.skillName) > -1

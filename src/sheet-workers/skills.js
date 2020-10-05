@@ -1,93 +1,98 @@
+const {
+  stats,
+  skills: pickupSkills,
+  specialAbilities,
+  compoundSkills
+} = data;
+const skills = [...pickupSkills, ...specialAbilities, ...compoundSkills];
+const potentialCompoundSkills = [...compoundSkills, ...specialAbilities];
 
-var stats = data.stats;
-var pickupSkills = data.skills;
-var specialAbilities = data.specialAbilities;
-var compoundSkills = data.compoundSkills;
-var skills = pickupSkills.concat(specialAbilities, compoundSkills);
-var potentialCompoundSkills = compoundSkills.concat(specialAbilities);
-var calcSkillEvents = [
-  'change:Wound_Level',// TODO: change case?
-  'change:Stun_Level', // TODO: change case?
-  'change:role',
-  'sheet:opened'
-];
-var statKeys = Object.keys(stats) || [];
+const prepareSkillEvents = () => {
+  const calcSkillEventList = [
+    'change:Wound_Level', // TODO: change case?
+    'change:Stun_Level', // TODO: change case?
+    'change:role',
+    'sheet:opened'
+  ];
+  const statKeys = Object.keys(stats) || [];
 
-statKeys.forEach(function(stat) {
-  calcSkillEvents.push(`change:${stat}_Base`);
-  calcSkillEvents.push(`change:${stat}_Mod`);
-});
+  statKeys.forEach((stat) => {
+    calcSkillEventList.push(`change:${stat}_Base`);
+    calcSkillEventList.push(`change:${stat}_Mod`);
+  });
 
-potentialCompoundSkills.forEach(function(skill) {
-  var skillAttrName = `Skill_${window.nameToAttrName(skill.skillName)}`;
-  calcSkillEvents.push(`change:${skillAttrName}_name`);
-});
+  potentialCompoundSkills.forEach((skill) => {
+    const skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
+    calcSkillEventList.push(`change:${skillAttrName}_name`);
+  });
 
-skills.forEach(function(skill) {
-  var skillAttrName = `Skill_${window.nameToAttrName(skill.skillName)}`;
-  calcSkillEvents.push(`change:${skillAttrName}_level`);
-  calcSkillEvents.push(`change:${skillAttrName}_ip`);
-});
+  skills.forEach((skill) => {
+    const skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
+    calcSkillEventList.push(`change:${skillAttrName}_level`);
+    calcSkillEventList.push(`change:${skillAttrName}_ip`);
+  });
 
-calcSkillEvents = calcSkillEvents.join(' ').toLowerCase();
-// console.log('|>|>|>|>|>|>|>|>|> ', calcSkillEvents);
-on(calcSkillEvents, function(eventInfo) {
-  updateStats(function() {
-    getStats(function(stats) {
-      var attrsToFetch = [];
-      skills.forEach(function(skill) {
-        if(skill.skillName){
-          var attrName = `Skill_${nameToAttrName(skill.skillName)}`;
-          attrsToFetch.push(`${attrName}_level`);
-          attrsToFetch.push(`${attrName}_ip`);
-          attrsToFetch.push(`${attrName}_name`);
-        }
-      });
-      getAttrs(attrsToFetch, function(skillAttrs) {
-        var attrsToSet = {};
-        skills.forEach(function(skill, index) {
-          if(skill.skillName) {
-            var subSkillName = skillAttrs[`Skill_${nameToAttrName(skill.skillName)}_name`]
-            var subSkill = subSkillName ? skills.filter(function(subSkill) {
-              return subSkill.skillName === subSkillName;
-            })[0] : {}
-            var skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
-            var skillLevel = skillAttrs[`${skillAttrName}_level`]
-            var skillIp = skillAttrs[`${skillAttrName}_ip`]
-            if( skillIp && skillLevel) {
-              var level = makeInt(skillLevel);
-              var ip = makeInt(skillIp);
-              var ipx = makeInt(
-                (subSkill ? subSkill.ipMultiplier : skill.ipMultiplier),
-                1
-              );
-              var stat = makeInt(
-                Object.keys(subSkill).length > 0
-                  ? stats[subSkill.baseAttribute]
-                  : stats[skill.baseAttribute]
-              );
-              // if (!isNaN(stat)) console.log(skill.skillName, stat, skill.baseAttribute)
-              stat = isNaN(stat) ? 0 : stat;
-              attrsToSet[`${skillAttrName}_stat`] = Object.keys(subSkill).length > 0
-                ? subSkill.baseAttribute
-                : subSkill.baseAttribute;
-              if (Object.keys(subSkill).length > 0) {
-                attrsToSet[`${skillAttrName}_ma_roll_table`] = subSkill.martialArtBonuses
-                  && Object.keys(subSkill.martialArtBonuses)
-                    .reduce(
-                      (moves, moveName) =>
-                        `${moves}|${moveName},${subSkill.martialArtBonuses[moveName]}`,
-                    'none,0')
-              }
-              attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
-              attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
-            }
-          }
-        });
-        // TODO: Not all skills are showing -- need to cover compound skills
-        // console.log('|>|>|>|>|>|>|>|>|> ', attrsToSet);
-        setAttrs(attrsToSet)
-      });
+  return calcSkillEventList.join(' ').toLowerCase();
+}
+
+const prepareSkillAttributes = () => {
+  const attrNames = [];
+  skills.forEach((skill) => {
+    if (skill.skillName) {
+      const attrName = `Skill_${nameToAttrName(skill.skillName)}`;
+      attrNames.push(`${attrName}_level`);
+      attrNames.push(`${attrName}_ip`);
+      attrNames.push(`${attrName}_name`);
+    }
+  });
+  return attrNames
+};
+
+const buildMaTable = (skill) => skill.martialArtBonuses
+  && Object.keys(skill.martialArtBonuses)
+    .reduce(
+      (moves, moveName) => (
+        `${moves}|${moveName},${skill.martialArtBonuses[moveName]}`
+      ),
+      'none,0'
+    );
+
+const resolveSkill = (skill, skillAttrs) => {
+  const subSkillName = skillAttrs[`Skill_${nameToAttrName(skill.skillName)}_name`]
+  return subSkillName ? skills.filter((subSkill) => {
+    return subSkill.skillName === subSkillName;
+  })[0] : skill;
+
+}
+
+const calculateAttributes = (skillAttrs, characterStats) => {
+  const attrsToSet = {};
+  skills.forEach((skill) => {
+    if (skill.skillName) {
+      const { ipMultiplier, baseAttribute } = resolveSkill(skill, skillAttrs)
+      const skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
+      const skillLevel = skillAttrs[`${skillAttrName}_level`]
+      const skillIp = skillAttrs[`${skillAttrName}_ip`]
+      if (skillIp && skillLevel) {
+        const level = makeInt(skillLevel);
+        const ip = makeInt(skillIp);
+        const ipx = makeInt(ipMultiplier) || 1;
+        const stat = makeInt(characterStats[baseAttribute]) || 0;
+        attrsToSet[`${skillAttrName}_stat`] = baseAttribute;
+        attrsToSet[`${skillAttrName}_ma_roll_table`] = buildMaTable(skill);
+        attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
+        attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
+      }
+    }
+  });
+  return attrsToSet;
+}
+
+on(prepareSkillEvents(), () => {
+  updateStats((statsAttrs) => {
+    getAttrs(prepareSkillAttributes(), (skillAttrs) => {
+      // console.log('|>|>|>|>|>|>|>|>|> ', statsAttrs);
+      setAttrs(calculateAttributes(skillAttrs, statsAttrs))
     });
   });
 })
