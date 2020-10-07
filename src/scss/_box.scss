@@ -1,18 +1,18 @@
 %cornered {
-  border: 1px solid;
+  border: 1px solid rgba($box-corner-color, 0.8);
   content: '';
   display: block;
   filter: blur(0.7px);
-  height: $box-spacing;
+  height: $box-spacing * 1.5;
   position: absolute;
-  width: $box-spacing;
+  width: $box-spacing * 1.5;
   z-index: 0;
 }
 
 .sheet-cp-2020{
   &__box {
-    background-color: rgba($dark-reverse-font-color, 0);
-    border: 1px solid $dim-stroke;
+    background-color: rgba($dark-reverse-font-color, 0.3);
+    border: 1px solid $box-border-color;
     box-sizing: border-box;
     display: inline-block;
     // height: calc(100% - 9px);

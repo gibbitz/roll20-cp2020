@@ -141,3 +141,7 @@ on(changeEvents, (eventInfo) => {
     })
   })
 })
+
+on('clicked:clearDamage', () => {
+  setAttrs({ Damage_Indicator: 0 }, null, () => console.log('^*^*^*^*^*^*^*'));
+})

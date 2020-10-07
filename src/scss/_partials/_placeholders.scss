@@ -218,7 +218,7 @@
   position: relative;
 
   &::before {
-    border: 1px solid $dim-stroke;
+    border: 1px solid rgba($dim-stroke, 0.8);
     bottom: 0;
     content: '';
     left: 0;
@@ -320,18 +320,19 @@
   justify-content: end;
   max-width: 4em;
 
-  > *:first-child, input {
+  > *[name]:first-child {
     @extend %title-font;
     box-sizing: border-box;
-    color: $light-font-color;
+    color: $base-font-color;
     font-size: 1.3em;
+    height: 1.2em;
     letter-spacing: 1px;
     line-height: 1.4;
-    text-align: center;
+    margin-bottom: 0.3em;
+  }
 
-    &:empty {
-      height: 1.8em;
-    }
+  > span:first-child:empty + span {
+    display: none;
   }
 
   > *:first-child {

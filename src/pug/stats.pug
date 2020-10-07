@@ -15,8 +15,8 @@
           label.cp-2020__stat__total-inner(for=`attr_${stat}_Base`)
             div.cp-2020__stat__name=name
             div.cp-2020__stat__total
-              span.cp-2020__stat__value(name=`attr_${stat}`)
               span.cp-2020__stat__abbr=`[${stat}]`
+              span.cp-2020__stat__value(name=`attr_${stat}`)
           div.cp-2020__stat__breakdown
             div.cp-2020__stat__component
               input.cp-2020__stat__value(
@@ -81,10 +81,10 @@
       label(for='attr_Hum')
         span.cp-2020__stat__name humanity
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[HUM]'
           span.cp-2020__stat__value(
             name='attr_Hum'
           )
-          span.cp-2020__stat__abbr='[HUM]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -96,13 +96,13 @@
       label(for='attr_Humanity_Loss')
         span.cp-2020__stat__name humanity loss
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[HL]'
           input.cp-2020__stat__value(
             id='attr_Humanity_Loss'
             name='attr_HL'
             type='number'
             value='0'
           )
-          span.cp-2020__stat__abbr='[HL]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -114,12 +114,12 @@
       label(for='Rep')
         span.cp-2020__stat__name reputation
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[REP]'
           input.cp-2020__stat__value(
             type='number'
             name='attr_Rep'
             value='0'
           )
-          span.cp-2020__stat__abbr='[REP]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -131,10 +131,10 @@
       label(for='attr_Run')
         span.cp-2020__stat__name run
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[RUN]'
           span.cp-2020__stat__value(
             name='attr_Run'
           )
-          span.cp-2020__stat__abbr='[RUN]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -146,10 +146,10 @@
       label(for='attr_Leap')
         span.cp-2020__stat__name leap
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[LEAP]'
           span.cp-2020__stat__value(
             name='attr_Leap'
           )
-          span.cp-2020__stat__abbr='[LEAP]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -161,10 +161,10 @@
       label(for='attr_Carry')
         span.cp-2020__stat__name carry
          div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[CARRY]'
           span.cp-2020__stat__value(
             name='attr_Carry'
           )
-          span.cp-2020__stat__abbr='[CARRY]'
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -176,10 +176,10 @@
       label(for='attr_Lift')
         span.cp-2020__stat__name lift
         div.cp-2020__stat__total
+          span.cp-2020__stat__abbr='[LIFT]'
           span.cp-2020__stat__value(
             name='attr_Lift'
           )
-          span.cp-2020__stat__abbr='[LIFT]'
       div.cp-2020__stat__roll-btns
 
   +box.cp-2020__stats__character-points

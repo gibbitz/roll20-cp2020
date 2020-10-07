@@ -66,16 +66,14 @@
       overflow: hidden;
 
       #{$base}__stat__total {
-        text-align: right;
       }
     }
 
     &__total {
       font-size: 1.7em;
-      text-align: center;
 
       #{$base}__stat__value {
-        color: $light-font-color;
+        color: $light-font-color !important;
         display: inline-block;
         max-width: 2.2em;
         text-align: right;
@@ -86,7 +84,7 @@
         display: inline-block;
         font-size: 0.7em;
         letter-spacing: 1px;
-        margin-left: 0.3em;
+        margin-right: 0.3em;
         vertical-align: text-top;
       }
 
@@ -94,18 +92,19 @@
 
     &__name {
       color: $base-font-color;
-      font-size: 0.9em;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 99%;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-bottom: 0.3em;
+      height: 2.4em;
     }
 
     &__roll-btns {
-      display: flex;
+      @extend %flex;
       flex: 1 1 9%;
       flex-direction: column;
       font-size: 0.8em;
+      justify-content: space-around;
       max-width: 3em;
     }
 

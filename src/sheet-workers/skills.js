@@ -48,14 +48,15 @@ const prepareSkillAttributes = () => {
   return attrNames
 };
 
-const buildMaTable = (skill) => skill.martialArtBonuses
-  && Object.keys(skill.martialArtBonuses)
+const buildMaTable = (skill) => (skill.martialArtBonuses
+  ? Object.keys(skill.martialArtBonuses)
     .reduce(
       (moves, moveName) => (
         `${moves}|${moveName},${skill.martialArtBonuses[moveName]}`
       ),
       'none,0'
-    );
+    )
+  : '');
 
 const resolveSkill = (skill, skillAttrs) => {
   const subSkillName = skillAttrs[`Skill_${nameToAttrName(skill.skillName)}_name`]
@@ -85,14 +86,14 @@ const calculateAttributes = (skillAttrs, characterStats) => {
       }
     }
   });
+  console.log('%%%%%%%%%%%%%% ', attrsToSet)
   return attrsToSet;
 }
 
 on(prepareSkillEvents(), () => {
   updateStats((statsAttrs) => {
     getAttrs(prepareSkillAttributes(), (skillAttrs) => {
-      // console.log('|>|>|>|>|>|>|>|>|> ', statsAttrs);
-      setAttrs(calculateAttributes(skillAttrs, statsAttrs))
+      setAttrs(calculateAttributes(skillAttrs, statsAttrs), null, () => updateWeapons());
     });
   });
 })

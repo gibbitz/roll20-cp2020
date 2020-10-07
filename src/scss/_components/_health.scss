@@ -16,7 +16,7 @@
   &::before {
     @extend %full-block;
     @extend %anchored;
-    border: calc(.5em - 2px) solid rgba($level-1, 0.5);
+    border: calc(.6em - 2px) solid rgba($level-1, 0.5);
     border-top-color: transparent;
     border-right-color: transparent;
     content: '';
@@ -37,8 +37,8 @@
   &__health {
 
     #{$base}__inner-box{
-      @extend %flex;
-      align-items: center;
+      // @extend %flex;
+      // align-items: center;
     }
 
     &__wrapper {
@@ -113,6 +113,18 @@
 
       label {
         padding: 0;
+      }
+    }
+
+    &__clear-button {
+      @extend %button;
+
+      &__wrapper {
+        @extend %flex;
+        box-sizing: border-box;
+        flex: 1 0 100%;
+        justify-content: flex-end;
+        padding: 0.3em;
       }
     }
   }
