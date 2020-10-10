@@ -1,0 +1,40 @@
++section('utilities')
+  div.cp-2020__utilities__wrapper
+    +box.cp-2020__utilities__initiative-button__wrapper
+      +rollBtn(
+        'initiative',
+        'initiative',
+        `&{template:general}
+        {{message=Initiative roll}}
+        {{handle=@{Handle}}}
+        {{Roll=[[
+          1d10!
+          + @{REF}
+          + @{Skill_combat_sense_level}
+          + ?{modifier|0}
+          &{tracker}
+          &{noerror}
+        ]]}}`)(name='initiative').cp-2020__utilities__initiative-button INITIATIVE
+
+    input(
+      type='hidden'
+      name='attr_CharacterPoints_Danger_indicator'
+      value='@{CharacterPoints_Danger}'
+      disabled
+    )
+    +box.cp-2020__utilities__character-points
+      div.cp-2020__character-points__group
+        input(
+          type='number'
+          name='attr_CharacterPoints_Base'
+          id='CharacterPoints_Base'
+          min='18'
+          max='90'
+        )
+        label(for='CharacterPoints_Base') Character Points
+      div.cp-2020__character-points__group
+        span(name='attr_CharacterPoints')
+        label Used
+      div.cp-2020__character-points__group
+        span(name='attr_CharacterPoints_Remain')
+        label Remaining

@@ -116,16 +116,16 @@
       }
     }
 
-    &__clear-button {
+    button#{$base}__health__clear-button {
       @extend %button;
+    }
 
-      &__wrapper {
-        @extend %flex;
-        box-sizing: border-box;
-        flex: 1 0 100%;
-        justify-content: flex-end;
-        padding: 0.3em;
-      }
+    &__clear-button__wrapper {
+      @extend %flex;
+      box-sizing: border-box;
+      flex: 1 0 100%;
+      justify-content: flex-end;
+      padding: 0.3em;
     }
   }
 

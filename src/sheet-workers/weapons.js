@@ -75,7 +75,6 @@ const updateWeapons = () => {
         getAttrs(
           prepSkillAndStatAttrsToFetch(weaponValues),
           (skillLevels) => {
-            console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', skillLevels);
             setAttrs(prepAttrToSet({
               ids,
               skillLevels,

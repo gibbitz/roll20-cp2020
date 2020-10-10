@@ -9,7 +9,9 @@ div.cp-2020
       include ./pug/stats.pug
     div.cp-2020__character__row--vitals
       include ./pug/armor.pug
-      include ./pug/health.pug
+      div.cp-2020__character__col--vitals
+        include ./pug/health.pug
+        include ./pug/utilities.pug
     div.cp-2020__character__row--tabs
       include ./pug/tab-navigation.pug
       include ./pug/bio.pug

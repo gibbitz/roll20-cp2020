@@ -9,12 +9,31 @@
     &__row--vitals {
       @extend %row-1;
       justify-content: space-between;
+
+      #{$base}__character__col--vitals {
+        @extend %flex-1;
+        flex-direction: column;
+        max-width: calc(100% - 240px);
+      }
     }
   }
 
   &__identity {
     @extend %bordered-section;
     max-width: 30%;
+    > #{$base}__inner-box {
+      @extend %flex-1;
+      flex-direction: column;
+    }
+    .sheet-cp-2020__layout--row-1-2 {
+      @extend %flex;
+      > * {
+        flex: 1;
+      }
+      > *:first-child {
+        flex:0 1 30%;
+      }
+    }
   }
 
   &__stats {
@@ -24,11 +43,14 @@
 
   &__armor {
     @extend %bordered-section;
-    max-width: 30%;
+    max-width: 230px;
   }
 
   &__health {
     @extend %bordered-section;
-    max-width: 69%;
+  }
+
+  &__utilities {
+    @extend %bordered-section;
   }
 }

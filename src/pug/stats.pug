@@ -82,9 +82,7 @@
         span.cp-2020__stat__name humanity
         div.cp-2020__stat__total
           span.cp-2020__stat__abbr='[HUM]'
-          span.cp-2020__stat__value(
-            name='attr_Hum'
-          )
+          span(name='attr_Hum').cp-2020__stat__value
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -93,16 +91,11 @@
       value='@{HL|0}'
     )
     +box.cp-2020__stat
-      label(for='attr_Humanity_Loss')
+      label
         span.cp-2020__stat__name humanity loss
         div.cp-2020__stat__total
           span.cp-2020__stat__abbr='[HL]'
-          input.cp-2020__stat__value(
-            id='attr_Humanity_Loss'
-            name='attr_HL'
-            type='number'
-            value='0'
-          )
+          span(name='attr_HL').cp-2020__stat__value
       div.cp-2020__stat__roll-btns
 
     input.cp-2020__stats__value-indicator(
@@ -160,7 +153,7 @@
     +box.cp-2020__stat
       label(for='attr_Carry')
         span.cp-2020__stat__name carry
-         div.cp-2020__stat__total
+        div.cp-2020__stat__total
           span.cp-2020__stat__abbr='[CARRY]'
           span.cp-2020__stat__value(
             name='attr_Carry'
@@ -181,30 +174,3 @@
             name='attr_Lift'
           )
       div.cp-2020__stat__roll-btns
-
-  +box.cp-2020__stats__character-points
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints_Base'
-        id='CharacterPoints_Base'
-        min='18'
-        max='90'
-      )
-      label(for='CharacterPoints_Base') Character Points
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints'
-        disabled='true'
-        value=`@{INT_Base}+@{REF_Base}+@{TECH_Base}+@{CL_Base}+@{ATT_Base}+@{LUCK_Base}+@{MA_Base}+@{BODY_Base}+@{EMP_Base}`
-      )
-      label(for='attr_CharacterPoints') Used
-    div.cp-2020__character-points__group
-      input(
-        type='number'
-        name='attr_CharacterPoints_Left'
-        disabled='true'
-        value=`(@{CharacterPoints}-@{CharacterPoints_Base})*-1`
-      )
-      label(for='attr_CharacterPoints_Left') Remaining

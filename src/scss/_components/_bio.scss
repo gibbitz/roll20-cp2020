@@ -33,8 +33,24 @@
     #{$base}__history {
       .repcontainer{
         @extend %row-1;
+        flex-wrap: wrap;
         > * {
-          max-width: 49.5%;
+          min-width: 33%;
+          display: flex;
+          flex-direction: column;
+          justify-items: stretch;
+
+          > *:last-child {
+            flex: 1;
+
+            label {
+              justify-content: space-between;
+
+              textarea {
+                height: 100%;
+              }
+            }
+          }
         }
       }
     }

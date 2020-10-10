@@ -45,6 +45,23 @@
     }
   }
 
+  &__box--inner {
+    > label {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-around;
+
+      > input {
+        flex: 1 0 auto;
+
+        + span {
+          flex: 1;
+        }
+      }
+    }
+  }
+
   input {
     &[type=text],
     &[type=password],

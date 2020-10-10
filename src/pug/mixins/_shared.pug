@@ -33,11 +33,12 @@ mixin rollBtn(nameOfRoll, rollId, valueCalc)
     button(
       class=(attributes.class || '')
       id=`${rollId}_roll`
-      name=`act_${id}`
+      name=(attributes.name || `act_${id}`)
       title=`roll ${nameOfRoll.replace(/_|-/g, ' ')}`
       type='roll'
       value=compressString(valueCalc)
     )
+      block
   else
     p there is a problem with the parameters passed to this mixin:
     |

@@ -3,24 +3,6 @@
 
   &__stats {
 
-    &__character-points {
-      // width: calc(100% - #{$box-spacing * 2});
-
-      #{$base}__box--inner{
-        @extend %flex-1;
-        @extend %flex-row;
-
-
-        &__group {
-          @extend %stat-group;
-        }
-
-        > *:first-child {
-          flex: 3;
-        }
-      }
-    }
-
     &__view-grid {
       display: flex;
       flex-wrap: wrap;
@@ -40,7 +22,7 @@
       $color: nth($level-colors, $index - 1);
       &__value-indicator[value='#{$index}']{
         + #{$base}__box {
-          background-color: rgba($color, 0.06);
+          background-color: rgba($color, 0.08);
 
           &:hover,
           &:focus-within {
@@ -65,7 +47,11 @@
       justify-content: space-between;
       overflow: hidden;
 
-      #{$base}__stat__total {
+      #{$base}__stat__total-inner {
+        @extend %flex-1;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 100%;
       }
     }
 
@@ -76,7 +62,6 @@
         color: $light-font-color !important;
         display: inline-block;
         max-width: 2.2em;
-        text-align: right;
       }
 
       #{$base}__stat__abbr {
@@ -96,7 +81,6 @@
       letter-spacing: 1px;
       line-height: 1.2;
       margin-bottom: 0.3em;
-      height: 2.4em;
     }
 
     &__roll-btns {

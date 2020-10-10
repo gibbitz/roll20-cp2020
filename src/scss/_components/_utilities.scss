@@ -1,0 +1,52 @@
+.sheet-cp-2020 {
+  $base: &;
+  &__utilities{
+    &__wrapper{
+      @extend %flex;
+      align-items: center;
+      height: 100%;
+    }
+    &__character-points {
+      // width: calc(100% - #{$box-spacing * 2});
+
+      #{$base}__box--inner{
+        @extend %flex-1;
+        @extend %flex-row;
+
+
+        &__group {
+          @extend %stat-group;
+        }
+
+        > *:first-child {
+          flex: 3;
+        }
+      }
+    }
+
+    input[value='true'] + #{$base}__utilities__character-points {
+      background-color: rgba($level-1, 0.08);
+
+      &:hover {
+        background-color: rgba($level-1, 0.16);
+      }
+    }
+
+    &__initiative-button {
+      @extend %d10-roll-button;
+      padding-right: 2em !important;
+      padding-left: 0.3em !important;
+      width: auto;
+
+      &::before {
+        transform: none;
+        left: auto;
+        right: 0;
+      }
+
+      &__wrappper {
+        flex: 0;
+      }
+    }
+  }
+}

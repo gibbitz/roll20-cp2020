@@ -36,27 +36,31 @@
 
     .sheet-armor-location{
       &--head {
-        right: 1.6em;
+        left: 50%;
+        transform: translateX(-50%);
       }
       &--torso {
-        left: 1em;
-        top: 3em;
+        top: 3.8em;
+        left: 50%;
+        transform: translateX(-50%);
       }
       &--right-arm {
-        left: 0em;
-        top: 8em;
+        left: 0;
+        top: 6em;
       }
       &--left-arm {
-        right: 0em;
+        right: 0;
         top: 6em;
       }
       &--right-leg {
-        bottom: 1em;
-        left: 1em;
+        bottom: 3em;
+        left: 43%;
+        transform: translateX(-100%);
       }
       &--left-leg {
         bottom: 3em;
-        right: 1em;
+        right: 48%;
+        transform: translateX(100%);
       }
     }
   }

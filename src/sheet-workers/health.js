@@ -123,14 +123,6 @@ on(changeEvents, (eventInfo) => {
       Wound_Ref_Mod
     } = calculateDamage({ damageIndAttr, Wound_Level, Stun_Level });
 
-    console.log('>->->->->->->', {
-      Stun_Level: stunValue,
-      Wound_Level: woundValue,
-      Stun_Save: bodyAttr - stunIndex,
-      Death_Save: bodyAttr - mortalIndex,
-      Wound_Divisor,
-      Wound_Ref_Mod
-    })
     setAttrs({
       Stun_Level: stunValue,
       Wound_Level: woundValue,
@@ -143,5 +135,5 @@ on(changeEvents, (eventInfo) => {
 })
 
 on('clicked:clearDamage', () => {
-  setAttrs({ Damage_Indicator: 0 }, null, () => console.log('^*^*^*^*^*^*^*'));
+  setAttrs({ Damage_Indicator: 0 }, null);
 })

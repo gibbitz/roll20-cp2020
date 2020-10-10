@@ -4,8 +4,8 @@
 const updateStats = (callback) => {
   const { stats } = data;
   const statKeys = Object.keys(stats);
-  const getExistngStats = (callback) => {
-    let fetchAttrs = ['Wound_Level', 'Stun_Level', 'HL'];
+  const getExistingStats = (callback) => {
+    let fetchAttrs = ['Wound_Level', 'Stun_Level', 'HL', 'CharacterPoints_Base'];
     statKeys.forEach((statKey) => {
       fetchAttrs = [...fetchAttrs, `${statKey}_Base`, `${statKey}_Mod`];
     });
@@ -31,7 +31,7 @@ const updateStats = (callback) => {
     } else {
       outputAttrs[stat] = defaultAttrValue;
       if (['INT', 'REF', 'CL'].indexOf(stat) > -1) {
-        outputAttrs[`${stat}_Damage_Mod`] = '';
+        outputAttrs[`${stat}_Damage_Mod`] = 0;
       }
     }
     return outputAttrs;
@@ -48,12 +48,14 @@ const updateStats = (callback) => {
         bodyTypes[type].body.indexOf(defaultAttrValue) > -1
       )
     );
+    console.log()
     outputAttrs.Damage_Bonus = bodyTypes[bodyType]
       ? bodyTypes[bodyType].damageModifier
       : 0;
     outputAttrs.BTM = bodyTypes[bodyType]
       ? bodyTypes[bodyType].btm
       : 0;
+    return outputAttrs;
   }
 
   const calculateStats = ({
@@ -63,10 +65,11 @@ const updateStats = (callback) => {
     woundRefMod
   }) => {
     let updatedStatAttrs = {};
+    let statTotal = 0;
     statKeys.forEach((stat) => {
       const defaultAttrValue = makeInt(attrs[`${stat}_Base`])
         + makeInt(attrs[`${stat}_Mod`]);
-
+      statTotal += makeInt(attrs[`${stat}_Base`]);
       updatedStatAttrs = {
         ...updatedStatAttrs,
         ...calculateDefaultStat({
@@ -80,7 +83,7 @@ const updateStats = (callback) => {
       };
 
       if (stat === 'BODY') {
-        updatedStatAttrs = { ...updatedStatAttrs, ...calculateBodyStats(stat, attrs) };
+        updatedStatAttrs = { ...updatedStatAttrs, ...calculateBodyStats(defaultAttrValue) };
       }
       if (stat === 'MA') {
         updatedStatAttrs.Run = defaultAttrValue * 3;
@@ -92,21 +95,13 @@ const updateStats = (callback) => {
         updatedStatAttrs[stat] = empValue;
       }
     });
+    updatedStatAttrs.CharacterPoints = statTotal
+    updatedStatAttrs.CharacterPoints_Remain = attrs.CharacterPoints_Base - statTotal
+    updatedStatAttrs.CharacterPoints_Danger = updatedStatAttrs.CharacterPoints_Remain < 0
     return updatedStatAttrs;
   };
 
-  getExistngStats((attrs) => {
-    // const damageIndex = Math.floor(Math.max(attrs.Wound_Level, attrs.Stun_Level));
-    // const Serious = damageIndex === 1 ? 2 : 0;
-    // const Critical = damageIndex === 2 ? damageIndex : 1;
-    // const Mortal = damageIndex >= 3 ? damageIndex : Critical;
-    // const statParams = {
-    //   attrs,
-    //   damageIndex,
-    //   woundDivisor: Mortal || Critical,
-    //   woundRefMod: Serious
-    // };
-
+  getExistingStats((attrs) => {
     /* eslint-disable-next-line camelcase */
     const { Wound_Level, Stun_Level } = attrs;
     const {
