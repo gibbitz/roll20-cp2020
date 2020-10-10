@@ -314,7 +314,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
             @each $skill in $allSkills {
               $careers: '#{map-get($skill, 'career')}';
               $career-selector: str-to-selector(map-get($skill, 'skillName'), '#{$base}__skill-');
-              @if str-contains($careers, $role) {
+              @if role-in-careers($careers, $role) {
                 &#{$career-selector} {
                   @extend %show;
                 }
