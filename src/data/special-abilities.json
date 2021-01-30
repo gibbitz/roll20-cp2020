@@ -274,7 +274,7 @@
         "baseAttribute": "CL",
         "modifier": "",
         "ipMultiplier": "1",
-        "specialAbility": "Credshark|Factor|Fence|Fixer|Information Broker|Loan Shark|Negotiator|Owner|Pimp|Pusher|Shoemaker|Sleaze|Smuggler|Sniffer|Talent Agent/Manager|Talent Scout|Trader",
+        "specialAbility": "|Black Marketeer|Credshark|Factor|Fence|Fixer|Information Broker|Loan Shark|Negotiator|Owner|Pimp|Pusher|Shoemaker|Sleaze|Smuggler|Sniffer|Talent Agent/Manager|Talent Scout|Trader",
         "description": "This is the ability to deal with the underground information network. With Streetdeal, a Fixer can uncover rumors and information, locate missing persons or things, put gossip out on the Street, pick up clues and score big deals. The higher your Streetdeal ability, the more information you can gather about things happening around you, the more informants you have, and the more secretive the information you can dig up. A level +3 Streetdeal can get you contacts for weapons, tools, or minor illegal operations. At level +5, you can penetrate the secrets of all but the most powerful crime families. At level +9, you are the equivalent of a Mafia crimelord yourself, privy to every secret that's on the Street. Apply Streetdeal to your Cool stat.",
         "notes": "",
         "career": ""

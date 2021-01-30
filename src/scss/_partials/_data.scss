@@ -74,7 +74,7 @@ $data: (
       career: 'Tatsujin'
     ), (
       skillName: 'Brawling or Martial Arts',
-      skillGroup: ('Brawling', 'Martial Arts'),
+      skillGroup: ('Brawling', 'Akido', 'Animal Kung Fu', 'Boxing', 'Capoeria', 'Choi Li Fut', 'Judo', 'Karate', 'Tae Kwon Do', 'Thai Kick Boxing', 'Wrestling', 'Sambo', 'Sumo', 'Tai Chi Chuan', 'Te', 'Jeet Kun Do', 'Ninjutsu', 'Koppo'),
       description: 'The skill of fighting man to man with fist, feet and other parts of the body.',
       baseAttribute: 'REF',
       career: 'PA Trooper|Solo'
@@ -728,15 +728,6 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       notes: 'Gaelic, Welsh, Breton',
       career: ''
     ), (
-      skillName: 'Chemistry',
-      baseAttribute: 'INT',
-      modifier: '',
-      ipMultiplier: '1',
-      specialAbility: '',
-      description: 'The required skill for mixing chemicals and creating various compounds. A level +2 Chemistry is equal to high school chemistry. A level +4 is equal to a trained pharmacist or college level chemist. A +8 is a trained laboratory chemist.',
-      notes: '',
-      career: 'Black Marketeer|Covert Tech Demolitions Ops'
-    ), (
       skillName: 'Composition',
       baseAttribute: 'INT',
       modifier: '',
@@ -1209,7 +1200,7 @@ Empathy Skills Human Perception: The skill of detecting lies, evasions, moods an
       specialAbility: '',
       description: 'The skill of fighting man to man with fist, feet and other parts of the body. Brawling is not a trained skill it is learned on the Street by getting into a lot of fights. Unlike Martial Arts, there are no specialized attacks and no damage bonuses based on level of mastery.',
       notes: '',
-      career: 'Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior'
+      career: 'Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior'
     ), (
       skillName: 'Capoeria',
       baseAttribute: 'REF',
@@ -2385,7 +2376,7 @@ players- you may elect to swap your original INT and REF stats for characters ge
       baseAttribute: 'CL',
       modifier: '',
       ipMultiplier: '1',
-      specialAbility: 'Credshark|Factor|Fence|Fixer|Information Broker|Loan Shark|Negotiator|Owner|Pimp|Pusher|Shoemaker|Sleaze|Smuggler|Sniffer|Talent Agent/Manager|Talent Scout|Trader',
+      specialAbility: '|Black Marketeer|Credshark|Factor|Fence|Fixer|Information Broker|Loan Shark|Negotiator|Owner|Pimp|Pusher|Shoemaker|Sleaze|Smuggler|Sniffer|Talent Agent/Manager|Talent Scout|Trader',
       description: 'This is the ability to deal with the underground information network. With Streetdeal, a Fixer can uncover rumors and information, locate missing persons or things, put gossip out on the Street, pick up clues and score big deals. The higher your Streetdeal ability, the more information you can gather about things happening around you, the more informants you have, and the more secretive the information you can dig up. A level +3 Streetdeal can get you contacts for weapons, tools, or minor illegal operations. At level +5, you can penetrate the secrets of all but the most powerful crime families. At level +9, you are the equivalent of a Mafia crimelord yourself, privy to every secret that"s on the Street. Apply Streetdeal to your Cool stat.',
       notes: '',
       career: ''

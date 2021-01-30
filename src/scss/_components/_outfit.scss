@@ -4,34 +4,35 @@
 
   > *:first-child,
   > *:last-child {
-    min-width: 100%;
+    min-width: 99%;
   }
 }
 .sheet-cp-2020 {
   $base: &;
 
   &__outfit{
+    @extend %section-wrapper;
 
     &__buy-toggle {
       @extend %tab-group;
     }
 
     &__wrapper {
-      @extend %section-wrapper;
 
       .repcontainer {
         @extend %flex;
         flex-wrap: wrap;
         justify-content: space-between;
         > * {
-          flex: 1 1 49.5%;
-          min-width: 49%;
-          margin-bottom: 0.2em;
+          flex: 0 1 calc(50% - 0.3em);
+          margin-bottom: 0.6em;
         }
       }
 
       #{$base}__outfit__item-section {
-        height: 100%;
+        border: 1px solid rgba($dim-stroke, 0.8);
+        height: calc(100% - 0.6em);
+        padding: 0.3em;
       }
     }
 

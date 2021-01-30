@@ -7,21 +7,21 @@
     &__row {
       @extend %row-1;
       justify-content: space-between;
-    }
 
-    &__col {
-      @extend %col-1;
-      justify-content: stretch;
-      max-width: 49.5%;
+      > * {
+        @extend %col-1;
+        justify-content: stretch;
+        max-width: 49.5%;
 
-      #{$base}__style,
-      #{$base}__family,
-      #{$base}__siblings,
-      #{$base}__motivations {
-        @extend %bordered-section;
+        &#{$base}__style,
+        &#{$base}__family,
+        &#{$base}__siblings,
+        &#{$base}__motivations {
+          @extend %bordered-section;
 
-        .repitem {
-          margin-bottom: 1em;
+          .repitem {
+            margin-bottom: 1em;
+          }
         }
       }
     }

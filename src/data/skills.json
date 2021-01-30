@@ -308,16 +308,6 @@
         "career": ""
     },
     {
-        "skillName": "Chemistry",
-        "baseAttribute": "INT",
-        "modifier": "",
-        "ipMultiplier": "1",
-        "specialAbility": "",
-        "description": "The required skill for mixing chemicals and creating various compounds. A level +2 Chemistry is equal to high school chemistry. A level +4 is equal to a trained pharmacist or college level chemist. A +8 is a trained laboratory chemist.",
-        "notes": "",
-        "career": "Black Marketeer|Covert Tech Demolitions Ops"
-    },
-    {
         "skillName": "Composition",
         "baseAttribute": "INT",
         "modifier": "",
@@ -835,7 +825,7 @@
         "specialAbility": "",
         "description": "The skill of fighting man to man with fist, feet and other parts of the body. Brawling is not a trained skill it is learned on the Street by getting into a lot of fights. Unlike Martial Arts, there are no specialized attacks and no damage bonuses based on level of mastery.",
         "notes": "",
-        "career": "Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Solo|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior"
+        "career": "Aerojock|Black Marketeer|Bookie|Cop|Dancer/Prostitute|Fence|Fixer|Loan Shark|Marine Corps|Negotiator|Nomad|Outrider|Owner|PA Trooper|Panzerboy|Pathfinder|Pimp|Pirate|Private Investigator|Pusher|Rockerboy|Sleaze|Smuggler|Sniffer|Streetpunk|U.S. or EDF Army|U.S. or EDF Navy|Warrior"
     },
     {
         "skillName": "Capoeria",

@@ -36,7 +36,7 @@
     },
     {
         "skillName": "Brawling or Martial Arts",
-        "skillGroup": ["Brawling", "Martial Arts"],
+        "skillGroup": ["Brawling", "Akido", "Animal Kung Fu", "Boxing", "Capoeria", "Choi Li Fut", "Judo", "Karate", "Tae Kwon Do", "Thai Kick Boxing", "Wrestling", "Sambo", "Sumo", "Tai Chi Chuan", "Te", "Jeet Kun Do", "Ninjutsu", "Koppo"],
         "description": "The skill of fighting man to man with fist, feet and other parts of the body.",
         "baseAttribute": "REF",
         "career": "PA Trooper|Solo"

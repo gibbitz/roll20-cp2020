@@ -25,7 +25,7 @@ const getHealthAttributes = (callback) => {
 const calculateDamageIndexAttrs = ({ damageIndAttr, Wound_Level, Stun_Level }) => {
   let stunValue = makeFloatOrZero(Stun_Level);
   let woundValue = makeFloatOrZero(Wound_Level);
-
+  console.log('>>>>>>>>>>>', stunValue, woundValue)
   if (damageIndAttr <= woundValue) {
     stunValue = damageIndAttr;
     woundValue = damageIndAttr;
@@ -34,6 +34,7 @@ const calculateDamageIndexAttrs = ({ damageIndAttr, Wound_Level, Stun_Level }) =
   } else if (damageIndAttr <= stunValue || damageIndAttr > stunValue) {
     stunValue = damageIndAttr;
   }
+  console.log('<<<<<<<<<<<<', stunValue, woundValue)
   return { stunValue, woundValue };
 };
 
@@ -113,7 +114,7 @@ on(changeEvents, (eventInfo) => {
       Wound_Level,
       Stun_Level
     } = attrs
-    const bodyAttr = makeIntOrZero(BODY_Mod + BODY_Base);
+    const bodyAttr = makeIntOrZero(BODY_Mod) + makeIntOrZero(BODY_Base);
     const {
       stunValue,
       woundValue,
