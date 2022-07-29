@@ -15,20 +15,21 @@
         - var woundCategory = woundLevel.toLowerCase().replace(' ', '-')
         div(class=`cp-2020__wound-slot--${woundCategory}`)
           label= woundLevel
-          each subLevel in levelSlots
-            - var woundId = `wound_${woundIndex}_${subLevel}`
-            - var woundValue = `${woundIndex}.${subLevel}`
-            - var stunId = `stun_${woundIndex}_${subLevel}`
-            div.cp-2020__wound-input
-              label(for=woundId)
-              input(
-                    name='attr_Damage_Indicator'
-                    id=woundId
-                    type='checkbox'
-                    value=woundValue
-              )
-              span(class=['cp-2020__wound__stun-icon', stunId])
-              span(class=['cp-2020__wound__wound-icon', woundId])
+          div.cp-2020__wound-input-wrapper
+            each subLevel in levelSlots
+              - var woundId = `wound_${woundIndex}_${subLevel}`
+              - var woundValue = `${woundIndex}.${subLevel}`
+              - var stunId = `stun_${woundIndex}_${subLevel}`
+              div.cp-2020__wound-input
+                label(for=woundId)
+                input(
+                      name='attr_Damage_Indicator'
+                      id=woundId
+                      type='checkbox'
+                      value=woundValue
+                )
+                span(class=['cp-2020__wound__stun-icon', stunId])
+                span(class=['cp-2020__wound__wound-icon', woundId])
       div.cp-2020__health__clear-button__wrapper
         button.cp-2020__health__clear-button(type='action' name='act_clearDamage') CLEAR ALL
 

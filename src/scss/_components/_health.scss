@@ -102,13 +102,15 @@
 
     &__wounds {
       @extend %row-0-1;
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       flex-wrap: wrap;
+      justify-content: space-around;
       margin-bottom: 1em;
       max-width: 410px;
 
       > * {
         padding: 0 0.3em;
+        max-width: calc(20% - 0.6em);
       }
 
       label {
@@ -125,17 +127,29 @@
       box-sizing: border-box;
       flex: 1 0 100%;
       justify-content: flex-end;
+      max-width: 100%;
       padding: 0.3em;
     }
   }
 
+  &__wound-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__wound-input {
+    flex: 1 0 auto;
     height: 1em;
-    padding: 0;
-    width: 1em;
-    display: inline-block;
     margin-left: .2em;
+    min-width: 1em;
+    padding: 0;
     position: relative;
+
+    @media screen and (max-width: 600px) {
+      width: 5em;
+      height: 5em;
+      border: 1px solid gold;
+    }
 
     input {
       @extend %full-block;

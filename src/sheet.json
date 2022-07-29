@@ -1,6 +1,7 @@
 {
-  "html": "CPk2020.html",
-  "css": "CP2020.css",
+  "legacy":true,
+  "html": "cp2020.html",
+  "css": "cp2020.css",
   "authors": "gibbitzStudios",
   "preview": "CP2020.PNG",
   "roll20userid": "6770476",
