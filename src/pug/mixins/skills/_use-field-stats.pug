@@ -9,7 +9,7 @@ mixin useFieldStats(skillAttrName, rollMacro)
         type='hidden'
         name=`attr_${skillAttrName}_chipped-flip`
         id=`${skillAttrName}_chipped-flip`
-        value=`@{${skillAttrName}_chipped}`
+        value=`@{${skillAttrName}_chipped}|''`
         disabled='true'
       )
       span(title='chipped').cp-2020__skill__chipped
@@ -18,7 +18,7 @@ mixin useFieldStats(skillAttrName, rollMacro)
       for=`${skillAttrName}_roll`
     )
       div.cp-2020__stat-group
-        span(class='cp-2020__skill__lvl--view cp-2020__stat-group__value')
+        span(class='cp-2020__skill__lvl--view cp-2020__group--span cp-2020__stat-group__value')
           span(name=`attr_${skillAttrName}_level`)
           span &sol;
           span(name=`attr_${skillAttrName}_roll_total`)

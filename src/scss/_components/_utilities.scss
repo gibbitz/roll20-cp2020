@@ -1,18 +1,23 @@
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
   &__utilities{
     &__wrapper{
       @extend %flex;
-      align-items: center;
+      align-items: stretch;
       height: 100%;
     }
     &__character-points {
       // width: calc(100% - #{$box-spacing * 2});
+      &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
       #{$base}__box--inner{
         @extend %flex-1;
         @extend %flex-row;
-
+        align-items: center;
 
         &__group {
           @extend %stat-group;
@@ -33,19 +38,27 @@
     }
 
     &__initiative-button {
-      @extend %d10-roll-button;
-      padding-right: 2em !important;
-      padding-left: 0.3em !important;
-      width: auto;
+      &.btn {
+        @extend %d10-roll-button;
+        padding-right: 2em !important;
+        padding-left: 0.3em !important;
+        width: auto;
 
-      &::before {
-        transform: none;
-        left: auto;
-        right: 0;
+        &::before {
+          transform: none;
+          left: auto;
+          right: 0;
+        }
       }
 
-      &__wrappper {
-        flex: 0;
+      &__wrapper {
+        flex: 1 0 40%;
+
+        > span {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
       }
     }
   }

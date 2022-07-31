@@ -10,7 +10,7 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
   )
 
     label(
-      class='cp-2020__stat-group cp-2020__skill--edit'
+      class='cp-2020__stat-group cp-2020__stat-group--icon cp-2020__skill--edit'
       for=`${skillAttrName}_chipped`
     )
       input(
@@ -24,7 +24,7 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
 
     label(
       for=`${skillAttrName}_level`
-    ).cp-2020__stat-group
+    ).cp-2020__stat-group.cp-2020__stat-group--input
       input(
         class='cp-2020__skill__lvl cp-2020__skill--edit cp-2020__stat-group__value'
         type='number'
@@ -38,7 +38,7 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
 
     label(
       for=`${skillAttrName}_ip`
-      class='cp-2020__stat-group cp-2020__skill--edit'
+      class='cp-2020__stat-group cp-2020__stat-group--input cp-2020__skill--edit'
     )
       input(
         type='hidden'
@@ -53,8 +53,8 @@ mixin editFieldStats(skillAttrName, skillData, additionalData)
       )
       span.cp-2020__stat-group__label ip
 
-    label(class='cp-2020__stat-group cp-2020__skill--edit')
-      span.cp-2020__stat-group__value(
+    label(class='cp-2020__stat-group cp-2020__stat-group--span cp-2020__skill--edit')
+      span.cp-2020__stat-group__value.cp-2020__group--span(
         name=`attr_${skillAttrName}_next_level`
       )
       span.cp-2020__stat-group__label lvl up

@@ -9,7 +9,7 @@
   z-index: 0;
 }
 
-.sheet-cp-2020{
+.cp-2020{
   &__box {
     background-color: rgba($dark-reverse-font-color, 0.3);
     border: 1px solid $box-border-color;
@@ -45,6 +45,9 @@
     }
 
     &--inner{
+      display: block;
+      height: 100%;
+
       &::before {
         @extend %cornered;
         border-bottom: 0;

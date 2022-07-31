@@ -2,7 +2,7 @@
 
 $dataValues: map-get($data, 'data');
 $stats: append(map-get($dataValues, 'stats'),'Combat');
-$base: '.sheet-cp-2020';
+$base: '.cp-2020';
 
 %roll-reset {
   border: 0 !important;
@@ -150,7 +150,8 @@ $base: '.sheet-cp-2020';
 .sheet-rolltemplate-supressive-fire,
 .sheet-rolltemplate-unskilled-check,
 .sheet-rolltemplate-attack-melee,
-.sheet-rolltemplate-attack-ranged {
+.sheet-rolltemplate-attack-ranged,
+.sheet-rolltemplate-initiative {
   @extend %roll-template;
   @extend %fumbleable-template;
 }

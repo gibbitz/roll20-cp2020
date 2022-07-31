@@ -5,7 +5,7 @@ $compoundSkills: map-get($dataValues, 'compoundSkills');
 $allSkills: join($skills, $compoundSkills);
 $special-abilities: map-get($dataValues, 'specialAbilities');
 
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
 
@@ -14,14 +14,17 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
     &__wrapper {
       padding: 0 0.3em 0 0.8em;
+      height: 100%;
     }
 
     label#{&}__name--view {
         color: white;
         cursor: pointer;
         display: block;
+        flex: 0 1 auto;
         font-size: 1.2em;
         letter-spacing: 1px;
+        overflow: hidden;
         padding-left: 1em;
         position: relative;
 
@@ -102,12 +105,15 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         cursor: pointer;
         display: flex;
         justify-content: space-around;
+        max-width: 200px;
         padding: 0.3em !important;
-        width: auto;
 
-        > * {
+        > *, > label {
+          display: flex;
           flex: 0 1 auto;
+          font-size: 1em;
           margin: 0 .3em !important;
+          justify-content: flex-end;
           white-space: nowrap;
         }
 
@@ -136,6 +142,12 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        > * {
+          align-items: stretch;
+          // flex: 1 0 auto;
+          width: auto;
+        }
     }
     &-stat,
     [name]#{&}-stat {
@@ -170,6 +182,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           #{$base}__skill__chipped {
             @extend %show;
             opacity: 0.4;
+            filter: brightness(1.5);
             transition: opacity 0.4s ease-out;
 
             &:hover {
@@ -183,6 +196,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           }
 
           input:checked + #{$base}__skill__chipped {
+            filter: brightness(2.5);
             opacity: 1;
           }
 
@@ -204,6 +218,7 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
           @extend %hide;
         }
       }
+
     }
     input[value='use'] {
       & ~ #{$base}__learn-toggle{
@@ -244,7 +259,13 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
             }
           }
         }
+
+        [value='chipped'] + #{$base}__skill__chipped {
+          filter: brightness(2.5);
+        }
+
       }
+
     }
 
     #{$base}__skill__chipped {
@@ -261,7 +282,6 @@ $special-abilities: map-get($dataValues, 'specialAbilities');
 
     [value='chipped'] + #{$base}__skill__chipped {
       @extend %show;
-      filter: brightness(1.5);
     }
 
     #{$base}__inner-box {

@@ -1,4 +1,4 @@
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
   &__armor {
@@ -10,6 +10,11 @@
       height: 18em;
       position: relative;
       width: 100%;
+
+      @media screen and (max-width: $wrap-width) {
+        margin: 0 auto;
+        max-width: 240px;
+      }
     }
 
     [value='f'] + &__figure {
@@ -34,7 +39,7 @@
         }
     }
 
-    .sheet-armor-location{
+    .armor-location{
       &--head {
         left: 50%;
         transform: translateX(-50%);

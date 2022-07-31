@@ -1,4 +1,4 @@
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
   &__weapons-cyber{
@@ -9,6 +9,7 @@
     }
 
     &__wrapper {
+      @extend %unwrap;
       @extend %section-wrapper;
       @extend %flex-1;
       justify-content: space-between;

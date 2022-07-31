@@ -7,7 +7,7 @@
     min-width: 99%;
   }
 }
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
   &__outfit{
@@ -21,6 +21,7 @@
 
       .repcontainer {
         @extend %flex;
+        @extend %unwrap;
         flex-wrap: wrap;
         justify-content: space-between;
         > * {

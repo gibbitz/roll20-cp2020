@@ -1,4 +1,4 @@
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
   &__bio {
@@ -6,6 +6,7 @@
 
     &__row {
       @extend %row-1;
+      @extend %unwrap;
       justify-content: space-between;
 
       > * {

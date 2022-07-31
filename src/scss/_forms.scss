@@ -34,7 +34,7 @@
   }
 }
 
-.sheet-cp-2020 {
+.cp-2020 {
   label {
     color: $dim-font-color;
     margin: 0;
@@ -79,9 +79,18 @@
 
   textarea {
     @extend %text-field;
+    @extend %custom-scrollbars;
     box-sizing: border-box;
     height: auto;
     resize: vertical;
+
+    &::-webkit-resizer {
+      background: $background;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent $dim-fill-color $dim-fill-color transparent;
+      width: 10px;
+    }
   }
 
   &__box {

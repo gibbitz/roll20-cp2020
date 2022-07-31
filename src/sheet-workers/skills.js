@@ -70,19 +70,22 @@ const calculateAttributes = (skillAttrs, characterStats) => {
   const attrsToSet = {};
   skills.forEach((skill) => {
     if (skill.skillName) {
-      const { ipMultiplier, baseAttribute } = resolveSkill(skill, skillAttrs)
-      const skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
-      const skillLevel = skillAttrs[`${skillAttrName}_level`]
-      const skillIp = skillAttrs[`${skillAttrName}_ip`]
-      if (skillIp && skillLevel) {
-        const level = makeInt(skillLevel);
-        const ip = makeInt(skillIp);
-        const ipx = makeInt(ipMultiplier) || 1;
-        const stat = makeInt(characterStats[baseAttribute]) || 0;
-        attrsToSet[`${skillAttrName}_stat`] = baseAttribute;
-        attrsToSet[`${skillAttrName}_ma_roll_table`] = buildMaTable(skill);
-        attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
-        attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
+      const currentSkill = resolveSkill(skill, skillAttrs)
+      if (currentSkill && currentSkill.ipMultiplier) {
+        const { ipMultiplier, baseAttribute } = currentSkill;
+        const skillAttrName = `Skill_${nameToAttrName(skill.skillName)}`;
+        const skillLevel = skillAttrs[`${skillAttrName}_level`]
+        const skillIp = skillAttrs[`${skillAttrName}_ip`]
+        if (skillIp && skillLevel) {
+          const level = makeInt(skillLevel);
+          const ip = makeInt(skillIp);
+          const ipx = makeInt(ipMultiplier) || 1;
+          const stat = makeInt(characterStats[baseAttribute]) || 0;
+          attrsToSet[`${skillAttrName}_stat`] = baseAttribute;
+          attrsToSet[`${skillAttrName}_ma_roll_table`] = buildMaTable(skill);
+          attrsToSet[`${skillAttrName}_next_level`] = ((level + 1) * ipx * 10) - ip;
+          attrsToSet[`${skillAttrName}_roll_total`] = level + stat;
+        }
       }
     }
   });

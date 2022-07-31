@@ -1,31 +1,46 @@
-.sheet-cp-2020{
+.cp-2020{
   $base: &;
+  height: calc(100% - 130px);
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+
+  @extend %custom-scrollbars;
+
   &__character {
     &__row--basics {
+      @extend %unwrap;
       @extend %row-0-1;
       justify-content: space-between;
     }
 
     &__row--vitals {
+      @extend %unwrap;
       @extend %row-1;
       justify-content: space-between;
 
       #{$base}__character__col--vitals {
         @extend %flex-1;
+        @extend %unwrap;
         flex-direction: column;
         max-width: calc(100% - 240px);
+
+        @media screen and (max-width: $wrap-width) {
+          max-width: 100%;
+        }
       }
     }
   }
 
   &__identity {
+    @extend %unwrap;
     @extend %bordered-section;
     max-width: 30%;
     > #{$base}__inner-box {
       @extend %flex-1;
       flex-direction: column;
     }
-    .sheet-cp-2020__layout--row-1-2 {
+    .cp-2020__layout--row-1-2 {
       @extend %flex;
       > * {
         flex: 1;
@@ -37,20 +52,24 @@
   }
 
   &__stats {
+    @extend %unwrap;
     @extend %bordered-section;
     max-width: 69%;
   }
 
   &__armor {
+    @extend %unwrap;
     @extend %bordered-section;
     max-width: 230px;
   }
 
   &__health {
+    @extend %unwrap;
     @extend %bordered-section;
   }
 
   &__utilities {
+    @extend %unwrap;
     @extend %bordered-section;
   }
 }

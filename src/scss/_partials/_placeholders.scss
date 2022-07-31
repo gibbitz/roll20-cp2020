@@ -138,6 +138,18 @@
   }
 }
 
+// responsive
+// ==============================
+  %unwrap {
+    @media screen and (max-width: $wrap-width) {
+      display: block;
+      > * {
+        max-width: 100% !important;
+        width: 100%;
+      }
+    }
+  }
+
 // base coloring
 // ========================================
 %basic-colors {
@@ -194,6 +206,10 @@
   font-size: 1.2em;
   position: relative;
   text-transform: uppercase;
+
+  @media screen and (max-width: $wrap-width) {
+    display: block;
+  }
 
   > label {
     @extend %inactive-tab;
@@ -315,46 +331,22 @@
 // forms
 // ============================================
 %stat-group {
+  $base: &;
+  @extend %title-font;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   max-width: 4em;
+  text-align: center;
 
-  > *[name]:first-child {
-    @extend %title-font;
-    box-sizing: border-box;
-    color: $base-font-color;
-    font-size: 1.3em;
-    height: 1.2em;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    margin-bottom: 0.3em;
+  input {
+    text-align: center;
   }
 
-  > span:first-child:empty + span {
-    display: none;
+  .cp-2020__group--span {
+    color: $light-font-color;
   }
 
-  > *:first-child {
-    line-height: 1.7;
-
-    > *:first-child,
-    > *:last-child {
-      color: $light-font-color;
-    }
-
-    > *:nth-child(2) {
-      color: $dim-font-color;
-    }
-  }
-
-  > *:last-child {
-    color: $dim-font-color;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    line-height: 1;
-    white-space: nowrap;
-  }
 }
 
 %d10-roll-button {
@@ -372,8 +364,11 @@
   text-shadow: none;
   width: 2em;
 
-  &:hover::before {
-    color: $level-9;
+  &:hover{
+    background: transparent;
+    &::before {
+      color: $level-9;
+    }
   }
 
   &::before {
@@ -388,5 +383,28 @@
     top: 0;
     transform: translateX(-50%);
     transition: color 0.5s ease-in-out;
+  }
+}
+
+// custom scrollbars
+// ==============================
+%custom-scrollbars {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $dim-fill-color $background;
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $dim-fill-color;
+    border-radius: 0;
+    border: 1px inset $background;
   }
 }

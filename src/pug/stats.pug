@@ -18,7 +18,7 @@
               span.cp-2020__stat__abbr=`[${stat}]`
               span.cp-2020__stat__value(name=`attr_${stat}`)
           div.cp-2020__stat__breakdown
-            div.cp-2020__stat__component
+            div.cp-2020__stat__component.cp-2020__stat__component
               input.cp-2020__stat__value(
                 type='number'
                 id=`attr_${stat}_Base`
@@ -27,15 +27,15 @@
                 max='10'
               )
               span.cp-2020__stat__key--value BASE
-            div.cp-2020__stat__component
+            div.cp-2020__stat__component.cp-2020__stat__component
               input.cp-2020__stat__value(
                 type='number'
                 name=`attr_${stat}_Mod`
                 value='0'
               )
               span.cp-2020__stat__key--value MOD.
-            div.cp-2020__stat__component
-              span.cp-2020__stat__value(name=`attr_${stat}_Damage_Mod`)
+            div.cp-2020__stat__component.cp-2020__stat__component
+              span.cp-2020__stat__value.cp-2020__group--span(name=`attr_${stat}_Damage_Mod`)
               span.cp-2020__stat__key--value DAM.
 
         div.cp-2020__stat__roll-btns

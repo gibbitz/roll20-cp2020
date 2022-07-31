@@ -31,7 +31,7 @@
     content: '';
   }
 }
-.sheet-cp-2020 {
+.cp-2020 {
   $base: &;
 
   &__health {
@@ -115,6 +115,13 @@
 
       label {
         padding: 0;
+        padding-top: 0.3em;
+
+        @media screen and (max-width: $wrap-width){
+          font-size: 0.7em;
+          text-align: center;
+          white-space: nowrap;
+        }
       }
     }
 
@@ -129,6 +136,7 @@
       justify-content: flex-end;
       max-width: 100%;
       padding: 0.3em;
+      padding-top: 1em;
     }
   }
 
@@ -145,10 +153,8 @@
     padding: 0;
     position: relative;
 
-    @media screen and (max-width: 600px) {
-      width: 5em;
-      height: 5em;
-      border: 1px solid gold;
+    @media screen and (max-width: $wrap-width) {
+      flex: 1 0 40%;
     }
 
     input {
@@ -208,7 +214,7 @@
     @for $subLevel from 1 through 4 {
       [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$base}__wound-input {
         @for $subLevelIterator from 1 through $subLevel {
-          .sheet-wound_#{$index}_#{$subLevelIterator} {
+          .wound_#{$index}_#{$subLevelIterator} {
             @extend %wounded;
           }
         }
@@ -216,7 +222,7 @@
 
       [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$base}__wound-input {
         @for $subLevelIterator from 1 through $subLevel {
-          .sheet-stun_#{$index}_#{$subLevelIterator} {
+          .stun_#{$index}_#{$subLevelIterator} {
             @extend %stunned;
           }
         }
@@ -224,13 +230,13 @@
 
       @each $slotLevel in $groupSelectors {
         [name='attr_Wound_Level'][value='#{$index}.#{$subLevel}'] + div #{$slotLevel} {
-          .sheet-cp-2020__wound__wound-icon {
+          .cp-2020__wound__wound-icon {
             @extend %wounded;
           }
         }
 
         [name='attr_Stun_Level'][value='#{$index}.#{$subLevel}'] + input + div #{$slotLevel} {
-          .sheet-cp-2020__wound__stun-icon {
+          .cp-2020__wound__stun-icon {
             @extend %stunned;
           }
         }
