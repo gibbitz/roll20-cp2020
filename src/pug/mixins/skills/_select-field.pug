@@ -13,13 +13,16 @@ mixin skillSelectField(skillAttrName, skillData, additionalData)
       {{statName=@{${skillAttrName}_stat}}}
       {{stat=@{${skillAttrName}_stat_level}}}
       {{modifier=[[?{Modifier|0}+1d0]]}}
+      {{maBonus=[[?{move|${getMoves(skillData.martialArtBonuses)}}]]}}
       {{total=[[1d10!
         + @{${skillAttrName}_stat_level}
         + @{${skillAttrName}_level}
         + ?{Modifier|0}
-        + ?{MA Attack?|@{${skillAttrName}_ma_roll_table}}]]
+        + ?{move|${getMoves(skillData.martialArtBonuses)}}}]]
       }}
       {{fumble=[[1d10]]}}`
+
+      // + ?{MA Attack?|@{${skillAttrName}_ma_roll_table}}]]
 
   +skillFieldWrapper(skillAttrName, skillData)
     input(type='hidden' name=`attr_${skillAttrName}_ma_roll_table` value='')

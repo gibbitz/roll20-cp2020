@@ -2,7 +2,7 @@
 
 $dataValues: map-get($data, 'data');
 $stats: append(map-get($dataValues, 'stats'),'Combat');
-$base: '.cp-2020';
+$base: '.sheet-cp-2020';
 
 %roll-reset {
   border: 0 !important;
